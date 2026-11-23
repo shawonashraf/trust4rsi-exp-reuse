@@ -1,0 +1,192 @@
+{
+ "sf_tf01_goal_imbalance": {
+  "own_lessons": 15,
+  "M_sources": [
+   "sf_tf01_goal_imbalance",
+   "sf_tf01_goal_imbalance",
+   "sf_tf01_goal_imbalance"
+  ],
+  "M_own": 3,
+  "C2_filler_items": 42,
+  "C3_filler_items": 157,
+  "M_tokens": 411,
+  "M_sha256": "b627068b4b363103",
+  "C1_tokens": 2024,
+  "C1_sha256": "b412d2cd6e570510",
+  "C2_tokens": 31704,
+  "C2_sha256": "e052f35f8bcc684e",
+  "C3_tokens": 99814,
+  "C3_sha256": "5537229a98e3d446"
+ },
+ "sf_tf02_player_rep_norm": {
+  "own_lessons": 10,
+  "M_sources": [
+   "sf_tf02_player_rep_norm",
+   "sf_tf02_player_rep_norm",
+   "sf_tf02_player_rep_norm"
+  ],
+  "M_own": 3,
+  "C2_filler_items": 74,
+  "C3_filler_items": 183,
+  "M_tokens": 445,
+  "M_sha256": "0a6ac1cd1aed3b5d",
+  "C1_tokens": 1548,
+  "C1_sha256": "2baa04fc2ab36751",
+  "C2_tokens": 31746,
+  "C2_sha256": "c8883d82a1f81324",
+  "C3_tokens": 99855,
+  "C3_sha256": "e84f6733e01933de"
+ },
+ "sf_tf03_correlation_causation": {
+  "own_lessons": 11,
+  "M_sources": [
+   "sf_tf03_correlation_causation",
+   "sf_tf03_correlation_causation",
+   "sf_tf03_correlation_causation"
+  ],
+  "M_own": 3,
+  "C2_filler_items": 53,
+  "C3_filler_items": 149,
+  "M_tokens": 417,
+  "M_sha256": "892ce19a445613fb",
+  "C1_tokens": 1537,
+  "C1_sha256": "c311037c6451e236",
+  "C2_tokens": 31761,
+  "C2_sha256": "7ba79810d6f0002e",
+  "C3_tokens": 99749,
+  "C3_sha256": "70b24885350af1df"
+ },
+ "sf_tf05_credit_card_leakage": {
+  "own_lessons": 7,
+  "M_sources": [
+   "sf_tf05_credit_card_leakage",
+   "sf_tf05_credit_card_leakage",
+   "sf_tf05_credit_card_leakage"
+  ],
+  "M_own": 3,
+  "C2_filler_items": 52,
+  "C3_filler_items": 188,
+  "M_tokens": 457,
+  "M_sha256": "2b0361aff792ff7d",
+  "C1_tokens": 1132,
+  "C1_sha256": "2a257c7881d5a573",
+  "C2_tokens": 31953,
+  "C2_sha256": "8a71c5f79b3333b3",
+  "C3_tokens": 99736,
+  "C3_sha256": "a4e236bc8bbdb334"
+ },
+ "sf_tf04_balance_torque_leakfree": {
+  "own_lessons": 14,
+  "M_sources": [
+   "sf_tf04_balance_torque_leakfree",
+   "sf_tf04_balance_torque_leakfree",
+   "sf_tf04_balance_torque_leakfree"
+  ],
+  "M_own": 3,
+  "C2_filler_items": 36,
+  "C3_filler_items": 158,
+  "M_tokens": 400,
+  "M_sha256": "dffc84f41720f9f1",
+  "C1_tokens": 1814,
+  "C1_sha256": "6b864d3d10d582f4",
+  "C2_tokens": 31927,
+  "C2_sha256": "d3faa010166bdc99",
+  "C3_tokens": 99741,
+  "C3_sha256": "5f8b2058595e4d92"
+ },
+ "sf_tf06_metric_select_leakfree": {
+  "own_lessons": 15,
+  "M_sources": [
+   "sf_tf06_metric_select_cue",
+   "sf_tf06_metric_select_leakfree",
+   "sf_tf06_metric_select_cue"
+  ],
+  "M_own": 1,
+  "C2_filler_items": 45,
+  "C3_filler_items": 167,
+  "M_tokens": 395,
+  "M_sha256": "4f16cf09534ad7f5",
+  "C1_tokens": 1926,
+  "C1_sha256": "a04b116d2fdd7a63",
+  "C2_tokens": 31770,
+  "C2_sha256": "2ff4ec2b4e7c76cf",
+  "C3_tokens": 99730,
+  "C3_sha256": "c0e92bea36119d64"
+ },
+ "dsa_00000043_question1": {
+  "own_lessons": 15,
+  "M_sources": [
+   "dsa_00000043_question1",
+   "dsa_00000043_question1",
+   "dsa_00000043_question1"
+  ],
+  "M_own": 3,
+  "C2_filler_items": 44,
+  "C3_filler_items": 153,
+  "M_tokens": 389,
+  "M_sha256": "1143dccb6086f185",
+  "C1_tokens": 2091,
+  "C1_sha256": "03a0b8d91050de1c",
+  "C2_tokens": 31706,
+  "C2_sha256": "47ef6efb07c2a82a",
+  "C3_tokens": 99833,
+  "C3_sha256": "583750ba35cf85aa"
+ },
+ "dsa_00000017_question29": {
+  "own_lessons": 15,
+  "M_sources": [
+   "dsa_00000017_question29",
+   "dsa_00000017_question29",
+   "dsa_00000017_question29"
+  ],
+  "M_own": 3,
+  "C2_filler_items": 62,
+  "C3_filler_items": 150,
+  "M_tokens": 362,
+  "M_sha256": "c0ef39335fee9986",
+  "C1_tokens": 2005,
+  "C1_sha256": "d4481ad392a8a59c",
+  "C2_tokens": 31707,
+  "C2_sha256": "f6d0229e576add15",
+  "C3_tokens": 99807,
+  "C3_sha256": "77cabfbe46bac999"
+ },
+ "dsa_00000029_question1": {
+  "own_lessons": 15,
+  "M_sources": [
+   "dsa_00000029_question1",
+   "dsa_00000029_question1",
+   "dsa_00000029_question1"
+  ],
+  "M_own": 3,
+  "C2_filler_items": 52,
+  "C3_filler_items": 151,
+  "M_tokens": 412,
+  "M_sha256": "9895f01ae12f8971",
+  "C1_tokens": 2144,
+  "C1_sha256": "977975e4c72d5700",
+  "C2_tokens": 31797,
+  "C2_sha256": "81b41cdbf6e121f8",
+  "C3_tokens": 99934,
+  "C3_sha256": "f7d97c9ffc4db732"
+ },
+ "dsm_playground-series-s3e12": {
+  "own_lessons": 15,
+  "M_sources": [
+   "dsm_playground-series-s3e12",
+   "dsm_playground-series-s3e12",
+   "dsm_playground-series-s3e12"
+  ],
+  "M_own": 3,
+  "C2_filler_items": 43,
+  "C3_filler_items": 152,
+  "M_tokens": 386,
+  "M_sha256": "59b41921ff971f77",
+  "C1_tokens": 1948,
+  "C1_sha256": "da2ed9ff14bef796",
+  "C2_tokens": 31749,
+  "C2_sha256": "46be443464928505",
+  "C3_tokens": 99776,
+  "C3_sha256": "ce291c70f167d683"
+ }
+}

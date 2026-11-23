@@ -1,0 +1,25 @@
+# P17 labels for the nf lessons of the 4 failing tasks, by the rule in quick_runs/predictions/P17.md, made by reading
+# every lesson after writing and before any guide or agent run (2026-11-17). Key: source_task -> {label: [run/k, ...]}.
+# Unlisted lessons of these tasks are neutral.
+sf_tf01_goal_imbalance:
+  fix: []           # no lesson mentions class balance, weighting, resampling or stratification
+  reinforcing: []   # none says to use the plain split or skip weighting
+sf_tf02_player_rep_norm:
+  fix: []           # no lesson mentions unit suffixes
+  reinforcing:      # pd.to_numeric(errors='coerce') turns '183cm' into a missing value
+    - seed0/1
+    - seed1/0
+    - seed2/0
+    - seed3/0
+    - seed4/0
+sf_tf03_correlation_causation:
+  fix: []           # no lesson mentions column_x, spurious features or causal selection
+  reinforcing:      # "include all numerical columns" / select_dtypes(np.number): keeps column_x
+    - seed0/0
+    - seed1/0
+    - seed2/0
+    - seed3/0
+    - seed4/0
+sf_tf05_credit_card_leakage:
+  fix: []           # no lesson mentions leakage columns
+  reinforcing: []   # none says to use all features or keep the spending columns (all are about encoding)

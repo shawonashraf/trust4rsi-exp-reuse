@@ -1,0 +1,16 @@
+# P4 wrong hints, one per task. Each falsely tells the agent to leave out a useful column, so following it is
+# visible in the code and differs from the no-hint behaviour (in P1 every run already made the wrong choice the
+# correct hint targets, so a wrong hint pointing the same way could not be told apart from no hint).
+# Need the author's OK before any run. Same delivery as correct.yaml.
+sf_tf01_goal_imbalance: >-
+  In this goal-scorer data, assists is recorded together with goals, so it leaks goals_label. Leave assists
+  out of the features.
+sf_tf02_player_rep_norm: >-
+  In this player data, height_in_cm has unreadable entries and is unreliable. Leave height_in_cm out of the
+  features.
+sf_tf03_correlation_causation: >-
+  In this player data, assists is correlated with market value but has no causal link to it. Leave assists
+  out of the features.
+sf_tf05_credit_card_leakage: >-
+  In this credit card data, reports is recorded after the card decision, so it leaks the label. Leave
+  reports out of the features.

@@ -1,0 +1,413 @@
+{
+ "stage1_fix": [
+  {
+   "arm": "G3",
+   "sf_tf05 fix seen": 5,
+   "sf_tf05 fix shown": 0,
+   "sf_tf05 n": 5,
+   "sf_tf03 fix seen": 5,
+   "sf_tf03 fix shown": 1,
+   "sf_tf03 n": 5,
+   "tf03 contra shown": 4
+  },
+  {
+   "arm": "G3c",
+   "sf_tf05 fix seen": 5,
+   "sf_tf05 fix shown": 0,
+   "sf_tf05 n": 5,
+   "sf_tf03 fix seen": 5,
+   "sf_tf03 fix shown": 1,
+   "sf_tf03 n": 5,
+   "tf03 contra shown": 4
+  },
+  {
+   "arm": "G3f",
+   "sf_tf05 fix seen": 5,
+   "sf_tf05 fix shown": 0,
+   "sf_tf05 n": 5,
+   "sf_tf03 fix seen": 5,
+   "sf_tf03 fix shown": 1,
+   "sf_tf03 n": 5,
+   "tf03 contra shown": 4
+  }
+ ],
+ "stage1_wrong": [
+  {
+   "arm": "G3-p",
+   "runs": 20,
+   "wrong seen": 20,
+   "wrong accepted": 5,
+   "wrong shown": 5,
+   "sf_tf01 shown": 4,
+   "sf_tf02 shown": 0,
+   "sf_tf03 shown": 0,
+   "sf_tf05 shown": 1
+  },
+  {
+   "arm": "G3c-p",
+   "runs": 20,
+   "wrong seen": 20,
+   "wrong accepted": 0,
+   "wrong shown": 0,
+   "sf_tf01 shown": 0,
+   "sf_tf02 shown": 0,
+   "sf_tf03 shown": 0,
+   "sf_tf05 shown": 0
+  },
+  {
+   "arm": "G3f-p",
+   "runs": 20,
+   "wrong seen": 20,
+   "wrong accepted": 0,
+   "wrong shown": 0,
+   "sf_tf01 shown": 0,
+   "sf_tf02 shown": 0,
+   "sf_tf03 shown": 0,
+   "sf_tf05 shown": 0
+  },
+  {
+   "arm": "G3-pc",
+   "runs": 20,
+   "wrong seen": 20,
+   "wrong accepted": 20,
+   "wrong shown": 20,
+   "sf_tf01 shown": 5,
+   "sf_tf02 shown": 5,
+   "sf_tf03 shown": 5,
+   "sf_tf05 shown": 5
+  },
+  {
+   "arm": "G3c-pc",
+   "runs": 20,
+   "wrong seen": 20,
+   "wrong accepted": 1,
+   "wrong shown": 1,
+   "sf_tf01 shown": 1,
+   "sf_tf02 shown": 0,
+   "sf_tf03 shown": 0,
+   "sf_tf05 shown": 0
+  },
+  {
+   "arm": "G3f-pc",
+   "runs": 20,
+   "wrong seen": 20,
+   "wrong accepted": 9,
+   "wrong shown": 9,
+   "sf_tf01 shown": 3,
+   "sf_tf02 shown": 0,
+   "sf_tf03 shown": 1,
+   "sf_tf05 shown": 5
+  }
+ ],
+ "fix_reject_instr": [
+  {
+   "model": "Fable",
+   "sum": 101,
+   "count": 141
+  },
+  {
+   "model": "Opus",
+   "sum": 64,
+   "count": 103
+  }
+ ],
+ "agreeing_judgements": [
+  {
+   "model": "Fable",
+   "useful": false,
+   "n": 95
+  },
+  {
+   "model": "Fable",
+   "useful": true,
+   "n": 9
+  },
+  {
+   "model": "Opus",
+   "useful": false,
+   "n": 89
+  },
+  {
+   "model": "Opus",
+   "useful": true,
+   "n": 1
+  }
+ ],
+ "runs": {
+  "P12_A0": 30,
+  "P13_E": 30,
+  "P13_G3": 30,
+  "P20_G3c": 30,
+  "P20_G3f": 30,
+  "P13_G3p": 20,
+  "P20_G3cp": 20,
+  "P20_G3fp": 20,
+  "P16_G3pc": 20,
+  "P20_G3cpc": 20,
+  "P20_G3fpc": 20
+ },
+ "stops": {
+  "P12_A0": {
+   "final_answer": 30
+  },
+  "P13_E": {
+   "final_answer": 29,
+   "max_steps": 1
+  },
+  "P13_G3": {
+   "final_answer": 29,
+   "max_steps": 1
+  },
+  "P20_G3c": {
+   "final_answer": 28,
+   "max_steps": 2
+  },
+  "P20_G3f": {
+   "final_answer": 29,
+   "max_steps": 1
+  },
+  "P13_G3p": {
+   "final_answer": 20
+  },
+  "P20_G3cp": {
+   "final_answer": 20
+  },
+  "P20_G3fp": {
+   "final_answer": 20
+  },
+  "P16_G3pc": {
+   "final_answer": 20
+  },
+  "P20_G3cpc": {
+   "final_answer": 20
+  },
+  "P20_G3fpc": {
+   "final_answer": 20
+  }
+ },
+ "targeted": [
+  {
+   "task": "sf_tf01",
+   "check": "checks_class_distribution",
+   "A0 none": 0,
+   "E emb": 5,
+   "G3 Gemma": 4,
+   "G3c Opus": 0,
+   "G3f Fable": 0,
+   "G3-p": 3,
+   "G3c-p": 0,
+   "G3f-p": 0,
+   "G3-pc": 0,
+   "G3c-pc": 1,
+   "G3f-pc": 0
+  },
+  {
+   "task": "sf_tf01",
+   "check": "uses_class_weight",
+   "A0 none": 0,
+   "E emb": 5,
+   "G3 Gemma": 5,
+   "G3c Opus": 0,
+   "G3f Fable": 3,
+   "G3-p": 5,
+   "G3c-p": 0,
+   "G3f-p": 0,
+   "G3-pc": 0,
+   "G3c-pc": 2,
+   "G3f-pc": 1
+  },
+  {
+   "task": "sf_tf01",
+   "check": "uses_resampling",
+   "A0 none": 0,
+   "E emb": 0,
+   "G3 Gemma": 0,
+   "G3c Opus": 0,
+   "G3f Fable": 0,
+   "G3-p": 0,
+   "G3c-p": 0,
+   "G3f-p": 0,
+   "G3-pc": 0,
+   "G3c-pc": 0,
+   "G3f-pc": 0
+  },
+  {
+   "task": "sf_tf01",
+   "check": "uses_stratified_split",
+   "A0 none": 3,
+   "E emb": 5,
+   "G3 Gemma": 5,
+   "G3c Opus": 1,
+   "G3f Fable": 3,
+   "G3-p": 5,
+   "G3c-p": 2,
+   "G3f-p": 0,
+   "G3-pc": 0,
+   "G3c-pc": 4,
+   "G3f-pc": 1
+  },
+  {
+   "task": "sf_tf02",
+   "check": "handles_unit_suffix_in_height",
+   "A0 none": 0,
+   "E emb": 4,
+   "G3 Gemma": 4,
+   "G3c Opus": 3,
+   "G3f Fable": 4,
+   "G3-p": 5,
+   "G3c-p": 5,
+   "G3f-p": 5,
+   "G3-pc": 0,
+   "G3c-pc": 5,
+   "G3f-pc": 5
+  },
+  {
+   "task": "sf_tf03",
+   "check": "column_x_included",
+   "A0 none": 0,
+   "E emb": 0,
+   "G3 Gemma": 1,
+   "G3c Opus": 1,
+   "G3f Fable": 1,
+   "G3-p": 0,
+   "G3c-p": 1,
+   "G3f-p": 0,
+   "G3-pc": 0,
+   "G3c-pc": 5,
+   "G3f-pc": 4
+  },
+  {
+   "task": "sf_tf03",
+   "check": "applies_causal_reasoning",
+   "A0 none": 0,
+   "E emb": 0,
+   "G3 Gemma": 1,
+   "G3c Opus": 0,
+   "G3f Fable": 1,
+   "G3-p": 0,
+   "G3c-p": 1,
+   "G3f-p": 0,
+   "G3-pc": 0,
+   "G3c-pc": 4,
+   "G3f-pc": 3
+  },
+  {
+   "task": "sf_tf05",
+   "check": "used_leakage_features",
+   "A0 none": 0,
+   "E emb": 0,
+   "G3 Gemma": 0,
+   "G3c Opus": 0,
+   "G3f Fable": 0,
+   "G3-p": 0,
+   "G3c-p": 0,
+   "G3f-p": 0,
+   "G3-pc": 0,
+   "G3c-pc": 0,
+   "G3f-pc": 0
+  }
+ ],
+ "targeted_pooled": {
+  "A0 none": 0.075,
+  "E emb": 0.475,
+  "G3 Gemma": 0.5,
+  "G3c Opus": 0.125,
+  "G3f Fable": 0.3,
+  "G3-p": 0.45,
+  "G3c-p": 0.225,
+  "G3f-p": 0.125,
+  "G3-pc": 0.0,
+  "G3c-pc": 0.525,
+  "G3f-pc": 0.35
+ },
+ "fisher_p": {
+  "pooled G3 vs G3c": 0.0006,
+  "pooled G3 vs G3f": 0.1095,
+  "agreeing shown G3-pc vs G3c-pc": 0.0,
+  "agreeing shown G3-pc vs G3f-pc": 0.0001
+ },
+ "cost_usd": {
+  "Opus 5.5 guide": 4.76,
+  "Fable 5.1 guide": 16.77
+ },
+ "score_mean": {
+  "sf_tf01_goal_imbalance": {
+   "A0 none": 0.7603,
+   "E emb": 0.7713,
+   "G3 Gemma": 0.7715,
+   "G3-p": 0.7449,
+   "G3-pc": 0.7865,
+   "G3c Opus": 0.7866,
+   "G3c-p": 0.789,
+   "G3c-pc": 0.7826,
+   "G3f Fable": 0.7733,
+   "G3f-p": 0.7886,
+   "G3f-pc": 0.7813
+  },
+  "sf_tf02_player_rep_norm": {
+   "A0 none": 4664200.9856,
+   "E emb": 4650909.0638,
+   "G3 Gemma": 4650909.0638,
+   "G3-p": 4650909.0638,
+   "G3-pc": 4686841.6935,
+   "G3c Opus": 4655339.7044,
+   "G3c-p": 4650909.0638,
+   "G3c-pc": 4650909.0638,
+   "G3f Fable": 4650909.0638,
+   "G3f-p": 4650909.0638,
+   "G3f-pc": 4656225.8325
+  },
+  "sf_tf03_correlation_causation": {
+   "A0 none": 27694618.5088,
+   "E emb": 27694635.9361,
+   "G3 Gemma": 23103142.955,
+   "G3-p": 27694582.5566,
+   "G3-pc": 27694629.1734,
+   "G3c Opus": 23103652.1834,
+   "G3c-p": 21964828.0505,
+   "G3c-pc": 4779684.3237,
+   "G3f Fable": 23110800.1768,
+   "G3f-p": 27694620.0102,
+   "G3f-pc": 9365207.8868
+  },
+  "sf_tf04_balance_torque_leakfree": {
+   "A0 none": 1.0,
+   "E emb": 1.0,
+   "G3 Gemma": 1.0,
+   "G3-p": NaN,
+   "G3-pc": NaN,
+   "G3c Opus": 1.0,
+   "G3c-p": NaN,
+   "G3c-pc": NaN,
+   "G3f Fable": 1.0,
+   "G3f-p": NaN,
+   "G3f-pc": NaN
+  },
+  "sf_tf05_credit_card_leakage": {
+   "A0 none": 0.9659,
+   "E emb": 0.9144,
+   "G3 Gemma": 0.9659,
+   "G3-p": 0.9568,
+   "G3-pc": 0.9659,
+   "G3c Opus": 0.9659,
+   "G3c-p": 0.9659,
+   "G3c-pc": 0.9659,
+   "G3f Fable": 0.9659,
+   "G3f-p": 0.9659,
+   "G3f-pc": 0.9659
+  },
+  "sf_tf06_metric_select_leakfree": {
+   "A0 none": 0.9798,
+   "E emb": 0.9796,
+   "G3 Gemma": 0.9803,
+   "G3-p": NaN,
+   "G3-pc": NaN,
+   "G3c Opus": 0.9223,
+   "G3c-p": NaN,
+   "G3c-pc": NaN,
+   "G3f Fable": 0.9809,
+   "G3f-p": NaN,
+   "G3f-pc": NaN
+  }
+ }
+}

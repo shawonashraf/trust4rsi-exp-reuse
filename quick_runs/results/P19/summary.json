@@ -1,0 +1,451 @@
+{
+ "cut_per_task": [
+  {
+   "task": "sf_tf05",
+   "G3s fix shown": 14,
+   "G3s n": 15,
+   "G3s-pl fix shown": 4,
+   "G3s-pl n": 15,
+   "p": 0.0005
+  },
+  {
+   "task": "sf_tf03",
+   "G3s fix shown": 15,
+   "G3s n": 15,
+   "G3s-pl fix shown": 1,
+   "G3s-pl n": 15,
+   "p": 0.0
+  }
+ ],
+ "escalation": [
+  {
+   "arm": "G3x",
+   "task": "sf_tf01",
+   "fix flagged": 0,
+   "fix shown": 0,
+   "wrong flagged": 0,
+   "wrong shown": 0
+  },
+  {
+   "arm": "G3x",
+   "task": "sf_tf02",
+   "fix flagged": 0,
+   "fix shown": 0,
+   "wrong flagged": 0,
+   "wrong shown": 0
+  },
+  {
+   "arm": "G3x",
+   "task": "sf_tf03",
+   "fix flagged": 5,
+   "fix shown": 0,
+   "wrong flagged": 0,
+   "wrong shown": 0
+  },
+  {
+   "arm": "G3x",
+   "task": "sf_tf05",
+   "fix flagged": 5,
+   "fix shown": 0,
+   "wrong flagged": 0,
+   "wrong shown": 0
+  },
+  {
+   "arm": "G3x-p",
+   "task": "sf_tf01",
+   "fix flagged": 0,
+   "fix shown": 0,
+   "wrong flagged": 3,
+   "wrong shown": 2
+  },
+  {
+   "arm": "G3x-p",
+   "task": "sf_tf02",
+   "fix flagged": 0,
+   "fix shown": 0,
+   "wrong flagged": 5,
+   "wrong shown": 0
+  },
+  {
+   "arm": "G3x-p",
+   "task": "sf_tf03",
+   "fix flagged": 5,
+   "fix shown": 0,
+   "wrong flagged": 5,
+   "wrong shown": 0
+  },
+  {
+   "arm": "G3x-p",
+   "task": "sf_tf05",
+   "fix flagged": 5,
+   "fix shown": 0,
+   "wrong flagged": 5,
+   "wrong shown": 0
+  },
+  {
+   "arm": "G3x-pc",
+   "task": "sf_tf01",
+   "fix flagged": 0,
+   "fix shown": 0,
+   "wrong flagged": 0,
+   "wrong shown": 5
+  },
+  {
+   "arm": "G3x-pc",
+   "task": "sf_tf02",
+   "fix flagged": 0,
+   "fix shown": 0,
+   "wrong flagged": 0,
+   "wrong shown": 5
+  },
+  {
+   "arm": "G3x-pc",
+   "task": "sf_tf03",
+   "fix flagged": 5,
+   "fix shown": 0,
+   "wrong flagged": 1,
+   "wrong shown": 5
+  },
+  {
+   "arm": "G3x-pc",
+   "task": "sf_tf05",
+   "fix flagged": 0,
+   "fix shown": 0,
+   "wrong flagged": 0,
+   "wrong shown": 5
+  }
+ ],
+ "escalation_totals": [
+  {
+   "arm": "G3x",
+   "fix flagged": 10,
+   "fix shown": 0,
+   "wrong flagged": 0,
+   "wrong shown": 0
+  },
+  {
+   "arm": "G3x-p",
+   "fix flagged": 10,
+   "fix shown": 0,
+   "wrong flagged": 18,
+   "wrong shown": 2
+  },
+  {
+   "arm": "G3x-pc",
+   "fix flagged": 5,
+   "fix shown": 0,
+   "wrong flagged": 1,
+   "wrong shown": 20
+  }
+ ],
+ "g3n_nf_reinf_shown": [
+  {
+   "task": "sf_tf01",
+   "reinf shown": 0
+  },
+  {
+   "task": "sf_tf02",
+   "reinf shown": 5
+  },
+  {
+   "task": "sf_tf03",
+   "reinf shown": 5
+  },
+  {
+   "task": "sf_tf05",
+   "reinf shown": 0
+  }
+ ],
+ "nfd_lessons": {
+  "sf_tf01": 15,
+  "sf_tf02": 15,
+  "sf_tf03": 15,
+  "sf_tf04": 29,
+  "sf_tf05": 15,
+  "sf_tf06": 30
+ },
+ "nfd_labels": {
+  "sf_tf01": {
+   "fix": 2,
+   "reinforcing": 0
+  },
+  "sf_tf02": {
+   "fix": 0,
+   "reinforcing": 5
+  },
+  "sf_tf03": {
+   "fix": 5,
+   "reinforcing": 2
+  },
+  "sf_tf05": {
+   "fix": 0,
+   "reinforcing": 0
+  }
+ },
+ "nfd_exposure": [
+  {
+   "arm": "C1-nfd",
+   "task": "sf_tf01",
+   "fix shown": 5,
+   "reinf shown": 0
+  },
+  {
+   "arm": "C1-nfd",
+   "task": "sf_tf02",
+   "fix shown": 0,
+   "reinf shown": 5
+  },
+  {
+   "arm": "C1-nfd",
+   "task": "sf_tf03",
+   "fix shown": 5,
+   "reinf shown": 5
+  },
+  {
+   "arm": "C1-nfd",
+   "task": "sf_tf05",
+   "fix shown": 0,
+   "reinf shown": 0
+  },
+  {
+   "arm": "E-nfd",
+   "task": "sf_tf01",
+   "fix shown": 0,
+   "reinf shown": 0
+  },
+  {
+   "arm": "E-nfd",
+   "task": "sf_tf02",
+   "fix shown": 0,
+   "reinf shown": 0
+  },
+  {
+   "arm": "E-nfd",
+   "task": "sf_tf03",
+   "fix shown": 0,
+   "reinf shown": 5
+  },
+  {
+   "arm": "E-nfd",
+   "task": "sf_tf05",
+   "fix shown": 0,
+   "reinf shown": 0
+  }
+ ],
+ "runs": {
+  "P12_A0": 30,
+  "P12_C1": 30,
+  "P13_E": 30,
+  "P17_C1nf": 30,
+  "P17_Enf": 30,
+  "P19_C1nfd": 30,
+  "P19_Enfd": 30,
+  "P19_A0h": 20
+ },
+ "stops": {
+  "P12_A0": {
+   "final_answer": 30
+  },
+  "P12_C1": {
+   "final_answer": 29,
+   "max_steps": 1
+  },
+  "P13_E": {
+   "final_answer": 29,
+   "max_steps": 1
+  },
+  "P17_C1nf": {
+   "final_answer": 30
+  },
+  "P17_Enf": {
+   "final_answer": 30
+  },
+  "P19_C1nfd": {
+   "final_answer": 30
+  },
+  "P19_Enfd": {
+   "final_answer": 30
+  },
+  "P19_A0h": {
+   "final_answer": 20
+  }
+ },
+ "targeted": [
+  {
+   "task": "sf_tf01",
+   "check": "checks_class_distribution",
+   "A0 none": 0,
+   "C1 own": 5,
+   "E emb": 5,
+   "C1-nf": 0,
+   "E-nf": 1,
+   "C1-nfd": 4,
+   "E-nfd": 2,
+   "A0h hint": 5
+  },
+  {
+   "task": "sf_tf01",
+   "check": "uses_class_weight",
+   "A0 none": 0,
+   "C1 own": 5,
+   "E emb": 5,
+   "C1-nf": 0,
+   "E-nf": 0,
+   "C1-nfd": 5,
+   "E-nfd": 1,
+   "A0h hint": 0
+  },
+  {
+   "task": "sf_tf01",
+   "check": "uses_resampling",
+   "A0 none": 0,
+   "C1 own": 0,
+   "E emb": 0,
+   "C1-nf": 0,
+   "E-nf": 0,
+   "C1-nfd": 0,
+   "E-nfd": 0,
+   "A0h hint": 0
+  },
+  {
+   "task": "sf_tf01",
+   "check": "uses_stratified_split",
+   "A0 none": 3,
+   "C1 own": 5,
+   "E emb": 5,
+   "C1-nf": 1,
+   "E-nf": 0,
+   "C1-nfd": 5,
+   "E-nfd": 3,
+   "A0h hint": 5
+  },
+  {
+   "task": "sf_tf02",
+   "check": "handles_unit_suffix_in_height",
+   "A0 none": 0,
+   "C1 own": 4,
+   "E emb": 4,
+   "C1-nf": 0,
+   "E-nf": 0,
+   "C1-nfd": 0,
+   "E-nfd": 0,
+   "A0h hint": 5
+  },
+  {
+   "task": "sf_tf03",
+   "check": "column_x_included",
+   "A0 none": 0,
+   "C1 own": 5,
+   "E emb": 0,
+   "C1-nf": 0,
+   "E-nf": 0,
+   "C1-nfd": 5,
+   "E-nfd": 0,
+   "A0h hint": 5
+  },
+  {
+   "task": "sf_tf03",
+   "check": "applies_causal_reasoning",
+   "A0 none": 0,
+   "C1 own": 5,
+   "E emb": 0,
+   "C1-nf": 0,
+   "E-nf": 0,
+   "C1-nfd": 5,
+   "E-nfd": 0,
+   "A0h hint": 4
+  },
+  {
+   "task": "sf_tf05",
+   "check": "used_leakage_features",
+   "A0 none": 0,
+   "C1 own": 1,
+   "E emb": 0,
+   "C1-nf": 0,
+   "E-nf": 0,
+   "C1-nfd": 0,
+   "E-nfd": 0,
+   "A0h hint": 5
+  }
+ ],
+ "targeted_pooled": {
+  "A0 none": 0.075,
+  "C1 own": 0.75,
+  "E emb": 0.475,
+  "C1-nf": 0.025,
+  "E-nf": 0.025,
+  "C1-nfd": 0.6,
+  "E-nfd": 0.15,
+  "A0h hint": 0.725
+ },
+ "fisher_p": {
+  "C1-nf vs C1-nfd": 0.0,
+  "C1-nfd vs C1": 0.2324,
+  "E-nf vs E-nfd": 0.1084,
+  "A0 vs A0h": 0.0,
+  "cut vs placebo sf_tf05": 0.0005,
+  "cut vs placebo sf_tf03": 0.0
+ },
+ "score_mean": {
+  "sf_tf01_goal_imbalance": {
+   "A0 none": 0.7603,
+   "A0h hint": 0.7804,
+   "C1 own": 0.7765,
+   "C1-nf": 0.786,
+   "C1-nfd": 0.7715,
+   "E emb": 0.7713,
+   "E-nf": 0.7243,
+   "E-nfd": 0.7879
+  },
+  "sf_tf02_player_rep_norm": {
+   "A0 none": 4664200.9856,
+   "A0h hint": 4650909.0638,
+   "C1 own": 4650909.0638,
+   "C1-nf": 4664200.9856,
+   "C1-nfd": 4664200.9856,
+   "E emb": 4650909.0638,
+   "E-nf": 4664200.9856,
+   "E-nfd": 4664200.9856
+  },
+  "sf_tf03_correlation_causation": {
+   "A0 none": 27694618.5088,
+   "A0h hint": 4774348.4664,
+   "C1 own": 4755266.2227,
+   "C1-nf": 27694584.7839,
+   "C1-nfd": 4699080.1002,
+   "E emb": 27694635.9361,
+   "E-nf": 27694583.0382,
+   "E-nfd": 27694641.0158
+  },
+  "sf_tf04_balance_torque_leakfree": {
+   "A0 none": 1.0,
+   "A0h hint": NaN,
+   "C1 own": 1.0,
+   "C1-nf": 1.0,
+   "C1-nfd": 1.0,
+   "E emb": 1.0,
+   "E-nf": 1.0,
+   "E-nfd": 1.0
+  },
+  "sf_tf05_credit_card_leakage": {
+   "A0 none": 0.9659,
+   "A0h hint": 0.822,
+   "C1 own": 0.822,
+   "C1-nf": 0.9659,
+   "C1-nfd": 0.9659,
+   "E emb": 0.9144,
+   "E-nf": 0.9659,
+   "E-nfd": 0.9659
+  },
+  "sf_tf06_metric_select_leakfree": {
+   "A0 none": 0.9798,
+   "A0h hint": NaN,
+   "C1 own": 0.9806,
+   "C1-nf": 0.9797,
+   "C1-nfd": 0.9799,
+   "E emb": 0.9796,
+   "E-nf": 0.9803,
+   "E-nfd": 0.9805
+  }
+ }
+}

@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quick Runs Baseline</title>
+<style>
+:root {
+  --bg: #f7f6f2; --panel: #ffffff; --ink: #1d1d1b; --muted: #66645e; --line: #e2dfd6;
+  --accent: #2f5d8a; --good: #2e7d4f; --bad: #b3412f; --warn: #b07a12; --soft: #eef2f6;
+  --bar: #2f5d8a; --bar2: #8aa9c7;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #161714; --panel: #1f201d; --ink: #ecebe6; --muted: #a3a199; --line: #34352f;
+    --accent: #8db6dd; --good: #6cc392; --bad: #ec8a78; --warn: #e2b55a; --soft: #262a2f;
+    --bar: #8db6dd; --bar2: #4c6a86;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #161714; --panel: #1f201d; --ink: #ecebe6; --muted: #a3a199; --line: #34352f;
+  --accent: #8db6dd; --good: #6cc392; --bad: #ec8a78; --warn: #e2b55a; --soft: #262a2f;
+  --bar: #8db6dd; --bar2: #4c6a86;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink);
+  font: 16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+nav { position: sticky; top: 0; z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); }
+nav .in { max-width: 980px; margin: 0 auto; padding: 8px 16px; display: flex; gap: 6px; overflow-x: auto; }
+nav a { color: var(--muted); text-decoration: none; padding: 4px 10px; border-radius: 999px; white-space: nowrap; font-size: 14px; }
+nav a:hover, nav a.on { background: var(--soft); color: var(--ink); }
+main { max-width: 980px; margin: 0 auto; padding: 0 16px 64px; }
+h1 { font-size: 30px; line-height: 1.2; margin: 32px 0 8px; }
+h2 { font-size: 22px; margin: 0 0 4px; }
+h3 { font-size: 16px; margin: 20px 0 8px; }
+p { margin: 8px 0; }
+.lead { font-size: 18px; max-width: 760px; }
+.muted { color: var(--muted); }
+.small { font-size: 13px; }
+section { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 20px; margin: 20px 0; scroll-margin-top: 56px; }
+.q { color: var(--muted); margin-bottom: 12px; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 20px 0; }
+.tile { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px; }
+.tile b { display: block; font-size: 26px; font-variant-numeric: tabular-nums; }
+.tile span { color: var(--muted); font-size: 14px; }
+.btns { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 12px; }
+button { font: inherit; font-size: 14px; border: 1px solid var(--line); background: var(--panel); color: var(--ink);
+  border-radius: 999px; padding: 4px 12px; cursor: pointer; }
+button.on { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { color: var(--muted); font-weight: 600; cursor: default; }
+th.sort { cursor: pointer; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+.scroll { overflow-x: auto; }
+.bars .row { display: grid; grid-template-columns: 150px 1fr 48px; gap: 8px; align-items: center; margin: 4px 0; font-size: 14px; }
+.bars .track { background: var(--soft); height: 14px; border-radius: 4px; overflow: hidden; }
+.bars .fill { background: var(--bar); height: 100%; transition: width .3s; }
+.bars .na { color: var(--muted); font-size: 12px; }
+.pill { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 12px; border: 1px solid var(--line); }
+.pill.bad { color: var(--bad); border-color: var(--bad); }
+.pill.good { color: var(--good); border-color: var(--good); }
+.pill.warn { color: var(--warn); border-color: var(--warn); }
+.dots { display: inline-flex; gap: 3px; }
+.dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+.dot.p { background: var(--good); } .dot.f { background: var(--bad); } .dot.u { background: var(--line); }
+.callout { border-left: 3px solid var(--accent); background: var(--soft); padding: 10px 14px; border-radius: 0 8px 8px 0; margin: 12px 0; }
+.callout.bad { border-color: var(--bad); }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+@media (max-width: 720px) { .grid2 { grid-template-columns: 1fr; } .bars .row { grid-template-columns: 110px 1fr 40px; } h1 { font-size: 24px; } }
+.flow { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 8px 0; }
+.flow .step { background: var(--soft); border-radius: 8px; padding: 8px 12px; font-size: 14px; }
+.flow .arrow { color: var(--muted); }
+details { border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; margin: 8px 0; }
+details summary { cursor: pointer; font-weight: 600; }
+details[open] summary { margin-bottom: 6px; }
+.rec { border-color: var(--accent); }
+svg text { fill: var(--muted); font-size: 11px; }
+.ans { font-family: ui-monospace, Menlo, monospace; font-size: 13px; }
+.ans .ok { color: var(--good); } .ans .no { color: var(--bad); }
+tr.click { cursor: pointer; } tr.click:hover { background: var(--soft); }
+.themebtn { margin-left: auto; }
+</style>
+</head>
+<body>
+<nav><div class="in" id="nav">
+  <a href="#top">Summary</a><a href="#terms">Terms</a><a href="#p10">P10 recall</a><a href="#p9">P9 noise</a>
+  <a href="#p1">P1 census</a><a href="#p1b">P1b DSBench</a><a href="#agree">Where runs split</a><a href="#next">Next steps</a>
+  <button class="themebtn" id="theme" title="Switch light/dark">Theme</button>
+</div></nav>
+<main>
+<div id="top"></div>
+<h1>Quick runs: how the agent behaves without memory</h1>
+<p class="muted small">Branch quick/baseline-behaviour · gemma-4-31B-it on SGLang · temperature 1.0, thinking on · numbers read from each probe's summary.json</p>
+<p class="lead"><b>Short answer.</b> Without memory, the agent mostly gives the same answer across runs. When it is wrong, it is
+usually wrong the same way every time. So a memory has to <i>change the agent's choice</i>; making runs agree would add little.</p>
+
+<div class="tiles" id="tiles"></div>
+
+<div class="callout">
+<b>Why this matters for the memory question.</b> We want to know if agents ignore memories. First we need to know what
+the agent does with no memory: where runs differ, and what they get wrong. That is the baseline any memory is compared against.
+</div>
+
+<section id="terms">
+<h2>Terms used on this page</h2>
+<div class="grid2">
+<div>
+<p><b>Run</b>: one full attempt by the agent at a task. Each task was run 5 times.</p>
+<p><b>Answer consistency</b>: of all pairs of runs on a task, the share that gave the same final answer. 1.0 = all 5 agree.</p>
+<p><b>Decision agreement</b>: the same share, but for one decision the code actually made, such as the feature list or the model type.</p>
+</div>
+<div>
+<p><b>Consistent failure</b>: all 5 runs fail the same check, for example "never looked at the class balance".</p>
+<p><b>Relative gap</b> (DSBench modelling): how much of the distance from a simple baseline to a perfect score the run closes. 0 = baseline, 1 = perfect.</p>
+<p><b>Contamination risk</b>: how likely the model already knows the answer from training.</p>
+</div>
+</div>
+<h3>How one run works</h3>
+<div class="flow">
+  <div class="step">Task prompt + data</div><div class="arrow">→</div>
+  <div class="step">Agent states DECISION lines</div><div class="arrow">→</div>
+  <div class="step">Runs one code block</div><div class="arrow">→</div>
+  <div class="step">Sees output, repeats</div><div class="arrow">→</div>
+  <div class="step">FINAL ANSWER</div><div class="arrow">→</div>
+  <div class="step">Extractor reads the executed code</div>
+</div>
+<p class="small muted">The extractor records what the code actually did, not what the agent said. A hand check found it right on 52 of 55 decisions.</p>
+</section>
+
+<section id="p10">
+<h2>P10 · Does the model already know the answers?</h2>
+<p class="q">Asked each task's question without the data, 3 times. No agent runs.</p>
+<div id="p10sum"></div>
+<div class="callout">Most "hits" are not memory of the dataset. Either the prompt names the study (BLADE), or the task
+wording or file name gives the pitfall away (for example, a file named "imbalance").</div>
+<div class="btns" id="p10f"></div>
+<div class="scroll"><table id="p10t"></table></div>
+</section>
+
+<section id="p9">
+<h2>P9 · How much comes from the server alone?</h2>
+<p class="q">Greedy decoding (temperature 0), so in theory every rerun is identical. 3 tasks, 4 reruns each.</p>
+<div id="p9sum"></div>
+<div class="callout bad">There is no "same input, same output" on this server. Text differs early, then runs drift.
+4 greedy runs of one BLADE task (crofoot) reached 3 different verdicts.</div>
+<div class="scroll"><table id="p9t"></table></div>
+<p class="small muted">"Differs at" = the first message and character where a rerun's text departs from the first batched run.</p>
+</section>
+
+<section id="p1">
+<h2>P1 · Silent Failures and BLADE, no memory</h2>
+<p class="q">15 tasks × 5 runs = 75 runs. Silent Failures (SF) tasks each hide a known problem in the data. BLADE tasks come with expert analyses.</p>
+<div class="tiles" id="p1tiles"></div>
+<h3>Check explorer: which planted problems did the runs catch?</h3>
+<p class="small muted">Each dot is one run. Green = passed the check, red = failed, grey = could not be judged.</p>
+<div class="btns" id="p1f"></div>
+<div class="scroll"><table id="p1t"></table></div>
+<div class="callout bad"><b>The key finding.</b> The agent writes the whole pipeline in 1–2 code cells and answers. It rarely
+looks at the data first. So nothing in its process would show it a 5% label, a "185cm" string or a column that leaks the answer.</div>
+<h3>How the agent works</h3>
+<div class="scroll"><table id="p1beh"></table></div>
+</section>
+
+<section id="p1b">
+<h2>P1b · DSBench, tasks with known answers</h2>
+<p class="q">26 Excel workbook questions + 8 Kaggle modelling tasks, 5 runs each = 170 runs.</p>
+<div class="tiles" id="p1btiles"></div>
+<div class="callout"><b>A data error in DSBench itself.</b> Question 00000020/35 has options A to I, but its stored answer is the
+number 14978914492, which belongs to a later question. It is left out of the accuracy numbers.</div>
+<h3>Workbook questions</h3>
+<div class="btns" id="dsaf"></div>
+<div class="scroll"><table id="dsat"></table></div>
+<p class="small muted">Click a row to see the 5 answers. Green = correct.</p>
+<div id="dsadetail"></div>
+<div class="callout"><b>One behaviour worth noting.</b> On question 00000029/1, 3 runs computed the right number. The question
+says "something isn't working" in the sheet, so they kept hunting for the error and ran out of steps. The prompt's text
+overrode the agent's own correct result.</div>
+<h3>Modelling tasks: score range across the 5 runs</h3>
+<div id="dsm"></div>
+<p class="small muted">Each bar spans the lowest to highest relative gap of the 5 runs; the tick is the mean. Narrow bars = runs score almost the same.</p>
+</section>
+
+<section id="agree">
+<h2>Where do runs split?</h2>
+<p class="q">Decision agreement by decision type, averaged over tasks. Short bars = runs made different choices.</p>
+<div class="btns" id="agf"></div>
+<div class="bars" id="agbars"></div>
+<p class="small muted" id="agnote"></p>
+</section>
+
+<section id="next">
+<h2>Next steps (for the author to pick)</h2>
+<details open class="rec"><summary>A. Correct hint and wrong hint on the 4 SF tasks that always fail (recommended)</summary>
+<p>TF01, TF02, TF03, TF05. Does a correct hint change the choice (P2)? Does a plausible wrong hint get followed (P4)?
+This is the direct test of "agents ignore memories". 40 runs; SF runs averaged 3.8 minutes each in P1. Needs the hint texts approved first.</p></details>
+<details><summary>B. A data check before the code runs (P3 mode 3)</summary>
+<p>P1 suggests the failure is that the agent never looks at the data. A check that runs on the data before a model is fitted
+may matter more than any text. 20 runs plus check code.</p></details>
+<details><summary>C. Harder ground-truth tasks</summary>
+<p>P1b was too easy. Take DSBench questions with low reported accuracy, or more Silent Failures variants.</p></details>
+<details><summary>D. Read the 00000029/1 transcripts closely</summary>
+<p>A case of prompt text overriding the agent's own evidence: the opposite of ignoring memory. No runs needed.</p></details>
+<details><summary>E. The same census on gemma-4-12B (P8)</summary>
+<p>Does a smaller model fail in more varied ways? 75 runs and a new server.</p></details>
+<h3>Limits</h3>
+<ul>
+<li>5 runs per task, so effects smaller than 1 run in 5 cannot be seen.</li>
+<li>SF checks are judged by the same model that ran the agent. Its 3 judging draws agreed on <span id="judge"></span> run-checks, but no second judge was used.</li>
+<li>The server is not reproducible even at temperature 0 (P9).</li>
+<li>Several tasks are high contamination risk (P10). DSBench recall was not tested.</li>
+</ul>
+</section>
+</main>
+
+<script>
+const D = /*__DATA__*/null;
+const $ = s => document.querySelector(s);
+const f2 = x => x == null ? "–" : (+x).toFixed(2);
+const f3 = x => x == null ? "–" : (+x).toFixed(3);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const short = t => t.replace(/^sf_/, "").replace(/^blade_/, "").replace(/^dsa_/, "").replace(/^dsm_/, "");
+function buttons(el, opts, cur, cb) {
+  el.innerHTML = "";
+  opts.forEach(([k, label]) => {
+    const b = document.createElement("button"); b.textContent = label; if (k === cur) b.className = "on";
+    b.onclick = () => { [...el.children].forEach(c => c.className = ""); b.className = "on"; cb(k); };
+    el.appendChild(b);
+  });
+  cb(cur);
+}
+function tiles(el, items) {
+  el.innerHTML = items.map(([v, l]) => `<div class="tile"><b>${v}</b><span>${l}</span></div>`).join("");
+}
+function sortable(table, cols, rows, onRow) {
+  let key = null, dir = 1;
+  function draw() {
+    const r = [...rows]; if (key) r.sort((a, b) => (a[key] > b[key] ? 1 : a[key] < b[key] ? -1 : 0) * dir);
+    table.innerHTML = "<thead><tr>" + cols.map(c => `<th class="sort ${c.num ? "num" : ""}" data-k="${c.k}">${c.h}${key === c.k ? (dir > 0 ? " ▲" : " ▼") : ""}</th>`).join("") +
+      "</tr></thead><tbody>" + r.map((x, i) => `<tr class="${onRow ? "click" : ""}" data-i="${rows.indexOf(x)}">` +
+      cols.map(c => `<td class="${c.num ? "num" : ""}">${c.f ? c.f(x) : esc(x[c.k])}</td>`).join("") + "</tr>").join("") + "</tbody>";
+    table.querySelectorAll("th").forEach(th => th.onclick = () => { const k = th.dataset.k; dir = key === k ? -dir : 1; key = k; draw(); });
+    if (onRow) table.querySelectorAll("tbody tr").forEach(tr => tr.onclick = () => onRow(rows[+tr.dataset.i]));
+  }
+  draw();
+}
+
+// Theme toggle
+$("#theme").onclick = () => {
+  const r = document.documentElement, dark = matchMedia("(prefers-color-scheme: dark)").matches;
+  const cur = r.dataset.theme || (dark ? "dark" : "light");
+  r.dataset.theme = cur === "dark" ? "light" : "dark";
+  try { localStorage.setItem("qr-theme", r.dataset.theme); } catch (e) {}
+};
+try { const t = localStorage.getItem("qr-theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+
+// Top tiles
+const sfFails = D.p1.checks.filter(c => c.consistent_failure && c.task.startsWith("sf_")).length;
+tiles($("#tiles"), [
+  [D.p1.runs + D.p1b.runs + 12, "agent runs (P9, P1, P1b)"],
+  [f2(D.p1.ac.sf), "answer consistency, Silent Failures"],
+  [sfFails, "SF checks failed in all 5 runs"],
+  [f3(D.p1b.pooled.accuracy), "DSBench workbook accuracy"],
+]);
+
+// P10
+const p10rows = Object.entries(D.p10.per_task).map(([t, v]) => ({task: t, src: t.split("_")[0] === "sf" ? "SF" : "BLADE", ...v}));
+$("#p10sum").innerHTML = `<p><b>${D.p10.hits} of 15</b> tasks are recall hits (2 or more of 3 answers named the pitfall or finding).
+After P10: ${Object.entries(D.p10.risk_after).map(([k, v]) => `${v} ${k}`).join(", ")} risk.</p>`;
+buttons($("#p10f"), [["all", "All tasks"], ["hit", "Recall hits only"]], "all", k => {
+  const rows = p10rows.filter(r => k === "all" || r.hits >= 2);
+  sortable($("#p10t"), [
+    {k: "task", h: "Task", f: r => esc(short(r.task))}, {k: "src", h: "Source"},
+    {k: "hits", h: "Hits (of 3)", num: true},
+    {k: "risk_after", h: "Risk", f: r => `<span class="pill ${r.risk_after === "high" ? "bad" : r.risk_after === "medium" ? "warn" : "good"}">${r.risk_after}</span>${r.risk_before !== r.risk_after ? ` <span class="small muted">was ${r.risk_before}</span>` : ""}`},
+    {k: "note", h: "Why", f: r => esc(r.note || "")}], rows);
+});
+
+// P9
+$("#p9sum").innerHTML = `<p><b>${D.p9.identical} of ${D.p9.pairs}</b> reruns were identical to the first run.</p>`;
+sortable($("#p9t"), [
+  {k: "task", h: "Task", f: r => esc(short(r.task))}, {k: "vs_batched_a", h: "Rerun"},
+  {k: "identical", h: "Identical?", f: r => r.identical ? '<span class="pill good">yes</span>' : '<span class="pill bad">no</span>'},
+  {k: "first_diff_step", h: "Differs at message", num: true, f: r => r.first_diff_step == null ? "–" : r.first_diff_step + 1},
+  {k: "first_diff_char", h: "…character", num: true, f: r => r.first_diff_char == null ? "–" : r.first_diff_char},
+  {k: "steps_other", h: "Steps", num: true}], D.p9.first_diff);
+
+// P1
+const b = D.p1.behaviour;
+tiles($("#p1tiles"), [
+  [f2(D.p1.ac.sf), "answer consistency, SF"], [f2(D.p1.ac.blade), "answer consistency, BLADE"],
+  [b.SF.steps, "steps per SF run"], [b.BLADE.steps, "steps per BLADE run"]]);
+const tasks1 = [...new Set(D.p1.checks.map(c => c.task))];
+function drawChecks(mode) {
+  let rows = D.p1.checks;
+  if (mode === "cf") rows = rows.filter(c => c.consistent_failure);
+  else if (mode === "sf") rows = rows.filter(c => c.task.startsWith("sf_"));
+  else if (mode === "blade") rows = rows.filter(c => c.task.startsWith("blade_"));
+  const dots = c => '<span class="dots">' + "p".repeat(c.pass).concat("f".repeat(c.fail), "u".repeat(c.unknown)).split("").map(x => `<span class="dot ${x}"></span>`).join("") + "</span>";
+  sortable($("#p1t"), [
+    {k: "task", h: "Task", f: r => esc(short(r.task))}, {k: "check", h: "Check", f: r => esc(r.check.replace(/_/g, " "))},
+    {k: "pass", h: "5 runs", f: dots},
+    {k: "consistent_failure", h: "", f: r => r.consistent_failure ? '<span class="pill bad">all fail</span>' : ""}], rows);
+}
+buttons($("#p1f"), [["cf", "Consistent failures"], ["sf", "All SF checks"], ["blade", "All BLADE checks"]], "cf", drawChecks);
+const behRows = [["Steps per run", "steps"], ["Code cells per run", "code_cells"], ["Cells that raised an error", "cell_errors"],
+  ["Model types fitted per run", "families_fitted"], ["Decision types made silently", "silent_types"], ["Minutes per run", "minutes"]];
+$("#p1beh").innerHTML = "<thead><tr><th></th><th class='num'>SF</th><th class='num'>BLADE</th></tr></thead><tbody>" +
+  behRows.map(([l, k]) => `<tr><td>${l}</td><td class="num">${b.SF[k]}</td><td class="num">${b.BLADE[k]}</td></tr>`).join("") + "</tbody>";
+
+// P1b
+const P = D.p1b;
+tiles($("#p1btiles"), [
+  [f3(P.pooled.accuracy), `workbook accuracy (${P.pooled.questions} questions)`],
+  [f3(P.pooled.answer_consistency), "answer consistency"],
+  [`${P.all_agree[1]} of ${P.all_agree[0]}`, "questions where all 5 runs agreed and were right"],
+  [`${P.dsm_valid[0]} / ${P.dsm_valid[1]}`, "valid modelling submissions"]]);
+const dsaRows = P.dsa.map(r => ({...r, label_error: P.label_errors.includes(r.task)}));
+function showDsa(r) {
+  const gold = String(r.gold);
+  $("#dsadetail").innerHTML = `<div class="callout"><b>${esc(short(r.task))}</b> · gold <span class="ans">${esc(gold)}</span>${r.label_error ? ' <span class="pill bad">label error</span>' : ""}<br>
+    <span class="ans">${r.answers.map(a => a == null ? '<span class="no">no answer</span>' :
+      `<span class="${(r.type === "integer" ? Math.abs(a - r.gold) <= 1 : a === r.gold) ? "ok" : "no"}">${esc(r.type === "integer" ? Math.round(a) : a)}</span>`).join(" · ")}</span></div>`;
+}
+buttons($("#dsaf"), [["all", "All 26"], ["split", "Runs disagree"], ["wrong", "Any wrong run"]], "all", k => {
+  const rows = dsaRows.filter(r => k === "all" || (k === "split" ? r.answer_consistency < 1 : r.n_correct < 5));
+  $("#dsadetail").innerHTML = "";
+  sortable($("#dsat"), [
+    {k: "task", h: "Question", f: r => esc(short(r.task)) + (r.label_error ? ' <span class="pill bad">label error</span>' : "")},
+    {k: "type", h: "Answer type"}, {k: "n_correct", h: "Correct (of 5)", num: true},
+    {k: "answer_consistency", h: "Answer consistency", num: true, f: r => f2(r.answer_consistency)}], rows, showDsa);
+});
+// Modelling range plot (SVG)
+(function () {
+  const rows = Object.entries(P.dsm), W = 640, rowH = 30, L = 170, R = 20, H = rows.length * rowH + 30;
+  const x = v => L + v * (W - L - R);
+  let s = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Relative gap range per modelling task">`;
+  [0, .25, .5, .75, 1].forEach(t => s += `<line x1="${x(t)}" x2="${x(t)}" y1="0" y2="${H - 20}" stroke="var(--line)"/><text x="${x(t)}" y="${H - 6}" text-anchor="middle">${t}</text>`);
+  rows.forEach(([t, v], i) => {
+    const y = i * rowH + 15;
+    s += `<text x="${L - 8}" y="${y + 4}" text-anchor="end">${esc(short(t))}</text>`;
+    s += `<rect x="${x(v.rel_gap_min)}" y="${y - 6}" width="${Math.max(2, x(v.rel_gap_max) - x(v.rel_gap_min))}" height="12" rx="3" fill="var(--bar2)"><title>${esc(t)}: ${f3(v.rel_gap_min)}–${f3(v.rel_gap_max)}, SD ${f3(v.rel_gap_sd)}</title></rect>`;
+    s += `<line x1="${x(v.rel_gap_mean)}" x2="${x(v.rel_gap_mean)}" y1="${y - 9}" y2="${y + 9}" stroke="var(--ink)" stroke-width="2"/>`;
+  });
+  $("#dsm").innerHTML = s + "</svg>";
+})();
+
+// Agreement bars
+const AG = {SF: D.p1.agree_SF, BLADE: D.p1.agree_BLADE, DSA: P.agree_DSA, DSM: P.agree_DSM};
+const notes = {
+  SF: "Silent Failures: runs differ most in the transformations and feature list; they agree on validation and metric.",
+  BLADE: "BLADE: runs differ most on the control variables; the verdict mostly agrees.",
+  DSA: "DSBench workbook questions: these decision types were built for modelling. Here most values are free text (\"sheet:Inputs\"), so low agreement is largely wording. All 18 questions with identical answers still show low agreement.",
+  DSM: "DSBench modelling: runs agree on the target, and split on features, transformations and the validation scheme."};
+buttons($("#agf"), [["SF", "Silent Failures"], ["BLADE", "BLADE"], ["DSA", "DSBench workbook"], ["DSM", "DSBench modelling"]], "SF", k => {
+  const rows = Object.entries(AG[k]).sort((a, b) => (a[1] ?? 2) - (b[1] ?? 2));
+  $("#agbars").innerHTML = rows.map(([t, v]) => `<div class="row"><span>${t}</span>` +
+    (v == null ? `<span class="na">does not apply</span><span></span>` :
+      `<div class="track"><div class="fill" style="width:${v * 100}%"></div></div><span class="num">${f2(v)}</span>`) + "</div>").join("");
+  $("#agnote").textContent = notes[k];
+});
+
+$("#judge").textContent = `${D.p1.judge[0]} of ${D.p1.judge[1]}`;
+
+// Highlight nav item for the visible section
+const links = [...document.querySelectorAll("nav a")];
+const obs = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) links.forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#" + e.target.id));
+}), {rootMargin: "-40% 0px -55% 0px"});
+document.querySelectorAll("section, #top").forEach(s => obs.observe(s));
+</script>
+</body>
+</html>

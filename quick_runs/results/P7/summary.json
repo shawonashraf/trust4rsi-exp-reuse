@@ -1,0 +1,555 @@
+{
+ "input": "/data/anon/debug/e01_experience_memory/results",
+ "runs": [
+  {
+   "task": 5,
+   "arm": "e0",
+   "attempts": 150,
+   "outcome_classes": {
+    "rejected": 14,
+    "supported": 134,
+    "inconclusive": 2
+   },
+   "attempts_without_fingerprint": 0,
+   "null_flags": 11,
+   "null_flags_also_rejected": 11,
+   "retries": 109,
+   "old_dead_end_retries": 4,
+   "old_dead_end_retries_check_old_notebook_count": 4,
+   "old_dead_end_retries_blocked": 4,
+   "old_dead_end_retries_unblocked_no_key": 0,
+   "blocked": 14,
+   "blocked_actual_outcome": {
+    "rejected": 1,
+    "supported": 12,
+    "inconclusive": 1
+   },
+   "blocked_that_were_dead_again": 1,
+   "blocked_that_were_supported": 12,
+   "coarse_key": {
+    "retries": 127,
+    "blocked": 56,
+    "blocked_that_were_dead_again": 3,
+    "blocked_that_were_supported": 52
+   },
+   "missed_near_duplicates": {
+    "one_element_off": 27
+   },
+   "missed_near_duplicates_dead_again": {
+    "one_element_off": 1
+   }
+  },
+  {
+   "task": 5,
+   "arm": "e1",
+   "attempts": 150,
+   "outcome_classes": {
+    "rejected": 46,
+    "supported": 96,
+    "inconclusive": 8
+   },
+   "attempts_without_fingerprint": 2,
+   "null_flags": 22,
+   "null_flags_also_rejected": 22,
+   "retries": 92,
+   "old_dead_end_retries": 21,
+   "old_dead_end_retries_check_old_notebook_count": 21,
+   "old_dead_end_retries_blocked": 21,
+   "old_dead_end_retries_unblocked_no_key": 0,
+   "blocked": 44,
+   "blocked_actual_outcome": {
+    "supported": 29,
+    "rejected": 14,
+    "inconclusive": 1
+   },
+   "blocked_that_were_dead_again": 14,
+   "blocked_that_were_supported": 29,
+   "coarse_key": {
+    "retries": 127,
+    "blocked": 101,
+    "blocked_that_were_dead_again": 28,
+    "blocked_that_were_supported": 67
+   },
+   "missed_near_duplicates": {
+    "one_element_off": 61,
+    "no_design_recorded": 2
+   },
+   "missed_near_duplicates_dead_again": {
+    "one_element_off": 13
+   }
+  },
+  {
+   "task": 16,
+   "arm": "e0",
+   "attempts": 150,
+   "outcome_classes": {
+    "supported": 144,
+    "rejected": 6
+   },
+   "attempts_without_fingerprint": 0,
+   "null_flags": 0,
+   "null_flags_also_rejected": 0,
+   "retries": 130,
+   "old_dead_end_retries": 4,
+   "old_dead_end_retries_check_old_notebook_count": 4,
+   "old_dead_end_retries_blocked": 4,
+   "old_dead_end_retries_unblocked_no_key": 0,
+   "blocked": 32,
+   "blocked_actual_outcome": {
+    "supported": 32
+   },
+   "blocked_that_were_dead_again": 0,
+   "blocked_that_were_supported": 32,
+   "coarse_key": {
+    "retries": 138,
+    "blocked": 90,
+    "blocked_that_were_dead_again": 2,
+    "blocked_that_were_supported": 88
+   },
+   "missed_near_duplicates": {
+    "one_element_off": 27
+   },
+   "missed_near_duplicates_dead_again": {
+    "one_element_off": 1
+   }
+  },
+  {
+   "task": 16,
+   "arm": "e1",
+   "attempts": 150,
+   "outcome_classes": {
+    "supported": 107,
+    "rejected": 43
+   },
+   "attempts_without_fingerprint": 18,
+   "null_flags": 8,
+   "null_flags_also_rejected": 8,
+   "retries": 79,
+   "old_dead_end_retries": 30,
+   "old_dead_end_retries_check_old_notebook_count": 30,
+   "old_dead_end_retries_blocked": 25,
+   "old_dead_end_retries_unblocked_no_key": 5,
+   "blocked": 47,
+   "blocked_actual_outcome": {
+    "rejected": 17,
+    "supported": 30
+   },
+   "blocked_that_were_dead_again": 17,
+   "blocked_that_were_supported": 30,
+   "coarse_key": {
+    "retries": 136,
+    "blocked": 115,
+    "blocked_that_were_dead_again": 35,
+    "blocked_that_were_supported": 80
+   },
+   "missed_near_duplicates": {
+    "one_element_off": 14,
+    "same_design_other_wording": 24,
+    "no_design_recorded": 18
+   },
+   "missed_near_duplicates_dead_again": {
+    "one_element_off": 3,
+    "same_design_other_wording": 6,
+    "no_design_recorded": 5
+   }
+  }
+ ],
+ "examples": [
+  {
+   "task": 5,
+   "arm": "e0",
+   "kind": "one_element_off",
+   "earlier": {
+    "attempt": 0,
+    "iteration": 0,
+    "outcome": "rejected",
+    "fingerprint": "eb74b17d44c9",
+    "variables": [
+     "age",
+     "dissaved"
+    ],
+    "design": "logit; controls=['INCOME', 'GENDER', 'BLACK', 'HISPANIC']; moderators=[]; transforms=['AGE_2']; scope='all respondents'"
+   },
+   "later": {
+    "attempt": 1,
+    "iteration": 0,
+    "outcome": "supported",
+    "fingerprint": "16fd86b2ec04",
+    "variables": [
+     "age",
+     "dissaved"
+    ],
+    "design": "logit; controls=['GENDER', 'BLACK', 'HISPANIC']; moderators=['INCOME']; transforms=['AGE_2']; scope='all respondents'"
+   }
+  },
+  {
+   "task": 5,
+   "arm": "e0",
+   "kind": "one_element_off",
+   "earlier": {
+    "attempt": 0,
+    "iteration": 0,
+    "outcome": "rejected",
+    "fingerprint": "eb74b17d44c9",
+    "variables": [
+     "age",
+     "dissaved"
+    ],
+    "design": "logit; controls=['INCOME', 'GENDER', 'BLACK', 'HISPANIC']; moderators=[]; transforms=['AGE_2']; scope='all respondents'"
+   },
+   "later": {
+    "attempt": 4,
+    "iteration": 0,
+    "outcome": "supported",
+    "fingerprint": "16fd86b2ec04",
+    "variables": [
+     "age",
+     "dissaved"
+    ],
+    "design": "logit; controls=['GENDER', 'BLACK', 'HISPANIC']; moderators=['INCOME']; transforms=['AGE_2']; scope='all respondents'"
+   }
+  },
+  {
+   "task": 5,
+   "arm": "e1",
+   "kind": "no_design_recorded",
+   "earlier": {
+    "attempt": 0,
+    "iteration": 0,
+    "outcome": "rejected",
+    "fingerprint": "eb74b17d44c9",
+    "variables": [
+     "age",
+     "dissaved"
+    ],
+    "design": "logit; controls=['INCOME', 'GENDER', 'BLACK', 'HISPANIC']; moderators=[]; transforms=['AGE_2']; scope='all respondents'"
+   },
+   "later": {
+    "attempt": 54,
+    "iteration": 3,
+    "outcome": "inconclusive",
+    "fingerprint": "none",
+    "variables": [
+     "age",
+     "dissaved"
+    ],
+    "design": "-; controls=[]; moderators=[]; transforms=[]; scope='-'"
+   }
+  },
+  {
+   "task": 5,
+   "arm": "e1",
+   "kind": "no_design_recorded",
+   "earlier": {
+    "attempt": 55,
+    "iteration": 3,
+    "outcome": "rejected",
+    "fingerprint": "8c3b0ef33928",
+    "variables": [
+     "age",
+     "age2",
+     "dissaved"
+    ],
+    "design": "logit; controls=['LOG_INCOME', 'GENDER']; moderators=[]; transforms=[]; scope='all respondents'"
+   },
+   "later": {
+    "attempt": 69,
+    "iteration": 4,
+    "outcome": "inconclusive",
+    "fingerprint": "none",
+    "variables": [
+     "age",
+     "age2",
+     "dissaved"
+    ],
+    "design": "-; controls=[]; moderators=[]; transforms=[]; scope='-'"
+   }
+  },
+  {
+   "task": 5,
+   "arm": "e1",
+   "kind": "one_element_off",
+   "earlier": {
+    "attempt": 1,
+    "iteration": 0,
+    "outcome": "rejected",
+    "fingerprint": "1fd4ee2bc711",
+    "variables": [
+     "age",
+     "dissaved"
+    ],
+    "design": "logit; controls=['GENDER', 'BLACK', 'HISPANIC']; moderators=['INCOME']; transforms=['log(INCOME)']; scope='all respondents'"
+   },
+   "later": {
+    "attempt": 6,
+    "iteration": 0,
+    "outcome": "rejected",
+    "fingerprint": "1f4fca324fc8",
+    "variables": [
+     "age",
+     "dissaved"
+    ],
+    "design": "logit; controls=['BLACK', 'HISPANIC']; moderators=['INCOME']; transforms=['log(INCOME)']; scope='all respondents'"
+   }
+  },
+  {
+   "task": 5,
+   "arm": "e1",
+   "kind": "one_element_off",
+   "earlier": {
+    "attempt": 1,
+    "iteration": 0,
+    "outcome": "rejected",
+    "fingerprint": "1fd4ee2bc711",
+    "variables": [
+     "age",
+     "dissaved"
+    ],
+    "design": "logit; controls=['GENDER', 'BLACK', 'HISPANIC']; moderators=['INCOME']; transforms=['log(INCOME)']; scope='all respondents'"
+   },
+   "later": {
+    "attempt": 11,
+    "iteration": 0,
+    "outcome": "supported",
+    "fingerprint": "cbae50ef2be9",
+    "variables": [
+     "age",
+     "dissaved"
+    ],
+    "design": "logit; controls=['GENDER', 'BLACK', 'HISPANIC']; moderators=['SAMESAVE', 'INCOME']; transforms=['log(INCOME)']; scope='all respondents'"
+   }
+  },
+  {
+   "task": 16,
+   "arm": "e0",
+   "kind": "one_element_off",
+   "earlier": {
+    "attempt": 10,
+    "iteration": 0,
+    "outcome": "rejected",
+    "fingerprint": "ed47b6a6d0bc",
+    "variables": [
+     "bammspeciation",
+     "ogpevol",
+     "rmlevol"
+    ],
+    "design": "ols; controls=['bio1', 'bio12', 'sgr']; moderators=['area']; transforms=[]; scope='all species in the dataset'"
+   },
+   "later": {
+    "attempt": 18,
+    "iteration": 1,
+    "outcome": "supported",
+    "fingerprint": "7632c7cebc16",
+    "variables": [
+     "bammspeciation",
+     "ogpevol",
+     "rmlevol"
+    ],
+    "design": "ols; controls=['bio1', 'bio12', 'sgr']; moderators=[]; transforms=[]; scope='all rows in the dataset'"
+   }
+  },
+  {
+   "task": 16,
+   "arm": "e0",
+   "kind": "one_element_off",
+   "earlier": {
+    "attempt": 10,
+    "iteration": 0,
+    "outcome": "rejected",
+    "fingerprint": "ed47b6a6d0bc",
+    "variables": [
+     "bammspeciation",
+     "ogpevol",
+     "rmlevol"
+    ],
+    "design": "ols; controls=['bio1', 'bio12', 'sgr']; moderators=['area']; transforms=[]; scope='all species in the dataset'"
+   },
+   "later": {
+    "attempt": 19,
+    "iteration": 1,
+    "outcome": "supported",
+    "fingerprint": "1369330ff113",
+    "variables": [
+     "bammspeciation",
+     "ogpevol",
+     "rmlevol"
+    ],
+    "design": "ols; controls=['bio1', 'bio12', 'sgr', 'area']; moderators=[]; transforms=[]; scope='all species in the dataset'"
+   }
+  },
+  {
+   "task": 16,
+   "arm": "e1",
+   "kind": "same_design_other_wording",
+   "earlier": {
+    "attempt": 30,
+    "iteration": 2,
+    "outcome": "rejected",
+    "fingerprint": "53d7475d15b1",
+    "variables": [
+     "bammspeciation",
+     "ogpevol",
+     "rmlevol"
+    ],
+    "design": "ols; controls=[]; moderators=[]; transforms=[]; scope='all species in the dataset'"
+   },
+   "later": {
+    "attempt": 32,
+    "iteration": 2,
+    "outcome": "supported",
+    "fingerprint": "1ae9f13e5e71",
+    "variables": [
+     "bammspeciation",
+     "ogpevol",
+     "rmlevol"
+    ],
+    "design": "ols; controls=[]; moderators=[]; transforms=[]; scope='all rows in the dataset'"
+   }
+  },
+  {
+   "task": 16,
+   "arm": "e1",
+   "kind": "same_design_other_wording",
+   "earlier": {
+    "attempt": 30,
+    "iteration": 2,
+    "outcome": "rejected",
+    "fingerprint": "53d7475d15b1",
+    "variables": [
+     "bammspeciation",
+     "ogpevol",
+     "rmlevol"
+    ],
+    "design": "ols; controls=[]; moderators=[]; transforms=[]; scope='all species in the dataset'"
+   },
+   "later": {
+    "attempt": 36,
+    "iteration": 2,
+    "outcome": "supported",
+    "fingerprint": "1ae9f13e5e71",
+    "variables": [
+     "bammspeciation",
+     "ogpevol",
+     "rmlevol"
+    ],
+    "design": "ols; controls=[]; moderators=[]; transforms=[]; scope='all rows in the dataset'"
+   }
+  },
+  {
+   "task": 16,
+   "arm": "e1",
+   "kind": "no_design_recorded",
+   "earlier": {
+    "attempt": 2,
+    "iteration": 0,
+    "outcome": "rejected",
+    "fingerprint": "467a5ad925c9",
+    "variables": [
+     "bammspeciation",
+     "ogpevol",
+     "rmlevol"
+    ],
+    "design": "ols; controls=['bio1', 'bio12', 'sgr']; moderators=['area']; transforms=['log(area)', 'log(BAMM_speciation)']; scope='all rows in the dataset'"
+   },
+   "later": {
+    "attempt": 33,
+    "iteration": 2,
+    "outcome": "supported",
+    "fingerprint": "none",
+    "variables": [
+     "bammspeciation",
+     "ogpevol",
+     "rmlevol"
+    ],
+    "design": "-; controls=[]; moderators=[]; transforms=[]; scope='-'"
+   }
+  },
+  {
+   "task": 16,
+   "arm": "e1",
+   "kind": "no_design_recorded",
+   "earlier": {
+    "attempt": 2,
+    "iteration": 0,
+    "outcome": "rejected",
+    "fingerprint": "467a5ad925c9",
+    "variables": [
+     "bammspeciation",
+     "ogpevol",
+     "rmlevol"
+    ],
+    "design": "ols; controls=['bio1', 'bio12', 'sgr']; moderators=['area']; transforms=['log(area)', 'log(BAMM_speciation)']; scope='all rows in the dataset'"
+   },
+   "later": {
+    "attempt": 47,
+    "iteration": 3,
+    "outcome": "supported",
+    "fingerprint": "none",
+    "variables": [
+     "bammspeciation",
+     "ogpevol",
+     "rmlevol"
+    ],
+    "design": "-; controls=[]; moderators=[]; transforms=[]; scope='-'"
+   }
+  },
+  {
+   "task": 16,
+   "arm": "e1",
+   "kind": "one_element_off",
+   "earlier": {
+    "attempt": 9,
+    "iteration": 0,
+    "outcome": "rejected",
+    "fingerprint": "92936e604e39",
+    "variables": [
+     "bammspeciation",
+     "ogpevol",
+     "rmlevol"
+    ],
+    "design": "ols; controls=['bio1', 'bio12', 'area', 'Elevation']; moderators=['RES_evol']; transforms=[]; scope='all rows in the dataset'"
+   },
+   "later": {
+    "attempt": 15,
+    "iteration": 1,
+    "outcome": "supported",
+    "fingerprint": "f73913daf33f",
+    "variables": [
+     "bammspeciation",
+     "ogpevol",
+     "rmlevol"
+    ],
+    "design": "ols; controls=['bio1', 'bio12', 'area', 'Elevation']; moderators=[]; transforms=[]; scope='all species in the dataset'"
+   }
+  },
+  {
+   "task": 16,
+   "arm": "e1",
+   "kind": "one_element_off",
+   "earlier": {
+    "attempt": 9,
+    "iteration": 0,
+    "outcome": "rejected",
+    "fingerprint": "92936e604e39",
+    "variables": [
+     "bammspeciation",
+     "ogpevol",
+     "rmlevol"
+    ],
+    "design": "ols; controls=['bio1', 'bio12', 'area', 'Elevation']; moderators=['RES_evol']; transforms=[]; scope='all rows in the dataset'"
+   },
+   "later": {
+    "attempt": 19,
+    "iteration": 1,
+    "outcome": "supported",
+    "fingerprint": "f73913daf33f",
+    "variables": [
+     "bammspeciation",
+     "ogpevol",
+     "rmlevol"
+    ],
+    "design": "ols; controls=['bio1', 'bio12', 'area', 'Elevation']; moderators=[]; transforms=[]; scope='all species in the dataset'"
+   }
+  }
+ ]
+}

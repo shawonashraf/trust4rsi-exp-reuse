@@ -1,0 +1,395 @@
+{
+ "nf_lessons": {
+  "sf_tf01_goal_imbalance": 13,
+  "sf_tf02_player_rep_norm": 15,
+  "sf_tf03_correlation_causation": 15,
+  "sf_tf04_balance_torque_cue": 14,
+  "sf_tf04_balance_torque_leakfree": 15,
+  "sf_tf05_credit_card_leakage": 14,
+  "sf_tf06_metric_select_cue": 15,
+  "sf_tf06_metric_select_leakfree": 15
+ },
+ "n_reinforcing": 10,
+ "n_fix": 0,
+ "exposure": [
+  {
+   "arm": "C1-nf",
+   "reinf_seen": 10,
+   "reinf_shown": 10,
+   "fix_shown": 0
+  },
+  {
+   "arm": "E-nf",
+   "reinf_seen": 10,
+   "reinf_shown": 10,
+   "fix_shown": 0
+  },
+  {
+   "arm": "G3-nf",
+   "reinf_seen": 11,
+   "reinf_shown": 10,
+   "fix_shown": 0
+  },
+  {
+   "arm": "G3d-nf",
+   "reinf_seen": 10,
+   "reinf_shown": 10,
+   "fix_shown": 0
+  }
+ ],
+ "exposure_by_task": [
+  {
+   "arm": "C1-nf",
+   "task": "sf_tf01",
+   "reinf_seen": 0,
+   "reinf_shown": 0
+  },
+  {
+   "arm": "C1-nf",
+   "task": "sf_tf02",
+   "reinf_seen": 5,
+   "reinf_shown": 5
+  },
+  {
+   "arm": "C1-nf",
+   "task": "sf_tf03",
+   "reinf_seen": 5,
+   "reinf_shown": 5
+  },
+  {
+   "arm": "C1-nf",
+   "task": "sf_tf05",
+   "reinf_seen": 0,
+   "reinf_shown": 0
+  },
+  {
+   "arm": "E-nf",
+   "task": "sf_tf01",
+   "reinf_seen": 0,
+   "reinf_shown": 0
+  },
+  {
+   "arm": "E-nf",
+   "task": "sf_tf02",
+   "reinf_seen": 5,
+   "reinf_shown": 5
+  },
+  {
+   "arm": "E-nf",
+   "task": "sf_tf03",
+   "reinf_seen": 5,
+   "reinf_shown": 5
+  },
+  {
+   "arm": "E-nf",
+   "task": "sf_tf05",
+   "reinf_seen": 0,
+   "reinf_shown": 0
+  },
+  {
+   "arm": "G3-nf",
+   "task": "sf_tf01",
+   "reinf_seen": 1,
+   "reinf_shown": 0
+  },
+  {
+   "arm": "G3-nf",
+   "task": "sf_tf02",
+   "reinf_seen": 5,
+   "reinf_shown": 5
+  },
+  {
+   "arm": "G3-nf",
+   "task": "sf_tf03",
+   "reinf_seen": 5,
+   "reinf_shown": 5
+  },
+  {
+   "arm": "G3-nf",
+   "task": "sf_tf05",
+   "reinf_seen": 0,
+   "reinf_shown": 0
+  },
+  {
+   "arm": "G3d-nf",
+   "task": "sf_tf01",
+   "reinf_seen": 0,
+   "reinf_shown": 0
+  },
+  {
+   "arm": "G3d-nf",
+   "task": "sf_tf02",
+   "reinf_seen": 5,
+   "reinf_shown": 5
+  },
+  {
+   "arm": "G3d-nf",
+   "task": "sf_tf03",
+   "reinf_seen": 5,
+   "reinf_shown": 5
+  },
+  {
+   "arm": "G3d-nf",
+   "task": "sf_tf05",
+   "reinf_seen": 0,
+   "reinf_shown": 0
+  }
+ ],
+ "reinf_judgements": [
+  {
+   "arm": "G3-nf",
+   "useful": false,
+   "n": 19
+  },
+  {
+   "arm": "G3-nf",
+   "useful": true,
+   "n": 15
+  },
+  {
+   "arm": "G3d-nf",
+   "useful": false,
+   "n": 15
+  },
+  {
+   "arm": "G3d-nf",
+   "useful": true,
+   "n": 15
+  }
+ ],
+ "runs": {
+  "P12_A0": 30,
+  "P12_C1": 30,
+  "P13_E": 30,
+  "P13_G3": 30,
+  "P16_G3d": 30,
+  "P17_C1nf": 30,
+  "P17_Enf": 30,
+  "P17_G3nf": 30,
+  "P17_G3dnf": 30
+ },
+ "stops": {
+  "P12_A0": {
+   "final_answer": 30
+  },
+  "P12_C1": {
+   "final_answer": 29,
+   "max_steps": 1
+  },
+  "P13_E": {
+   "final_answer": 29,
+   "max_steps": 1
+  },
+  "P13_G3": {
+   "final_answer": 29,
+   "max_steps": 1
+  },
+  "P16_G3d": {
+   "final_answer": 28,
+   "max_steps": 2
+  },
+  "P17_C1nf": {
+   "final_answer": 30
+  },
+  "P17_Enf": {
+   "final_answer": 30
+  },
+  "P17_G3nf": {
+   "final_answer": 30
+  },
+  "P17_G3dnf": {
+   "final_answer": 30
+  }
+ },
+ "targeted": [
+  {
+   "task": "sf_tf01",
+   "check": "checks_class_distribution",
+   "A0 none": 0,
+   "C1 own": 5,
+   "E emb": 5,
+   "G3": 4,
+   "G3d": 2,
+   "C1-nf": 0,
+   "E-nf": 1,
+   "G3-nf": 0,
+   "G3d-nf": 0
+  },
+  {
+   "task": "sf_tf01",
+   "check": "uses_class_weight",
+   "A0 none": 0,
+   "C1 own": 5,
+   "E emb": 5,
+   "G3": 5,
+   "G3d": 5,
+   "C1-nf": 0,
+   "E-nf": 0,
+   "G3-nf": 0,
+   "G3d-nf": 0
+  },
+  {
+   "task": "sf_tf01",
+   "check": "uses_resampling",
+   "A0 none": 0,
+   "C1 own": 0,
+   "E emb": 0,
+   "G3": 0,
+   "G3d": 0,
+   "C1-nf": 0,
+   "E-nf": 0,
+   "G3-nf": 0,
+   "G3d-nf": 0
+  },
+  {
+   "task": "sf_tf01",
+   "check": "uses_stratified_split",
+   "A0 none": 3,
+   "C1 own": 5,
+   "E emb": 5,
+   "G3": 5,
+   "G3d": 5,
+   "C1-nf": 1,
+   "E-nf": 0,
+   "G3-nf": 1,
+   "G3d-nf": 0
+  },
+  {
+   "task": "sf_tf02",
+   "check": "handles_unit_suffix_in_height",
+   "A0 none": 0,
+   "C1 own": 4,
+   "E emb": 4,
+   "G3": 4,
+   "G3d": 3,
+   "C1-nf": 0,
+   "E-nf": 0,
+   "G3-nf": 0,
+   "G3d-nf": 0
+  },
+  {
+   "task": "sf_tf03",
+   "check": "column_x_included",
+   "A0 none": 0,
+   "C1 own": 5,
+   "E emb": 0,
+   "G3": 1,
+   "G3d": 5,
+   "C1-nf": 0,
+   "E-nf": 0,
+   "G3-nf": 0,
+   "G3d-nf": 0
+  },
+  {
+   "task": "sf_tf03",
+   "check": "applies_causal_reasoning",
+   "A0 none": 0,
+   "C1 own": 5,
+   "E emb": 0,
+   "G3": 1,
+   "G3d": 4,
+   "C1-nf": 0,
+   "E-nf": 0,
+   "G3-nf": 0,
+   "G3d-nf": 0
+  },
+  {
+   "task": "sf_tf05",
+   "check": "used_leakage_features",
+   "A0 none": 0,
+   "C1 own": 1,
+   "E emb": 0,
+   "G3": 0,
+   "G3d": 0,
+   "C1-nf": 0,
+   "E-nf": 0,
+   "G3-nf": 0,
+   "G3d-nf": 0
+  }
+ ],
+ "targeted_pooled": {
+  "A0 none": 0.075,
+  "C1 own": 0.75,
+  "E emb": 0.475,
+  "G3": 0.5,
+  "G3d": 0.6,
+  "C1-nf": 0.025,
+  "E-nf": 0.025,
+  "G3-nf": 0.025,
+  "G3d-nf": 0.0
+ },
+ "fisher_p": {
+  "C1 vs C1-nf": 0.0,
+  "E vs E-nf": 0.0,
+  "G3 vs G3-nf": 0.0,
+  "A0 vs C1-nf": 0.6153
+ },
+ "score_mean": {
+  "sf_tf01_goal_imbalance": {
+   "A0 none": 0.7603,
+   "C1 own": 0.7765,
+   "C1-nf": 0.786,
+   "E emb": 0.7713,
+   "E-nf": 0.7243,
+   "G3": 0.7715,
+   "G3-nf": 0.7788,
+   "G3d": 0.7658,
+   "G3d-nf": 0.7836
+  },
+  "sf_tf02_player_rep_norm": {
+   "A0 none": 4664200.9856,
+   "C1 own": 4650909.0638,
+   "C1-nf": 4664200.9856,
+   "E emb": 4650909.0638,
+   "E-nf": 4664200.9856,
+   "G3": 4650909.0638,
+   "G3-nf": 4664200.9856,
+   "G3d": 4655339.7044,
+   "G3d-nf": 4664200.9856
+  },
+  "sf_tf03_correlation_causation": {
+   "A0 none": 27694618.5088,
+   "C1 own": 4755266.2227,
+   "C1-nf": 27694584.7839,
+   "E emb": 27694635.9361,
+   "E-nf": 27694583.0382,
+   "G3": 23103142.955,
+   "G3-nf": 27694574.6108,
+   "G3d": 4759155.3407,
+   "G3d-nf": 27694574.1292
+  },
+  "sf_tf04_balance_torque_leakfree": {
+   "A0 none": 1.0,
+   "C1 own": 1.0,
+   "C1-nf": 1.0,
+   "E emb": 1.0,
+   "E-nf": 1.0,
+   "G3": 1.0,
+   "G3-nf": 1.0,
+   "G3d": 1.0,
+   "G3d-nf": 1.0
+  },
+  "sf_tf05_credit_card_leakage": {
+   "A0 none": 0.9659,
+   "C1 own": 0.822,
+   "C1-nf": 0.9659,
+   "E emb": 0.9144,
+   "E-nf": 0.9659,
+   "G3": 0.9659,
+   "G3-nf": 0.9659,
+   "G3d": 0.9659,
+   "G3d-nf": 0.9659
+  },
+  "sf_tf06_metric_select_leakfree": {
+   "A0 none": 0.9798,
+   "C1 own": 0.9806,
+   "C1-nf": 0.9797,
+   "E emb": 0.9796,
+   "E-nf": 0.9803,
+   "G3": 0.9803,
+   "G3-nf": 0.9799,
+   "G3d": 0.9777,
+   "G3d-nf": 0.978
+  }
+ }
+}

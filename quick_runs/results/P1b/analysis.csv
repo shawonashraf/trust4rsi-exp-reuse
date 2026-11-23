@@ -1,0 +1,27 @@
+task,type,gold,answers,n_correct,no_answer,answer_consistency,modal,modal_n,all_wrong_same,all_wrong
+dsa_00000001_question17,integer,1661626,"[472042.0, 1661626.0, 1661626.0, 1661626.0, 1661626.0]",4,0,0.6,1661626.0,4,False,False
+dsa_00000001_question6,letter,D,"['D', 'D', 'D', 'D', 'D']",5,0,1.0,D,5,False,False
+dsa_00000005_question20,letter,B,"['D', 'B', 'B', 'B', 'B']",4,0,0.6,B,4,False,False
+dsa_00000005_question28,integer,178052,"[178052.0, 178052.0, 178052.0, 178052.0, 178052.0]",5,0,1.0,178052.0,5,False,False
+dsa_00000008_question26,letter,C,"['C', 'C', 'C', 'C', 'C']",5,0,1.0,C,5,False,False
+dsa_00000010_question1,letter,C,"['C', 'C', 'C', 'C', 'C']",5,0,1.0,C,5,False,False
+dsa_00000010_question4,integer,78,"[78.0, 78.0, 78.0, 78.0, 78.0]",5,0,1.0,78.0,5,False,False
+dsa_00000011_question1,letter,B,"['B', 'D', 'B', 'B', 'B']",4,0,0.6,B,4,False,False
+dsa_00000016_question1,letter,D,"['D', 'D', 'D', 'D', 'D']",5,0,1.0,D,5,False,False
+dsa_00000017_question29,letter,E,"['C', 'E', 'E', 'E', 'C']",3,0,0.4,E,3,False,False
+dsa_00000018_question16,letter,H,"['H', 'H', 'H', 'H', 'H']",5,0,1.0,H,5,False,False
+dsa_00000019_question14,integer,1345868,"[1345868.0, 1345868.0, 1345868.0, 1345868.0, 1312786.0]",4,0,0.6,1345868.0,4,False,False
+dsa_00000019_question6,letter,E,"['E', 'E', 'E', 'E', 'E']",5,0,1.0,E,5,False,False
+dsa_00000020_question28,letter,E,"['E', 'E', 'E', 'E', 'E']",5,0,1.0,E,5,False,False
+dsa_00000020_question35,integer,14978914492,"[None, None, None, None, None]",0,5,0.0,,0,False,True
+dsa_00000022_question31,letter,B,"['B', 'B', 'B', 'B', 'B']",5,0,1.0,B,5,False,False
+dsa_00000022_question38,integer,1175387,"[1175387.0, 1175387.0, 1175387.0, 1175387.0, 1175387.0]",5,0,1.0,1175387.0,5,False,False
+dsa_00000025_question32,letter,D,"['D', 'D', 'D', 'D', 'D']",5,0,1.0,D,5,False,False
+dsa_00000027_question1,letter,B,"['B', 'B', 'B', 'B', 'B']",5,0,1.0,B,5,False,False
+dsa_00000028_question1,letter,B,"['B', 'B', 'B', 'B', 'B']",5,0,1.0,B,5,False,False
+dsa_00000029_question1,letter,A,"[None, None, None, 'A', 'A']",2,3,0.1,A,2,False,False
+dsa_00000030_question1,letter,D,"['D', 'D', 'D', 'D', 'D']",5,0,1.0,D,5,False,False
+dsa_00000032_question1,letter,B,"['B', 'B', 'B', 'B', 'B']",5,0,1.0,B,5,False,False
+dsa_00000034_question1,letter,B,"['B', 'B', 'B', 'B', 'B']",5,0,1.0,B,5,False,False
+dsa_00000038_question1,letter,D,"['D', 'D', 'D', 'D', 'D']",5,0,1.0,D,5,False,False
+dsa_00000043_question1,letter,B,"['C', 'C', 'A', 'A', 'B']",1,0,0.2,C,2,False,False

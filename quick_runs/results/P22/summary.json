@@ -1,0 +1,265 @@
+{
+ "heavy_placebo": [
+  {
+   "task": "sf_tf03",
+   "G3 (none cut)": 1,
+   "G3s feature cut": 15,
+   "G3s-pl light": 1,
+   "G3s-pl2 heavy": 0
+  },
+  {
+   "task": "sf_tf05",
+   "G3 (none cut)": 0,
+   "G3s feature cut": 14,
+   "G3s-pl light": 4,
+   "G3s-pl2 heavy": 2
+  }
+ ],
+ "open_profile": [
+  {
+   "task": "sf_tf03",
+   "arm": "G3n open",
+   "fix": 0,
+   "keepx": 5
+  },
+  {
+   "task": "sf_tf03",
+   "arm": "G3d profile",
+   "fix": 5,
+   "keepx": 0
+  },
+  {
+   "task": "sf_tf03",
+   "arm": "G3o-d open+prof",
+   "fix": 5,
+   "keepx": 0
+  },
+  {
+   "task": "sf_tf05",
+   "arm": "G3n open",
+   "fix": 2,
+   "keepx": 0
+  },
+  {
+   "task": "sf_tf05",
+   "arm": "G3d profile",
+   "fix": 0,
+   "keepx": 0
+  },
+  {
+   "task": "sf_tf05",
+   "arm": "G3o-d open+prof",
+   "fix": 0,
+   "keepx": 0
+  }
+ ],
+ "reasons_instr": [
+  {
+   "arm": "G3o-d",
+   "sum": 15,
+   "count": 32
+  },
+  {
+   "arm": "G3s-pl2",
+   "sum": 35,
+   "count": 47
+  }
+ ],
+ "runs": {
+  "P12_A0": 30,
+  "P12_C1": 30,
+  "P13_E": 30,
+  "P13_G3": 30,
+  "P14_G3n": 30,
+  "P16_G3d": 30,
+  "P22_G3od": 30
+ },
+ "stops": {
+  "P12_A0": {
+   "final_answer": 30
+  },
+  "P12_C1": {
+   "final_answer": 29,
+   "max_steps": 1
+  },
+  "P13_E": {
+   "final_answer": 29,
+   "max_steps": 1
+  },
+  "P13_G3": {
+   "final_answer": 29,
+   "max_steps": 1
+  },
+  "P14_G3n": {
+   "final_answer": 30
+  },
+  "P16_G3d": {
+   "final_answer": 28,
+   "max_steps": 2
+  },
+  "P22_G3od": {
+   "final_answer": 29,
+   "max_steps": 1
+  }
+ },
+ "targeted": [
+  {
+   "task": "sf_tf01",
+   "check": "checks_class_distribution",
+   "A0 none": 0,
+   "C1 own": 5,
+   "E emb": 5,
+   "G3": 4,
+   "G3n open": 3,
+   "G3d profile": 2,
+   "G3o-d open+prof": 4
+  },
+  {
+   "task": "sf_tf01",
+   "check": "uses_class_weight",
+   "A0 none": 0,
+   "C1 own": 5,
+   "E emb": 5,
+   "G3": 5,
+   "G3n open": 5,
+   "G3d profile": 5,
+   "G3o-d open+prof": 5
+  },
+  {
+   "task": "sf_tf01",
+   "check": "uses_resampling",
+   "A0 none": 0,
+   "C1 own": 0,
+   "E emb": 0,
+   "G3": 0,
+   "G3n open": 0,
+   "G3d profile": 0,
+   "G3o-d open+prof": 0
+  },
+  {
+   "task": "sf_tf01",
+   "check": "uses_stratified_split",
+   "A0 none": 3,
+   "C1 own": 5,
+   "E emb": 5,
+   "G3": 5,
+   "G3n open": 5,
+   "G3d profile": 5,
+   "G3o-d open+prof": 5
+  },
+  {
+   "task": "sf_tf02",
+   "check": "handles_unit_suffix_in_height",
+   "A0 none": 0,
+   "C1 own": 4,
+   "E emb": 4,
+   "G3": 4,
+   "G3n open": 5,
+   "G3d profile": 3,
+   "G3o-d open+prof": 4
+  },
+  {
+   "task": "sf_tf03",
+   "check": "column_x_included",
+   "A0 none": 0,
+   "C1 own": 5,
+   "E emb": 0,
+   "G3": 1,
+   "G3n open": 0,
+   "G3d profile": 5,
+   "G3o-d open+prof": 5
+  },
+  {
+   "task": "sf_tf03",
+   "check": "applies_causal_reasoning",
+   "A0 none": 0,
+   "C1 own": 5,
+   "E emb": 0,
+   "G3": 1,
+   "G3n open": 0,
+   "G3d profile": 4,
+   "G3o-d open+prof": 4
+  },
+  {
+   "task": "sf_tf05",
+   "check": "used_leakage_features",
+   "A0 none": 0,
+   "C1 own": 1,
+   "E emb": 0,
+   "G3": 0,
+   "G3n open": 0,
+   "G3d profile": 0,
+   "G3o-d open+prof": 0
+  }
+ ],
+ "targeted_pooled": {
+  "A0 none": 0.075,
+  "C1 own": 0.75,
+  "E emb": 0.475,
+  "G3": 0.5,
+  "G3n open": 0.45,
+  "G3d profile": 0.6,
+  "G3o-d open+prof": 0.675
+ },
+ "fisher_p": {
+  "TF03 fix G3s(15) vs G3s-pl2(5)": 0.0001,
+  "G3o-d vs G3d pooled": 0.6422,
+  "G3o-d vs G3n pooled": 0.0707
+ },
+ "score_mean": {
+  "sf_tf01_goal_imbalance": {
+   "A0 none": 0.7603,
+   "C1 own": 0.7765,
+   "E emb": 0.7713,
+   "G3": 0.7715,
+   "G3d profile": 0.7658,
+   "G3n open": 0.7706,
+   "G3o-d open+prof": 0.7708
+  },
+  "sf_tf02_player_rep_norm": {
+   "A0 none": 4664200.9856,
+   "C1 own": 4650909.0638,
+   "E emb": 4650909.0638,
+   "G3": 4650909.0638,
+   "G3d profile": 4655339.7044,
+   "G3n open": 4653567.4481,
+   "G3o-d open+prof": 4650909.0638
+  },
+  "sf_tf03_correlation_causation": {
+   "A0 none": 27694618.5088,
+   "C1 own": 4755266.2227,
+   "E emb": 27694635.9361,
+   "G3": 23103142.955,
+   "G3d profile": 4759155.3407,
+   "G3n open": 27694584.7839,
+   "G3o-d open+prof": 4769608.9539
+  },
+  "sf_tf04_balance_torque_leakfree": {
+   "A0 none": 1.0,
+   "C1 own": 1.0,
+   "E emb": 1.0,
+   "G3": 1.0,
+   "G3d profile": 1.0,
+   "G3n open": 1.0,
+   "G3o-d open+prof": 1.0
+  },
+  "sf_tf05_credit_card_leakage": {
+   "A0 none": 0.9659,
+   "C1 own": 0.822,
+   "E emb": 0.9144,
+   "G3": 0.9659,
+   "G3d profile": 0.9659,
+   "G3n open": 0.928,
+   "G3o-d open+prof": 0.9659
+  },
+  "sf_tf06_metric_select_leakfree": {
+   "A0 none": 0.9798,
+   "C1 own": 0.9806,
+   "E emb": 0.9796,
+   "G3": 0.9803,
+   "G3d profile": 0.9777,
+   "G3n open": 0.9792,
+   "G3o-d open+prof": 0.9797
+  }
+ }
+}

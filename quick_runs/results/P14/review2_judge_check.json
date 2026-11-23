@@ -1,0 +1,61 @@
+{
+ "n_check_runs": 550,
+ "n_both": 490,
+ "agreement": 0.9959,
+ "by_check": [
+  {
+   "check": "column_x_included",
+   "sum": 93,
+   "count": 94,
+   "mean": 0.989
+  },
+  {
+   "check": "handles_unit_suffix_in_height",
+   "sum": 84,
+   "count": 85,
+   "mean": 0.988
+  },
+  {
+   "check": "used_leakage_features",
+   "sum": 91,
+   "count": 91,
+   "mean": 1.0
+  },
+  {
+   "check": "uses_class_weight",
+   "sum": 110,
+   "count": 110,
+   "mean": 1.0
+  },
+  {
+   "check": "uses_stratified_split",
+   "sum": 110,
+   "count": 110,
+   "mean": 1.0
+  }
+ ],
+ "probes": [
+  "P12_A0",
+  "P12_C1",
+  "P12_C2",
+  "P12_C3",
+  "P12_M",
+  "P13_E",
+  "P13_Ep",
+  "P13_G0",
+  "P13_G1",
+  "P13_G3",
+  "P13_G3p",
+  "P14_G3n",
+  "P14_G3np",
+  "P15_Q3",
+  "P15_Q3p",
+  "P16_Epc",
+  "P16_G3d",
+  "P16_G3dp",
+  "P16_G3dpc",
+  "P16_G3pc",
+  "P16_G3t",
+  "P16_G3tp"
+ ]
+}

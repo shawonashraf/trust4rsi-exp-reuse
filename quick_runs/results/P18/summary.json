@@ -1,0 +1,1264 @@
+{
+ "stage1_fix": [
+  {
+   "arm": "G3",
+   "sf_tf05 fix seen": 5,
+   "sf_tf05 fix shown": 0,
+   "sf_tf05 n": 5,
+   "sf_tf03 fix seen": 5,
+   "sf_tf03 fix shown": 1,
+   "sf_tf03 n": 5,
+   "tf03 contra shown": 4
+  },
+  {
+   "arm": "G3t",
+   "sf_tf05 fix seen": 5,
+   "sf_tf05 fix shown": 5,
+   "sf_tf05 n": 5,
+   "sf_tf03 fix seen": 5,
+   "sf_tf03 fix shown": 5,
+   "sf_tf03 n": 5,
+   "tf03 contra shown": 5
+  },
+  {
+   "arm": "G3d",
+   "sf_tf05 fix seen": 5,
+   "sf_tf05 fix shown": 0,
+   "sf_tf05 n": 5,
+   "sf_tf03 fix seen": 5,
+   "sf_tf03 fix shown": 5,
+   "sf_tf03 n": 5,
+   "tf03 contra shown": 0
+  },
+  {
+   "arm": "R3",
+   "sf_tf05 fix seen": 5,
+   "sf_tf05 fix shown": 5,
+   "sf_tf05 n": 5,
+   "sf_tf03 fix seen": 4,
+   "sf_tf03 fix shown": 4,
+   "sf_tf03 n": 5,
+   "tf03 contra shown": 2
+  },
+  {
+   "arm": "G3s",
+   "sf_tf05 fix seen": 5,
+   "sf_tf05 fix shown": 5,
+   "sf_tf05 n": 5,
+   "sf_tf03 fix seen": 5,
+   "sf_tf03 fix shown": 5,
+   "sf_tf03 n": 5,
+   "tf03 contra shown": 3
+  },
+  {
+   "arm": "G3s-pl",
+   "sf_tf05 fix seen": 5,
+   "sf_tf05 fix shown": 2,
+   "sf_tf05 n": 5,
+   "sf_tf03 fix seen": 5,
+   "sf_tf03 fix shown": 0,
+   "sf_tf03 n": 5,
+   "tf03 contra shown": 5
+  },
+  {
+   "arm": "G3d-tr",
+   "sf_tf05 fix seen": 5,
+   "sf_tf05 fix shown": 0,
+   "sf_tf05 n": 5,
+   "sf_tf03 fix seen": 5,
+   "sf_tf03 fix shown": 0,
+   "sf_tf03 n": 5,
+   "tf03 contra shown": 5
+  },
+  {
+   "arm": "G3h",
+   "sf_tf05 fix seen": 5,
+   "sf_tf05 fix shown": 0,
+   "sf_tf05 n": 5,
+   "sf_tf03 fix seen": 5,
+   "sf_tf03 fix shown": 5,
+   "sf_tf03 n": 5,
+   "tf03 contra shown": 0
+  },
+  {
+   "arm": "E",
+   "sf_tf05 fix seen": 5,
+   "sf_tf05 fix shown": 5,
+   "sf_tf05 n": 5,
+   "sf_tf03 fix seen": 5,
+   "sf_tf03 fix shown": 5,
+   "sf_tf03 n": 5,
+   "tf03 contra shown": 5
+  },
+  {
+   "arm": "X3",
+   "sf_tf05 fix seen": 5,
+   "sf_tf05 fix shown": 5,
+   "sf_tf05 n": 5,
+   "sf_tf03 fix seen": 5,
+   "sf_tf03 fix shown": 5,
+   "sf_tf03 n": 5,
+   "tf03 contra shown": 0
+  }
+ ],
+ "stage1_wrong": [
+  {
+   "arm": "E-p",
+   "runs": 20,
+   "wrong seen": 10,
+   "wrong accepted": 10,
+   "wrong shown": 10,
+   "sf_tf01 shown": 5,
+   "sf_tf02 shown": 0,
+   "sf_tf03 shown": 0,
+   "sf_tf05 shown": 5
+  },
+  {
+   "arm": "G3-p",
+   "runs": 20,
+   "wrong seen": 20,
+   "wrong accepted": 5,
+   "wrong shown": 5,
+   "sf_tf01 shown": 4,
+   "sf_tf02 shown": 0,
+   "sf_tf03 shown": 0,
+   "sf_tf05 shown": 1
+  },
+  {
+   "arm": "R3-p",
+   "runs": 20,
+   "wrong seen": 10,
+   "wrong accepted": 10,
+   "wrong shown": 10,
+   "sf_tf01 shown": 0,
+   "sf_tf02 shown": 2,
+   "sf_tf03 shown": 3,
+   "sf_tf05 shown": 5
+  },
+  {
+   "arm": "E-pc",
+   "runs": 20,
+   "wrong seen": 20,
+   "wrong accepted": 20,
+   "wrong shown": 20,
+   "sf_tf01 shown": 5,
+   "sf_tf02 shown": 5,
+   "sf_tf03 shown": 5,
+   "sf_tf05 shown": 5
+  },
+  {
+   "arm": "G3-pc",
+   "runs": 20,
+   "wrong seen": 20,
+   "wrong accepted": 20,
+   "wrong shown": 20,
+   "sf_tf01 shown": 5,
+   "sf_tf02 shown": 5,
+   "sf_tf03 shown": 5,
+   "sf_tf05 shown": 5
+  },
+  {
+   "arm": "G3d-pc",
+   "runs": 20,
+   "wrong seen": 20,
+   "wrong accepted": 8,
+   "wrong shown": 8,
+   "sf_tf01 shown": 0,
+   "sf_tf02 shown": 0,
+   "sf_tf03 shown": 3,
+   "sf_tf05 shown": 5
+  },
+  {
+   "arm": "G3d-tr-pc",
+   "runs": 20,
+   "wrong seen": 20,
+   "wrong accepted": 15,
+   "wrong shown": 15,
+   "sf_tf01 shown": 0,
+   "sf_tf02 shown": 5,
+   "sf_tf03 shown": 5,
+   "sf_tf05 shown": 5
+  },
+  {
+   "arm": "G3h-pc",
+   "runs": 20,
+   "wrong seen": 20,
+   "wrong accepted": 5,
+   "wrong shown": 5,
+   "sf_tf01 shown": 5,
+   "sf_tf02 shown": 0,
+   "sf_tf03 shown": 0,
+   "sf_tf05 shown": 0
+  },
+  {
+   "arm": "X3-pc",
+   "runs": 20,
+   "wrong seen": 15,
+   "wrong accepted": 15,
+   "wrong shown": 15,
+   "sf_tf01 shown": 5,
+   "sf_tf02 shown": 5,
+   "sf_tf03 shown": 5,
+   "sf_tf05 shown": 0
+  }
+ ],
+ "reasons_rejected_instr": [
+  {
+   "arm": "G3d-tr",
+   "kind": "contra",
+   "sum": 0,
+   "count": 1
+  },
+  {
+   "arm": "G3d-tr",
+   "kind": "fix",
+   "sum": 40,
+   "count": 50
+  },
+  {
+   "arm": "G3d-tr-pc",
+   "kind": "contra",
+   "sum": 1,
+   "count": 3
+  },
+  {
+   "arm": "G3d-tr-pc",
+   "kind": "fix",
+   "sum": 15,
+   "count": 29
+  },
+  {
+   "arm": "G3d-tr-pc",
+   "kind": "wrong",
+   "sum": 3,
+   "count": 32
+  },
+  {
+   "arm": "G3h",
+   "kind": "contra",
+   "sum": 6,
+   "count": 10
+  },
+  {
+   "arm": "G3h",
+   "kind": "fix",
+   "sum": 0,
+   "count": 38
+  },
+  {
+   "arm": "G3h-pc",
+   "kind": "contra",
+   "sum": 5,
+   "count": 9
+  },
+  {
+   "arm": "G3h-pc",
+   "kind": "fix",
+   "sum": 0,
+   "count": 20
+  },
+  {
+   "arm": "G3h-pc",
+   "kind": "wrong",
+   "sum": 39,
+   "count": 48
+  },
+  {
+   "arm": "G3s",
+   "kind": "contra",
+   "sum": 1,
+   "count": 7
+  },
+  {
+   "arm": "G3s",
+   "kind": "fix",
+   "sum": 3,
+   "count": 36
+  },
+  {
+   "arm": "G3s-pl",
+   "kind": "contra",
+   "sum": 0,
+   "count": 1
+  },
+  {
+   "arm": "G3s-pl",
+   "kind": "fix",
+   "sum": 38,
+   "count": 48
+  }
+ ],
+ "judgements": [
+  {
+   "arm": "G3d-tr",
+   "kind": "contra",
+   "useful": false,
+   "n": 1
+  },
+  {
+   "arm": "G3d-tr",
+   "kind": "contra",
+   "useful": true,
+   "n": 9
+  },
+  {
+   "arm": "G3d-tr",
+   "kind": "fix",
+   "useful": false,
+   "n": 50
+  },
+  {
+   "arm": "G3d-tr-pc",
+   "kind": "contra",
+   "useful": false,
+   "n": 3
+  },
+  {
+   "arm": "G3d-tr-pc",
+   "kind": "contra",
+   "useful": true,
+   "n": 6
+  },
+  {
+   "arm": "G3d-tr-pc",
+   "kind": "fix",
+   "useful": false,
+   "n": 29
+  },
+  {
+   "arm": "G3d-tr-pc",
+   "kind": "wrong",
+   "useful": false,
+   "n": 32
+  },
+  {
+   "arm": "G3d-tr-pc",
+   "kind": "wrong",
+   "useful": true,
+   "n": 25
+  },
+  {
+   "arm": "G3h",
+   "kind": "contra",
+   "useful": false,
+   "n": 10
+  },
+  {
+   "arm": "G3h",
+   "kind": "fix",
+   "useful": false,
+   "n": 38
+  },
+  {
+   "arm": "G3h",
+   "kind": "fix",
+   "useful": true,
+   "n": 12
+  },
+  {
+   "arm": "G3h-pc",
+   "kind": "contra",
+   "useful": false,
+   "n": 9
+  },
+  {
+   "arm": "G3h-pc",
+   "kind": "fix",
+   "useful": false,
+   "n": 20
+  },
+  {
+   "arm": "G3h-pc",
+   "kind": "fix",
+   "useful": true,
+   "n": 9
+  },
+  {
+   "arm": "G3h-pc",
+   "kind": "wrong",
+   "useful": false,
+   "n": 48
+  },
+  {
+   "arm": "G3h-pc",
+   "kind": "wrong",
+   "useful": true,
+   "n": 10
+  },
+  {
+   "arm": "G3s",
+   "kind": "contra",
+   "useful": false,
+   "n": 7
+  },
+  {
+   "arm": "G3s",
+   "kind": "contra",
+   "useful": true,
+   "n": 3
+  },
+  {
+   "arm": "G3s",
+   "kind": "fix",
+   "useful": false,
+   "n": 36
+  },
+  {
+   "arm": "G3s",
+   "kind": "fix",
+   "useful": true,
+   "n": 13
+  },
+  {
+   "arm": "G3s-pl",
+   "kind": "contra",
+   "useful": false,
+   "n": 1
+  },
+  {
+   "arm": "G3s-pl",
+   "kind": "contra",
+   "useful": true,
+   "n": 9
+  },
+  {
+   "arm": "G3s-pl",
+   "kind": "fix",
+   "useful": false,
+   "n": 48
+  },
+  {
+   "arm": "G3s-pl",
+   "kind": "fix",
+   "useful": true,
+   "n": 2
+  }
+ ],
+ "runs": {
+  "P12_A0": 30,
+  "P12_C1": 30,
+  "P13_E": 30,
+  "P13_G3": 30,
+  "P16_G3t": 30,
+  "P16_G3d": 30,
+  "P18_R3": 30,
+  "P18_G3s": 10,
+  "P18_G3spl": 10,
+  "P18_G3dtr": 30,
+  "P18_X3": 30,
+  "P13_Ep": 20,
+  "P13_G3p": 20,
+  "P18_R3p": 20,
+  "P16_Epc": 20,
+  "P16_G3pc": 20,
+  "P16_G3dpc": 20,
+  "P18_G3dtrpc": 20,
+  "P18_X3pc": 20
+ },
+ "stops": {
+  "P12_A0": {
+   "final_answer": 30
+  },
+  "P12_C1": {
+   "final_answer": 29,
+   "max_steps": 1
+  },
+  "P13_E": {
+   "final_answer": 29,
+   "max_steps": 1
+  },
+  "P13_G3": {
+   "final_answer": 29,
+   "max_steps": 1
+  },
+  "P16_G3t": {
+   "final_answer": 28,
+   "max_steps": 2
+  },
+  "P16_G3d": {
+   "final_answer": 28,
+   "max_steps": 2
+  },
+  "P18_R3": {
+   "final_answer": 29,
+   "max_steps": 1
+  },
+  "P18_G3s": {
+   "final_answer": 10
+  },
+  "P18_G3spl": {
+   "final_answer": 10
+  },
+  "P18_G3dtr": {
+   "final_answer": 30
+  },
+  "P18_X3": {
+   "final_answer": 30
+  },
+  "P13_Ep": {
+   "final_answer": 19,
+   "max_steps": 1
+  },
+  "P13_G3p": {
+   "final_answer": 20
+  },
+  "P18_R3p": {
+   "final_answer": 20
+  },
+  "P16_Epc": {
+   "final_answer": 20
+  },
+  "P16_G3pc": {
+   "final_answer": 20
+  },
+  "P16_G3dpc": {
+   "final_answer": 20
+  },
+  "P18_G3dtrpc": {
+   "final_answer": 20
+  },
+  "P18_X3pc": {
+   "final_answer": 20
+  }
+ },
+ "targeted": [
+  {
+   "task": "sf_tf01",
+   "check": "checks_class_distribution",
+   "A0 none": 0,
+   "C1 own": 5,
+   "E emb": 5,
+   "G3": 4,
+   "G3t": 4,
+   "G3d": 2,
+   "R3": 0,
+   "G3s": 0,
+   "G3s-pl": 0,
+   "G3d-tr": 1,
+   "X3": 4,
+   "E-p": 3,
+   "G3-p": 3,
+   "R3-p": 3,
+   "E-pc": 1,
+   "G3-pc": 0,
+   "G3d-pc": 2,
+   "G3d-tr-pc": 3,
+   "X3-pc": 0
+  },
+  {
+   "task": "sf_tf01",
+   "check": "uses_class_weight",
+   "A0 none": 0,
+   "C1 own": 5,
+   "E emb": 5,
+   "G3": 5,
+   "G3t": 5,
+   "G3d": 5,
+   "R3": 4,
+   "G3s": 0,
+   "G3s-pl": 0,
+   "G3d-tr": 5,
+   "X3": 4,
+   "E-p": 5,
+   "G3-p": 5,
+   "R3-p": 4,
+   "E-pc": 0,
+   "G3-pc": 0,
+   "G3d-pc": 5,
+   "G3d-tr-pc": 5,
+   "X3-pc": 0
+  },
+  {
+   "task": "sf_tf01",
+   "check": "uses_resampling",
+   "A0 none": 0,
+   "C1 own": 0,
+   "E emb": 0,
+   "G3": 0,
+   "G3t": 0,
+   "G3d": 0,
+   "R3": 0,
+   "G3s": 0,
+   "G3s-pl": 0,
+   "G3d-tr": 0,
+   "X3": 0,
+   "E-p": 0,
+   "G3-p": 0,
+   "R3-p": 0,
+   "E-pc": 0,
+   "G3-pc": 0,
+   "G3d-pc": 0,
+   "G3d-tr-pc": 0,
+   "X3-pc": 0
+  },
+  {
+   "task": "sf_tf01",
+   "check": "uses_stratified_split",
+   "A0 none": 3,
+   "C1 own": 5,
+   "E emb": 5,
+   "G3": 5,
+   "G3t": 5,
+   "G3d": 5,
+   "R3": 4,
+   "G3s": 0,
+   "G3s-pl": 0,
+   "G3d-tr": 5,
+   "X3": 5,
+   "E-p": 5,
+   "G3-p": 5,
+   "R3-p": 4,
+   "E-pc": 0,
+   "G3-pc": 0,
+   "G3d-pc": 5,
+   "G3d-tr-pc": 5,
+   "X3-pc": 5
+  },
+  {
+   "task": "sf_tf02",
+   "check": "handles_unit_suffix_in_height",
+   "A0 none": 0,
+   "C1 own": 4,
+   "E emb": 4,
+   "G3": 4,
+   "G3t": 3,
+   "G3d": 3,
+   "R3": 4,
+   "G3s": 0,
+   "G3s-pl": 0,
+   "G3d-tr": 5,
+   "X3": 0,
+   "E-p": 4,
+   "G3-p": 5,
+   "R3-p": 4,
+   "E-pc": 0,
+   "G3-pc": 0,
+   "G3d-pc": 5,
+   "G3d-tr-pc": 0,
+   "X3-pc": 0
+  },
+  {
+   "task": "sf_tf03",
+   "check": "column_x_included",
+   "A0 none": 0,
+   "C1 own": 5,
+   "E emb": 0,
+   "G3": 1,
+   "G3t": 0,
+   "G3d": 5,
+   "R3": 3,
+   "G3s": 2,
+   "G3s-pl": 0,
+   "G3d-tr": 0,
+   "X3": 5,
+   "E-p": 0,
+   "G3-p": 0,
+   "R3-p": 3,
+   "E-pc": 0,
+   "G3-pc": 0,
+   "G3d-pc": 1,
+   "G3d-tr-pc": 0,
+   "X3-pc": 0
+  },
+  {
+   "task": "sf_tf03",
+   "check": "applies_causal_reasoning",
+   "A0 none": 0,
+   "C1 own": 5,
+   "E emb": 0,
+   "G3": 1,
+   "G3t": 0,
+   "G3d": 4,
+   "R3": 2,
+   "G3s": 1,
+   "G3s-pl": 0,
+   "G3d-tr": 0,
+   "X3": 5,
+   "E-p": 0,
+   "G3-p": 0,
+   "R3-p": 4,
+   "E-pc": 0,
+   "G3-pc": 0,
+   "G3d-pc": 1,
+   "G3d-tr-pc": 0,
+   "X3-pc": 0
+  },
+  {
+   "task": "sf_tf05",
+   "check": "used_leakage_features",
+   "A0 none": 0,
+   "C1 own": 1,
+   "E emb": 0,
+   "G3": 0,
+   "G3t": 0,
+   "G3d": 0,
+   "R3": 0,
+   "G3s": 0,
+   "G3s-pl": 0,
+   "G3d-tr": 0,
+   "X3": 0,
+   "E-p": 0,
+   "G3-p": 0,
+   "R3-p": 0,
+   "E-pc": 0,
+   "G3-pc": 0,
+   "G3d-pc": 0,
+   "G3d-tr-pc": 0,
+   "X3-pc": 0
+  }
+ ],
+ "targeted_pooled": {
+  "A0 none": 0.075,
+  "C1 own": 0.75,
+  "E emb": 0.475,
+  "G3": 0.5,
+  "G3t": 0.425,
+  "G3d": 0.6,
+  "R3": 0.425,
+  "G3s": 0.075,
+  "G3s-pl": 0.0,
+  "G3d-tr": 0.4,
+  "X3": 0.575,
+  "E-p": 0.425,
+  "G3-p": 0.45,
+  "R3-p": 0.55,
+  "E-pc": 0.025,
+  "G3-pc": 0.0,
+  "G3d-pc": 0.475,
+  "G3d-tr-pc": 0.325,
+  "X3-pc": 0.125
+ },
+ "tf05_leak_cols_kept": {
+  "A0 none": [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  "C1 own": [
+   1,
+   0,
+   1,
+   1,
+   1
+  ],
+  "E emb": [
+   4,
+   2,
+   2,
+   4,
+   4
+  ],
+  "G3": [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  "G3t": [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  "G3d": [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  "R3": [
+   4,
+   2,
+   2,
+   3,
+   4
+  ],
+  "G3s": [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  "G3s-pl": [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  "G3d-tr": [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  "X3": [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  "E-p": [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  "G3-p": [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  "R3-p": [
+   4,
+   4,
+   2,
+   4,
+   2
+  ],
+  "E-pc": [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  "G3-pc": [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  "G3d-pc": [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  "G3d-tr-pc": [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  "X3-pc": [
+   4,
+   4,
+   4,
+   4,
+   4
+  ]
+ },
+ "fisher_p": {
+  "fix shown TF03+TF05 G3 vs G3s (of 10)": 0.0001,
+  "fix shown TF03+TF05 G3s vs G3s-pl (of 10)": 0.0007,
+  "fix shown TF03+TF05 G3 vs G3h (of 10)": 0.1409,
+  "fix shown TF03+TF05 G3 vs R3 (of 10)": 0.0011,
+  "wrong shown G3-p vs R3-p": 0.1908,
+  "wrong shown G3-pc vs G3h-pc": 0.0,
+  "wrong shown G3d-pc vs G3d-tr-pc": 0.0536,
+  "passed G3 vs R3": 0.6541,
+  "passed E vs X3": 0.5021,
+  "passed G3d vs G3d-tr": 0.117,
+  "passed G3-pc vs G3d-tr-pc": 0.0001
+ },
+ "trust": [
+  {
+   "arm": "E-p",
+   "shown": false,
+   "sum": 0,
+   "count": 10
+  },
+  {
+   "arm": "E-p",
+   "shown": true,
+   "sum": 10,
+   "count": 10
+  },
+  {
+   "arm": "E-pc",
+   "shown": true,
+   "sum": 20,
+   "count": 20
+  },
+  {
+   "arm": "G3-p",
+   "shown": false,
+   "sum": 0,
+   "count": 15
+  },
+  {
+   "arm": "G3-p",
+   "shown": true,
+   "sum": 5,
+   "count": 5
+  },
+  {
+   "arm": "G3d-pc",
+   "shown": false,
+   "sum": 1,
+   "count": 12
+  },
+  {
+   "arm": "G3d-pc",
+   "shown": true,
+   "sum": 8,
+   "count": 8
+  },
+  {
+   "arm": "G3d-tr-pc",
+   "shown": false,
+   "sum": 0,
+   "count": 5
+  },
+  {
+   "arm": "G3d-tr-pc",
+   "shown": true,
+   "sum": 15,
+   "count": 15
+  },
+  {
+   "arm": "R3-p",
+   "shown": false,
+   "sum": 0,
+   "count": 10
+  },
+  {
+   "arm": "R3-p",
+   "shown": true,
+   "sum": 9,
+   "count": 10
+  },
+  {
+   "arm": "X3-pc",
+   "shown": false,
+   "sum": 5,
+   "count": 5
+  },
+  {
+   "arm": "X3-pc",
+   "shown": true,
+   "sum": 15,
+   "count": 15
+  }
+ ],
+ "trust_by_task": [
+  {
+   "arm": "E-p",
+   "task": "sf_tf01",
+   "shown": 5,
+   "followed": 5
+  },
+  {
+   "arm": "E-p",
+   "task": "sf_tf02",
+   "shown": 0,
+   "followed": 0
+  },
+  {
+   "arm": "E-p",
+   "task": "sf_tf03",
+   "shown": 0,
+   "followed": 0
+  },
+  {
+   "arm": "E-p",
+   "task": "sf_tf05",
+   "shown": 5,
+   "followed": 5
+  },
+  {
+   "arm": "E-pc",
+   "task": "sf_tf01",
+   "shown": 5,
+   "followed": 5
+  },
+  {
+   "arm": "E-pc",
+   "task": "sf_tf02",
+   "shown": 5,
+   "followed": 5
+  },
+  {
+   "arm": "E-pc",
+   "task": "sf_tf03",
+   "shown": 5,
+   "followed": 5
+  },
+  {
+   "arm": "E-pc",
+   "task": "sf_tf05",
+   "shown": 5,
+   "followed": 5
+  },
+  {
+   "arm": "G3-p",
+   "task": "sf_tf01",
+   "shown": 4,
+   "followed": 4
+  },
+  {
+   "arm": "G3-p",
+   "task": "sf_tf02",
+   "shown": 0,
+   "followed": 0
+  },
+  {
+   "arm": "G3-p",
+   "task": "sf_tf03",
+   "shown": 0,
+   "followed": 0
+  },
+  {
+   "arm": "G3-p",
+   "task": "sf_tf05",
+   "shown": 1,
+   "followed": 1
+  },
+  {
+   "arm": "G3d-pc",
+   "task": "sf_tf01",
+   "shown": 0,
+   "followed": 0
+  },
+  {
+   "arm": "G3d-pc",
+   "task": "sf_tf02",
+   "shown": 0,
+   "followed": 0
+  },
+  {
+   "arm": "G3d-pc",
+   "task": "sf_tf03",
+   "shown": 3,
+   "followed": 4
+  },
+  {
+   "arm": "G3d-pc",
+   "task": "sf_tf05",
+   "shown": 5,
+   "followed": 5
+  },
+  {
+   "arm": "G3d-tr-pc",
+   "task": "sf_tf01",
+   "shown": 0,
+   "followed": 0
+  },
+  {
+   "arm": "G3d-tr-pc",
+   "task": "sf_tf02",
+   "shown": 5,
+   "followed": 5
+  },
+  {
+   "arm": "G3d-tr-pc",
+   "task": "sf_tf03",
+   "shown": 5,
+   "followed": 5
+  },
+  {
+   "arm": "G3d-tr-pc",
+   "task": "sf_tf05",
+   "shown": 5,
+   "followed": 5
+  },
+  {
+   "arm": "R3-p",
+   "task": "sf_tf01",
+   "shown": 0,
+   "followed": 0
+  },
+  {
+   "arm": "R3-p",
+   "task": "sf_tf02",
+   "shown": 2,
+   "followed": 1
+  },
+  {
+   "arm": "R3-p",
+   "task": "sf_tf03",
+   "shown": 3,
+   "followed": 3
+  },
+  {
+   "arm": "R3-p",
+   "task": "sf_tf05",
+   "shown": 5,
+   "followed": 5
+  },
+  {
+   "arm": "X3-pc",
+   "task": "sf_tf01",
+   "shown": 5,
+   "followed": 5
+  },
+  {
+   "arm": "X3-pc",
+   "task": "sf_tf02",
+   "shown": 5,
+   "followed": 5
+  },
+  {
+   "arm": "X3-pc",
+   "task": "sf_tf03",
+   "shown": 5,
+   "followed": 5
+  },
+  {
+   "arm": "X3-pc",
+   "task": "sf_tf05",
+   "shown": 0,
+   "followed": 5
+  }
+ ],
+ "score_mean": {
+  "sf_tf01_goal_imbalance": {
+   "A0 none": 0.7603,
+   "C1 own": 0.7765,
+   "E emb": 0.7713,
+   "E-p": 0.7387,
+   "E-pc": 0.76,
+   "G3": 0.7715,
+   "G3-p": 0.7449,
+   "G3-pc": 0.7865,
+   "G3d": 0.7658,
+   "G3d-pc": 0.7659,
+   "G3d-tr": 0.7657,
+   "G3d-tr-pc": 0.7767,
+   "G3s": NaN,
+   "G3s-pl": NaN,
+   "G3t": 0.7713,
+   "R3": 0.7764,
+   "R3-p": 0.7827,
+   "X3": 0.7878,
+   "X3-pc": 0.7931
+  },
+  "sf_tf02_player_rep_norm": {
+   "A0 none": 4664200.9856,
+   "C1 own": 4650909.0638,
+   "E emb": 4650909.0638,
+   "E-p": 4657555.0247,
+   "E-pc": 4664200.9856,
+   "G3": 4650909.0638,
+   "G3-p": 4650909.0638,
+   "G3-pc": 4686841.6935,
+   "G3d": 4655339.7044,
+   "G3d-pc": 4650909.0638,
+   "G3d-tr": 4650909.0638,
+   "G3d-tr-pc": 4664200.9856,
+   "G3s": NaN,
+   "G3s-pl": NaN,
+   "G3t": 4650909.0638,
+   "R3": 4655339.7044,
+   "R3-p": 4651365.3277,
+   "X3": 4664200.9856,
+   "X3-pc": 4664200.9856
+  },
+  "sf_tf03_correlation_causation": {
+   "A0 none": 27694618.5088,
+   "C1 own": 4755266.2227,
+   "E emb": 27694635.9361,
+   "E-p": 27694637.0999,
+   "E-pc": 27694630.9191,
+   "G3": 23103142.955,
+   "G3-p": 27694582.5566,
+   "G3-pc": 27694629.1734,
+   "G3d": 4759155.3407,
+   "G3d-pc": 23112026.3136,
+   "G3d-tr": 27694593.5504,
+   "G3d-tr-pc": 27694607.4473,
+   "G3s": 18528224.0027,
+   "G3s-pl": 27694592.824,
+   "G3t": 27694636.1209,
+   "R3": 16247667.1039,
+   "R3-p": 16239556.2905,
+   "X3": 4768431.5802,
+   "X3-pc": 27694639.7308
+  },
+  "sf_tf04_balance_torque_leakfree": {
+   "A0 none": 1.0,
+   "C1 own": 1.0,
+   "E emb": 1.0,
+   "E-p": NaN,
+   "E-pc": NaN,
+   "G3": 1.0,
+   "G3-p": NaN,
+   "G3-pc": NaN,
+   "G3d": 1.0,
+   "G3d-pc": NaN,
+   "G3d-tr": 1.0,
+   "G3d-tr-pc": NaN,
+   "G3s": NaN,
+   "G3s-pl": NaN,
+   "G3t": 1.0,
+   "R3": 1.0,
+   "R3-p": NaN,
+   "X3": 1.0,
+   "X3-pc": NaN
+  },
+  "sf_tf05_credit_card_leakage": {
+   "A0 none": 0.9659,
+   "C1 own": 0.822,
+   "E emb": 0.9144,
+   "E-p": 0.9659,
+   "E-pc": 0.9659,
+   "G3": 0.9659,
+   "G3-p": 0.9568,
+   "G3-pc": 0.9659,
+   "G3d": 0.9659,
+   "G3d-pc": 0.9659,
+   "G3d-tr": 0.9659,
+   "G3d-tr-pc": 0.9659,
+   "G3s": 0.9386,
+   "G3s-pl": 0.9568,
+   "G3t": 0.9477,
+   "R3": 0.8894,
+   "R3-p": 0.8947,
+   "X3": 0.9659,
+   "X3-pc": 0.9659
+  },
+  "sf_tf06_metric_select_leakfree": {
+   "A0 none": 0.9798,
+   "C1 own": 0.9806,
+   "E emb": 0.9796,
+   "E-p": NaN,
+   "E-pc": NaN,
+   "G3": 0.9803,
+   "G3-p": NaN,
+   "G3-pc": NaN,
+   "G3d": 0.9777,
+   "G3d-pc": NaN,
+   "G3d-tr": 0.9802,
+   "G3d-tr-pc": NaN,
+   "G3s": NaN,
+   "G3s-pl": NaN,
+   "G3t": 0.981,
+   "R3": 0.9801,
+   "R3-p": NaN,
+   "X3": 0.98,
+   "X3-pc": NaN
+  }
+ },
+ "guide_tokens_per_run": {
+  "G3s": 10572.6,
+  "G3s-pl": 9235.3,
+  "G3d-tr": 8213.066666666668,
+  "G3h": 7402.4,
+  "G3h-pc": 6236.7
+ }
+}

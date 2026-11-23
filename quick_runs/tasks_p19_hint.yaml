@@ -1,0 +1,59 @@
+# P19: the four failing tasks at the suite's first hint level (predictions/P19.md). Only workload_id differs
+# from tasks_p12.yaml, so the files and judge criteria are the same.
+tasks:
+- id: sf_tf01_goal_imbalance
+  source: silent_failures
+  test: TF01_goal_imbalance
+  workload: dsts/src/agents/dsguru/workload/FM01_goal_imbalance.json
+  workload_id: FM01_goal_imbalance_02
+  files:
+  - dsts/data/FM01_goal_imbalance/input/player_goals_5high_train.csv
+  - dsts/data/FM01_goal_imbalance/input/player_goals_5high_test.csv
+  criteria: dsts/llmjudge/judge_criteria/FM01_goal_imbalance_eval.json
+  contamination_risk: high
+  risk_reason: Transfermarkt-derived player table with a planted 5% positive label; no published analysis of this task.
+  recall_probe:
+    hits_of_3: 3
+    risk_before_p10: low
+- id: sf_tf02_player_rep_norm
+  source: silent_failures
+  test: TF02_player_rep_norm
+  workload: dsts/src/agents/dsguru/workload/FM02_player_rep_norm.json
+  workload_id: FM02_player_rep_norm_03
+  files:
+  - dsts/data/FM02_player_rep_norm/input/player_value_rep_norm_train.csv
+  - dsts/data/FM02_player_rep_norm/input/player_value_rep_norm_test.csv
+  criteria: dsts/llmjudge/judge_criteria/FM02_player_rep_norm_eval.json
+  contamination_risk: low
+  risk_reason: Planted messy values ('185cm', 'na') in a derived table; nothing to recall.
+  recall_probe:
+    hits_of_3: 0
+    risk_before_p10: low
+- id: sf_tf03_correlation_causation
+  source: silent_failures
+  test: TF03_correlation_causation
+  workload: dsts/src/agents/dsguru/workload/FM03_correlation_causation.json
+  workload_id: FM03_correlation_causation_02
+  files:
+  - dsts/data/FM03_correlation_causation/input/player_value_corr_causal_train.csv
+  - dsts/data/FM03_correlation_causation/input/player_value_corr_causal_test.csv
+  criteria: dsts/llmjudge/judge_criteria/FM03_correlation_causation_eval.json
+  contamination_risk: low
+  risk_reason: Planted spurious column_x; nothing to recall. File name contains 'corr_causal' (a cue, kept as released).
+  recall_probe:
+    hits_of_3: 0
+    risk_before_p10: low
+- id: sf_tf05_credit_card_leakage
+  source: silent_failures
+  test: TF05_credit_card_leakage
+  workload: dsts/src/agents/dsguru/workload/FM05_credit_card_leakage.json
+  workload_id: FM05_credit_card_leakage_02
+  files:
+  - dsts/data/FM05_credit_card_leakage/input/credit_card_train.csv
+  - dsts/data/FM05_credit_card_leakage/input/credit_card_test.csv
+  criteria: dsts/llmjudge/judge_criteria/FM05_credit_card_leakage_eval.json
+  contamination_risk: medium
+  risk_reason: AER CreditCard data; its expenditure/share leakage is a known Kaggle/textbook example.
+  recall_probe:
+    hits_of_3: 0
+    risk_before_p10: medium

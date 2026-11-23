@@ -1,0 +1,31 @@
+# P19 labels for the nfd lessons (written with the data profile, without the evaluator's outcome) of the 4 failing
+# tasks, by the P17 rule (quick_runs/predictions/P17.md, Method 3), made by reading every lesson after writing and
+# before the C1-nfd / E-nfd runs (2026-11-17). Key: source_task -> {label: [run/k, ...]}. Unlisted lessons are neutral.
+sf_tf01_goal_imbalance:
+  fix:              # says to weight classes (class_weight="balanced") or resample
+    - seed0/1
+    - seed3/0
+  reinforcing: []   # none says to use the plain split or skip weighting. Neutral by the rule: seed1/2, seed2/0
+                    # (imbalance noted, metric advice only) and seed4/0 (stratify=y, not in the rule's fix list)
+sf_tf02_player_rep_norm:
+  fix: []           # no lesson says to strip the unit suffix
+  reinforcing:      # pd.to_numeric(errors='coerce') on '183cm' columns: turns the values into missing ones
+    - seed0/1
+    - seed1/0
+    - seed2/0
+    - seed3/0
+    - seed4/0
+sf_tf03_correlation_causation:
+  fix:              # names column_x as leaked (+1.00 in train, near 0 in test) and says to drop such features
+    - seed0/0
+    - seed1/0
+    - seed2/1
+    - seed3/0
+    - seed4/0
+  reinforcing:      # keep all numerical columns: select_dtypes(np.number) / "strict adherence" to the instruction
+    - seed2/0
+    - seed4/1
+                    # neutral: seed0/1 (keep IDs, "but prioritize removing columns that exhibit data leakage")
+sf_tf05_credit_card_leakage:
+  fix: []           # no lesson mentions leakage or the spending columns
+  reinforcing: []   # none says to use all features or keep the spending columns

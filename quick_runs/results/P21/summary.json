@@ -1,0 +1,395 @@
+{
+ "nfdtr_lessons": {
+  "sf_tf01": 15,
+  "sf_tf02": 15,
+  "sf_tf03": 13,
+  "sf_tf04": 28,
+  "sf_tf05": 14,
+  "sf_tf06": 30
+ },
+ "nfdtr_labels": {
+  "sf_tf01": {
+   "fix": 3,
+   "reinforcing": 0
+  },
+  "sf_tf02": {
+   "fix": 1,
+   "reinforcing": 4
+  },
+  "sf_tf03": {
+   "fix": 5,
+   "reinforcing": 2
+  },
+  "sf_tf05": {
+   "fix": 0,
+   "reinforcing": 0
+  }
+ },
+ "nfdtr_exposure": [
+  {
+   "arm": "C1-nfdtr",
+   "task": "sf_tf01",
+   "fix shown": 5,
+   "reinf shown": 0
+  },
+  {
+   "arm": "C1-nfdtr",
+   "task": "sf_tf02",
+   "fix shown": 5,
+   "reinf shown": 5
+  },
+  {
+   "arm": "C1-nfdtr",
+   "task": "sf_tf03",
+   "fix shown": 5,
+   "reinf shown": 5
+  },
+  {
+   "arm": "C1-nfdtr",
+   "task": "sf_tf05",
+   "fix shown": 0,
+   "reinf shown": 0
+  },
+  {
+   "arm": "E-nfdtr",
+   "task": "sf_tf01",
+   "fix shown": 5,
+   "reinf shown": 0
+  },
+  {
+   "arm": "E-nfdtr",
+   "task": "sf_tf02",
+   "fix shown": 0,
+   "reinf shown": 0
+  },
+  {
+   "arm": "E-nfdtr",
+   "task": "sf_tf03",
+   "fix shown": 0,
+   "reinf shown": 5
+  },
+  {
+   "arm": "E-nfdtr",
+   "task": "sf_tf05",
+   "fix shown": 0,
+   "reinf shown": 0
+  }
+ ],
+ "runs": {
+  "P12_A0": 30,
+  "P12_C1": 30,
+  "P21_A0g2": 30,
+  "P21_C1g2": 30,
+  "P13_E": 30,
+  "P17_C1nf": 30,
+  "P19_C1nfd": 30,
+  "P21_C1nfdtr": 30,
+  "P21_Enfdtr": 30
+ },
+ "stops": {
+  "P12_A0": {
+   "final_answer": 30
+  },
+  "P12_C1": {
+   "final_answer": 29,
+   "max_steps": 1
+  },
+  "P21_A0g2": {
+   "final_answer": 30
+  },
+  "P21_C1g2": {
+   "final_answer": 28,
+   "max_steps": 2
+  },
+  "P13_E": {
+   "final_answer": 29,
+   "max_steps": 1
+  },
+  "P17_C1nf": {
+   "final_answer": 30
+  },
+  "P19_C1nfd": {
+   "final_answer": 30
+  },
+  "P21_C1nfdtr": {
+   "final_answer": 30
+  },
+  "P21_Enfdtr": {
+   "final_answer": 30
+  }
+ },
+ "targeted": [
+  {
+   "task": "sf_tf01",
+   "check": "checks_class_distribution",
+   "A0 4gpu": 0,
+   "C1 4gpu": 5,
+   "A0 2gpu": 1,
+   "C1 2gpu": 5,
+   "E emb": 5,
+   "C1-nf": 0,
+   "C1-nfd": 4,
+   "C1-nfdtr": 3,
+   "E-nfdtr": 3
+  },
+  {
+   "task": "sf_tf01",
+   "check": "uses_class_weight",
+   "A0 4gpu": 0,
+   "C1 4gpu": 5,
+   "A0 2gpu": 0,
+   "C1 2gpu": 5,
+   "E emb": 5,
+   "C1-nf": 0,
+   "C1-nfd": 5,
+   "C1-nfdtr": 5,
+   "E-nfdtr": 5
+  },
+  {
+   "task": "sf_tf01",
+   "check": "uses_resampling",
+   "A0 4gpu": 0,
+   "C1 4gpu": 0,
+   "A0 2gpu": 0,
+   "C1 2gpu": 0,
+   "E emb": 0,
+   "C1-nf": 0,
+   "C1-nfd": 0,
+   "C1-nfdtr": 0,
+   "E-nfdtr": 0
+  },
+  {
+   "task": "sf_tf01",
+   "check": "uses_stratified_split",
+   "A0 4gpu": 3,
+   "C1 4gpu": 5,
+   "A0 2gpu": 2,
+   "C1 2gpu": 5,
+   "E emb": 5,
+   "C1-nf": 1,
+   "C1-nfd": 5,
+   "C1-nfdtr": 1,
+   "E-nfdtr": 3
+  },
+  {
+   "task": "sf_tf02",
+   "check": "handles_unit_suffix_in_height",
+   "A0 4gpu": 0,
+   "C1 4gpu": 4,
+   "A0 2gpu": 0,
+   "C1 2gpu": 3,
+   "E emb": 4,
+   "C1-nf": 0,
+   "C1-nfd": 0,
+   "C1-nfdtr": 0,
+   "E-nfdtr": 0
+  },
+  {
+   "task": "sf_tf03",
+   "check": "column_x_included",
+   "A0 4gpu": 0,
+   "C1 4gpu": 5,
+   "A0 2gpu": 0,
+   "C1 2gpu": 4,
+   "E emb": 0,
+   "C1-nf": 0,
+   "C1-nfd": 5,
+   "C1-nfdtr": 5,
+   "E-nfdtr": 0
+  },
+  {
+   "task": "sf_tf03",
+   "check": "applies_causal_reasoning",
+   "A0 4gpu": 0,
+   "C1 4gpu": 5,
+   "A0 2gpu": 0,
+   "C1 2gpu": 4,
+   "E emb": 0,
+   "C1-nf": 0,
+   "C1-nfd": 5,
+   "C1-nfdtr": 3,
+   "E-nfdtr": 0
+  },
+  {
+   "task": "sf_tf05",
+   "check": "used_leakage_features",
+   "A0 4gpu": 0,
+   "C1 4gpu": 1,
+   "A0 2gpu": 0,
+   "C1 2gpu": 0,
+   "E emb": 0,
+   "C1-nf": 0,
+   "C1-nfd": 0,
+   "C1-nfdtr": 0,
+   "E-nfdtr": 0
+  }
+ ],
+ "targeted_pooled": {
+  "A0 4gpu": 0.075,
+  "C1 4gpu": 0.75,
+  "A0 2gpu": 0.075,
+  "C1 2gpu": 0.65,
+  "E emb": 0.475,
+  "C1-nf": 0.025,
+  "C1-nfd": 0.6,
+  "C1-nfdtr": 0.425,
+  "E-nfdtr": 0.275
+ },
+ "hardware": [
+  {
+   "task": "sf_tf01",
+   "check": "checks_class_distribution",
+   "A0 4gpu": 0,
+   "A0 2gpu": 1,
+   "C1 4gpu": 5,
+   "C1 2gpu": 5,
+   "A0 diff": 1,
+   "C1 diff": 0
+  },
+  {
+   "task": "sf_tf01",
+   "check": "uses_class_weight",
+   "A0 4gpu": 0,
+   "A0 2gpu": 0,
+   "C1 4gpu": 5,
+   "C1 2gpu": 5,
+   "A0 diff": 0,
+   "C1 diff": 0
+  },
+  {
+   "task": "sf_tf01",
+   "check": "uses_resampling",
+   "A0 4gpu": 0,
+   "A0 2gpu": 0,
+   "C1 4gpu": 0,
+   "C1 2gpu": 0,
+   "A0 diff": 0,
+   "C1 diff": 0
+  },
+  {
+   "task": "sf_tf01",
+   "check": "uses_stratified_split",
+   "A0 4gpu": 3,
+   "A0 2gpu": 2,
+   "C1 4gpu": 5,
+   "C1 2gpu": 5,
+   "A0 diff": 1,
+   "C1 diff": 0
+  },
+  {
+   "task": "sf_tf02",
+   "check": "handles_unit_suffix_in_height",
+   "A0 4gpu": 0,
+   "A0 2gpu": 0,
+   "C1 4gpu": 4,
+   "C1 2gpu": 3,
+   "A0 diff": 0,
+   "C1 diff": 1
+  },
+  {
+   "task": "sf_tf03",
+   "check": "column_x_included",
+   "A0 4gpu": 0,
+   "A0 2gpu": 0,
+   "C1 4gpu": 5,
+   "C1 2gpu": 4,
+   "A0 diff": 0,
+   "C1 diff": 1
+  },
+  {
+   "task": "sf_tf03",
+   "check": "applies_causal_reasoning",
+   "A0 4gpu": 0,
+   "A0 2gpu": 0,
+   "C1 4gpu": 5,
+   "C1 2gpu": 4,
+   "A0 diff": 0,
+   "C1 diff": 1
+  },
+  {
+   "task": "sf_tf05",
+   "check": "used_leakage_features",
+   "A0 4gpu": 0,
+   "A0 2gpu": 0,
+   "C1 4gpu": 1,
+   "C1 2gpu": 0,
+   "A0 diff": 0,
+   "C1 diff": 1
+  }
+ ],
+ "fisher_p": {
+  "C1-nf vs C1-nfdtr": 0.0,
+  "C1-nfd vs C1-nfdtr": 0.1793,
+  "C1-nfdtr vs C1 4gpu": 0.006,
+  "A0 4gpu vs A0 2gpu": 1.0,
+  "C1 4gpu vs C1 2gpu": 0.4647
+ },
+ "score_mean": {
+  "sf_tf01_goal_imbalance": {
+   "A0 2gpu": 0.7049,
+   "A0 4gpu": 0.7603,
+   "C1 2gpu": 0.7868,
+   "C1 4gpu": 0.7765,
+   "C1-nf": 0.786,
+   "C1-nfd": 0.7715,
+   "C1-nfdtr": 0.7704,
+   "E emb": 0.7713,
+   "E-nfdtr": 0.7454
+  },
+  "sf_tf02_player_rep_norm": {
+   "A0 2gpu": 4664200.9856,
+   "A0 4gpu": 4664200.9856,
+   "C1 2gpu": 4650909.0638,
+   "C1 4gpu": 4650909.0638,
+   "C1-nf": 4664200.9856,
+   "C1-nfd": 4664200.9856,
+   "C1-nfdtr": 4664200.9856,
+   "E emb": 4650909.0638,
+   "E-nfdtr": 4664200.9856
+  },
+  "sf_tf03_correlation_causation": {
+   "A0 2gpu": 27694615.0642,
+   "A0 4gpu": 27694618.5088,
+   "C1 2gpu": 9337854.3774,
+   "C1 4gpu": 4755266.2227,
+   "C1-nf": 27694584.7839,
+   "C1-nfd": 4699080.1002,
+   "C1-nfdtr": 4748094.8571,
+   "E emb": 27694635.9361,
+   "E-nfdtr": 27694585.8432
+  },
+  "sf_tf04_balance_torque_leakfree": {
+   "A0 2gpu": 0.9149,
+   "A0 4gpu": 1.0,
+   "C1 2gpu": 1.0,
+   "C1 4gpu": 1.0,
+   "C1-nf": 1.0,
+   "C1-nfd": 1.0,
+   "C1-nfdtr": 1.0,
+   "E emb": 1.0,
+   "E-nfdtr": 1.0
+  },
+  "sf_tf05_credit_card_leakage": {
+   "A0 2gpu": 0.9659,
+   "A0 4gpu": 0.9659,
+   "C1 2gpu": 0.822,
+   "C1 4gpu": 0.822,
+   "C1-nf": 0.9659,
+   "C1-nfd": 0.9659,
+   "C1-nfdtr": 0.9659,
+   "E emb": 0.9144,
+   "E-nfdtr": 0.9659
+  },
+  "sf_tf06_metric_select_leakfree": {
+   "A0 2gpu": 0.9789,
+   "A0 4gpu": 0.9798,
+   "C1 2gpu": 0.9806,
+   "C1 4gpu": 0.9806,
+   "C1-nf": 0.9797,
+   "C1-nfd": 0.9799,
+   "C1-nfdtr": 0.9797,
+   "E emb": 0.9796,
+   "E-nfdtr": 0.9777
+  }
+ }
+}

@@ -1,0 +1,46 @@
+task_id,sample,recall_hit,quote_or_reason
+sf_tf01_goal_imbalance,0,1,because 'high scorers' are usually a minority class (class imbalance)
+sf_tf01_goal_imbalance,1,1,high-scoring players are usually a minority (class imbalance)
+sf_tf01_goal_imbalance,2,1,'high scorers' are typically a minority class (class imbalance)
+sf_tf02_player_rep_norm,0,0,no mention of unit suffixes or 'na' strings
+sf_tf02_player_rep_norm,1,0,no mention of unit suffixes or 'na' strings
+sf_tf02_player_rep_norm,2,0,no mention of unit suffixes or 'na' strings
+sf_tf03_correlation_causation,0,0,no mention of column_x or a spurious feature
+sf_tf03_correlation_causation,1,0,no mention of column_x or a spurious feature
+sf_tf03_correlation_causation,2,0,mentions the given split 'controls for data leakage'; not column_x
+sf_tf04_balance_torque_leakfree,0,0,no torque / weight x distance
+sf_tf04_balance_torque_leakfree,1,0,no torque / weight x distance
+sf_tf04_balance_torque_leakfree,2,0,no torque / weight x distance
+sf_tf04_balance_torque_cue,0,1,governed by a strict physical formula (Torque = Force x Distance)
+sf_tf04_balance_torque_cue,1,0,"reads torque as sensor measurements, not weight x distance"
+sf_tf04_balance_torque_cue,2,0,reads torque as sensor signals; recommends scaling
+sf_tf05_credit_card_leakage,0,0,expects accuracy 0.82-0.91; no leakage named
+sf_tf05_credit_card_leakage,1,0,expects accuracy 0.80-0.92; no leakage named
+sf_tf05_credit_card_leakage,2,0,expects accuracy 0.82-0.92; no leakage named
+sf_tf06_metric_select_leakfree,0,1,goal-scoring data can be imbalanced
+sf_tf06_metric_select_leakfree,1,1,the classes are usually imbalanced
+sf_tf06_metric_select_leakfree,2,1,'scoring a goal' is often a minority class (imbalanced data)
+sf_tf06_metric_select_cue,0,1,Because the dataset is explicitly labeled as 'imbalance'
+sf_tf06_metric_select_cue,1,1,Because the dataset is explicitly labeled as 'imbalance'
+sf_tf06_metric_select_cue,2,1,Because the dataset is explicitly labeled as 'imbalance'
+blade_boxes,0,0,conformity bias; no study named; age effect stated as general literature
+blade_boxes,1,0,'studies similar to those by Asch'; no source study
+blade_boxes,2,0,majority bias increases with age; no source study
+blade_caschools,0,0,'often used in textbooks to demonstrate omitted variable bias'; not named; predicts effect disappears
+blade_caschools,1,0,'frequently used to demonstrate Omitted Variable Bias'; not named
+blade_caschools,2,0,'classic dataset used in econometrics courses'; not named; predicts effect shrinks or vanishes
+blade_crofoot,0,1,refers to Crofoot et al.; 'home-field advantage can offset a numerical disadvantage'
+blade_crofoot,1,1,(Crofoot et al.); 'location can offset size'
+blade_crofoot,2,1,'the most critical finding is likely that location can offset size'
+blade_fish,0,0,'classic examples often used in statistical textbooks'; not named
+blade_fish,1,0,generic count-data reasoning; no source
+blade_fish,2,0,'frequently used in statistics pedagogy'; not named
+blade_hurricane,0,1,Simonsohn et al. (2020) used Specification Curve Analysis to debunk this finding
+blade_hurricane,1,1,Simonsohn et al. (2020) ... critique of that original finding
+blade_hurricane,2,1,Simonsohn et al.: the feminine name effect disappeared in most models
+blade_reading,0,0,predicts Reader View helps dyslexic readers; no study named
+blade_reading,1,0,no study named
+blade_reading,2,0,'corresponds to a known study on accessibility and dyslexia'; not named
+blade_teachingratings,0,1,referenced paper by Hamermesh and Parker (2005)
+blade_teachingratings,1,1,reference to the paper by Hamermesh and Parker (2005)
+blade_teachingratings,2,1,Hamermesh and Parker found that more attractive instructors received higher ratings

@@ -1,0 +1,36 @@
+{
+ "instr_share": {
+  "G3o": {
+   "rejected_fix": 47,
+   "pre_set": 39,
+   "contradict_only": 3,
+   "contradict_only_lesson_not_task": 0,
+   "citing_instructions": 39,
+   "share": 0.83
+  },
+  "G3n": {
+   "rejected_fix": 48,
+   "pre_set": 38,
+   "contradict_only": 11,
+   "contradict_only_lesson_not_task": 6,
+   "citing_instructions": 32,
+   "share": 0.67
+  },
+  "Q3": {
+   "rejected_fix": 45,
+   "pre_set": 29,
+   "contradict_only": 0,
+   "contradict_only_lesson_not_task": 0,
+   "citing_instructions": 29,
+   "share": 0.64
+  }
+ },
+ "fisher_p": {
+  "wrong shown: embedding 10/20 vs guide 5/20": 0.1908,
+  "wrong shown: Gemma guide 5/20 vs Qwen guide 1/20": 0.1818,
+  "passed: guide R=3 20/40 vs Qwen guide 14/40": 0.258,
+  "passed: embedding 19/40 vs guide R=3 20/40": 1.0,
+  "passed: embedding 19/40 vs all own lessons 30/40": 0.021,
+  "passed: no memory 3/40 vs embedding 19/40": 0.0001
+ }
+}

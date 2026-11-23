@@ -1,0 +1,239 @@
+{
+ "runs": {
+  "P1": 20,
+  "P2": 20,
+  "P4": 20
+ },
+ "stops": {
+  "P1": {
+   "final_answer": 20
+  },
+  "P2": {
+   "final_answer": 20
+  },
+  "P4": {
+   "final_answer": 20
+  }
+ },
+ "targeted_checks": [
+  {
+   "task": "sf_tf01_goal_imbalance",
+   "check": "checks_class_distribution",
+   "P1": "0/5",
+   "P2": "5/5",
+   "P4": "0/5"
+  },
+  {
+   "task": "sf_tf01_goal_imbalance",
+   "check": "uses_class_weight",
+   "P1": "0/5",
+   "P2": "5/5",
+   "P4": "0/5"
+  },
+  {
+   "task": "sf_tf01_goal_imbalance",
+   "check": "uses_resampling",
+   "P1": "0/5",
+   "P2": "0/5",
+   "P4": "0/5"
+  },
+  {
+   "task": "sf_tf01_goal_imbalance",
+   "check": "uses_stratified_split",
+   "P1": "1/5",
+   "P2": "5/5",
+   "P4": "2/5"
+  },
+  {
+   "task": "sf_tf02_player_rep_norm",
+   "check": "handles_unit_suffix_in_height",
+   "P1": "0/5",
+   "P2": "5/5",
+   "P4": "0/5"
+  },
+  {
+   "task": "sf_tf03_correlation_causation",
+   "check": "column_x_included",
+   "P1": "0/5",
+   "P2": "5/5",
+   "P4": "0/5"
+  },
+  {
+   "task": "sf_tf03_correlation_causation",
+   "check": "applies_causal_reasoning",
+   "P1": "0/5",
+   "P2": "0/5",
+   "P4": "0/5"
+  },
+  {
+   "task": "sf_tf05_credit_card_leakage",
+   "check": "used_leakage_features",
+   "P1": "0/5",
+   "P2": "5/5",
+   "P4": "0/5"
+  }
+ ],
+ "wrong_col_used": {
+  "sf_tf01_goal_imbalance": {
+   "P1": 5,
+   "P2": 5,
+   "P4": 0
+  },
+  "sf_tf02_player_rep_norm": {
+   "P1": 5,
+   "P2": 5,
+   "P4": 0
+  },
+  "sf_tf03_correlation_causation": {
+   "P1": 5,
+   "P2": 5,
+   "P4": 0
+  },
+  "sf_tf05_credit_card_leakage": {
+   "P1": 5,
+   "P2": 5,
+   "P4": 0
+  }
+ },
+ "mentions": [
+  {
+   "arm": "P2",
+   "task": "sf_tf01_goal_imbalance",
+   "mentions": 5,
+   "doubt_phrase": 0
+  },
+  {
+   "arm": "P2",
+   "task": "sf_tf02_player_rep_norm",
+   "mentions": 5,
+   "doubt_phrase": 0
+  },
+  {
+   "arm": "P2",
+   "task": "sf_tf03_correlation_causation",
+   "mentions": 5,
+   "doubt_phrase": 0
+  },
+  {
+   "arm": "P2",
+   "task": "sf_tf05_credit_card_leakage",
+   "mentions": 5,
+   "doubt_phrase": 0
+  },
+  {
+   "arm": "P4",
+   "task": "sf_tf01_goal_imbalance",
+   "mentions": 5,
+   "doubt_phrase": 0
+  },
+  {
+   "arm": "P4",
+   "task": "sf_tf02_player_rep_norm",
+   "mentions": 5,
+   "doubt_phrase": 0
+  },
+  {
+   "arm": "P4",
+   "task": "sf_tf03_correlation_causation",
+   "mentions": 5,
+   "doubt_phrase": 0
+  },
+  {
+   "arm": "P4",
+   "task": "sf_tf05_credit_card_leakage",
+   "mentions": 5,
+   "doubt_phrase": 0
+  }
+ ],
+ "score": [
+  {
+   "task": "sf_tf01_goal_imbalance",
+   "arm": "P1",
+   "mean": 0.75734,
+   "std": 0.06285,
+   "count": 5
+  },
+  {
+   "task": "sf_tf01_goal_imbalance",
+   "arm": "P2",
+   "mean": 0.73206,
+   "std": 0.04803,
+   "count": 5
+  },
+  {
+   "task": "sf_tf01_goal_imbalance",
+   "arm": "P4",
+   "mean": 0.75516,
+   "std": 0.00361,
+   "count": 5
+  },
+  {
+   "task": "sf_tf02_player_rep_norm",
+   "arm": "P1",
+   "mean": 4664200.9856,
+   "std": 0.0,
+   "count": 5
+  },
+  {
+   "task": "sf_tf02_player_rep_norm",
+   "arm": "P2",
+   "mean": 4653567.44813,
+   "std": 5944.32816,
+   "count": 5
+  },
+  {
+   "task": "sf_tf02_player_rep_norm",
+   "arm": "P4",
+   "mean": 4653190.38331,
+   "std": 0.0,
+   "count": 5
+  },
+  {
+   "task": "sf_tf03_correlation_causation",
+   "arm": "P1",
+   "mean": 27694639.39535,
+   "std": 3.06748,
+   "count": 5
+  },
+  {
+   "task": "sf_tf03_correlation_causation",
+   "arm": "P2",
+   "mean": 4771574.11275,
+   "std": 43268.10786,
+   "count": 5
+  },
+  {
+   "task": "sf_tf03_correlation_causation",
+   "arm": "P4",
+   "mean": 27694627.26866,
+   "std": 23.83509,
+   "count": 5
+  },
+  {
+   "task": "sf_tf05_credit_card_leakage",
+   "arm": "P1",
+   "mean": 0.96591,
+   "std": 0.0,
+   "count": 5
+  },
+  {
+   "task": "sf_tf05_credit_card_leakage",
+   "arm": "P2",
+   "mean": 0.82197,
+   "std": 0.0,
+   "count": 5
+  },
+  {
+   "task": "sf_tf05_credit_card_leakage",
+   "arm": "P4",
+   "mean": 0.96591,
+   "std": 0.0,
+   "count": 5
+  }
+ ],
+ "steps_mean": {
+  "P1": 2.55,
+  "P2": 2.65,
+  "P4": 2.25
+ }
+}

@@ -1,0 +1,169 @@
+{
+ "runs": 12,
+ "tasks": [
+  "blade_crofoot",
+  "sf_tf01_goal_imbalance",
+  "sf_tf03_correlation_causation"
+ ],
+ "identical_to_batched_a": 1,
+ "compared_pairs": 9,
+ "first_diff": [
+  {
+   "task": "blade_crofoot",
+   "vs_batched_a": "batched_b",
+   "identical": false,
+   "first_diff_step": 2.0,
+   "first_diff_char": 104.0,
+   "steps_a": 15,
+   "steps_other": 10
+  },
+  {
+   "task": "blade_crofoot",
+   "vs_batched_a": "batched_c",
+   "identical": false,
+   "first_diff_step": 3.0,
+   "first_diff_char": 0.0,
+   "steps_a": 15,
+   "steps_other": 8
+  },
+  {
+   "task": "blade_crofoot",
+   "vs_batched_a": "bs1",
+   "identical": false,
+   "first_diff_step": 0.0,
+   "first_diff_char": 149.0,
+   "steps_a": 15,
+   "steps_other": 10
+  },
+  {
+   "task": "sf_tf01_goal_imbalance",
+   "vs_batched_a": "batched_b",
+   "identical": false,
+   "first_diff_step": 0.0,
+   "first_diff_char": 280.0,
+   "steps_a": 4,
+   "steps_other": 4
+  },
+  {
+   "task": "sf_tf01_goal_imbalance",
+   "vs_batched_a": "batched_c",
+   "identical": false,
+   "first_diff_step": 0.0,
+   "first_diff_char": 357.0,
+   "steps_a": 4,
+   "steps_other": 4
+  },
+  {
+   "task": "sf_tf01_goal_imbalance",
+   "vs_batched_a": "bs1",
+   "identical": false,
+   "first_diff_step": 0.0,
+   "first_diff_char": 219.0,
+   "steps_a": 4,
+   "steps_other": 4
+  },
+  {
+   "task": "sf_tf03_correlation_causation",
+   "vs_batched_a": "batched_b",
+   "identical": false,
+   "first_diff_step": 0.0,
+   "first_diff_char": 540.0,
+   "steps_a": 2,
+   "steps_other": 2
+  },
+  {
+   "task": "sf_tf03_correlation_causation",
+   "vs_batched_a": "batched_c",
+   "identical": true,
+   "first_diff_step": NaN,
+   "first_diff_char": NaN,
+   "steps_a": 2,
+   "steps_other": 2
+  },
+  {
+   "task": "sf_tf03_correlation_causation",
+   "vs_batched_a": "bs1",
+   "identical": false,
+   "first_diff_step": 0.0,
+   "first_diff_char": 90.0,
+   "steps_a": 2,
+   "steps_other": 2
+  }
+ ],
+ "per_task": {
+  "blade_crofoot": {
+   "risk": "high",
+   "n": 4,
+   "answer_consistency": 0.16666666666666666,
+   "score_mean": 0.9166666666666666,
+   "score_sd": 0.16666666666666669,
+   "first_divergence": "variables",
+   "consistent_failures": "",
+   "framing.target": 1.0,
+   "framing.population": 1.0,
+   "framing.unit": 1.0,
+   "variables": 0.16666666666666666,
+   "transformation": 0.0,
+   "model.family": 1.0,
+   "model.controls": 1.0,
+   "validation": 1.0,
+   "metric": 1.0,
+   "verdict": 0.5,
+   "final_selection": 0.0
+  },
+  "sf_tf01_goal_imbalance": {
+   "risk": "high",
+   "n": 4,
+   "answer_consistency": 0.5,
+   "score_mean": 0.7878978349482573,
+   "score_sd": 0.007358887210683895,
+   "first_divergence": "variables",
+   "consistent_failures": "checks_class_distribution,uses_class_weight,uses_resampling,uses_stratified_split",
+   "framing.target": 1.0,
+   "framing.population": 1.0,
+   "framing.unit": 1.0,
+   "variables": 0.5,
+   "transformation": 0.5,
+   "model.family": 1.0,
+   "model.controls": NaN,
+   "validation": 1.0,
+   "metric": 0.16666666666666666,
+   "verdict": NaN,
+   "final_selection": 0.3333333333333333
+  },
+  "sf_tf03_correlation_causation": {
+   "risk": "low",
+   "n": 4,
+   "answer_consistency": 1.0,
+   "score_mean": 27694641.015753955,
+   "score_sd": 0.0,
+   "first_divergence": "variables",
+   "consistent_failures": "applies_causal_reasoning,column_x_included",
+   "framing.target": 1.0,
+   "framing.population": 1.0,
+   "framing.unit": 1.0,
+   "variables": 0.3333333333333333,
+   "transformation": 1.0,
+   "model.family": 1.0,
+   "model.controls": NaN,
+   "validation": 1.0,
+   "metric": 1.0,
+   "verdict": NaN,
+   "final_selection": 1.0
+  }
+ },
+ "mean_agreement_by_type": {
+  "framing.target": 1.0,
+  "framing.population": 1.0,
+  "framing.unit": 1.0,
+  "variables": 0.333,
+  "transformation": 0.5,
+  "model.family": 1.0,
+  "model.controls": 1.0,
+  "validation": 1.0,
+  "metric": 0.722,
+  "verdict": 0.5,
+  "final_selection": 0.444
+ },
+ "mean_answer_consistency": 0.556
+}

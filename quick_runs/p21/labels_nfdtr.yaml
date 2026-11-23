@@ -1,0 +1,33 @@
+# P21 labels for the nfdtr lessons (written with the TRAIN-ONLY data profile, no evaluator outcome), by the P17 rule
+# (quick_runs/predictions/P17.md, Method 3), one author's reading after writing and before the C1-nfdtr / E-nfdtr
+# runs (2026-11-17). Key: source_task -> {label: [run/k, ...]}. Unlisted lessons of these tasks are neutral.
+# Note: unlike the train-only profile given to the GUIDE (P18 G3d-tr, which read column_x's +1.00 as "keep a
+# predictive feature"), the WRITER flagged the same +1.00 as leakage and told the agent to remove it (TF03 fix 5/5).
+sf_tf01_goal_imbalance:
+  fix:              # recommends class_weight='balanced' (seed0/1, seed1/2) or to check the class distribution (seed2/1)
+    - seed0/1
+    - seed1/2
+    - seed2/1
+  reinforcing: []   # none says to use the plain split or skip weighting; seed3/0, seed4/1 give metric advice only (neutral)
+sf_tf02_player_rep_norm:
+  fix:              # says to strip the 'cm' suffix rather than coerce it away
+    - seed4/0
+  reinforcing:      # pd.to_numeric(errors='coerce') on '183cm': turns the value into a missing one
+    - seed0/1
+    - seed1/0
+    - seed2/0
+    - seed3/0
+sf_tf03_correlation_causation:
+  fix:              # "a feature with correlation ~1.0 is leaked; remove it" (seed1/0 names column_x)
+    - seed0/0
+    - seed1/0
+    - seed2/1
+    - seed3/0
+    - seed4/0
+  reinforcing:      # keep all numerical columns: select_dtypes(np.number) / "strict adherence", no exclusion
+    - seed2/0
+    - seed4/1
+                    # neutral: seed0/1 (don't drop columns unless IDs), seed1/1, seed3/1 (exclude IDs), seed2/2, seed3/2 (missing values)
+sf_tf05_credit_card_leakage:
+  fix: []           # no lesson mentions leakage or the spending columns
+  reinforcing: []   # none says to use all features or keep the spending columns

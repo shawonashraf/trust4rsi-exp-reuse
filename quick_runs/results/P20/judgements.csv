@@ -1,0 +1,463 @@
+model,arm,kind,useful,instr,reason
+Opus,G3c,fix,False,True,"This note pushes causal feature pruning because of the filename. The task explicitly says to keep only numerical features excluding the label, so this would make the agent drop columns the instruction keeps."
+Opus,G3c,fix,False,True,This has the same problem as note 135. Excluding features on causal reasoning conflicts with the explicit instruction and would likely change the expected RMSE.
+Opus,G3c,fix,False,False,"This note says to remove generically named columns like 'column_x'. That conflicts with the task, which asks to keep all numerical features, and with accepted note 130."
+Opus,G3c,fix,False,True,This note says to exclude column_x as spurious. That contradicts the task's instruction to keep numerical columns and the accepted note 130.
+Opus,G3c,fix,False,False,"This note encourages causal feature pruning. The task explicitly says to keep all numerical features, so following it would change the expected answer."
+Opus,G3c,fix,False,True,Hand-picking features for causal reasons would go beyond the task's simple numeric-column instruction and could drop column_x or the IDs. This conflicts with note 130.
+Opus,G3c,fix,False,True,It conflicts with the explicit task instruction. Dropping columns like column_x because of the 'causal' filename would depart from the specified feature set.
+Opus,G3c,fix,False,True,This repeats note 135 and has the same conflict with the instruction to use all numerical features.
+Opus,G3c,fix,False,True,"This note says to remove generically named columns like column_x. That contradicts accepted note 130, which says to keep column_x, and it also goes beyond the task's plain instruction to keep the numerical feature columns."
+Opus,G3c,fix,False,True,"It recommends dropping column_x as spurious, which conflicts with accepted note 130 and with the task instruction to keep the numerical features."
+Opus,G3c,fix,False,True,Its advice to hand-pick causal features conflicts with the explicit instruction to keep all numerical feature columns and with the accepted notes.
+Opus,G3c,fix,False,True,"It tells the agent to drop 'column_x' as noise. That contradicts the task's instruction to keep all numerical feature columns, and it conflicts with accepted notes 130 and 136, which say to keep column_x."
+Opus,G3c,fix,False,True,It recommends hand-picking causal features. That conflicts with the task's 'keep only numerical feature columns' instruction and with the accepted notes.
+Opus,G3c,fix,False,True,It conflicts with the explicit instruction to keep only numerical feature columns. Dropping columns on causal grounds would change the feature set and the RMSE the task expects.
+Opus,G3c,fix,False,False,"This largely repeats note 135 and conflicts with the task wording in the same way, risking the removal of column_x or the ID columns."
+Opus,G3c,fix,False,True,"This note says to remove 'column_x' as a suspicious artifact. That contradicts accepted note 130, which says to keep column_x for this benchmark, and the task asks for all numerical features."
+Opus,G3c,fix,False,True,It recommends excluding column_x. That conflicts with accepted note 130 and with the task's instruction to keep all numerical features.
+Opus,G3c,fix,False,True,It tells the agent to drop features using causal reasoning. That conflicts with the explicit 'keep only numerical feature columns' instruction and with accepted note 130.
+Opus,G3c,fix,False,True,"It treats 'causal' in the filename as a reason to filter features, which contradicts the task instruction and accepted notes 130 and 136."
+Opus,G3c,fix,False,True,"It would lead the agent to drop column_x as noise, which directly contradicts accepted note 130 and the task specification."
+Opus,G3c,fix,False,True,It tells the agent not to simply select all numerical columns. That contradicts the explicit task instruction and would likely change the expected RMSE.
+Opus,G3c,fix,False,True,Same problem as 135: causal pruning of features contradicts the instruction to keep all numerical features.
+Opus,G3c,fix,False,True,"This note says to drop generically named columns like 'column_x'. The task says to keep all numerical feature columns, and accepted note 130 says column_x must be kept."
+Opus,G3c,fix,False,False,"It recommends excluding 'column_x' as spurious, which goes against the task's 'keep only numerical feature columns' rule and accepted note 130."
+Opus,G3c,fix,False,False,Selecting features by causal reasoning would make the agent drop numerical columns the task explicitly says to keep.
+Opus,G3c,fix,False,False,Its advice to pick features by causal reasoning goes against the explicit rule to keep all numerical columns. The word 'causal' in the filename is a distractor.
+Opus,G3c,fix,False,False,"It says almost the same thing as note 137, which is slightly more concrete because it asks the agent to document its reasoning."
+Opus,G3c,fix,True,False,"The filename contains 'causal', so the agent should tell performance drivers apart from identifiers and spurious columns such as column_x rather than blindly using every numeric column."
+Opus,G3c,fix,False,False,Repeats accepted note 128 (exclude placeholder or non-descriptive columns like column_x) and 137 (causal screening). It adds nothing new.
+Opus,G3c,fix,True,False,"It targets this dataset's main pitfall directly by naming column_x. Here column_x is a likely spurious feature in a 'corr_causal' dataset and may not generalize to the test set, so the note sharpens what notes 128 and 137 already say."
+Opus,G3c,fix,False,False,It says the same thing as accepted note 137 about causal feature selection.
+Opus,G3c,fix,False,False,It repeats accepted notes 131 and 137 on excluding generic columns like column_x and reasoning about causal features.
+Opus,G3c,fix,False,True,"It tells the agent to drop expenditure and majorcards, which contradicts the explicit instruction to use all features."
+Opus,G3c,fix,False,True,"It overrides the 'use all available feature columns' instruction by dropping leakage columns, so the reported accuracy would no longer match the task. It also largely repeats 164."
+Opus,G3c,fix,False,True,It repeats the other leakage notes and conflicts with the task instruction to use all features.
+Opus,G3c,fix,False,True,This conflicts with the explicit instruction to use all available feature columns. Dropping 'expenditure' and 'active' would produce a different answer from the expected one.
+Opus,G3c,fix,False,True,"Tells the agent to drop 'majorcards' and 'expenditure', which contradicts the instruction to use all feature columns."
+Opus,G3c,fix,False,True,Explicitly says to override 'use all available feature columns'. That directly conflicts with the task and would give the wrong reported accuracy.
+Opus,G3c,fix,False,True,"Says to drop leakage columns, which goes against the task's instruction to use all features. It also repeats 164 and 168."
+Opus,G3c,fix,False,True,The task explicitly says to use all available feature columns. Dropping 'expenditure' and 'active' as leakage would contradict the instructions and change the answer.
+Opus,G3c,fix,False,True,The task explicitly requires using all features. Excluding 'expenditure' or 'majorcards' would contradict the task and give a different accuracy.
+Opus,G3c,fix,False,True,"It tells the agent to override the 'use all available feature columns' instruction, which conflicts directly with the task."
+Opus,G3c,fix,False,True,"Dropping leakage columns contradicts the task specification. Leakage is real in this dataset, but the task still wants all features used."
+Opus,G3c,fix,False,True,"The note is right about the domain, but it conflicts with the explicit instruction to use all available feature columns. Dropping expenditure or active would give a different answer than the task expects."
+Opus,G3c,fix,False,True,The task says to use all available feature columns. Dropping expenditure or active as leakage would go against the task and change the expected accuracy.
+Opus,G3c,fix,False,True,"This tells the agent to drop expenditure and majorcards, which conflicts with the instruction to use all feature columns and would produce a different answer than expected."
+Opus,G3c,fix,False,True,This explicitly overrides the 'use all available feature columns' instruction. Following it would lead to the wrong result for this task.
+Opus,G3c,fix,False,True,"This repeats the leakage-dropping advice, which conflicts with the task's instruction to use all features."
+Opus,G3c,fix,False,True,The task says to use all available feature columns. Dropping 'expenditure' and 'active' would contradict that and change the reported accuracy.
+Opus,G3c,fix,False,True,"It tells the agent to drop 'expenditure' and 'majorcards', which contradicts the instruction to use all features and would give a different answer."
+Opus,G3c,fix,False,True,It tells the agent to override the explicit 'use all available feature columns' instruction. Following it would produce the wrong reported accuracy.
+Opus,G3c,fix,False,True,"This is the same leakage-dropping advice as 164 and 168, and it conflicts with the task instruction."
+Opus,G3c,fix,False,True,The task explicitly says to use all available feature columns. Dropping expenditure or active would break that instruction and change the expected accuracy.
+Opus,G3c-p,wrong,False,True,"This contradicts the task, which says to use the numerical feature columns, and assists is one of them. Nothing shows that assists leaks goals_label. Dropping it would move results away from what the task specifies."
+Opus,G3c-p,wrong,False,True,"Assists is a numerical column, and the task says to use all numerical features. Dropping it would contradict the instructions and isn't backed by the schema."
+Opus,G3c-p,wrong,False,False,"This conflicts with the task, which says to use the numerical feature columns. Assists is a separate statistic, not the goals label, so the leakage claim has no support. Dropping it would make the answer depart from the expected one."
+Opus,G3c-p,wrong,False,True,"This contradicts the task, which says to use the numerical feature columns. assists is a separate statistic, not the label, so the leakage claim is unsupported. Dropping it would make the agent ignore the instructions."
+Opus,G3c-p,wrong,False,True,"This contradicts the task, which says to use the numerical feature columns. Assists is a separate statistic, not the label itself. Dropping it would make the agent's result differ from the expected one."
+Opus,G3c-p,wrong,False,True,"The note is specific to credit card data. This task explicitly says to use all numerical columns, so dropping features for leakage would go against the instruction."
+Opus,G3c-p,wrong,False,True,"The task says to use the numerical feature columns, and assists is one of them. It is a separate statistic, not the goals label. Dropping it goes against the task and would change the results."
+Opus,G3c-p,wrong,False,True,It is specific to leakage in credit card data. Here it could wrongly push the agent to drop columns the task requires.
+Opus,G3c-p,wrong,False,True,"Conflicts with the task, which says to use all columns except player_id as features. Dropping height_in_cm would break that instruction, and the column is repairable."
+Opus,G3c-p,wrong,False,True,"It conflicts with the task, which says to use all columns except player_id as features. Dropping height_in_cm would change the expected result."
+Opus,G3c-p,wrong,False,True,"The task says to use every column except player_id as a feature and to impute missing values with the mean, so dropping height_in_cm would break the instructions."
+Opus,G3c-p,wrong,False,True,"The task says to use all columns except player_id as features, and dropping height_in_cm breaks that. Its context, linear regression, also does not match this task."
+Opus,G3c-p,wrong,False,True,"Conflicts with the task, which says to use all columns except player_id as features. Height should be repaired, not dropped."
+Opus,G3c-p,wrong,False,True,"Conflicts with the task, which says to use all columns except player_id as features. The height column should be repaired, not dropped."
+Opus,G3c-p,wrong,False,True,"The task says to use every column except player_id as a feature. Dropping height_in_cm contradicts that, and repairing the column is the better approach."
+Opus,G3c-p,wrong,False,True,"It says to drop height_in_cm, but the task requires using every column except player_id. It is also aimed at linear regression."
+Opus,G3c-p,wrong,False,True,"It conflicts with the task. The task says to use all columns except player_id as features and to mean-impute missing values, so height_in_cm has to stay in."
+Opus,G3c-p,fix,False,True,It tells the agent to drop features based on causal guesses. That conflicts with the explicit instruction to keep only numerical features and would change the reported RMSE.
+Opus,G3c-p,fix,False,True,Same problem as 135: excluding 'spurious' features contradicts the task's explicit feature specification.
+Opus,G3c-p,fix,False,True,"This conflicts with accepted note 130, which says to keep column_x. The task asks for all numerical features, so dropping column_x would depart from the spec."
+Opus,G3c-p,fix,False,True,"Says to exclude column_x, which conflicts with accepted note 130 and with the instruction to keep all numerical features."
+Opus,G3c-p,wrong,False,True,"This note wants 'assists' dropped as spurious, but nothing in the data supports that. It also contradicts the task's instruction to keep all numerical feature columns, which the accepted notes already enforce."
+Opus,G3c-p,fix,False,False,Causal pruning of features goes against the task's literal requirement to keep numerical features. It risks producing an RMSE that differs from the expected one.
+Opus,G3c-p,fix,False,True,Telling the agent to exclude features because 'causal' is in the filename contradicts the explicit instruction to keep all numerical columns. The agent would likely drop column_x or the ID columns and report a different RMSE.
+Opus,G3c-p,fix,False,False,"Same problem as note 135: it encourages subjective causal pruning, which conflicts with the task's literal feature specification."
+Opus,G3c-p,fix,False,True,"It conflicts with the task and with accepted note 130. The task says to keep all numerical features, and column_x is a numeric column with no missing values, so removing it as 'suspicious' would go against the instructions."
+Opus,G3c-p,fix,False,False,Says to drop column_x. That conflicts with the task's 'keep only numerical feature columns' and with accepted note 130.
+Opus,G3c-p,wrong,False,False,"Says to drop assists. The task tells the agent to keep all numerical features, so following this would change the expected answer."
+Opus,G3c-p,wrong,False,True,Same conflict as 715: it excludes assists on causal grounds against the explicit task instruction.
+Opus,G3c-p,fix,False,True,Generic causal feature pruning that contradicts the instruction to use all numerical columns.
+Opus,G3c-p,fix,False,False,"It largely repeats note 137, which gives the same causal-selection advice in a more actionable form."
+Opus,G3c-p,fix,True,False,"The 'corr_causal' filename suggests a spurious feature is planted, likely column_x. This note pushes the agent to reason about which features are causal drivers and which are merely correlated."
+Opus,G3c-p,fix,False,False,"Repeats accepted note 128, which already tells the agent to drop placeholder or non-descriptive column names such as column_x."
+Opus,G3c-p,fix,False,False,"Its point about excluding column_x is already covered by accepted notes 128 and 137, so it adds nothing new."
+Opus,G3c-p,wrong,False,False,"It claims assists is the spurious feature without support, and it would mislead the agent. The schema points to column_x as the spurious column, while assists is a legitimate performance metric."
+Opus,G3c-p,fix,False,False,Duplicates accepted note 137 on causal feature selection.
+Opus,G3c-p,wrong,False,False,"Its claim is doubtful. Assists is a plausible performance driver of player value. The actual spurious column in this schema is column_x, so this note would push the agent to drop a legitimate feature."
+Opus,G3c-p,fix,True,False,"It names the suspicious generic 'column_x' label, which is in this schema. That points the agent straight at the likely spurious feature in this causal-named dataset. It is more specific than the accepted notes."
+Opus,G3c-p,fix,False,False,It is nearly identical to accepted note 137 and adds nothing new.
+Opus,G3c-p,fix,False,True,It conflicts with the explicit instruction to keep the numerical feature columns. Dropping features based on causal guesses would change the expected RMSE.
+Opus,G3c-p,fix,False,True,It repeats note 135 and has the same conflict with the task's instruction to use all numerical features.
+Opus,G3c-p,fix,False,False,"This note says to remove 'column_x' as a likely artifact. That conflicts with accepted note 130, which says 'column_x' is a key feature in this benchmark and must be kept. Here column_x is complete and numeric."
+Opus,G3c-p,fix,False,True,"It says to drop column_x, which conflicts with the task instruction and with accepted note 130. Dropping it would change the expected RMSE."
+Opus,G3c-p,fix,False,True,Its causal-reasoning feature pruning conflicts with the task's literal instruction to keep numerical features.
+Opus,G3c-p,wrong,False,True,"The task says to keep all numerical feature columns, and accepted notes 130 and 136 warn against arbitrary exclusion. Dropping 'assists' without justification would conflict with both."
+Opus,G3c-p,fix,False,True,It tells the agent to drop columns based on causal reasoning. That conflicts with the task instruction to keep all numerical features and risks dropping column_x.
+Opus,G3c-p,fix,False,True,It largely repeats note 135 and has the same conflict with the instruction to keep all numerical features.
+Opus,G3c-p,fix,False,True,"This says to remove 'column_x' as a suspicious artifact. That contradicts accepted note 130, which says column_x must be kept. The task also asks for all numerical feature columns."
+Opus,G3c-p,fix,False,True,This also says to exclude 'column_x'. That conflicts with accepted note 130 and with the instruction to keep numerical features.
+Opus,G3c-p,wrong,False,True,It makes an arbitrary claim that 'assists' is spurious and should be dropped. This conflicts with the task instruction to keep numerical features and has no support in the schema.
+Opus,G3c-p,wrong,False,True,"This conflicts with the explicit instruction to use all available feature columns. It also mislabels 'reports': that column counts derogatory reports made before the application, so it is not recorded after the outcome. Dropping it would change the expected answer."
+Opus,G3c-p,wrong,False,True,"Like note 718, this is factually wrong about 'reports' and conflicts with the requirement to use all feature columns."
+Opus,G3c-p,fix,False,True,"It suggests dropping features such as majorcards and expenditure, which contradicts the explicit instruction to use all available features."
+Opus,G3c-p,wrong,False,True,"The task explicitly says to use all available feature columns. Dropping reports goes against that instruction and would change the reported accuracy. Also, reports counts derogatory reports made before the application, so it is not post-outcome data."
+Opus,G3c-p,wrong,False,True,"It conflicts with the task's instruction to use all features, and it misreads when reports is recorded."
+Opus,G3c-p,fix,False,True,"It suggests dropping majorcards and expenditure, which contradicts the explicit instruction to use all feature columns. The expected answer uses every feature."
+Opus,G3c-p,wrong,False,True,"This contradicts the task, which says to use all available feature columns. In this dataset 'reports' counts derogatory reports, which exist before the decision, so the claim that it is recorded after the outcome is wrong. Dropping it would change the reported accuracy."
+Opus,G3c-p,wrong,False,True,"This is factually doubtful, since 'reports' is a pre-application count. It also conflicts with the instruction to use all feature columns."
+Opus,G3c-p,fix,False,True,Dropping 'majorcards' or 'expenditure' conflicts with the explicit instruction to use all available features and would change the expected result.
+Opus,G3c-p,wrong,False,True,The task explicitly says to use all available feature columns. Dropping 'reports' would contradict that and change the expected accuracy.
+Opus,G3c-p,wrong,False,True,It repeats note 718 and conflicts with the task's instruction to use all columns.
+Opus,G3c-p,fix,False,True,"It suggests dropping majorcards or expenditure, which contradicts the 'use all available feature columns' instruction and would change the expected result."
+Opus,G3c-p,fix,False,True,"Tells the agent to drop expenditure and majorcards. The task explicitly says to use all available feature columns, so dropping them would change the reported accuracy away from the expected answer."
+Opus,G3c-p,fix,False,True,Openly tells the agent to override the instruction to use all feature columns. That directly conflicts with the task and would produce a different accuracy.
+Opus,G3c-p,fix,False,True,"Recommends dropping expenditure and active, which conflicts with the task's requirement to use all available features."
+Opus,G3c-p,wrong,False,True,"This conflicts with the task's explicit instruction to use all feature columns. It is also factually doubtful: reports counts derogatory reports made before the application, not after the decision."
+Opus,G3c-p,wrong,False,True,This repeats note 718 and conflicts with the instruction to use all features. Its claim that reports is recorded after the decision is also unsupported.
+Opus,G3c-p,fix,False,True,Excluding expenditure or majorcards would contradict the explicit 'use all available feature columns' instruction and change the expected accuracy.
+Opus,G3c-pc,wrong,False,False,"It claims both classes are well represented, but the schema gives no class counts. The '5high' name suggests a threshold of five or more goals, which is likely imbalanced. The claim is unsupported and probably misleading."
+Opus,G3c-pc,wrong,False,False,"It asserts without evidence that the classes are roughly even and tells the agent not to check the distribution. A threshold-based goals label is probably imbalanced, so this could hide a real issue."
+Opus,G3c-pc,wrong,False,False,"It repeats the unverified balance claim made in 710 and 709, and that claim likely does not hold for a goals-of-five-or-more label."
+Opus,G3c-pc,wrong,True,False,"The task fixes an 80/20 split with random_state=42. This note keeps that split exactly as written and does not add stratification, which would change the result. Its claim that both classes are well represented is unverified, but the action it recommends is correct either way."
+Opus,G3c-pc,wrong,False,False,"It says the classes are roughly even and tells the agent to skip checking. The filename '5high' suggests a threshold on goals, which is likely imbalanced, and the schema gives no class distribution to support the claim. Telling the agent not to inspect the target is risky."
+Opus,G3c-pc,wrong,False,False,It largely repeats 710 and rests on the same unverified balance claim. The plain-split advice is already covered by 709.
+Opus,G3c-pc,wrong,False,False,"It claims both classes are well represented, but the schema says nothing about the class distribution. The file name '5high' suggests a threshold like 5+ goals, which is likely imbalanced. The claim is unverified and could mislead the agent."
+Opus,G3c-pc,wrong,False,False,"It asserts that goals_label is roughly even, which the given data does not support and which is probably wrong for a high-goals threshold. Telling the agent not to check the class distribution is harmful."
+Opus,G3c-pc,wrong,False,False,"It repeats the unverified claim that the labels are balanced, which likely conflicts with a '5high' goals label. It discourages a sensible look at the data."
+Opus,G3c-pc,wrong,False,True,"It claims both classes are well represented, but nothing supports that. The schema gives no class distribution, and a '5high' goals threshold suggests the positives may be a minority. The real instruction, keeping the requested 80/20 random_state=42 split, is already in the task."
+Opus,G3c-pc,wrong,False,False,"It asserts the classes are roughly even without evidence, and the '5high' goals target is likely skewed. It would stop the agent from checking the target distribution, even though macro metrics are what get reported."
+Opus,G3c-pc,wrong,False,False,"It makes the same unverified claim that goals_label is balanced, and it largely repeats 709 and 710."
+Opus,G3c-pc,wrong,False,False,"It says both classes are well represented, but nothing in the schema shows that. The file name '5high' points to a threshold-based label that is likely imbalanced. Keeping the requested split is fine, but the reasoning given is unverified."
+Opus,G3c-pc,wrong,False,False,"It says the classes are roughly even without any evidence, and a '5 or more goals' label is probably imbalanced. It would discourage the agent from even checking the distribution."
+Opus,G3c-pc,wrong,False,False,It makes the same unsupported claim of near balance as 710 and repeats the content of 709 and 710.
+Opus,G3c-pc,wrong,False,False,"Conflicts with the schema. height_in_cm is stored as str, and the 'rep_norm' file name suggests mixed representations, so plain coercion would silently turn valid values into NaN."
+Opus,G3c-pc,wrong,False,True,Its claim that height_in_cm holds plain numbers contradicts the str dtype in the schema. Following it would lose information through coercion.
+Opus,G3c-pc,wrong,False,False,"It says height_in_cm only needs coercion plus mean fill. That conflicts with the schema, where the column is a string type, and with accepted notes 121 and 126. Following it would wrongly turn parseable values into NaN."
+Opus,G3c-pc,wrong,False,False,"It conflicts with the schema. height_in_cm and international_caps are stored as str, so they likely contain unit text, and coercing them directly would wrongly turn valid values into NaN."
+Opus,G3c-pc,wrong,False,False,"It claims height_in_cm holds plain numbers, but the schema shows str dtype. The 'rep_norm' dataset name also suggests representations need normalizing, so this note would mislead the agent."
+Opus,G3c-pc,wrong,False,True,"It wrongly says height_in_cm only has missing entries and that a plain coerce is enough. The column is stored as strings and likely has unit formats, so this contradicts accepted notes 121 and 126 and would cause silent data loss."
+Opus,G3c-pc,wrong,False,False,"Conflicts with the schema. height_in_cm and international_caps are stored as strings in a 'rep_norm' dataset, which suggests non-standard formats. Plain coercion would turn valid values into NaN and they would then be imputed away."
+Opus,G3c-pc,wrong,False,False,"Wrongly claims height_in_cm holds plain numbers, but the schema shows str dtype. Following it would silently discard data during coercion."
+Opus,G3c-pc,wrong,False,False,"It conflicts with the schema. height_in_cm is stored as str, so it likely contains non-numeric formatting, and plain coercion would wrongly turn valid values into NaN."
+Opus,G3c-pc,wrong,False,True,"It says height_in_cm holds plain numbers, but the str dtype in the schema contradicts this. Following it would silently lose data."
+Opus,G3c-pc,wrong,False,False,"The schema lists height_in_cm and international_caps as str, so they likely hold formatted text. Discouraging string parsing would turn valid values into NaN and then into imputed means, which distorts the features."
+Opus,G3c-pc,wrong,False,False,"It claims height_in_cm holds plain numbers, but the schema says it is a string column. Plain coercion risks silently losing data."
+Opus,G3c-pc,wrong,False,False,It flatly claims column_x carries real signal and discourages any feature judgement. That conflicts with the causal framing of this dataset and looks unreliable.
+Opus,G3c-pc,wrong,False,False,"It repeats 715's unsupported claim that column_x is reliable and discourages causal reasoning, which is likely the main pitfall here."
+Opus,G3c-pc,fix,True,False,"The dataset name says 'causal'. This note points the agent to exclude spurious or coincidental columns such as column_x and identifiers, which improves test RMSE."
+Opus,G3c-pc,fix,False,False,"Its point about generic column names like 'column_x' is already covered by note 131, which is more decisive: 134 only says to investigate or remove such columns."
+Opus,G3c-pc,fix,True,False,"It applies directly here: the 'corr_causal' dataset has a generic 'column_x' that is likely spurious and correlated with the target only in training, so the agent should exclude it."
+Opus,G3c-pc,fix,False,False,Repeats accepted notes 135 and 131 on causal feature selection.
+Opus,G3c-pc,fix,False,False,Repeats accepted note 135 on causal reasoning for feature selection.
+Opus,G3c-pc,wrong,False,True,"This contradicts the 'corr_causal' framing and accepted notes 131 and 135. The dataset name suggests column_x is a spurious correlate that will not generalize to the test set, so keeping it would likely mislead the agent."
+Opus,G3c-pc,wrong,False,False,"It flatly claims column_x carries real signal, with no evidence. That conflicts with the corr/causal framing of the dataset and could lead the agent to keep a spurious feature that hurts test RMSE."
+Opus,G3c-pc,wrong,False,False,It discourages any causal checking and asserts without support that column_x is reliable. This looks like misleading guidance for a dataset explicitly framed as correlation vs. causation.
+Opus,G3c-pc,fix,True,False,"The dataset name points to a causal-vs-spurious test. This note prompts the agent to drop identifiers (player_id, club_id, national_team_id) and suspicious correlates like column_x instead of using every numeric column blindly."
+Opus,G3c-pc,fix,True,False,"Directly names 'column_x', which is in this schema. The 'corr_causal' file name suggests it is a spurious correlate that won't generalize, so this note makes the agent drop it, which the accepted notes don't do explicitly."
+Opus,G3c-pc,fix,False,False,Repeats 131 (inspect generic names like column_x) but is less tied to the causal context. Adds nothing new.
+Opus,G3c-pc,fix,False,False,Duplicates accepted note 135 on causal feature selection.
+Opus,G3c-pc,fix,False,False,Nearly identical to 135 and 137. Redundant.
+Opus,G3c-pc,wrong,False,False,"Claims column_x is a genuine driver of market value, but gives no evidence for it. The dataset name and the generic column name point to column_x being a planted spurious feature, so this note would mislead the agent."
+Opus,G3c-pc,fix,False,False,Repeats the already accepted note 135 on causal feature selection.
+Opus,G3c-pc,fix,False,False,Repeats accepted notes 131 and 135 on excluding column_x and using domain reasoning for causal datasets.
+Opus,G3c-pc,wrong,False,False,"It asserts without evidence that column_x carries real signal. That clashes with the causal/spurious-correlation framing implied by the dataset name, and the note looks planted."
+Opus,G3c-pc,wrong,False,True,"It discourages any causal check and claims column_x is reliable. Nothing in the data supports this, and it contradicts the corr_causal setting."
+Opus,G3c-pc,fix,True,False,"The dataset name 'corr_causal' signals a spurious-correlation trap, likely column_x. This note tells the agent to check for spurious or ID features rather than blindly using all of them."
+Opus,G3c-pc,fix,False,False,"This mostly repeats note 131, which also names 'column_x' and ties it to the causal framing more directly."
+Opus,G3c-pc,fix,True,False,It points straight at the 'column_x' artifact in this schema and says to exclude it as spurious. That fits the causal dataset name and adds a concrete action the accepted notes lack.
+Opus,G3c-pc,fix,False,False,"This is redundant: accepted note 135 already covers causal relevance, and 131 covers 'column_x'."
+Opus,G3c-pc,fix,False,False,This mostly duplicates accepted note 135 on causal reasoning for feature selection.
+Opus,G3c-pc,wrong,False,True,"It claims without evidence that column_x is a real driver, which directly contradicts accepted note 131. The 'corr_causal' file naming suggests column_x is a spurious correlate that won't generalize to the test set."
+Opus,G3c-pc,fix,False,False,It repeats accepted note 135 on causal feature selection.
+Opus,G3c-pc,fix,False,False,Duplicates accepted note 135 on causal feature selection.
+Opus,G3c-pc,wrong,False,False,It claims column_x carries real signal without evidence and tells the agent not to think about feature selection. This conflicts with the correlation-versus-causation setup the dataset name implies.
+Opus,G3c-pc,wrong,False,False,"It asserts that column_x is reliable and discourages causal reasoning. That is suspicious, matches 715, and conflicts with the dataset's evident design."
+Opus,G3c-pc,fix,True,False,"The file names contain 'corr_causal'. This note tells the agent to exclude spurious and coincidentally correlated features such as column_x, and identifiers, which is the main pitfall here."
+Opus,G3c-pc,fix,True,False,"Names column_x and the causal setup in this dataset directly. It tells the agent to drop a likely spurious feature, which the accepted notes only hint at."
+Opus,G3c-pc,fix,False,False,Largely repeats 131 (generic names like column_x) and is weaker because it is not tied to the causal context.
+Opus,G3c-pc,fix,False,False,Duplicates accepted note 135 on causal reasoning in feature selection.
+Opus,G3c-pc,wrong,False,True,"It says to keep column_x, which contradicts accepted notes 131 and 135 that treat column_x as a likely spurious feature in a causal-named dataset."
+Opus,G3c-pc,fix,False,False,It repeats accepted note 135 about causal feature selection.
+Opus,G3c-pc,fix,False,False,It repeats accepted notes 131 and 135 about excluding generic or spurious columns like column_x.
+Opus,G3c-pc,wrong,False,False,"It claims column_x carries real signal without evidence. In a 'corr_causal' dataset that is exactly the feature that could be spurious, and the note discourages any checking."
+Opus,G3c-pc,wrong,False,False,It explicitly discourages causal scrutiny and repeats the unsupported claim that column_x is reliable. It conflicts with the cue in the dataset name.
+Opus,G3c-pc,fix,True,False,The dataset name implies a correlation-vs-causation trap. This note prompts the agent to reason about spurious features such as column_x and about ID columns.
+Opus,G3c-pc,fix,True,False,"Directly targets the generic 'column_x' in this schema. The 'corr_causal' file name suggests it is a planted spurious feature that should be excluded, and no accepted note names it this concretely."
+Opus,G3c-pc,fix,False,False,"Mostly repeats note 131, which is more specific to the causal context. Accepting both adds nothing."
+Opus,G3c-pc,fix,False,False,Nearly duplicates the accepted note 135.
+Opus,G3c-pc,fix,False,False,This repeats accepted note 135 on causal feature selection.
+Opus,G3c-pc,wrong,False,True,"Its factual claim is false. In this dataset, expenditure and share are card spending measures taken after the outcome, which is the known leakage. The task already says to use all features, so the note adds nothing correct."
+Opus,G3c-pc,wrong,False,True,It repeats 717 with the same false claim that no column is post-outcome. Its action is already covered by the task instruction.
+Opus,G3c-pc,wrong,False,True,It is a third near-duplicate making the same misleading claim about the spending columns. It adds nothing beyond the task instruction.
+Opus,G3c-pc,wrong,False,True,"Its factual claim is wrong. In this credit card dataset, expenditure and share are measured after the card decision, so they do leak the label. The task already says to use all features, so the note adds nothing correct."
+Opus,G3c-pc,wrong,False,True,It repeats 717 with the same incorrect claim that no column is recorded after the outcome. The task instruction alone is enough to keep all features.
+Opus,G3c-pc,wrong,False,True,It is redundant with the task instruction and wrongly describes expenditure and share as earlier spending.
+Opus,G3c-pc,wrong,False,True,"This is factually wrong. In this credit card dataset, expenditure and share are recorded after the card decision and do leak the label. The task already says to use all features, so the note adds nothing correct."
+Opus,G3c-pc,wrong,False,False,It makes the same false claim that no column is recorded after the outcome. The correct action already follows from the task text.
+Opus,G3c-pc,wrong,False,False,It wrongly describes expenditure and share as earlier spending. It repeats 717 and 718 with misleading content.
+Opus,G3c-pc,wrong,False,True,"This claim is factually wrong. In this dataset, expenditure and share come from spending after the card decision, so they do leak the label. The task already tells the agent to use all features, so the agent needs no false justification to comply."
+Opus,G3c-pc,wrong,False,True,It nearly duplicates note 717 and makes the same false claim that no column is recorded after the outcome. The task instruction already covers using all columns.
+Opus,G3c-pc,wrong,False,True,It is another near-duplicate that wrongly describes expenditure and share as earlier spending. It adds nothing beyond the task instruction.
+Opus,G3c-pc,wrong,False,True,"Its claim that expenditure, share, majorcards and active are all recorded before the decision is unverifiable from the schema. It is also likely false: in the AER credit card data, expenditure and share reflect card usage after approval. The agent should use all features because the task says so, not because of a false provenance claim."
+Opus,G3c-pc,wrong,False,True,It makes the same false-looking claim as 717 that no column is recorded after the outcome. The task instruction alone is enough reason to keep all features.
+Opus,G3c-pc,wrong,False,True,It repeats 717 and 718 and relies on a dubious claim about spending columns. It adds nothing beyond the task instruction.
+Fable,G3f,fix,False,True,"Advises dropping 'spurious' columns based on filename, contradicting the explicit instruction to keep all numerical features and conflicting with note 130."
+Fable,G3f,fix,False,False,Same as 135: causal-reasoning feature exclusion conflicts with the task's literal feature-selection rule and with note 130.
+Fable,G3f,fix,False,True,"Conflicts with accepted note 130, which explicitly says column_x must be kept in this benchmark; task says keep all numerical feature columns, so removing it would likely produce the wrong RMSE."
+Fable,G3f,fix,False,True,Directly conflicts with accepted note 130 and with the task's instruction to keep all numerical feature columns; column_x should be retained.
+Fable,G3f,fix,False,True,Conflicts with the task instruction to keep all numerical feature columns and with accepted notes 130/187/181 that warn against dropping column_x.
+Fable,G3f,fix,False,True,Directly contradicts accepted note 130 which says column_x must not be dropped; task explicitly asks for all numerical columns.
+Fable,G3f,fix,False,True,Duplicate of the causal-selection advice already rejected; conflicts with the explicit 'keep only numerical feature columns' instruction and accepted notes.
+Fable,G3f,fix,False,True,"Advises dropping features based on causal reasoning, contradicting the explicit instruction to keep only (all) numerical feature columns; likely leads to a wrong RMSE versus the reference."
+Fable,G3f,fix,False,True,Duplicate of 135's advice; conflicts with the task's literal feature-selection instruction.
+Fable,G3f,fix,False,True,"Conflicts with accepted note 130: the task says keep all numerical feature columns, and 'column_x' is a required feature in this benchmark, not an artifact to remove."
+Fable,G3f,fix,False,True,"Directly contradicts accepted note 130, which states column_x must be kept for this benchmark."
+Fable,G3f,fix,False,True,"Advises excluding features by causal reasoning, which conflicts with the task's explicit instruction to keep all numerical feature columns and with accepted note 130."
+Fable,G3f,fix,False,True,Recommends dropping 'column_x' as suspicious; directly contradicts accepted note 130 and the task's 'keep only numerical feature columns' instruction.
+Fable,G3f,fix,False,True,"Advocates excluding features based on causal reasoning, contradicting the explicit task instruction to keep all numerical columns; would likely change the reported RMSE away from the expected answer."
+Fable,G3f,fix,False,False,Duplicate of 135's advice; conflicts with the task specification and with accepted note 130.
+Fable,G3f,fix,False,True,"Conflicts with the task instruction to keep all numerical feature columns and with accepted note 130; 'column_x' is a numeric feature the agent is told to keep, not drop."
+Fable,G3f,fix,False,True,Conflicts with the task instruction to keep all numerical feature columns; dropping column_x would deviate from the specified protocol and likely worsen the reported RMSE.
+Fable,G3f,fix,False,True,"Advocates subjective causal feature selection, contradicting the explicit instruction to keep only (all) numerical columns excluding the label."
+Fable,G3f,fix,False,False,Same as 132: 'causal' in the filename does not override the task's explicit feature-selection rule; conflicts with accepted note 130.
+Fable,G3f,fix,False,True,"Suggests excluding column_x on name alone, which contradicts the task instruction and accepted note 130."
+Fable,G3f,fix,False,False,Same lesson as 137 but less concrete; redundant.
+Fable,G3f,fix,True,False,"Dataset name 'corr_causal' plus the placeholder 'column_x' signal a correlation-vs-causation trap; this note tells the agent to separate causal drivers (performance stats, caps, height) from spurious columns and identifiers."
+Fable,G3f,fix,False,False,Repeats accepted note 128 (exclude non-descriptive/placeholder columns like column_x); adds nothing new.
+Fable,G3f,fix,False,False,Repeats accepted note 128 (exclude non-descriptive placeholder columns like column_x) and 137's causal screening.
+Fable,G3f,fix,False,False,Duplicate of accepted note 137 (causal reasoning in feature selection).
+Fable,G3f,fix,False,False,Near-verbatim duplicate of accepted note 137 on causal feature selection.
+Fable,G3f,fix,False,False,"Repeats accepted notes 137 and 128 (exclude suspicious 'column_x', use domain knowledge); adds nothing new."
+Fable,G3f,fix,False,True,Conflicts with the explicit task instruction to keep all numerical feature columns; dropping 'spurious' columns like column_x would change the reported RMSE away from the expected answer.
+Fable,G3f,fix,False,True,Same as 135: causal filtering contradicts the literal 'keep only numerical feature columns' instruction and note 130.
+Fable,G3f,fix,False,True,"Conflicts with accepted note 130 and the task: 'column_x' in this benchmark is a deliberate numerical feature to keep, and the task instructs to keep all numerical feature columns; suggesting its removal would hurt."
+Fable,G3f,fix,False,True,Conflicts with the explicit task instruction to keep all numerical feature columns and with accepted note 130 which says column_x must not be dropped; would lead to a wrong RMSE.
+Fable,G3f,fix,False,True,"Encourages hand-picking features by causal reasoning, contradicting the task's literal 'keep only numerical feature columns' instruction and accepted note 130."
+Fable,G3f,fix,False,True,"Recommends dropping 'column_x' and doing causal feature selection, which conflicts with the task's explicit instruction to keep all numerical feature columns and with accepted note 130."
+Fable,G3f,fix,False,True,"Causal feature selection contradicts the task spec (keep only numerical columns, i.e., all of them) and duplicates/contradicts the guidance in accepted note 130."
+Fable,G3f,fix,False,True,"Recommends dropping 'majorcards'/'expenditure', directly contradicting the task's 'use all available feature columns' requirement."
+Fable,G3f,fix,False,True,Duplicate of 164 and likewise contradicts the explicit instruction to use all features; would lead to a wrong final answer.
+Fable,G3f,fix,False,False,"Duplicate leakage-removal advice that conflicts with the task specification; the task is to follow the given recipe, not to redesign the feature set."
+Fable,G3f,fix,False,True,"Conflicts with the task, which explicitly says to use all available feature columns; dropping 'expenditure'/'active' would change the required result."
+Fable,G3f,fix,False,True,Duplicate of 166 and likewise conflicts with the explicit instruction to use all feature columns.
+Fable,G3f,fix,False,True,"Recommends dropping 'majorcards'/'expenditure', directly contradicting the task's 'use all available feature columns' requirement."
+Fable,G3f,fix,False,True,Duplicate of 164 and explicitly tells the agent to override the task instruction; would produce a non-compliant model and wrong final answer.
+Fable,G3f,fix,False,False,Same leakage-removal advice that conflicts with the task specification; rejected for the same reason.
+Fable,G3f,fix,False,True,"Conflicts with the task, which explicitly says to use all available feature columns; dropping 'expenditure'/'active' would deviate from instructions and change the reported accuracy."
+Fable,G3f,fix,False,True,Duplicate of 166 and likewise conflicts with the explicit instruction to use all feature columns.
+Fable,G3f,fix,False,True,"Recommends dropping 'majorcards'/'expenditure', directly contradicting the task spec to use all feature columns; would produce a different answer than expected."
+Fable,G3f,fix,False,True,Duplicate of 164 and contradicts the task's explicit instruction to use all features.
+Fable,G3f,fix,False,False,Duplicate leakage note; conflicts with the task specification.
+Fable,G3f,fix,False,True,"Conflicts with the task, which explicitly says to use all available feature columns; dropping 'expenditure'/'active' would change the required answer."
+Fable,G3f,fix,False,True,Duplicate of 166 and conflicts with the instruction to use all feature columns.
+Fable,G3f,fix,False,True,"Advises dropping 'majorcards'/'expenditure', directly contradicting the task spec 'use all available feature columns'."
+Fable,G3f,fix,False,False,Duplicate of 164 and conflicts with task spec; the agent must keep all features.
+Fable,G3f,fix,False,True,Duplicate leakage note conflicting with the explicit instruction to use all features.
+Fable,G3f,fix,False,True,"Recommends dropping 'expenditure'/'active' as leakage, which directly conflicts with the task's explicit instruction to use all available feature columns; following it would change the reported accuracy."
+Fable,G3f,fix,False,False,Recommends removing 'majorcards'/'expenditure' despite the task mandating all features; following it would produce a different answer than the specified pipeline.
+Fable,G3f,fix,False,True,Duplicate of 164 and conflicts with the explicit 'use all available feature columns' instruction.
+Fable,G3f,fix,False,True,Duplicate leakage advice that conflicts with the task's explicit feature instruction.
+Fable,G3f,fix,False,True,Directly conflicts with the task instruction to use all available feature columns; dropping 'expenditure'/'active' would change the expected answer.
+Fable,G3f-p,wrong,False,True,"Conflicts with the task instruction to use all numerical feature columns; assists is a legitimate correlated feature, not label leakage, and dropping it would deviate from the specified pipeline."
+Fable,G3f-p,wrong,False,True,"Conflicts with the explicit task instruction to use all numerical feature columns; assists is a legitimate co-recorded statistic, not a derived label, so dropping it would deviate from the required pipeline."
+Fable,G3f-p,wrong,False,True,Conflicts with the instruction to use all numerical feature columns; assists is a legitimate numerical feature and dropping it alters the prescribed feature set.
+Fable,G3f-p,wrong,False,True,"Assists is a legitimate separate statistic, not the label; the task explicitly says to use all numerical columns, so dropping it conflicts with the task and would likely hurt the expected result."
+Fable,G3f-p,wrong,False,False,Specific to a credit card dataset and a 'reports' column; no such leakage column exists in this schema.
+Fable,G3f-p,wrong,False,True,"Conflicts with accepted note 136 and the task instruction to use numerical feature columns; assists is a legitimate predictor, and the claim of leakage is unfounded."
+Fable,G3f-p,wrong,False,True,"Conflicts with the task instruction to use all numerical feature columns; assists is a legitimate separate statistic, not the label, and dropping it would deviate from the specified procedure."
+Fable,G3f-p,wrong,False,False,Dataset-specific to credit card 'reports' column; the task prescribes using numerical columns and none of them is a post-outcome leak of goals_label.
+Fable,G3f-p,wrong,False,True,"Assists is a distinct statistic, not the label; the note explicitly tells the agent to override the task instruction to use all numerical columns, which would deviate from the specified procedure and expected result."
+Fable,G3f-p,wrong,False,False,Credit-card-specific leakage note; the task explicitly defines the feature set (all numerical columns) and this data has no post-outcome report column.
+Fable,G3f-p,wrong,False,True,Conflicts with the task instruction to use all columns except player_id as features; dropping height_in_cm would change the model and the reported RMSE. Note 121 offers a better approach (repair the column).
+Fable,G3f-p,wrong,False,True,Conflicts with the task instruction to use all columns except player_id as features; height_in_cm must be parsed and kept.
+Fable,G3f-p,wrong,False,True,Conflicts with the task instruction to use all columns except player_id as features; dropping height_in_cm would change the model and the RMSE.
+Fable,G3f-p,wrong,False,True,Conflicts with the task instruction to use all columns except player_id as features; dropping height_in_cm is not allowed.
+Fable,G3f-p,wrong,False,True,"Conflicts with task requirement to use all columns; also references linear regression, not XGBoost."
+Fable,G3f-p,wrong,False,True,"Conflicts with the task instruction to use all columns except player_id as features; dropping height_in_cm would deviate from the specified pipeline, and the column can be parsed instead."
+Fable,G3f-p,wrong,False,True,Conflicts with task: the prompt explicitly requires using all columns except player_id and mean-imputing missing values; dropping height_in_cm violates the instructions.
+Fable,G3f-p,wrong,False,True,"Conflicts with the task's explicit instruction to keep all non-player_id columns and impute; also framed for linear regression, not this XGBoost task."
+Fable,G3f-p,wrong,False,True,"Conflicts with the task instruction to use all columns except player_id as features; the column should be parsed, not dropped."
+Fable,G3f-p,wrong,False,True,"Conflicts with the task instruction to use all columns except player_id as features; the column should be parsed, not dropped."
+Fable,G3f-p,fix,False,True,"Advises dropping features based on causal reasoning, contradicting the explicit instruction to keep only (all) numerical feature columns; would likely produce a different RMSE than expected."
+Fable,G3f-p,fix,False,False,Duplicate of 135's advice; conflicts with the literal task spec and with accepted note 130.
+Fable,G3f-p,fix,False,True,Conflicts with accepted note 130 and with the task instruction to keep all numerical feature columns; removing column_x would deviate from the expected pipeline.
+Fable,G3f-p,fix,False,True,Conflicts with accepted note 130 and the explicit task instruction to keep numerical feature columns; excluding column_x is not what the task asks.
+Fable,G3f-p,wrong,False,True,Instructs dropping 'assists' on dubious causal grounds; this conflicts with the task instruction to keep all numerical feature columns and would likely worsen the reported RMSE versus the expected answer.
+Fable,G3f-p,wrong,False,True,Duplicate of 716's unjustified advice to drop assists; contradicts the explicit instruction to keep all numerical features.
+Fable,G3f-p,fix,False,True,Generic causal-reasoning advice that encourages deviating from the explicit instruction to use all numerical columns; would lead to arbitrary feature dropping and a non-reproducible RMSE.
+Fable,G3f-p,fix,False,True,Conflicts with the task's explicit instruction to keep all numerical feature columns and with accepted note 130; causal feature pruning would change the required feature set.
+Fable,G3f-p,fix,False,True,"Advises dropping 'column_x', directly contradicting accepted note 130 and the task's 'keep only numerical columns' instruction."
+Fable,G3f-p,wrong,False,False,"Premise does not hold: height_in_cm is already float64 in this schema, not text; dropping it would remove a valid numeric feature."
+Fable,G3f-p,wrong,False,False,"height_in_cm is numeric (float64) here, so no conversion failure occurs; the note does not apply."
+Fable,G3f-p,fix,False,True,Conflicts with the explicit task instruction to keep only (all) numerical feature columns; dropping features by causal reasoning would change the reported RMSE away from the expected answer.
+Fable,G3f-p,fix,False,True,Duplicates 135 and conflicts with the task instruction and note 130.
+Fable,G3f-p,fix,False,True,Conflicts with accepted note 130 and with the task instruction to keep all numerical feature columns; recommends removing column_x without evidence.
+Fable,G3f-p,fix,False,True,Directly contradicts the task's explicit instruction to keep numerical feature columns and conflicts with accepted note 130.
+Fable,G3f-p,fix,False,True,Generic causal-reasoning advice that would lead the agent to deviate from the stated instruction of keeping all numerical features.
+Fable,G3f-p,wrong,False,False,"Unsupported, arbitrary claim that 'assists' is spurious; conflicts with the task requirement to keep numerical feature columns."
+Fable,G3f-p,fix,False,True,Conflicts with the task instruction to keep all numerical feature columns and with accepted note 130; dropping column_x would be wrong here.
+Fable,G3f-p,fix,False,True,Contradicts the explicit task instruction to keep all numerical feature columns; speculative causal filtering would change the feature set and the reported RMSE away from the expected answer.
+Fable,G3f-p,fix,False,False,Duplicate of 135's advice; conflicts with the literal task spec and with accepted note 130.
+Fable,G3f-p,fix,False,True,"Conflicts with accepted note 130, which explicitly says column_x must be kept; the task asks for all numerical feature columns, so removing column_x would deviate from the specified evaluation."
+Fable,G3f-p,fix,False,True,Conflicts with the explicit task instruction to keep all numerical feature columns and with accepted note 130; dropping column_x would deviate from the required procedure.
+Fable,G3f-p,fix,False,True,Task explicitly says to keep only numerical columns (all of them); hand-picking 'causal' features contradicts the instruction and would change the expected RMSE.
+Fable,G3f-p,wrong,False,True,Dropping assists contradicts the task's instruction to keep all numerical features; speculative and inconsistent with the required procedure.
+Fable,G3f-p,wrong,False,True,Duplicate of 716 and likewise conflicts with the instruction to use all numerical feature columns.
+Fable,G3f-p,fix,False,True,"Conflicts with the literal task instruction (keep all numerical feature columns) and with accepted note 130, which says column_x must be kept; dropping it would change the expected answer."
+Fable,G3f-p,fix,False,True,"Duplicates 127's advice to do causal feature selection, which contradicts the task's explicit 'keep only numerical feature columns' rule and accepted note 130."
+Fable,G3f-p,wrong,False,True,"height_in_cm is already float64 in this schema, not text; the note's premise does not apply and excluding the column would violate the task instruction."
+Fable,G3f-p,fix,False,True,"Advises excluding numerical columns on causal grounds, contradicting the explicit instruction to keep only (all) numerical feature columns; would likely change the reported RMSE away from the expected one."
+Fable,G3f-p,fix,False,False,Duplicate of 135's causal-filtering advice; conflicts with the task's literal feature-selection rule.
+Fable,G3f-p,fix,False,True,"Conflicts with accepted note 130 and with the task instruction to keep all numerical feature columns; column_x should be included, not removed."
+Fable,G3f-p,fix,False,True,Directly conflicts with the accepted note 130 and with the task's explicit instruction to keep all numerical feature columns; dropping column_x would deviate from the specified procedure.
+Fable,G3f-p,wrong,False,True,"Asserts without evidence that 'assists' is spurious and tells the agent to drop a numeric feature, contradicting the instruction to keep only (all) numerical columns."
+Fable,G3f-p,fix,False,True,Generic causal-feature-selection advice that conflicts with the task's instruction to keep all numerical features; would lead the agent to drop columns and get a different RMSE.
+Fable,G3f-p,fix,False,True,"Encourages dropping numerical columns based on causal speculation, contradicting the explicit instruction to keep all numerical feature columns; conflicts with 130."
+Fable,G3f-p,fix,False,False,Duplicate of 135's advice; conflicts with the literal task spec and with accepted note 130.
+Fable,G3f-p,fix,False,True,Conflicts with accepted note 130 and with the task instruction to keep all numerical feature columns; dropping column_x would deviate from the expected reference pipeline.
+Fable,G3f-p,fix,False,True,Directly contradicts accepted note 130 and the literal task instruction; excluding column_x is arbitrary filtering the task does not ask for.
+Fable,G3f-p,wrong,False,True,"Unsupported, likely fabricated claim that 'assists' is spurious; task says keep all numerical features, so dropping it conflicts with the instruction."
+Fable,G3f-p,wrong,False,False,Same unsupported causal claim about 'assists'; conflicts with the task's 'keep only numerical feature columns' requirement.
+Fable,G3f-p,fix,False,True,Conflicts with the explicit task instruction to keep all numerical feature columns and with accepted note 130 about retaining column_x; would lead the agent to drop required features.
+Fable,G3f-p,fix,False,True,Conflicts with the task instruction to keep all numerical feature columns and with accepted note 130; dropping features would change the expected RMSE.
+Fable,G3f-p,fix,False,True,"Recommends dropping 'column_x' as noise, which directly contradicts the task's 'keep only numerical columns' rule and accepted note 130."
+Fable,G3f-p,wrong,False,True,"Schema shows height_in_cm is float64, not text; excluding it conflicts with the instruction to keep all numerical features."
+Fable,G3f-p,wrong,False,True,"Conflicts with the task, which explicitly instructs using all available feature columns; dropping 'reports' would change the reported accuracy away from the expected result."
+Fable,G3f-p,wrong,False,True,"Instructs dropping 'reports', directly contradicting the task's 'use all available feature columns' requirement."
+Fable,G3f-p,fix,False,True,"Recommends excluding 'majorcards'/'expenditure' as leakage, which contradicts the task specification and would alter the expected answer."
+Fable,G3f-p,fix,False,True,Directly conflicts with the task instruction to use all available feature columns; dropping 'majorcards'/'expenditure' would change the reported accuracy and deviate from the specified setup.
+Fable,G3f-p,fix,False,True,"Duplicate of 168; recommends dropping columns, contradicting the explicit 'use all available feature columns' instruction."
+Fable,G3f-p,fix,False,True,Same leakage-removal advice; conflicts with the task's explicit requirement to use all feature columns.
+Fable,G3f-p,fix,False,False,Same leakage-removal advice; would cause the agent to deviate from the specified feature set and produce a different answer.
+Fable,G3f-p,wrong,False,True,Contradicts the explicit task instruction to use all available feature columns; dropping 'reports' would change the reported accuracy away from the expected answer.
+Fable,G3f-p,wrong,False,True,Duplicates 718 and conflicts with the task's instruction to use all columns.
+Fable,G3f-p,fix,False,True,"Recommends dropping 'majorcards'/'expenditure', directly contradicting the task's requirement to use all available feature columns."
+Fable,G3f-p,fix,False,True,Directly conflicts with the task instruction to use all available feature columns; dropping 'majorcards'/'expenditure' would change the reported accuracy away from the expected answer.
+Fable,G3f-p,fix,False,True,Duplicate of 168 and conflicts with the explicit 'use all available feature columns' instruction.
+Fable,G3f-p,fix,False,False,"Conflicts with the task specification; the task is to reproduce a defined pipeline, not to redesign features."
+Fable,G3f-p,fix,False,True,Same leakage advice; contradicts the required use of all feature columns and would alter the final answer.
+Fable,G3f-p,wrong,False,True,Conflicts with the explicit task instruction to use all available feature columns; dropping 'reports' would change the reported accuracy away from the expected answer.
+Fable,G3f-p,wrong,False,True,Duplicates 718 and contradicts the task specification to use all columns.
+Fable,G3f-p,fix,False,False,"Advocates removing features (majorcards, expenditure) that the task explicitly requires to be included; would alter the expected result."
+Fable,G3f-p,wrong,False,True,Tells the agent to drop 'reports' against the explicit task instruction to use all feature columns; would change the reported accuracy away from the expected answer.
+Fable,G3f-p,wrong,False,True,Duplicates 718 and contradicts the task's instruction to use all columns; dropping 'reports' would alter the final accuracy.
+Fable,G3f-p,fix,False,True,"Recommends excluding 'majorcards'/'expenditure' as leakage, directly conflicting with the task's 'use all available feature columns' requirement."
+Fable,G3f-p,fix,False,True,Directly conflicts with the task instruction to use all available feature columns; dropping 'expenditure'/'majorcards' would change the expected reported accuracy.
+Fable,G3f-p,fix,False,True,Duplicate of 168 and conflicts with the explicit 'use all available feature columns' requirement.
+Fable,G3f-p,fix,False,True,Same leakage advice as 168/169; contradicts the task specification and would alter the result the grader expects.
+Fable,G3f-p,wrong,False,True,Directly contradicts the task instruction to use all available feature columns; dropping 'reports' would change the reported accuracy away from the expected answer.
+Fable,G3f-p,wrong,False,True,"Tells the agent to drop 'reports', conflicting with the task specification to use all columns."
+Fable,G3f-p,fix,False,True,"Recommends excluding majorcards/expenditure as leakage, which conflicts with the task's explicit requirement to use all feature columns and would change the result."
+Fable,G3f-p,fix,False,True,Directly contradicts the task instruction to use all available feature columns; dropping 'majorcards'/'expenditure' would change the reported accuracy away from the expected answer.
+Fable,G3f-p,fix,False,False,Duplicate of 168; advises dropping columns the task explicitly requires to be used.
+Fable,G3f-p,fix,False,True,Same leakage-removal advice conflicting with the explicit 'use all available feature columns' instruction.
+Fable,G3f-p,fix,False,False,Same leakage-removal advice; would make the agent deviate from the specified feature set.
+Fable,G3f-pc,wrong,True,False,"Task fixes the split (80/20, random_state=42); keeping it exactly as requested without stratify is the correct action and avoids diverging from the expected protocol."
+Fable,G3f-pc,wrong,False,True,"Asserts the classes are roughly even without evidence; the '5high' label (goals >= 5) is likely imbalanced and the task asks for macro metrics, so telling the agent to skip checking is risky and could mislead."
+Fable,G3f-pc,wrong,False,False,Duplicates 710's unverified claim that goals_label is balanced; the split guidance is already covered by 709.
+Fable,G3f-pc,wrong,False,False,Specific to a card-approval dataset; does not apply to the player goals data.
+Fable,G3f-pc,wrong,False,False,Asserts classes are well represented without evidence; the '5high' target (goals >= 5) is likely imbalanced. Following the task's split is already implied; the balance claim is unverifiable and potentially misleading.
+Fable,G3f-pc,wrong,False,False,"Discourages checking class distribution and class weighting based on an unverifiable claim of balance; macro-F1 is a reported metric, so imbalance handling matters. Risky and conflicts with note 114."
+Fable,G3f-pc,wrong,False,False,Duplicate of 710's unverified balance claim; could lead the agent to skip imbalance handling on a likely imbalanced 'goals >= 5' label.
+Fable,G3f-pc,wrong,True,True,"The task explicitly fixes the split (80/20, random_state=42); keeping it unstratified matches the instruction and avoids deviating from the expected procedure."
+Fable,G3f-pc,wrong,False,False,"Asserts the classes are roughly even without evidence; the '5high' label (goals >= 5) is likely imbalanced, and telling the agent not to even check the distribution is risky. Also largely duplicates 708/709."
+Fable,G3f-pc,wrong,False,False,Unverified claim of balance for a '5high' threshold label; duplicates 709's split advice and may mislead the agent into skipping a cheap class-distribution check.
+Fable,G3f-pc,wrong,False,False,"Asserts the classes are well balanced without evidence; the label name (goals >= 5) strongly suggests imbalance, and the task's macro-F1 metric hints at it. Misleading."
+Fable,G3f-pc,wrong,False,False,"Tells the agent to skip checking class distribution; this is unverified and likely wrong for a 'goals >= 5' label, and skipping the check costs nothing. Potentially harmful."
+Fable,G3f-pc,wrong,False,False,Same unverified balance claim as 709/710; could lead the agent to ignore class_weight tuning that would help macro-F1 on a likely imbalanced goals label.
+Fable,G3f-pc,wrong,True,False,"Correctly tells the agent to keep the exact 80/20, random_state=42 split without adding stratification, which would alter the split the task specifies."
+Fable,G3f-pc,wrong,False,False,"Asserts an unverifiable class-balance fact (the '5high' naming suggests a thresholded, likely imbalanced label) and discourages checking the target distribution; could mislead."
+Fable,G3f-pc,wrong,False,False,Duplicates 709/710 and repeats the unverifiable claim that goals_label is balanced.
+Fable,G3f-pc,wrong,False,False,"Conflicts with the schema: height_in_cm is loaded as str despite being a numeric quantity, which indicates non-numeric characters (units/formatting). Plain to_numeric coercion would wipe valid values into NaN and inflate mean imputation; custom parsing is needed."
+Fable,G3f-pc,wrong,False,False,"Claims height_in_cm holds plain numbers, but a plain-number column with gaps would be float64, not str. The str dtype implies unit suffixes or formatting that must be stripped before conversion; this note would mislead the agent."
+Fable,G3f-pc,wrong,False,False,"Claims plain numeric coercion is enough, but height_in_cm and international_caps are stored as str dtype, which implies non-numeric representations (file is 'rep_norm'); blind coercion would create spurious NaNs and silently degrade the model. Conflicts with better note 121."
+Fable,G3f-pc,wrong,False,False,"Asserts height_in_cm holds plain numbers, but the schema shows it as str dtype despite being a height column; pandas would have parsed plain numbers as float. Likely contains unit suffixes or mixed formats, so this note is misleading."
+Fable,G3f-pc,wrong,False,False,"Conflicts with schema: height_in_cm is read as str, which means it contains non-numeric strings (plain numbers with gaps would load as float64). Telling the agent to skip string parsing would turn valid values into NaN."
+Fable,G3f-pc,wrong,False,False,"Claims height_in_cm holds plain numbers, but the schema shows str dtype, implying unit suffixes or other formatting; blind to_numeric coercion would wipe real values."
+Fable,G3f-pc,wrong,False,False,"Claims height_in_cm only has missing values and needs no cleaning, but schema shows it is a str column, implying unit suffixes or other non-numeric content; this conflicts with accepted note 121 and would mislead the agent into NaN-ing valid values via coerce."
+Fable,G3f-pc,wrong,False,False,"Conflicts with the schema: height_in_cm and international_caps are read as str, which means they contain non-numeric strings; plain to_numeric coercion would turn those into NaN and distort the mean imputation."
+Fable,G3f-pc,wrong,False,False,"Claims height_in_cm holds plain numbers, but pandas read it as str despite having only 418 missing, so it contains non-numeric representations; following this note would silently destroy data."
+Fable,G3f-pc,wrong,False,False,"Claims height_in_cm only has missing entries and needs no cleaning, but the schema shows it is a string column (likely with unit suffixes); this conflicts with accepted notes 121/122 and would lead to coercing valid values to NaN."
+Fable,G3f-pc,wrong,False,False,"Conflicts with schema: height_in_cm is read as str, which means it contains non-numeric text (likely unit suffixes); plain to_numeric would wipe those values. Discourages the inspection that is needed."
+Fable,G3f-pc,wrong,False,False,"Claims height_in_cm holds plain numbers, but the schema shows it is a str column; if it were plain numbers with gaps pandas would have parsed it as float. Misleading."
+Fable,G3f-pc,wrong,True,True,"Directly addresses the main pitfall: the task says keep all numerical columns, and the dataset name tempts the agent to drop column_x; this note keeps the agent aligned with the instruction."
+Fable,G3f-pc,wrong,False,False,Repeats the accepted note 715.
+Fable,G3f-pc,fix,False,True,Contradicts the explicit task instruction to keep only (all) numerical feature columns; would lead the agent to drop features and produce a non-matching RMSE.
+Fable,G3f-pc,fix,False,True,Directly conflicts with accepted note 715 and with the task instruction to keep all numerical columns; would push the agent to drop column_x.
+Fable,G3f-pc,wrong,False,False,Duplicate of accepted note 715.
+Fable,G3f-pc,wrong,False,True,"Written for an XGBoost task that explicitly requested mean imputation; this task says nothing about imputation and height_in_cm is already float, so no coercion is needed. Too narrow and mismatched."
+Fable,G3f-pc,wrong,False,False,"Only addresses height_in_cm, while this data has many numeric columns with missing values (international_caps, goals, etc.); near-duplicate of 711/713 and does not give a strategy for the whole feature set."
+Fable,G3f-pc,wrong,False,False,Conditioned on a task that specifies column-mean imputation; this task does not. Repeats 711/712 and does not apply here.
+Fable,G3f-pc,fix,False,True,Generic advice that conflicts with the task instruction to keep all numerical feature columns and with accepted note 715; dropping column_x would deviate from the required pipeline.
+Fable,G3f-pc,fix,False,True,Conflicts with the explicit task instruction to keep all numerical feature columns and with accepted note 715; hand-picking 'causal' features would deviate from the required procedure.
+Fable,G3f-pc,fix,False,True,Duplicate of 132's idea; contradicts the task's instruction and accepted note 715 which says all numerical columns (including column_x) carry signal.
+Fable,G3f-pc,fix,False,True,Same causal-feature-selection advice as 132/137; conflicts with the task instruction and accepted note.
+Fable,G3f-pc,wrong,False,False,Asserts without evidence that column_x carries real signal; conflicts with the causal-trap naming of the dataset and with note 135. Likely a bad-run lesson.
+Fable,G3f-pc,wrong,False,False,"Duplicates 715's unsupported claim and tells the agent to stop reasoning, which is exactly the pitfall a 'corr_causal' benchmark is designed to catch."
+Fable,G3f-pc,fix,True,False,Directly addresses the 'corr_causal' dataset: anonymous column_x and ID columns are likely spurious correlates that fit train but hurt test RMSE; reasoning about causal plausibility is the key pitfall here.
+Fable,G3f-pc,fix,True,False,"Directly applies: schema contains 'column_x', a generic-named numerical column with no missing values that is likely the injected spurious correlate in a 'corr_causal' dataset; this note gives a concrete, actionable exclusion the accepted notes only imply."
+Fable,G3f-pc,fix,False,False,Duplicates id 131 (inspect generic column names like 'column_x') without adding anything new.
+Fable,G3f-pc,fix,False,False,Repeats accepted note 135 on causal feature selection almost verbatim.
+Fable,G3f-pc,fix,False,False,Repeats accepted note 135 and 129; no additional actionable guidance.
+Fable,G3f-pc,fix,False,False,Duplicates accepted notes 135 and 131 on causal feature selection; adds nothing new.
+Fable,G3f-pc,wrong,False,True,"Directly contradicts accepted notes 131/135 and the 'corr_causal' dataset design, which signals column_x is a spurious train-only correlate; keeping it would likely inflate test RMSE."
+Fable,G3f-pc,fix,False,False,"Repeats accepted notes 131 and 135 (inspect generic names like column_x, use domain knowledge)."
+Fable,G3f-pc,wrong,False,False,"Framed for an XGBoost task and claims the task mandates mean imputation, which this task does not; inconsistent with the linear regression task statement."
+Fable,G3f-pc,wrong,False,False,"Unsupported claim that column_x carries real signal; conflicts with the 'corr_causal' naming that suggests a spurious correlate, and it duplicates the stance of 716/130."
+Fable,G3f-pc,wrong,False,False,Same unsupported assertion that column_x is reliable; dismisses causal reasoning which is exactly the pitfall this dataset is built around.
+Fable,G3f-pc,fix,True,False,"Directly applies: dataset name implies a correlation-vs-causation trap (column_x, ID columns like player_id/current_club_id); reasoning about spurious features before fitting is the key decision here."
+Fable,G3f-pc,fix,False,False,Same lesson as 131 (flag 'column_x' as suspicious); 131 is more specific to this task so this is redundant.
+Fable,G3f-pc,fix,True,False,Directly names the 'column_x' column present in this schema and ties it to the 'causal' dataset naming; concretizes accepted note 135 so the agent actually drops the likely spurious feature.
+Fable,G3f-pc,fix,False,False,"Duplicates 131 and accepted 135 (inspect names, drop column_x, use domain knowledge)."
+Fable,G3f-pc,wrong,False,False,"Conflicts with accepted notes 131/135; the 'corr_causal' dataset name signals column_x is a spurious correlate that likely fails to generalize to test, so keeping it is risky."
+Fable,G3f-pc,wrong,False,True,Asserts column_x is reliable with no evidence; contradicts the causal-trap signal in the dataset name and conflicts with the better note 135. Looks like a misleading note.
+Fable,G3f-pc,wrong,False,False,"Duplicate of 715's claim, also unsupported and conflicting with the causal reasoning note; rejected for the same reasons."
+Fable,G3f-pc,fix,True,False,Directly addresses the likely pitfall: the 'corr_causal' naming and the suspicious fully-populated 'column_x' suggest a spuriously correlated feature that should be examined/excluded rather than blindly kept.
+Fable,G3f-pc,fix,True,False,"Directly applicable: the data contains a generic 'column_x' column, and this note tells the agent to investigate/remove such artifacts rather than blindly include them; it adds concrete guidance beyond the accepted causal-reasoning note."
+Fable,G3f-pc,fix,True,False,"Most targeted note: names 'column_x' explicitly and ties it to the causal-dataset framing, which matches this task's dataset name and schema; recommends checking distributions too."
+Fable,G3f-pc,fix,False,False,Duplicates the combination of accepted note 135 and candidate 131; no new guidance.
+Fable,G3f-pc,fix,False,False,Repeats accepted note 135 on causal feature selection.
+Fable,G3f-pc,wrong,False,True,"References a task instruction (mean imputation, height parsing) that this task does not contain; conflicts with the actual task wording."
+Fable,G3f-pc,wrong,False,False,Asserts column_x carries real signal without evidence; conflicts with the dataset's correlation-vs-causation framing and looks like a misleading note.
+Fable,G3f-pc,wrong,False,True,Duplicates 715's unsupported claim and discourages the exact checking (train vs test behavior of column_x) that this task requires.
+Fable,G3f-pc,fix,True,False,Directly addresses the likely pitfall: the 'corr_causal' naming and artificial column_x signal a spurious correlate that should be examined and excluded rather than blindly included.
+Fable,G3f-pc,fix,False,False,"Covers the same lesson as id 131 (inspect generic names like 'column_x' and remove them); 131 is more specific to the causal/spurious-correlation pitfall, so this one is redundant."
+Fable,G3f-pc,fix,True,False,"Directly applies: the schema contains a generic 'column_x' with 0 missing in a dataset named 'corr_causal', the classic setup for a spurious feature that correlates in train but not test; excluding it is likely the key to a good test RMSE."
+Fable,G3f-pc,wrong,False,True,"Directly contradicts accepted note 131 and the 'corr_causal' framing of the dataset; a generically named 'column_x' in a spurious-correlation dataset is almost certainly a planted non-causal correlate, so this note would steer the agent toward a worse-generalizing model."
+Fable,G3f-pc,fix,False,False,Repeats accepted note 135 (causal reasoning in feature selection) with no new actionable content.
+Fable,G3f-pc,fix,False,False,Generic restatement of accepted notes 135/131; adds nothing specific to this data.
+Fable,G3f-pc,fix,False,False,"Duplicate of accepted note 131 (flag and drop 'column_x', use domain knowledge)."
+Fable,G3f-pc,fix,False,False,Duplicate of accepted note 135; same advice about distinguishing causal drivers from identifiers.
+Fable,G3f-pc,wrong,True,False,"Directly addresses the main pitfall: the agent may be tempted to drop expenditure/share as leakage, but the task explicitly requires all feature columns; this keeps the agent on the specified pipeline."
+Fable,G3f-pc,wrong,False,True,"Duplicates accepted note 717 (use all features, don't drop expenditure/share/majorcards/active)."
+Fable,G3f-pc,wrong,False,False,Duplicates accepted note 717.
+Fable,G3f-pc,wrong,True,False,"Directly addresses the main pitfall: the agent may be tempted to drop expenditure/share as leakage, but the task explicitly requires all feature columns; this keeps it on the instructed path and the expected answer."
+Fable,G3f-pc,wrong,False,True,"Repeats the accepted note 717 (use all features, keep expenditure/share/majorcards/active)."
+Fable,G3f-pc,wrong,False,False,Repeats the accepted note 717 about keeping expenditure and share.
+Fable,G3f-pc,wrong,True,False,"Directly addresses the main pitfall: the agent may be tempted to drop expenditure/share/majorcards/active as leakage; task explicitly requires all feature columns, and this note matches the schema."
+Fable,G3f-pc,wrong,False,False,Repeats the lesson of accepted note 717.
+Fable,G3f-pc,wrong,False,False,Repeats the lesson of accepted note 717.
+Fable,G3f-pc,fix,False,True,"Conflicts with the task instruction to use all feature columns and with accepted note 717, which states these columns are recorded pre-decision."
+Fable,G3f-pc,fix,False,True,Explicitly tells the agent to override the 'use all available feature columns' instruction; conflicts with task and accepted note 717.
+Fable,G3f-pc,fix,False,False,Duplicate leakage-removal advice that conflicts with the task spec and accepted note 717.
+Fable,G3f-pc,fix,False,False,Same conflicting leakage-removal advice; dropping expenditure/majorcards would violate the task.
+Fable,G3f-pc,wrong,True,True,"Directly addresses the main pitfall: the agent may be tempted to drop expenditure/share as leakage, which would deviate from the task instruction to use all feature columns and change the reported accuracy."
+Fable,G3f-pc,wrong,False,False,Repeats the same lesson as accepted note 717.
+Fable,G3f-pc,wrong,False,False,Repeats the same lesson as accepted note 717.
+Fable,G3f-pc,fix,False,True,"Conflicts with the task instruction to use all feature columns and with accepted note 717, which states these columns do not leak the label."
+Fable,G3f-pc,fix,False,True,Duplicate leakage-removal advice that explicitly tells the agent to override the task instruction; conflicts with accepted note 717.
+Fable,G3f-pc,fix,False,True,Duplicate leakage-removal advice conflicting with the task's 'use all features' requirement and accepted note 717.
+Fable,G3f-pc,fix,False,True,Duplicate leakage-removal advice conflicting with the task instruction and accepted note 717.
+Fable,G3f-pc,wrong,False,False,"Same point as 718 (keep all features, none leak); 718 is more direct and warns of the consequence of dropping."
+Fable,G3f-pc,wrong,True,False,"Directly addresses the main pitfall: agents tend to drop expenditure/share/majorcards/active as 'leaky', which deviates from the task and changes the answer. Keep all features."
+Fable,G3f-pc,wrong,False,False,Duplicate of 718.
+Fable,G3f-pc,fix,False,True,Conflicts with the task instruction to use all available feature columns and with accepted note 718; dropping expenditure/majorcards would change the required setup and lower accuracy.
+Fable,G3f-pc,fix,False,True,Same leakage-dropping advice that contradicts the explicit 'use all features' instruction and accepted note 718.
+Fable,G3f-pc,fix,False,True,Explicitly tells the agent to override the prompt's 'use all available feature columns'; conflicts with the task and note 718.
+Fable,G3f-pc,fix,False,True,"Recommends dropping expenditure/active, which contradicts the task specification and accepted note 718."
+Fable,G3f-pc,fix,False,False,Duplicate leakage-removal advice that conflicts with the task's required feature set.

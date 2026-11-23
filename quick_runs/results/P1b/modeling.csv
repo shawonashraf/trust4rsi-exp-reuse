@@ -1,0 +1,41 @@
+task,run,stop,valid,raw_metric,rel_gap,score_error,family,all_families,validation,steps
+dsm_bike-sharing-demand,seed0,final_answer,True,0.3210151849285008,0.9331370660150449,,xgboost,['xgboost'],holdout_split,7
+dsm_bike-sharing-demand,seed1,final_answer,True,0.28481847864075505,0.9406763292543505,,xgboost,['xgboost'],holdout_split,10
+dsm_bike-sharing-demand,seed2,final_answer,True,0.27673825851425454,0.9423593251070933,,xgboost,['xgboost'],holdout_split,10
+dsm_bike-sharing-demand,seed3,final_answer,True,0.28370111344409016,0.9409090606604936,,xgboost,['xgboost'],holdout_split,4
+dsm_bike-sharing-demand,seed4,final_answer,True,0.3256023563059801,0.9321816229351221,,xgboost,['xgboost'],holdout_split,4
+dsm_playground-series-s3e12,seed0,final_answer,True,0.8567251461988303,0.7134502923976607,,random_forest,"['gradient_boosting', 'logistic', 'random_forest']",stratified_kfold_cv,7
+dsm_playground-series-s3e12,seed1,final_answer,True,0.871345029239766,0.742690058479532,,random_forest,"['gradient_boosting', 'logistic', 'random_forest']",stratified_kfold_cv,10
+dsm_playground-series-s3e12,seed2,final_answer,True,0.8578947368421053,0.7157894736842105,,random_forest,"['gradient_boosting', 'logistic', 'random_forest']",stratified_kfold_cv,9
+dsm_playground-series-s3e12,seed3,final_answer,True,0.843859649122807,0.687719298245614,,random_forest,"['glm_other', 'gradient_boosting', 'random_forest']",grid_search_cv,6
+dsm_playground-series-s3e12,seed4,final_answer,True,0.867251461988304,0.7345029239766081,,other,"['gradient_boosting', 'logistic', 'other', 'random_forest']",stratified_kfold_cv,8
+dsm_playground-series-s3e17,seed0,final_answer,True,0.9578325009796399,0.9156650019592798,,xgboost,['xgboost'],stratified_kfold_cv,4
+dsm_playground-series-s3e17,seed1,final_answer,True,0.9589331076079918,0.9178662152159835,,xgboost,['xgboost'],holdout_split,5
+dsm_playground-series-s3e17,seed2,final_answer,True,0.9598141881779243,0.9196283763558486,,xgboost,['xgboost'],holdout_split,7
+dsm_playground-series-s3e17,seed3,final_answer,True,0.9569671099536848,0.9139342199073697,,xgboost,['xgboost'],stratified_kfold_cv,7
+dsm_playground-series-s3e17,seed4,final_answer,True,0.9635713449910472,0.9271426899820945,,xgboost,['xgboost'],stratified_kfold_cv,7
+dsm_playground-series-s3e23,seed0,final_answer,True,0.7888705767588298,0.5777411535176595,,xgboost,['xgboost'],stratified_kfold_cv,4
+dsm_playground-series-s3e23,seed1,final_answer,True,0.7893766223435432,0.5787532446870864,,xgboost,['xgboost'],stratified_kfold_cv,8
+dsm_playground-series-s3e23,seed2,final_answer,True,0.7894210501342533,0.5788421002685067,,other,"['gradient_boosting', 'xgboost']",stratified_kfold_cv,5
+dsm_playground-series-s3e23,seed3,final_answer,True,0.7888966040337391,0.5777932080674781,,xgboost,['xgboost'],stratified_kfold_cv,5
+dsm_playground-series-s3e23,seed4,final_answer,True,0.7886032703654704,0.5772065407309408,,xgboost,['xgboost'],stratified_kfold_cv,5
+dsm_playground-series-s3e5,seed0,final_answer,True,0.4990922059395668,0.4990922059395668,,random_forest,"['gradient_boosting', 'random_forest', 'xgboost']",stratified_kfold_cv,7
+dsm_playground-series-s3e5,seed1,final_answer,True,0.4837315819038154,0.4837315819038154,,other,"['gradient_boosting', 'random_forest', 'other']",kfold_cv,6
+dsm_playground-series-s3e5,seed2,final_answer,True,0.49667339634761853,0.49667339634761853,,xgboost,['xgboost'],kfold_cv,4
+dsm_playground-series-s3e5,seed3,final_answer,True,0.48235425508152785,0.48235425508152785,,xgboost,['xgboost'],kfold_cv,5
+dsm_playground-series-s3e5,seed4,final_answer,True,0.500968992248062,0.500968992248062,,xgboost,"['gradient_boosting', 'random_forest', 'xgboost']",kfold_cv,7
+dsm_playground-series-s3e8,seed0,final_answer,True,574.2500913930186,0.8571486532695594,,xgboost,"['gradient_boosting', 'lightgbm', 'xgboost']",kfold_cv,10
+dsm_playground-series-s3e8,seed1,final_answer,True,572.9186565526086,0.8574798630732444,,xgboost,['xgboost'],kfold_cv,8
+dsm_playground-series-s3e8,seed2,final_answer,True,574.1307289045468,0.8571783460680158,,xgboost,['xgboost'],kfold_cv,9
+dsm_playground-series-s3e8,seed3,final_answer,True,576.5814360168097,0.8565687043514957,,xgboost,['xgboost'],holdout_split,9
+dsm_playground-series-s3e8,seed4,final_answer,True,574.9778231998986,0.8569676215723433,,xgboost,['xgboost'],kfold_cv,5
+dsm_playground-series-s4e3,seed0,final_answer,True,0.882236236347836,0.764472472695672,,xgboost,['xgboost'],holdout_split,5
+dsm_playground-series-s4e3,seed1,final_answer,True,0.8825810031579696,0.7651620063159392,,xgboost,['xgboost'],stratified_kfold_cv,3
+dsm_playground-series-s4e3,seed2,final_answer,True,0.8874955236478729,0.7749910472957457,,gradient_boosting,['gradient_boosting'],stratified_kfold_cv,11
+dsm_playground-series-s4e3,seed3,final_answer,True,0.8882107044357329,0.7764214088714658,,xgboost,['xgboost'],holdout_split,8
+dsm_playground-series-s4e3,seed4,final_answer,True,0.8796922261205075,0.7593844522410149,,xgboost,['xgboost'],kfold_cv,6
+dsm_tabular-playground-series-apr-2021,seed0,final_answer,True,0.77,0.6010753620674704,,xgboost,['xgboost'],stratified_kfold_cv,9
+dsm_tabular-playground-series-apr-2021,seed1,final_answer,True,0.76985,0.6008151938253404,,xgboost,['xgboost'],kfold_cv,7
+dsm_tabular-playground-series-apr-2021,seed2,final_answer,True,0.77095,0.6027230942676265,,xgboost,['xgboost'],kfold_cv,8
+dsm_tabular-playground-series-apr-2021,seed3,final_answer,True,0.77095,0.6027230942676265,,random_forest,"['gradient_boosting', 'random_forest']",stratified_kfold_cv,10
+dsm_tabular-playground-series-apr-2021,seed4,final_answer,True,0.7727,0.6057583904258088,,xgboost,['xgboost'],stratified_kfold_cv,8

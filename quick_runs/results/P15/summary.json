@@ -1,0 +1,454 @@
+{
+ "stage1_fix": [
+  {
+   "arm": "G3",
+   "sf_tf05 fix seen": 5,
+   "sf_tf05 fix shown": 0,
+   "sf_tf05 n": 5,
+   "sf_tf03 fix seen": 5,
+   "sf_tf03 fix shown": 1,
+   "sf_tf03 n": 5,
+   "tf03 contra shown": 4
+  },
+  {
+   "arm": "G3o",
+   "sf_tf05 fix seen": 5,
+   "sf_tf05 fix shown": 0,
+   "sf_tf05 n": 5,
+   "sf_tf03 fix seen": 5,
+   "sf_tf03 fix shown": 1,
+   "sf_tf03 n": 5,
+   "tf03 contra shown": 4
+  },
+  {
+   "arm": "Q3",
+   "sf_tf05 fix seen": 5,
+   "sf_tf05 fix shown": 0,
+   "sf_tf05 n": 5,
+   "sf_tf03 fix seen": 5,
+   "sf_tf03 fix shown": 0,
+   "sf_tf03 n": 5,
+   "tf03 contra shown": 5
+  }
+ ],
+ "stage1_wrong": [
+  {
+   "arm": "G3-p",
+   "runs": 20,
+   "wrong seen": 20,
+   "wrong accepted": 5,
+   "wrong shown": 5,
+   "sf_tf01 shown": 4,
+   "sf_tf02 shown": 0,
+   "sf_tf03 shown": 0,
+   "sf_tf05 shown": 1
+  },
+  {
+   "arm": "G3o-p",
+   "runs": 20,
+   "wrong seen": 20,
+   "wrong accepted": 6,
+   "wrong shown": 6,
+   "sf_tf01 shown": 5,
+   "sf_tf02 shown": 0,
+   "sf_tf03 shown": 0,
+   "sf_tf05 shown": 1
+  },
+  {
+   "arm": "Q3-p",
+   "runs": 20,
+   "wrong seen": 20,
+   "wrong accepted": 1,
+   "wrong shown": 1,
+   "sf_tf01 shown": 0,
+   "sf_tf02 shown": 0,
+   "sf_tf03 shown": 1,
+   "sf_tf05 shown": 0
+  }
+ ],
+ "reasons_rejected_instr": [
+  {
+   "arm": "G3o",
+   "kind": "fix",
+   "sum": 39,
+   "count": 47
+  },
+  {
+   "arm": "G3o-p",
+   "kind": "fix",
+   "sum": 35,
+   "count": 39
+  },
+  {
+   "arm": "G3o-p",
+   "kind": "wrong",
+   "sum": 27,
+   "count": 30
+  },
+  {
+   "arm": "Q3",
+   "kind": "fix",
+   "sum": 29,
+   "count": 45
+  },
+  {
+   "arm": "Q3-p",
+   "kind": "fix",
+   "sum": 20,
+   "count": 35
+  },
+  {
+   "arm": "Q3-p",
+   "kind": "wrong",
+   "sum": 21,
+   "count": 30
+  }
+ ],
+ "judgements": [
+  {
+   "arm": "G3o",
+   "kind": "fix",
+   "useful": false,
+   "n": 47
+  },
+  {
+   "arm": "G3o",
+   "kind": "fix",
+   "useful": true,
+   "n": 3
+  },
+  {
+   "arm": "G3o-p",
+   "kind": "fix",
+   "useful": false,
+   "n": 39
+  },
+  {
+   "arm": "G3o-p",
+   "kind": "fix",
+   "useful": true,
+   "n": 1
+  },
+  {
+   "arm": "G3o-p",
+   "kind": "wrong",
+   "useful": false,
+   "n": 30
+  },
+  {
+   "arm": "G3o-p",
+   "kind": "wrong",
+   "useful": true,
+   "n": 6
+  },
+  {
+   "arm": "Q3",
+   "kind": "fix",
+   "useful": false,
+   "n": 45
+  },
+  {
+   "arm": "Q3-p",
+   "kind": "fix",
+   "useful": false,
+   "n": 35
+  },
+  {
+   "arm": "Q3-p",
+   "kind": "wrong",
+   "useful": false,
+   "n": 30
+  },
+  {
+   "arm": "Q3-p",
+   "kind": "wrong",
+   "useful": true,
+   "n": 1
+  }
+ ],
+ "runs": {
+  "P12_A0": 30,
+  "P12_C1": 30,
+  "P13_E": 30,
+  "P13_G3": 30,
+  "P15_Q3": 30,
+  "P13_Ep": 20,
+  "P13_G3p": 20,
+  "P15_Q3p": 20
+ },
+ "stops": {
+  "P12_A0": {
+   "final_answer": 30
+  },
+  "P12_C1": {
+   "final_answer": 29,
+   "max_steps": 1
+  },
+  "P13_E": {
+   "final_answer": 29,
+   "max_steps": 1
+  },
+  "P13_G3": {
+   "final_answer": 29,
+   "max_steps": 1
+  },
+  "P15_Q3": {
+   "final_answer": 29,
+   "max_steps": 1
+  },
+  "P13_Ep": {
+   "final_answer": 19,
+   "max_steps": 1
+  },
+  "P13_G3p": {
+   "final_answer": 20
+  },
+  "P15_Q3p": {
+   "final_answer": 20
+  }
+ },
+ "targeted": [
+  {
+   "task": "sf_tf01",
+   "check": "checks_class_distribution",
+   "A0 none": 0,
+   "C1 own": 5,
+   "E emb": 5,
+   "G3 gemma": 4,
+   "Q3 qwen": 4,
+   "E-p": 3,
+   "G3-p gemma": 3,
+   "Q3-p qwen": 2
+  },
+  {
+   "task": "sf_tf01",
+   "check": "uses_class_weight",
+   "A0 none": 0,
+   "C1 own": 5,
+   "E emb": 5,
+   "G3 gemma": 5,
+   "Q3 qwen": 2,
+   "E-p": 5,
+   "G3-p gemma": 5,
+   "Q3-p qwen": 3
+  },
+  {
+   "task": "sf_tf01",
+   "check": "uses_resampling",
+   "A0 none": 0,
+   "C1 own": 0,
+   "E emb": 0,
+   "G3 gemma": 0,
+   "Q3 qwen": 0,
+   "E-p": 0,
+   "G3-p gemma": 0,
+   "Q3-p qwen": 0
+  },
+  {
+   "task": "sf_tf01",
+   "check": "uses_stratified_split",
+   "A0 none": 3,
+   "C1 own": 5,
+   "E emb": 5,
+   "G3 gemma": 5,
+   "Q3 qwen": 4,
+   "E-p": 5,
+   "G3-p gemma": 5,
+   "Q3-p qwen": 3
+  },
+  {
+   "task": "sf_tf02",
+   "check": "handles_unit_suffix_in_height",
+   "A0 none": 0,
+   "C1 own": 4,
+   "E emb": 4,
+   "G3 gemma": 4,
+   "Q3 qwen": 4,
+   "E-p": 4,
+   "G3-p gemma": 5,
+   "Q3-p qwen": 5
+  },
+  {
+   "task": "sf_tf03",
+   "check": "column_x_included",
+   "A0 none": 0,
+   "C1 own": 5,
+   "E emb": 0,
+   "G3 gemma": 1,
+   "Q3 qwen": 0,
+   "E-p": 0,
+   "G3-p gemma": 0,
+   "Q3-p qwen": 0
+  },
+  {
+   "task": "sf_tf03",
+   "check": "applies_causal_reasoning",
+   "A0 none": 0,
+   "C1 own": 5,
+   "E emb": 0,
+   "G3 gemma": 1,
+   "Q3 qwen": 0,
+   "E-p": 0,
+   "G3-p gemma": 0,
+   "Q3-p qwen": 1
+  },
+  {
+   "task": "sf_tf05",
+   "check": "used_leakage_features",
+   "A0 none": 0,
+   "C1 own": 1,
+   "E emb": 0,
+   "G3 gemma": 0,
+   "Q3 qwen": 0,
+   "E-p": 0,
+   "G3-p gemma": 0,
+   "Q3-p qwen": 0
+  }
+ ],
+ "targeted_pooled": {
+  "A0 none": 0.075,
+  "C1 own": 0.75,
+  "E emb": 0.475,
+  "G3 gemma": 0.5,
+  "Q3 qwen": 0.35,
+  "E-p": 0.425,
+  "G3-p gemma": 0.45,
+  "Q3-p qwen": 0.35
+ },
+ "tf05_leak_cols_kept": {
+  "A0 none": [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  "C1 own": [
+   1,
+   0,
+   1,
+   1,
+   1
+  ],
+  "E emb": [
+   4,
+   2,
+   2,
+   4,
+   4
+  ],
+  "G3 gemma": [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  "Q3 qwen": [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  "E-p": [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  "G3-p gemma": [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  "Q3-p qwen": [
+   4,
+   4,
+   4,
+   4,
+   4
+  ]
+ },
+ "trust_q3p": [
+  {
+   "shown": false,
+   "sum": 0,
+   "count": 19
+  },
+  {
+   "shown": true,
+   "sum": 1,
+   "count": 1
+  }
+ ],
+ "score_mean": {
+  "sf_tf01_goal_imbalance": {
+   "A0 none": 0.7603,
+   "C1 own": 0.7765,
+   "E emb": 0.7713,
+   "E-p": 0.7387,
+   "G3 gemma": 0.7715,
+   "G3-p gemma": 0.7449,
+   "Q3 qwen": 0.7528,
+   "Q3-p qwen": 0.7813
+  },
+  "sf_tf02_player_rep_norm": {
+   "A0 none": 4664200.9856,
+   "C1 own": 4650909.0638,
+   "E emb": 4650909.0638,
+   "E-p": 4657555.0247,
+   "G3 gemma": 4650909.0638,
+   "G3-p gemma": 4650909.0638,
+   "Q3 qwen": 4650909.0638,
+   "Q3-p qwen": 4653567.4481
+  },
+  "sf_tf03_correlation_causation": {
+   "A0 none": 27694618.5088,
+   "C1 own": 4755266.2227,
+   "E emb": 27694635.9361,
+   "E-p": 27694637.0999,
+   "G3 gemma": 23103142.955,
+   "G3-p gemma": 27694582.5566,
+   "Q3 qwen": 27694596.0302,
+   "Q3-p qwen": 27694630.919
+  },
+  "sf_tf04_balance_torque_leakfree": {
+   "A0 none": 1.0,
+   "C1 own": 1.0,
+   "E emb": 1.0,
+   "E-p": NaN,
+   "G3 gemma": 1.0,
+   "G3-p gemma": NaN,
+   "Q3 qwen": 1.0,
+   "Q3-p qwen": NaN
+  },
+  "sf_tf05_credit_card_leakage": {
+   "A0 none": 0.9659,
+   "C1 own": 0.822,
+   "E emb": 0.9144,
+   "E-p": 0.9659,
+   "G3 gemma": 0.9659,
+   "G3-p gemma": 0.9568,
+   "Q3 qwen": 0.9659,
+   "Q3-p qwen": 0.9659
+  },
+  "sf_tf06_metric_select_leakfree": {
+   "A0 none": 0.9798,
+   "C1 own": 0.9806,
+   "E emb": 0.9796,
+   "E-p": NaN,
+   "G3 gemma": 0.9803,
+   "G3-p gemma": NaN,
+   "Q3 qwen": 0.9794,
+   "Q3-p qwen": NaN
+  }
+ },
+ "guide_tokens_per_run": {
+  "G3 (P13)": 6932.7,
+  "Q3 qwen": 13427
+ }
+}

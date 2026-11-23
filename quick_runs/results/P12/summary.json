@@ -1,0 +1,608 @@
+{
+ "runs": {
+  "P12_A0": 50,
+  "P12_M": 50,
+  "P12_C1": 50,
+  "P12_C2": 50,
+  "P12_C3": 50
+ },
+ "stops": {
+  "P12_A0": {
+   "final_answer": 50
+  },
+  "P12_M": {
+   "final_answer": 50
+  },
+  "P12_C1": {
+   "final_answer": 49,
+   "max_steps": 1
+  },
+  "P12_C2": {
+   "final_answer": 50
+  },
+  "P12_C3": {
+   "final_answer": 50
+  }
+ },
+ "targeted": [
+  {
+   "task": "sf_tf01_goal_imbalance",
+   "check": "checks_class_distribution",
+   "A0 none": 0,
+   "M memory": 0,
+   "C1 ctx 2k": 5,
+   "C2 ctx 32k": 3,
+   "C3 ctx 100k": 1
+  },
+  {
+   "task": "sf_tf01_goal_imbalance",
+   "check": "uses_class_weight",
+   "A0 none": 0,
+   "M memory": 0,
+   "C1 ctx 2k": 5,
+   "C2 ctx 32k": 5,
+   "C3 ctx 100k": 3
+  },
+  {
+   "task": "sf_tf01_goal_imbalance",
+   "check": "uses_resampling",
+   "A0 none": 0,
+   "M memory": 0,
+   "C1 ctx 2k": 0,
+   "C2 ctx 32k": 0,
+   "C3 ctx 100k": 0
+  },
+  {
+   "task": "sf_tf01_goal_imbalance",
+   "check": "uses_stratified_split",
+   "A0 none": 3,
+   "M memory": 5,
+   "C1 ctx 2k": 5,
+   "C2 ctx 32k": 5,
+   "C3 ctx 100k": 3
+  },
+  {
+   "task": "sf_tf02_player_rep_norm",
+   "check": "handles_unit_suffix_in_height",
+   "A0 none": 0,
+   "M memory": 0,
+   "C1 ctx 2k": 4,
+   "C2 ctx 32k": 5,
+   "C3 ctx 100k": 4
+  },
+  {
+   "task": "sf_tf03_correlation_causation",
+   "check": "column_x_included",
+   "A0 none": 0,
+   "M memory": 0,
+   "C1 ctx 2k": 5,
+   "C2 ctx 32k": 2,
+   "C3 ctx 100k": 1
+  },
+  {
+   "task": "sf_tf03_correlation_causation",
+   "check": "applies_causal_reasoning",
+   "A0 none": 0,
+   "M memory": 0,
+   "C1 ctx 2k": 5,
+   "C2 ctx 32k": 2,
+   "C3 ctx 100k": 1
+  },
+  {
+   "task": "sf_tf05_credit_card_leakage",
+   "check": "used_leakage_features",
+   "A0 none": 0,
+   "M memory": 0,
+   "C1 ctx 2k": 1,
+   "C2 ctx 32k": 0,
+   "C3 ctx 100k": 0
+  }
+ ],
+ "targeted_pooled": {
+  "A0 none": 0.075,
+  "M memory": 0.125,
+  "C1 ctx 2k": 0.75,
+  "C2 ctx 32k": 0.55,
+  "C3 ctx 100k": 0.325
+ },
+ "harm": [
+  {
+   "task": "sf_tf04_balance_torque_leakfree",
+   "check": "has_torque_difference",
+   "A0 none": "4/5",
+   "M memory": "5/5",
+   "C1 ctx 2k": "5/5",
+   "C2 ctx 32k": "0/5",
+   "C3 ctx 100k": "1/5"
+  },
+  {
+   "task": "sf_tf04_balance_torque_leakfree",
+   "check": "has_torque_features",
+   "A0 none": "5/5",
+   "M memory": "5/5",
+   "C1 ctx 2k": "5/5",
+   "C2 ctx 32k": "5/5",
+   "C3 ctx 100k": "5/5"
+  },
+  {
+   "task": "sf_tf06_metric_select_leakfree",
+   "check": "selection_metric",
+   "A0 none": "3/5 (2 unk)",
+   "M memory": "4/5 (1 unk)",
+   "C1 ctx 2k": "2/5 (3 unk)",
+   "C2 ctx 32k": "5/5",
+   "C3 ctx 100k": "5/5"
+  }
+ ],
+ "dsbench": [
+  {
+   "task": "dsa_00000043_question1",
+   "A0 none": "2/5 (ac 0.2)",
+   "M memory": "2/5 (ac 0.2)",
+   "C1 ctx 2k": "3/5 (ac 0.3)",
+   "C2 ctx 32k": "1/5 (ac 0.3)",
+   "C3 ctx 100k": "0/5 (ac 1.0)"
+  },
+  {
+   "task": "dsa_00000017_question29",
+   "A0 none": "3/5 (ac 0.4)",
+   "M memory": "4/5 (ac 0.6)",
+   "C1 ctx 2k": "2/5 (ac 0.4)",
+   "C2 ctx 32k": "5/5 (ac 1.0)",
+   "C3 ctx 100k": "5/5 (ac 1.0)"
+  },
+  {
+   "task": "dsa_00000029_question1",
+   "A0 none": "5/5 (ac 1.0)",
+   "M memory": "5/5 (ac 1.0)",
+   "C1 ctx 2k": "5/5 (ac 1.0)",
+   "C2 ctx 32k": "5/5 (ac 1.0)",
+   "C3 ctx 100k": "5/5 (ac 1.0)"
+  },
+  {
+   "task": "dsm_playground-series-s3e12",
+   "A0 none": "0.697 +- 0.026",
+   "M memory": "0.724 +- 0.013",
+   "C1 ctx 2k": "0.711 +- 0.014",
+   "C2 ctx 32k": "0.717 +- 0.014",
+   "C3 ctx 100k": "0.694 +- 0.040"
+  }
+ ],
+ "tf05_leak_cols_kept": {
+  "A0 none": [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  "M memory": [
+   3,
+   3,
+   2,
+   4,
+   3
+  ],
+  "C1 ctx 2k": [
+   1,
+   0,
+   1,
+   1,
+   1
+  ],
+  "C2 ctx 32k": [
+   1,
+   4,
+   4,
+   3,
+   4
+  ],
+  "C3 ctx 100k": [
+   4,
+   4,
+   4,
+   4,
+   4
+  ]
+ },
+ "tf04_runs_fitting_model": {
+  "A0 none": 4,
+  "M memory": 4,
+  "C1 ctx 2k": 3,
+  "C2 ctx 32k": 0,
+  "C3 ctx 100k": 0
+ },
+ "score_mean": {
+  "dsa_00000017_question29": {
+   "A0 none": 0.6,
+   "C1 ctx 2k": 0.4,
+   "C2 ctx 32k": 1.0,
+   "C3 ctx 100k": 1.0,
+   "M memory": 0.8
+  },
+  "dsa_00000029_question1": {
+   "A0 none": 1.0,
+   "C1 ctx 2k": 1.0,
+   "C2 ctx 32k": 1.0,
+   "C3 ctx 100k": 1.0,
+   "M memory": 1.0
+  },
+  "dsa_00000043_question1": {
+   "A0 none": 0.4,
+   "C1 ctx 2k": 0.6,
+   "C2 ctx 32k": 0.2,
+   "C3 ctx 100k": 0.0,
+   "M memory": 0.4
+  },
+  "dsm_playground-series-s3e12": {
+   "A0 none": 0.69673,
+   "C1 ctx 2k": 0.71135,
+   "C2 ctx 32k": 0.71743,
+   "C3 ctx 100k": 0.69415,
+   "M memory": 0.72398
+  },
+  "sf_tf01_goal_imbalance": {
+   "A0 none": 0.76033,
+   "C1 ctx 2k": 0.77654,
+   "C2 ctx 32k": 0.78165,
+   "C3 ctx 100k": 0.7903,
+   "M memory": 0.7929
+  },
+  "sf_tf02_player_rep_norm": {
+   "A0 none": 4664200.9856,
+   "C1 ctx 2k": 4650909.06376,
+   "C2 ctx 32k": 4650909.06376,
+   "C3 ctx 100k": 4656225.8325,
+   "M memory": 4664200.9856
+  },
+  "sf_tf03_correlation_causation": {
+   "A0 none": 27694618.50884,
+   "C1 ctx 2k": 4755266.22273,
+   "C2 ctx 32k": 18512162.98883,
+   "C3 ctx 100k": 23103173.20458,
+   "M memory": 27694584.78385
+  },
+  "sf_tf04_balance_torque_leakfree": {
+   "A0 none": 1.0,
+   "C1 ctx 2k": 1.0,
+   "C2 ctx 32k": 1.0,
+   "C3 ctx 100k": 1.0,
+   "M memory": 1.0
+  },
+  "sf_tf05_credit_card_leakage": {
+   "A0 none": 0.96591,
+   "C1 ctx 2k": 0.82197,
+   "C2 ctx 32k": 0.91212,
+   "C3 ctx 100k": 0.96591,
+   "M memory": 0.86515
+  },
+  "sf_tf06_metric_select_leakfree": {
+   "A0 none": 0.97979,
+   "C1 ctx 2k": 0.98058,
+   "C2 ctx 32k": 0.97934,
+   "C3 ctx 100k": 0.98026,
+   "M memory": 0.98003
+  }
+ },
+ "cost": {
+  "A0 none": {
+   "steps": 4.88,
+   "minutes": 7.246,
+   "first_prompt_tokens": 1120.0,
+   "sum_prompt_tokens": 17221.66,
+   "peak_fill": 0.039
+  },
+  "C1 ctx 2k": {
+   "steps": 5.94,
+   "minutes": 9.851,
+   "first_prompt_tokens": 2936.9,
+   "sum_prompt_tokens": 30525.64,
+   "peak_fill": 0.059
+  },
+  "C2 ctx 32k": {
+   "steps": 3.64,
+   "minutes": 4.646,
+   "first_prompt_tokens": 32902.0,
+   "sum_prompt_tokens": 124740.78,
+   "peak_fill": 0.278
+  },
+  "C3 ctx 100k": {
+   "steps": 2.98,
+   "minutes": 6.566,
+   "first_prompt_tokens": 100917.5,
+   "sum_prompt_tokens": 305036.36,
+   "peak_fill": 0.797
+  },
+  "M memory": {
+   "steps": 5.82,
+   "minutes": 8.491,
+   "first_prompt_tokens": 1527.4,
+   "sum_prompt_tokens": 22304.0,
+   "peak_fill": 0.045
+  }
+ },
+ "cost_by_src": [
+  {
+   "src": "dsa",
+   "arm": "A0 none",
+   "steps": 8.67,
+   "minutes": 15.78
+  },
+  {
+   "src": "dsa",
+   "arm": "C1 ctx 2k",
+   "steps": 7.8,
+   "minutes": 20.01
+  },
+  {
+   "src": "dsa",
+   "arm": "C2 ctx 32k",
+   "steps": 5.6,
+   "minutes": 9.48
+  },
+  {
+   "src": "dsa",
+   "arm": "C3 ctx 100k",
+   "steps": 4.47,
+   "minutes": 13.82
+  },
+  {
+   "src": "dsa",
+   "arm": "M memory",
+   "steps": 9.8,
+   "minutes": 18.12
+  },
+  {
+   "src": "dsm",
+   "arm": "A0 none",
+   "steps": 6.8,
+   "minutes": 7.56
+  },
+  {
+   "src": "dsm",
+   "arm": "C1 ctx 2k",
+   "steps": 9.6,
+   "minutes": 7.26
+  },
+  {
+   "src": "dsm",
+   "arm": "C2 ctx 32k",
+   "steps": 4.6,
+   "minutes": 3.01
+  },
+  {
+   "src": "dsm",
+   "arm": "C3 ctx 100k",
+   "steps": 4.0,
+   "minutes": 4.52
+  },
+  {
+   "src": "dsm",
+   "arm": "M memory",
+   "steps": 8.2,
+   "minutes": 6.33
+  },
+  {
+   "src": "sf",
+   "arm": "A0 none",
+   "steps": 2.67,
+   "minutes": 2.93
+  },
+  {
+   "src": "sf",
+   "arm": "C1 ctx 2k",
+   "steps": 4.4,
+   "minutes": 5.2
+  },
+  {
+   "src": "sf",
+   "arm": "C2 ctx 32k",
+   "steps": 2.5,
+   "minutes": 2.5
+  },
+  {
+   "src": "sf",
+   "arm": "C3 ctx 100k",
+   "steps": 2.07,
+   "minutes": 3.28
+  },
+  {
+   "src": "sf",
+   "arm": "M memory",
+   "steps": 3.43,
+   "minutes": 4.04
+  }
+ ],
+ "contexts": {
+  "sf_tf01_goal_imbalance": {
+   "own_lessons": 15,
+   "M_sources": [
+    "sf_tf01_goal_imbalance",
+    "sf_tf01_goal_imbalance",
+    "sf_tf01_goal_imbalance"
+   ],
+   "M_own": 3,
+   "C2_filler_items": 42,
+   "C3_filler_items": 157,
+   "M_tokens": 411,
+   "M_sha256": "b627068b4b363103",
+   "C1_tokens": 2024,
+   "C1_sha256": "b412d2cd6e570510",
+   "C2_tokens": 31704,
+   "C2_sha256": "e052f35f8bcc684e",
+   "C3_tokens": 99814,
+   "C3_sha256": "5537229a98e3d446"
+  },
+  "sf_tf02_player_rep_norm": {
+   "own_lessons": 10,
+   "M_sources": [
+    "sf_tf02_player_rep_norm",
+    "sf_tf02_player_rep_norm",
+    "sf_tf02_player_rep_norm"
+   ],
+   "M_own": 3,
+   "C2_filler_items": 74,
+   "C3_filler_items": 183,
+   "M_tokens": 445,
+   "M_sha256": "0a6ac1cd1aed3b5d",
+   "C1_tokens": 1548,
+   "C1_sha256": "2baa04fc2ab36751",
+   "C2_tokens": 31746,
+   "C2_sha256": "c8883d82a1f81324",
+   "C3_tokens": 99855,
+   "C3_sha256": "e84f6733e01933de"
+  },
+  "sf_tf03_correlation_causation": {
+   "own_lessons": 11,
+   "M_sources": [
+    "sf_tf03_correlation_causation",
+    "sf_tf03_correlation_causation",
+    "sf_tf03_correlation_causation"
+   ],
+   "M_own": 3,
+   "C2_filler_items": 53,
+   "C3_filler_items": 149,
+   "M_tokens": 417,
+   "M_sha256": "892ce19a445613fb",
+   "C1_tokens": 1537,
+   "C1_sha256": "c311037c6451e236",
+   "C2_tokens": 31761,
+   "C2_sha256": "7ba79810d6f0002e",
+   "C3_tokens": 99749,
+   "C3_sha256": "70b24885350af1df"
+  },
+  "sf_tf05_credit_card_leakage": {
+   "own_lessons": 7,
+   "M_sources": [
+    "sf_tf05_credit_card_leakage",
+    "sf_tf05_credit_card_leakage",
+    "sf_tf05_credit_card_leakage"
+   ],
+   "M_own": 3,
+   "C2_filler_items": 52,
+   "C3_filler_items": 188,
+   "M_tokens": 457,
+   "M_sha256": "2b0361aff792ff7d",
+   "C1_tokens": 1132,
+   "C1_sha256": "2a257c7881d5a573",
+   "C2_tokens": 31953,
+   "C2_sha256": "8a71c5f79b3333b3",
+   "C3_tokens": 99736,
+   "C3_sha256": "a4e236bc8bbdb334"
+  },
+  "sf_tf04_balance_torque_leakfree": {
+   "own_lessons": 14,
+   "M_sources": [
+    "sf_tf04_balance_torque_leakfree",
+    "sf_tf04_balance_torque_leakfree",
+    "sf_tf04_balance_torque_leakfree"
+   ],
+   "M_own": 3,
+   "C2_filler_items": 36,
+   "C3_filler_items": 158,
+   "M_tokens": 400,
+   "M_sha256": "dffc84f41720f9f1",
+   "C1_tokens": 1814,
+   "C1_sha256": "6b864d3d10d582f4",
+   "C2_tokens": 31927,
+   "C2_sha256": "d3faa010166bdc99",
+   "C3_tokens": 99741,
+   "C3_sha256": "5f8b2058595e4d92"
+  },
+  "sf_tf06_metric_select_leakfree": {
+   "own_lessons": 15,
+   "M_sources": [
+    "sf_tf06_metric_select_cue",
+    "sf_tf06_metric_select_leakfree",
+    "sf_tf06_metric_select_cue"
+   ],
+   "M_own": 1,
+   "C2_filler_items": 45,
+   "C3_filler_items": 167,
+   "M_tokens": 395,
+   "M_sha256": "4f16cf09534ad7f5",
+   "C1_tokens": 1926,
+   "C1_sha256": "a04b116d2fdd7a63",
+   "C2_tokens": 31770,
+   "C2_sha256": "2ff4ec2b4e7c76cf",
+   "C3_tokens": 99730,
+   "C3_sha256": "c0e92bea36119d64"
+  },
+  "dsa_00000043_question1": {
+   "own_lessons": 15,
+   "M_sources": [
+    "dsa_00000043_question1",
+    "dsa_00000043_question1",
+    "dsa_00000043_question1"
+   ],
+   "M_own": 3,
+   "C2_filler_items": 44,
+   "C3_filler_items": 153,
+   "M_tokens": 389,
+   "M_sha256": "1143dccb6086f185",
+   "C1_tokens": 2091,
+   "C1_sha256": "03a0b8d91050de1c",
+   "C2_tokens": 31706,
+   "C2_sha256": "47ef6efb07c2a82a",
+   "C3_tokens": 99833,
+   "C3_sha256": "583750ba35cf85aa"
+  },
+  "dsa_00000017_question29": {
+   "own_lessons": 15,
+   "M_sources": [
+    "dsa_00000017_question29",
+    "dsa_00000017_question29",
+    "dsa_00000017_question29"
+   ],
+   "M_own": 3,
+   "C2_filler_items": 62,
+   "C3_filler_items": 150,
+   "M_tokens": 362,
+   "M_sha256": "c0ef39335fee9986",
+   "C1_tokens": 2005,
+   "C1_sha256": "d4481ad392a8a59c",
+   "C2_tokens": 31707,
+   "C2_sha256": "f6d0229e576add15",
+   "C3_tokens": 99807,
+   "C3_sha256": "77cabfbe46bac999"
+  },
+  "dsa_00000029_question1": {
+   "own_lessons": 15,
+   "M_sources": [
+    "dsa_00000029_question1",
+    "dsa_00000029_question1",
+    "dsa_00000029_question1"
+   ],
+   "M_own": 3,
+   "C2_filler_items": 52,
+   "C3_filler_items": 151,
+   "M_tokens": 412,
+   "M_sha256": "9895f01ae12f8971",
+   "C1_tokens": 2144,
+   "C1_sha256": "977975e4c72d5700",
+   "C2_tokens": 31797,
+   "C2_sha256": "81b41cdbf6e121f8",
+   "C3_tokens": 99934,
+   "C3_sha256": "f7d97c9ffc4db732"
+  },
+  "dsm_playground-series-s3e12": {
+   "own_lessons": 15,
+   "M_sources": [
+    "dsm_playground-series-s3e12",
+    "dsm_playground-series-s3e12",
+    "dsm_playground-series-s3e12"
+   ],
+   "M_own": 3,
+   "C2_filler_items": 43,
+   "C3_filler_items": 152,
+   "M_tokens": 386,
+   "M_sha256": "59b41921ff971f77",
+   "C1_tokens": 1948,
+   "C1_sha256": "da2ed9ff14bef796",
+   "C2_tokens": 31749,
+   "C2_sha256": "46be443464928505",
+   "C3_tokens": 99776,
+   "C3_sha256": "ce291c70f167d683"
+  }
+ }
+}

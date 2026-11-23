@@ -1,0 +1,357 @@
+# DSBench data-analysis questions for P1b (selected by quick_runs/select_dsbench_analysis.py;
+# rule in that file's docstring). Data: /data/anon/reveries_data/dsbench_hf/data_analysis/data/<id>/
+tasks:
+- id: dsa_00000001_question6
+  source: dsbench_analysis
+  competition: '00000001'
+  name: 2016-round-1-section-2-chip-off-the-old-block
+  question_file: question6.txt
+  files: &id001
+  - MO16-Round-1-Sec-2-Chip-Off-The-Old-Block.xlsx
+  gold: D
+  answer_type: letter
+  contamination_risk: medium
+  risk_reason: Public ModelOff competition question with published answers (eloquens.com).
+- id: dsa_00000001_question17
+  source: dsbench_analysis
+  competition: '00000001'
+  name: 2016-round-1-section-2-chip-off-the-old-block
+  question_file: question17.txt
+  files: *id001
+  gold: 1661626
+  answer_type: integer
+  contamination_risk: medium
+  risk_reason: Public ModelOff competition question with published answers (eloquens.com).
+- id: dsa_00000005_question20
+  source: dsbench_analysis
+  competition: '00000005'
+  name: 2016-round-1-section-3-roll-the-dice
+  question_file: question20.txt
+  files: &id002
+  - MO16-Round-1-Sec-3-Roll-The-Dice-1.xlsx
+  gold: B
+  answer_type: letter
+  contamination_risk: medium
+  risk_reason: Public ModelOff competition question with published answers (eloquens.com).
+- id: dsa_00000005_question28
+  source: dsbench_analysis
+  competition: '00000005'
+  name: 2016-round-1-section-3-roll-the-dice
+  question_file: question28.txt
+  files: *id002
+  gold: 178052
+  answer_type: integer
+  contamination_risk: medium
+  risk_reason: Public ModelOff competition question with published answers (eloquens.com).
+- id: dsa_00000008_question26
+  source: dsbench_analysis
+  competition: 00000008
+  name: 2017-round-2-section-3-system-allocation
+  question_file: question26.txt
+  files:
+  - MO17-Round-2-Section-3-System-Allocation-Workbook.xlsx
+  gold: C
+  answer_type: letter
+  contamination_risk: medium
+  risk_reason: Public ModelOff competition question with published answers (eloquens.com).
+- id: dsa_00000010_question1
+  source: dsbench_analysis
+  competition: '00000010'
+  name: 2017-finals-ladder-up
+  question_file: question1.txt
+  files: &id003
+  - MO2017-Finals-Sec-1-Ladder-Up.xlsx
+  gold: C
+  answer_type: letter
+  contamination_risk: medium
+  risk_reason: Public ModelOff competition question with published answers (eloquens.com).
+- id: dsa_00000010_question4
+  source: dsbench_analysis
+  competition: '00000010'
+  name: 2017-finals-ladder-up
+  question_file: question4.txt
+  files: *id003
+  gold: 78
+  answer_type: integer
+  contamination_risk: medium
+  risk_reason: Public ModelOff competition question with published answers (eloquens.com).
+- id: dsa_00000011_question1
+  source: dsbench_analysis
+  competition: '00000011'
+  name: 2014-round-2-purple-city
+  question_file: question1.txt
+  files:
+  - MO14-Purple-City.xlsx
+  gold: B
+  answer_type: letter
+  contamination_risk: medium
+  risk_reason: Public ModelOff competition question with published answers (eloquens.com).
+- id: dsa_00000016_question1
+  source: dsbench_analysis
+  competition: '00000016'
+  name: 2017-round-2-section-1-collect-the-cash
+  question_file: question1.txt
+  files:
+  - MO17-Round-2-Section-1-Collect-the-Cash-Spreadsheet-Format (1).xlsx
+  gold: D
+  answer_type: letter
+  contamination_risk: medium
+  risk_reason: Public ModelOff competition question with published answers (eloquens.com).
+- id: dsa_00000017_question29
+  source: dsbench_analysis
+  competition: '00000017'
+  name: 2017-round-1-when-it-rains-it-pours
+  question_file: question29.txt
+  files:
+  - MO17-Round-1-Sec-3-When-it-Rains-it-Pours-data.xlsx
+  - assumptions_export.csv
+  gold: E
+  answer_type: letter
+  contamination_risk: medium
+  risk_reason: Public ModelOff competition question with published answers (eloquens.com).
+- id: dsa_00000018_question16
+  source: dsbench_analysis
+  competition: 00000018
+  name: 2017-finals-castles-in-the-air
+  question_file: question16.txt
+  files:
+  - MO17-Round-1-Sec-2-Castles-In-The-Air-data.xlsx
+  gold: H
+  answer_type: letter
+  contamination_risk: medium
+  risk_reason: Public ModelOff competition question with published answers (eloquens.com).
+- id: dsa_00000019_question6
+  source: dsbench_analysis
+  competition: 00000019
+  name: 2016-round-2-section-2-fund-the-future
+  question_file: question6.txt
+  files: &id004
+  - MO16-Round-2-Sec-2-Fund-the-Future (2).xlsx
+  gold: E
+  answer_type: letter
+  contamination_risk: medium
+  risk_reason: Public ModelOff competition question with published answers (eloquens.com).
+- id: dsa_00000019_question14
+  source: dsbench_analysis
+  competition: 00000019
+  name: 2016-round-2-section-2-fund-the-future
+  question_file: question14.txt
+  files: *id004
+  gold: 1345868
+  answer_type: integer
+  contamination_risk: medium
+  risk_reason: Public ModelOff competition question with published answers (eloquens.com).
+- id: dsa_00000020_question28
+  source: dsbench_analysis
+  competition: '00000020'
+  name: 2016-round-2-section-4-maximize-the-benefit
+  question_file: question28.txt
+  files: &id005
+  - MO16-Round-2-Sec-4-Maximize-the-Benefit.xlsx
+  gold: E
+  answer_type: letter
+  contamination_risk: medium
+  risk_reason: Public ModelOff competition question with published answers (eloquens.com).
+- id: dsa_00000020_question35
+  source: dsbench_analysis
+  competition: '00000020'
+  name: 2016-round-2-section-4-maximize-the-benefit
+  question_file: question35.txt
+  files: *id005
+  gold: 14978914492
+  answer_type: integer
+  contamination_risk: medium
+  risk_reason: Public ModelOff competition question with published answers (eloquens.com).
+- id: dsa_00000022_question31
+  source: dsbench_analysis
+  competition: '00000022'
+  name: 2016-round-1-section-4-going-around-in-circles
+  question_file: question31.txt
+  files: &id006
+  - MO16-Round-1-Sec-4-Going-Around-in-Circles (1) (1).xlsx
+  gold: B
+  answer_type: letter
+  contamination_risk: medium
+  risk_reason: Public ModelOff competition question with published answers (eloquens.com).
+- id: dsa_00000022_question38
+  source: dsbench_analysis
+  competition: '00000022'
+  name: 2016-round-1-section-4-going-around-in-circles
+  question_file: question38.txt
+  files: *id006
+  gold: 1175387
+  answer_type: integer
+  contamination_risk: medium
+  risk_reason: Public ModelOff competition question with published answers (eloquens.com).
+- id: dsa_00000025_question32
+  source: dsbench_analysis
+  competition: '00000025'
+  name: 2015-round-1-tax
+  question_file: question32.txt
+  files:
+  - MO15-Tax-Data (1).xlsx
+  gold: D
+  answer_type: letter
+  contamination_risk: medium
+  risk_reason: Public ModelOff competition question with published answers (eloquens.com).
+- id: dsa_00000027_question1
+  source: dsbench_analysis
+  competition: '00000027'
+  name: 2015-round-1-bread-and-butter
+  question_file: question1.txt
+  files:
+  - MO15-Round-1-Sec-2-Bread-and-Butter-Data.xlsx
+  gold: B
+  answer_type: letter
+  contamination_risk: medium
+  risk_reason: Public ModelOff competition question with published answers (eloquens.com).
+- id: dsa_00000028_question1
+  source: dsbench_analysis
+  competition: 00000028
+  name: 2015-round-one-options-to-call
+  question_file: question1.txt
+  files:
+  - MO15-Round-1-Sec-4-Options-to-Call-Data.xlsx
+  gold: B
+  answer_type: letter
+  contamination_risk: medium
+  risk_reason: Public ModelOff competition question with published answers (eloquens.com).
+- id: dsa_00000029_question1
+  source: dsbench_analysis
+  competition: 00000029
+  name: 2014-round-2-stepping-up
+  question_file: question1.txt
+  files:
+  - MO14-Stepping-Up.xlsx
+  gold: A
+  answer_type: letter
+  contamination_risk: medium
+  risk_reason: Public ModelOff competition question with published answers (eloquens.com).
+- id: dsa_00000030_question1
+  source: dsbench_analysis
+  competition: '00000030'
+  name: 2014-round-2-time-is-money
+  question_file: question1.txt
+  files:
+  - MO14-Time-is-Money-Data.xlsx
+  gold: D
+  answer_type: letter
+  contamination_risk: medium
+  risk_reason: Public ModelOff competition question with published answers (eloquens.com).
+- id: dsa_00000032_question1
+  source: dsbench_analysis
+  competition: '00000032'
+  name: 2014-round-1-dealing-with-data
+  question_file: question1.txt
+  files:
+  - MO14-Round-1-Dealing-With-Data-Workbook.xlsx
+  gold: B
+  answer_type: letter
+  contamination_risk: medium
+  risk_reason: Public ModelOff competition question with published answers (eloquens.com).
+- id: dsa_00000034_question1
+  source: dsbench_analysis
+  competition: '00000034'
+  name: 2013-round-2-data-analysis
+  question_file: question1.txt
+  files:
+  - MO13-Data-Analysis-Data-Workbook.xlsx
+  gold: B
+  answer_type: letter
+  contamination_risk: medium
+  risk_reason: Public ModelOff competition question with published answers (eloquens.com).
+- id: dsa_00000038_question1
+  source: dsbench_analysis
+  competition: 00000038
+  name: 2013-round-1-energy-operations
+  question_file: question1.txt
+  files:
+  - MO13-Energy-Operations-Workbook.xlsx
+  gold: D
+  answer_type: letter
+  contamination_risk: medium
+  risk_reason: Public ModelOff competition question with published answers (eloquens.com).
+- id: dsa_00000043_question1
+  source: dsbench_analysis
+  competition: '00000043'
+  name: 2012-round-2-find-that-error
+  question_file: question1.txt
+  files:
+  - ModelOff-Find-That-Error-QUESTION-1.xlsx
+  gold: B
+  answer_type: letter
+  contamination_risk: medium
+  risk_reason: Public ModelOff competition question with published answers (eloquens.com).
+dropped_competitions:
+- id: '00000002'
+  name: 2012-round-1-theory-and-practice-mcqs
+  files: []
+- id: '00000003'
+  name: 2012-round-2-monte-carlo
+  files: []
+- id: '00000004'
+  name: 2017-round-1-go-with-the-flow
+  files:
+  - MO17-Round-1-Sec-4-Go-With-The-Flow-data.xlsx
+  - calculations_sheet.csv
+  - flow.jpg
+- id: '00000006'
+  name: 2016-round-2-section-3-tally-up
+  files:
+  - MO16-Round-2-Sec-3-Tally-Up-1.xlsx
+  - get_results.ipynb
+- id: '00000007'
+  name: 2017-finals-funding-fun
+  files:
+  - MO2017-Finals-Sec-2-Funding-Fun.xlsb
+- id: 00000009
+  name: 2017-finals-word-play
+  files:
+  - MO2017-Finals-Sec-3-Word-Play (1).xlsb
+  - image.jpg
+- id: '00000012'
+  name: 2015-round-2-more-money-please
+  files:
+  - MO15-More-Money-Please-Data.xlsx
+  - answer.ipynb
+- id: '00000013'
+  name: 2017-round-2-late-again
+  files:
+  - MO17-Round-2-Section-2-Late-Again-Data (1).xlsx
+  - image.jpg
+- id: '00000014'
+  name: 2012-round-2-asset-schedule
+  files: []
+- id: '00000026'
+  name: 2015-round-2-the-price-is-right
+  files: []
+- id: '00000031'
+  name: 2014-round-1-snakes-and-ladders
+  files:
+  - image.jpg
+- id: '00000033'
+  name: 2014-round-1-precise-debt-modeling
+  files:
+  - MO14-Round-1-Debt-Modeling-Workbook.xlsx
+  - Precise-Debt-Modelling-Model-Citizn.xlsm
+- id: '00000035'
+  name: 2013-round-2-hard-times-turnaround-a-toy-company
+  files:
+  - MO13-Hard-Times-Assumptions.xlsx
+  - image.jpg
+  - mock_data.xlsx
+- id: '00000036'
+  name: 2013-round-2-theory-and-practice
+  files: []
+- id: '00000037'
+  name: 2013-round-1-theory-and-practice
+  files: []
+- id: 00000039
+  name: 2013-round-1-acquisition-financing
+  files: []
+- id: '00000041'
+  name: 2012-finals-investment-property
+  files: []
+- id: '00000042'
+  name: 2012-finals-excel-knowledge-test
+  files: []

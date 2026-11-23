@@ -1,0 +1,157 @@
+# Fixed task list for all quick-run probes (quick_runs.md §1.2). Do not change between probes.
+# Data root: /data/anon/reveries_data (outside the repo; see README "Data").
+#   dsts/        hongqianx/tabular-agent-failures @ a1957ea  (Silent Failures test-suite data + workloads)
+#   sf_release/  trl-lab/silent-failures-agentic-ds          (leak-free TF04/TF06 data, judge criteria)
+#   blade/       behavioral-data/BLADE                       (datasets + expert annotations)
+#
+# Silent Failures (SF): the no-hint variant (_01) of each of the 6 tests, as in the paper
+# (dsts_results.py NO_HINT_ONLY). Exceptions, stated:
+#   - TF02: the _01 workload points at the CLEAN files (player_value_*.csv), which do not contain the
+#     planted pitfall. We use the _02 wording, which is the _01 wording on the messy files
+#     (player_value_rep_norm_*.csv) and gives no hint.
+#   - TF04 and TF06: the paper uses leak-free copies (train.csv/test.csv) because the original file
+#     names give the pitfall away ("balance_torque", "imbalance"). We run BOTH: *_leakfree is the
+#     paper's task, *_cue keeps the original names. The pair shows how much a file-name cue moves
+#     the agent.
+# BLADE: 7 datasets with expert decision annotations (annotations.csv, incl. is_negative = wrong option).
+# soccer (Silberzahn) and affairs are left out: soccer is the most widely published analysis and is
+# 146k rows; affairs is a textbook example. mortgage/conversation/amtl/... were not needed for 7.
+#
+# contamination_risk follows G02 "Contamination tagging"; updated by P10 (recall probe, 2026-11-11):
+# a task with >= 2 of 3 recall hits moved to high. See quick_runs/results/P10/report.md.
+
+tasks:
+  - id: sf_tf01_goal_imbalance
+    source: silent_failures
+    test: TF01_goal_imbalance
+    workload: dsts/src/agents/dsguru/workload/FM01_goal_imbalance.json
+    workload_id: FM01_goal_imbalance_01
+    files: [dsts/data/FM01_goal_imbalance/input/player_goals_5high_train.csv, dsts/data/FM01_goal_imbalance/input/player_goals_5high_test.csv]
+    criteria: dsts/llmjudge/judge_criteria/FM01_goal_imbalance_eval.json
+    contamination_risk: high
+    risk_reason: Transfermarkt-derived player table with a planted 5% positive label; no published analysis of this task.
+    recall_probe: {hits_of_3: 3, risk_before_p10: low}  # inferred from the task wording (goal scorers are rare), not recalled
+
+  - id: sf_tf02_player_rep_norm
+    source: silent_failures
+    test: TF02_player_rep_norm
+    workload: dsts/src/agents/dsguru/workload/FM02_player_rep_norm.json
+    workload_id: FM02_player_rep_norm_02
+    files: [dsts/data/FM02_player_rep_norm/input/player_value_rep_norm_train.csv, dsts/data/FM02_player_rep_norm/input/player_value_rep_norm_test.csv]
+    criteria: dsts/llmjudge/judge_criteria/FM02_player_rep_norm_eval.json
+    contamination_risk: low
+    risk_reason: Planted messy values ('185cm', 'na') in a derived table; nothing to recall.
+    recall_probe: {hits_of_3: 0, risk_before_p10: low}
+
+  - id: sf_tf03_correlation_causation
+    source: silent_failures
+    test: TF03_correlation_causation
+    workload: dsts/src/agents/dsguru/workload/FM03_correlation_causation.json
+    workload_id: FM03_correlation_causation_01
+    files: [dsts/data/FM03_correlation_causation/input/player_value_corr_causal_train.csv, dsts/data/FM03_correlation_causation/input/player_value_corr_causal_test.csv]
+    criteria: dsts/llmjudge/judge_criteria/FM03_correlation_causation_eval.json
+    contamination_risk: low
+    risk_reason: Planted spurious column_x; nothing to recall. File name contains 'corr_causal' (a cue, kept as released).
+    recall_probe: {hits_of_3: 0, risk_before_p10: low}
+
+  - id: sf_tf04_balance_torque_leakfree
+    source: silent_failures
+    test: TF04_balance_torque
+    leakfree: TF04_balance_torque_leakfree_01
+    files: [sf_release/dsts_leakfree_data/tf04/input/train.csv, sf_release/dsts_leakfree_data/tf04/input/test.csv]
+    criteria: dsts/llmjudge/judge_criteria/FM04_balance_torque_eval.json
+    contamination_risk: medium
+    risk_reason: UCI balance-scale data; the torque rule is textbook, but file names are neutral.
+    recall_probe: {hits_of_3: 0, risk_before_p10: medium}
+
+  - id: sf_tf04_balance_torque_cue
+    source: silent_failures
+    test: TF04_balance_torque
+    workload: dsts/src/agents/dsguru/workload/FM04_balance_torque.json
+    workload_id: FM04_balance_torque_01
+    files: [dsts/data/FM04_balance_torque/input/balance_torque_train.csv, dsts/data/FM04_balance_torque/input/balance_torque_test.csv]
+    criteria: dsts/llmjudge/judge_criteria/FM04_balance_torque_eval.json
+    contamination_risk: medium
+    risk_reason: Same data as the leak-free task; the file name 'balance_torque' names the needed feature.
+    recall_probe: {hits_of_3: 1, risk_before_p10: medium}
+
+  - id: sf_tf05_credit_card_leakage
+    source: silent_failures
+    test: TF05_credit_card_leakage
+    workload: dsts/src/agents/dsguru/workload/FM05_credit_card_leakage.json
+    workload_id: FM05_credit_card_leakage_01
+    files: [dsts/data/FM05_credit_card_leakage/input/credit_card_train.csv, dsts/data/FM05_credit_card_leakage/input/credit_card_test.csv]
+    criteria: dsts/llmjudge/judge_criteria/FM05_credit_card_leakage_eval.json
+    contamination_risk: medium
+    risk_reason: AER CreditCard data; its expenditure/share leakage is a known Kaggle/textbook example.
+    recall_probe: {hits_of_3: 0, risk_before_p10: medium}
+
+  - id: sf_tf06_metric_select_leakfree
+    source: silent_failures
+    test: TF06_metric_select
+    leakfree: TF06_metric_select_leakfree_01
+    files: [sf_release/dsts_leakfree_data/tf06/input/train.csv, sf_release/dsts_leakfree_data/tf06/input/test.csv]
+    criteria: dsts/llmjudge/judge_criteria/FM06_metric_select_eval.json
+    contamination_risk: high
+    risk_reason: Derived player table with planted imbalance; neutral file names.
+    recall_probe: {hits_of_3: 3, risk_before_p10: low}  # inferred from the task wording (goal scorers are rare), not recalled
+
+  - id: sf_tf06_metric_select_cue
+    source: silent_failures
+    test: TF06_metric_select
+    workload: dsts/src/agents/dsguru/workload/FM06_metric_select.json
+    workload_id: FM06_metric_select_01
+    files: [dsts/data/FM06_metric_select/input/player_goals_imbalance_train.csv, dsts/data/FM06_metric_select/input/player_goals_imbalance_test.csv]
+    criteria: dsts/llmjudge/judge_criteria/FM06_metric_select_eval.json
+    contamination_risk: high
+    risk_reason: Same data as the leak-free task; the file name contains 'imbalance' (a cue).
+    recall_probe: {hits_of_3: 3, risk_before_p10: low}  # read off the file name 'imbalance'
+
+  - id: blade_boxes
+    source: blade
+    dataset: boxes
+    contamination_risk: medium
+    risk_reason: Published cross-cultural study; dataset public, analysis not widely reproduced.
+    recall_probe: {hits_of_3: 0, risk_before_p10: medium}
+
+  - id: blade_caschools
+    source: blade
+    dataset: caschools
+    contamination_risk: high
+    risk_reason: Stock & Watson textbook dataset; class-size regression is a standard worked example.
+    recall_probe: {hits_of_3: 0, risk_before_p10: high}
+
+  - id: blade_crofoot
+    source: blade
+    dataset: crofoot
+    contamination_risk: high
+    risk_reason: Published primate study (Crofoot et al. 2008); data public, analysis not widely known.
+    recall_probe: {hits_of_3: 3, risk_before_p10: medium}  # the prompt names Crofoot et al.
+
+  - id: blade_fish
+    source: blade
+    dataset: fish
+    contamination_risk: high
+    risk_reason: Classic UCLA count-data example (Poisson / zero-inflated tutorials).
+    recall_probe: {hits_of_3: 0, risk_before_p10: high}
+
+  - id: blade_hurricane
+    source: blade
+    dataset: hurricane
+    contamination_risk: high
+    risk_reason: Jung et al. 2014 and the Simonsohn specification-curve reanalysis; the prompt description names the paper.
+    recall_probe: {hits_of_3: 3, risk_before_p10: high}  # the prompt names Simonsohn et al.
+
+  - id: blade_reading
+    source: blade
+    dataset: reading
+    contamination_risk: medium
+    risk_reason: Published CHI study; prompt links it, but no well-known worked analysis.
+    recall_probe: {hits_of_3: 0, risk_before_p10: medium}
+
+  - id: blade_teachingratings
+    source: blade
+    dataset: teachingratings
+    contamination_risk: high
+    risk_reason: Hamermesh & Parker 2005, an AER/Stock & Watson textbook dataset; the prompt names the paper.
+    recall_probe: {hits_of_3: 3, risk_before_p10: high}  # the prompt names Hamermesh & Parker

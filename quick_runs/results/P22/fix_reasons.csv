@@ -1,0 +1,95 @@
+arm,task,useful,instr,reason
+G3s-pl2,sf_tf03,False,True,"This note suggests excluding numerical features based on causal reasoning. However, the task provides a specific instruction to 'Keep only numerical feature columns', and over-filtering might violate the prompt's requirements."
+G3s-pl2,sf_tf03,False,True,"Similar to 135, this encourages the agent to use causal reasoning to exclude features, which conflicts with the direct instruction to keep numerical feature columns."
+G3s-pl2,sf_tf03,False,True,"This note suggests removing generic columns like 'column_x', which contradicts the explicit instruction to 'Keep only numerical feature columns' and conflicts with the accepted note [id 130] which warns that 'column_x' might be critical."
+G3s-pl2,sf_tf03,False,True,"This note suggests excluding 'column_x' as a spurious feature, which contradicts the prompt's requirement to keep numerical feature columns and conflicts with note [id 130]."
+G3s-pl2,sf_tf03,False,True,"This note encourages using domain/causal reasoning to prune features, which would lead the agent to violate the explicit instruction to 'Keep only numerical feature columns'."
+G3s-pl2,sf_tf03,False,True,"Similar to [id 131], this note suggests removing 'column_x' and other generic labels, which contradicts the prompt and note [id 130]."
+G3s-pl2,sf_tf03,False,True,"This note suggests using causal reasoning to filter features, which conflicts with the explicit instruction to 'Keep only numerical feature columns'."
+G3s-pl2,sf_tf03,False,True,"This note suggests analyzing features to exclude spurious ones, which conflicts with the explicit instruction to 'Keep only numerical feature columns'."
+G3s-pl2,sf_tf03,False,False,"This note encourages investigating and potentially removing 'column_x'. However, Note 130 specifically warns that 'column_x' might be a key indicator in some benchmarks and should not be accidentally dropped. Following 134 could lead to the agent dropping a necessary feature."
+G3s-pl2,sf_tf03,False,False,"This contradicts Note 130. Note 130 says to keep 'column_x', while this note says to exclude it as a spurious feature. Given the context of data science benchmarks, keeping all requested numerical features is usually safer."
+G3s-pl2,sf_tf03,False,True,"This note suggests excluding non-causal features based on reasoning. However, the task explicitly instructs to 'Keep only numerical feature columns'. Following this note would lead the agent to ignore the explicit instruction and potentially drop required features."
+G3s-pl2,sf_tf03,False,True,"This note suggests excluding 'column_x' as noise. This directly contradicts the task's 'numerical feature columns' requirement and Note 130, which explicitly warns against dropping 'column_x'."
+G3s-pl2,sf_tf03,False,True,The prompt explicitly instructs to 'Keep only numerical feature columns'. Manually performing causal selection to remove numerical features would violate this instruction.
+G3s-pl2,sf_tf03,False,True,This note suggests applying domain-driven selection to exclude numerical features. This contradicts the explicit instruction to 'Keep only numerical feature columns'.
+G3s-pl2,sf_tf03,False,True,"Similar to 135, this suggests filtering numerical columns based on causal reasoning, which conflicts with the prompt's specific instruction to keep numerical columns."
+G3s-pl2,sf_tf03,False,True,"This note suggests removing columns like 'column_x', which contradicts the literal instructions of the prompt and the guidance in already accepted note [id 130]."
+G3s-pl2,sf_tf03,False,False,"This advocates for causal reasoning over literal prompt adherence, which would lead the agent to exclude columns that the prompt specifically asks to keep ('numerical feature columns')."
+G3s-pl2,sf_tf03,False,True,This contradicts the instruction to keep numerical features and the specific warning in [id 130] regarding 'column_x'.
+G3s-pl2,sf_tf03,False,False,"This similarly encourages excluding 'column_x' based on its name, which conflicts with the prompt's requirements and Note [id 130]."
+G3s-pl2,sf_tf03,False,True,"Conflicts with the prompt's explicit instruction to 'Keep only numerical feature columns' and accepted note [id 136]. This note encourages subjective feature selection, which often leads to missing required columns in these specific tasks."
+G3s-pl2,sf_tf03,False,True,This note contradicts the explicit instruction of the task to 'keep only numerical feature columns'. Following this note would lead the agent to ignore a direct constraint.
+G3s-pl2,sf_tf03,False,True,"Similar to 135, this suggests reasoning over the feature set instead of simply selecting numerical columns, which contradicts the prompt's explicit constraint."
+G3s-pl2,sf_tf03,False,False,"This note suggests removing columns like 'column_x', but accepted note [id 130] specifically warns against dropping 'column_x' in these benchmarks."
+G3s-pl2,sf_tf03,False,False,"This note suggests excluding columns like 'column_x'. However, the task explicitly asks to 'keep only numerical feature columns'. In many benchmarks, 'column_x' is a critical feature, and excluding it would violate the prompt and likely decrease performance. It conflicts with accepted note [id 136]."
+G3s-pl2,sf_tf03,False,True,This note suggests using causal reasoning to filter features. The prompt provides a strict instruction to 'keep only numerical feature columns'. Over-filtering based on domain assumptions could lead to the omission of required features and conflicts with [id 136].
+G3s-pl2,sf_tf03,False,True,"Similar to [id 131], this suggests excluding generic labels like 'column_x', which conflicts with the explicit instruction to keep numerical feature columns and with [id 136]."
+G3s-pl2,sf_tf03,False,False,"This note suggests filtering for causal drivers. While the filename contains 'causal', the prompt explicitly instructs the agent to 'keep only numerical feature columns'. Applying external causal filtering would be a deviation from the prompt's requirements and conflicts with [id 136]."
+G3s-pl2,sf_tf03,False,True,"This note suggests domain-driven selection to avoid simply selecting all numerical columns, which directly contradicts the prompt's explicit instruction: 'Keep only numerical feature columns (excluding the label)'."
+G3s-pl2,sf_tf03,False,False,"Like id 135, this encourages filtering based on causal reasoning, which conflicts with the strict requirement to keep all numerical feature columns."
+G3s-pl2,sf_tf03,False,False,"This conflicts with accepted note [id 130], which specifically warns NOT to drop 'column_x' in these types of benchmarks."
+G3s-pl2,sf_tf03,False,True,The task explicitly instructs to 'Keep only numerical feature columns (excluding the label)'. Suggesting the exclusion of 'column_x' based on it being a generic name contradicts this strict instruction.
+G3s-pl2,sf_tf03,False,False,The task provides a specific rule for feature selection ('Keep only numerical feature columns'). Applying causal reasoning to exclude numerical features would violate the prompt's constraints.
+G3s-pl2,sf_tf03,False,True,"Similar to 131 and 132, this suggests excluding numerical columns based on intuition, which contradicts the explicit instruction to keep all numerical features."
+G3s-pl2,sf_tf03,False,True,"While the filename contains 'causal', the prompt's instruction on feature selection is explicit. Filtering based on causal drivers instead of 'all numerical columns' would be a deviation from the task requirements."
+G3s-pl2,sf_tf05,False,True,"The prompt explicitly instructs the agent to 'Use all available feature columns'. While these features might be leakage in a real-world scenario, the agent must follow the explicit prompt constraint for this task."
+G3s-pl2,sf_tf05,False,True,"The prompt explicitly instructs the agent to 'Use all available feature columns'. This note explicitly advises the agent to ignore that instruction, which is counter-productive to following the prompt."
+G3s-pl2,sf_tf05,False,True,The prompt explicitly instructs the agent to 'Use all available feature columns'. Advising the agent to drop these specific columns violates that constraint.
+G3s-pl2,sf_tf05,False,True,"The prompt explicitly instructs the agent to 'Use all available feature columns'. This note suggests identifying and removing leakage features, which would contradict the explicit instruction."
+G3s-pl2,sf_tf05,False,True,"The prompt explicitly instructs the agent to 'Use all available feature columns'. This note suggests removing features, which would contradict the explicit instruction."
+G3s-pl2,sf_tf05,False,True,"The prompt explicitly instructs the agent to 'Use all available feature columns'. This note suggests removing features, which would contradict the explicit instruction."
+G3s-pl2,sf_tf05,False,True,"This note encourages the agent to ignore the explicit instruction to 'use all available feature columns' by removing potential leakage features, which contradicts the task specification."
+G3s-pl2,sf_tf05,False,True,"This note encourages the agent to ignore the explicit instruction to 'use all available feature columns', which contradicts the task specification."
+G3s-pl2,sf_tf05,False,True,"This note encourages the agent to ignore the explicit instruction to 'use all available feature columns', which contradicts the task specification."
+G3s-pl2,sf_tf05,False,True,Redundant if Note 168 is accepted; 168 is more explicit about overriding the prompt's instruction.
+G3s-pl2,sf_tf05,True,True,"This note identifies specific leakage features ('majorcards', 'expenditure') in the credit card dataset and explicitly warns the agent to remove them even if the prompt says to 'use all available feature columns', which is a common trap in this specific task."
+G3s-pl2,sf_tf05,False,False,Redundant if Note 168 is accepted.
+G3s-pl2,sf_tf05,False,True,Redundant; id 168 is more comprehensive and explicitly addresses the 'use all features' instruction in the prompt.
+G3s-pl2,sf_tf05,True,True,"This is a critical lesson for this specific dataset. It warns the agent that 'majorcards' and 'expenditure' are leakage features that make the task trivial, and explicitly tells the agent to ignore the 'use all features' instruction to avoid creating an unrealistic model."
+G3s-pl2,sf_tf05,False,False,Redundant; id 168 is more detailed and addresses the prompt's specific wording.
+G3o-d,sf_tf03,True,False,"The filename contains 'causal', and the data contains a blatant spurious correlation ('column_x'). This note encourages the agent to reason about the features rather than blindly including all numerical columns."
+G3o-d,sf_tf03,False,False,Very similar to id 135; id 135 is more concise.
+G3o-d,sf_tf03,False,False,"Redundant with note 137, which provides similar advice on causal reasoning."
+G3o-d,sf_tf03,True,True,Crucial for this task because the dataset name contains 'causal' and the data profile shows a clear spurious correlation in 'column_x'. It encourages the agent to use reasoning rather than blindly following the 'all numerical columns' instruction.
+G3o-d,sf_tf03,False,False,"While relevant, this is largely covered by [id 128] and [id 131]. [id 131] is more specific about the reason for exclusion (spurious correlations that do not generalize)."
+G3o-d,sf_tf03,True,False,This is highly relevant because the data profile shows 'column_x' has a perfect correlation (+1.00) in the training set but a near-zero correlation (-0.04) in the test set. This note explicitly warns against including such generic/spurious columns.
+G3o-d,sf_tf03,False,False,Redundant. [id 137] already instructs the agent to incorporate causal reasoning in feature selection.
+G3o-d,sf_tf03,False,False,Redundant. Covered by the combination of [id 137] and [id 131].
+G3o-d,sf_tf03,False,False,This is a duplicate of note [id 137].
+G3o-d,sf_tf03,True,False,"Critical for this task. The dataset contains 'causal' in the name and includes obvious identifiers (player_id, etc.) and a spurious feature (column_x) that would ruin the model if followed literally based on the 'numerical' requirement."
+G3o-d,sf_tf03,True,False,"Reinforces the need to distinguish between causal drivers and spurious correlations, which is essential given the profile of 'column_x'."
+G3o-d,sf_tf03,True,False,"The data profile reveals 'column_x' has a +1.00 correlation in train and -0.04 in test, which is a clear indicator of data leakage or a spurious artifact. This note encourages the agent to investigate such labels."
+G3o-d,sf_tf03,True,False,"Directly addresses the risk of including generic columns like 'column_x' which, as seen in the data profile, are highly likely to be spurious and non-generalizable."
+G3o-d,sf_tf03,False,False,This is redundant given that notes 135 and 137 have already been accepted and cover causal reasoning in feature selection.
+G3o-d,sf_tf03,False,False,This is redundant given notes 131 and 134.
+G3o-d,sf_tf03,False,False,"This is redundant with accepted notes [135] and [137], which already cover causal feature selection."
+G3o-d,sf_tf03,False,False,"Very similar to 137, but 137 is slightly more explicit about the reasoning process."
+G3o-d,sf_tf03,True,True,Crucial for this task because the dataset name contains 'causal' and the data profile reveals a massive spurious correlation in 'column_x'. This note guides the agent to think critically about feature selection rather than following the literal instruction blindly.
+G3o-d,sf_tf03,False,False,"While useful, id 131 is more explicit about the risk of spurious correlations and specifically mentions 'column_x', which is a critical red flag in this dataset."
+G3o-d,sf_tf03,True,False,"This note specifically warns against generic columns like 'column_x' and the risk of spurious correlations, which is exactly the primary trap in this dataset given the training/test correlation discrepancy."
+G3o-d,sf_tf03,False,False,This is largely redundant with the already accepted note [id 137].
+G3o-d,sf_tf03,False,False,This is redundant with [id 131] and [id 137].
+G3o-d,sf_tf03,False,False,This note is nearly identical to accepted note [id 137].
+G3o-d,sf_tf03,True,False,"The dataset filename contains 'causal' and the data profile reveals a massive spurious correlation in 'column_x'. This note correctly guides the agent to use reasoning to exclude spurious features and IDs, even if the prompt asks for numerical columns generally."
+G3o-d,sf_tf03,False,False,This is very similar to note 135 but less direct about the action of excluding spurious features. 135 is sufficient.
+G3o-d,sf_tf03,True,False,"Specifically warns about generic column names like 'column_x', which is a critical pitfall in this dataset given its extreme training correlation vs test correlation."
+G3o-d,sf_tf03,True,False,"Directly addresses the issue of generic columns like 'column_x' and the risk of learning spurious correlations that do not generalize, which is exactly what is happening with this feature."
+G3o-d,sf_tf03,False,False,This is largely redundant with the already accepted note [id 135] regarding domain-driven feature selection for causal tasks.
+G3o-d,sf_tf03,True,False,"Similar to 131 and 134, it correctly identifies the risk of including generic labels like 'column_x' in causal modeling tasks."
+G3o-d,sf_tf03,False,False,"This note is redundant as it repeats the logic already contained in accepted notes [id 135], [id 127], and [id 131] regarding causal feature selection and avoiding spurious correlations in 'causal' datasets."
+G3o-d,sf_tf05,False,True,"This note suggests removing 'leakage' features like 'majorcards' or 'expenditure'. However, the prompt explicitly commands the agent to 'Use all available feature columns'. Following this note would result in a failure to follow instructions."
+G3o-d,sf_tf05,False,True,"This note suggests removing 'leakage' features, which contradicts the explicit instruction to 'Use all available feature columns'."
+G3o-d,sf_tf05,False,True,"This note suggests removing 'leakage' features, which contradicts the explicit instruction to 'Use all available feature columns'."
+G3o-d,sf_tf05,False,True,"This note suggests removing features like 'majorcards' or 'expenditure', which directly contradicts the prompt's instruction to 'Use all available feature columns'."
+G3o-d,sf_tf05,False,True,"This note suggests removing features like 'majorcards' or 'expenditure', which directly contradicts the prompt's instruction to 'Use all available feature columns'."
+G3o-d,sf_tf05,False,True,"This note suggests removing features like 'expenditure' or 'majorcards', which directly contradicts the prompt's instruction to 'Use all available feature columns'."
+G3o-d,sf_tf05,False,True,"Similar to 170, this note suggests removing features based on domain knowledge of 'leakage' (e.g., 'majorcards'), which contradicts the explicit instruction to use all available feature columns."
+G3o-d,sf_tf05,False,True,This note contradicts the explicit prompt instruction to 'use all available feature columns'.
+G3o-d,sf_tf05,False,True,This note contradicts the explicit prompt instruction to 'use all available feature columns'.
+G3o-d,sf_tf05,False,True,"The task explicitly instructs to 'Use all available feature columns'. This note encourages the agent to ignore that instruction to avoid leakage, which may lead to an incorrect result relative to the task's specific requirements."
+G3o-d,sf_tf05,False,True,"The task explicitly instructs to 'Use all available feature columns'. This note encourages the agent to ignore that instruction to avoid leakage, which may lead to an incorrect result relative to the task's specific requirements."
+G3o-d,sf_tf05,False,True,"The task explicitly instructs to 'Use all available feature columns'. This note encourages the agent to ignore that instruction to avoid leakage, which may lead to an incorrect result relative to the task's specific requirements."
+G3o-d,sf_tf05,False,True,This note encourages the agent to ignore the explicit instruction to 'Use all available feature columns' by removing suspected leakage features.
+G3o-d,sf_tf05,False,True,This note encourages the agent to ignore the explicit instruction to 'Use all available feature columns' by removing suspected leakage features.
+G3o-d,sf_tf05,False,True,This note encourages the agent to ignore the explicit instruction to 'Use all available feature columns' by removing suspected leakage features.

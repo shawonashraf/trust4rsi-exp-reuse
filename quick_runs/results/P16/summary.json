@@ -1,0 +1,863 @@
+{
+ "stage1_fix": [
+  {
+   "arm": "G3",
+   "sf_tf05 fix seen": 5,
+   "sf_tf05 fix shown": 0,
+   "sf_tf05 n": 5,
+   "sf_tf03 fix seen": 5,
+   "sf_tf03 fix shown": 1,
+   "sf_tf03 n": 5,
+   "tf03 contra shown": 4
+  },
+  {
+   "arm": "G3o",
+   "sf_tf05 fix seen": 5,
+   "sf_tf05 fix shown": 0,
+   "sf_tf05 n": 5,
+   "sf_tf03 fix seen": 5,
+   "sf_tf03 fix shown": 1,
+   "sf_tf03 n": 5,
+   "tf03 contra shown": 4
+  },
+  {
+   "arm": "G3t",
+   "sf_tf05 fix seen": 5,
+   "sf_tf05 fix shown": 5,
+   "sf_tf05 n": 5,
+   "sf_tf03 fix seen": 5,
+   "sf_tf03 fix shown": 5,
+   "sf_tf03 n": 5,
+   "tf03 contra shown": 5
+  },
+  {
+   "arm": "G3d",
+   "sf_tf05 fix seen": 5,
+   "sf_tf05 fix shown": 0,
+   "sf_tf05 n": 5,
+   "sf_tf03 fix seen": 5,
+   "sf_tf03 fix shown": 5,
+   "sf_tf03 n": 5,
+   "tf03 contra shown": 0
+  }
+ ],
+ "stage1_wrong": [
+  {
+   "arm": "G3-p",
+   "runs": 20,
+   "wrong seen": 20,
+   "wrong accepted": 5,
+   "wrong shown": 5,
+   "sf_tf01 shown": 4,
+   "sf_tf02 shown": 0,
+   "sf_tf03 shown": 0,
+   "sf_tf05 shown": 1
+  },
+  {
+   "arm": "G3o-p",
+   "runs": 20,
+   "wrong seen": 20,
+   "wrong accepted": 6,
+   "wrong shown": 6,
+   "sf_tf01 shown": 5,
+   "sf_tf02 shown": 0,
+   "sf_tf03 shown": 0,
+   "sf_tf05 shown": 1
+  },
+  {
+   "arm": "G3t-p",
+   "runs": 20,
+   "wrong seen": 19,
+   "wrong accepted": 19,
+   "wrong shown": 17,
+   "sf_tf01 shown": 5,
+   "sf_tf02 shown": 5,
+   "sf_tf03 shown": 2,
+   "sf_tf05 shown": 5
+  },
+  {
+   "arm": "G3d-p",
+   "runs": 20,
+   "wrong seen": 20,
+   "wrong accepted": 1,
+   "wrong shown": 1,
+   "sf_tf01 shown": 1,
+   "sf_tf02 shown": 0,
+   "sf_tf03 shown": 0,
+   "sf_tf05 shown": 0
+  },
+  {
+   "arm": "E-pc",
+   "runs": 20,
+   "wrong seen": 20,
+   "wrong accepted": 20,
+   "wrong shown": 20,
+   "sf_tf01 shown": 5,
+   "sf_tf02 shown": 5,
+   "sf_tf03 shown": 5,
+   "sf_tf05 shown": 5
+  },
+  {
+   "arm": "G3-pc",
+   "runs": 20,
+   "wrong seen": 20,
+   "wrong accepted": 20,
+   "wrong shown": 20,
+   "sf_tf01 shown": 5,
+   "sf_tf02 shown": 5,
+   "sf_tf03 shown": 5,
+   "sf_tf05 shown": 5
+  },
+  {
+   "arm": "G3d-pc",
+   "runs": 20,
+   "wrong seen": 20,
+   "wrong accepted": 8,
+   "wrong shown": 8,
+   "sf_tf01 shown": 0,
+   "sf_tf02 shown": 0,
+   "sf_tf03 shown": 3,
+   "sf_tf05 shown": 5
+  }
+ ],
+ "reasons_rejected_instr": [
+  {
+   "arm": "G3-pc",
+   "kind": "fix",
+   "sum": 23,
+   "count": 32
+  },
+  {
+   "arm": "G3-pc",
+   "kind": "wrong",
+   "sum": 2,
+   "count": 21
+  },
+  {
+   "arm": "G3d",
+   "kind": "fix",
+   "sum": 18,
+   "count": 36
+  },
+  {
+   "arm": "G3d-p",
+   "kind": "fix",
+   "sum": 8,
+   "count": 28
+  },
+  {
+   "arm": "G3d-p",
+   "kind": "wrong",
+   "sum": 22,
+   "count": 38
+  },
+  {
+   "arm": "G3d-pc",
+   "kind": "fix",
+   "sum": 8,
+   "count": 20
+  },
+  {
+   "arm": "G3d-pc",
+   "kind": "wrong",
+   "sum": 5,
+   "count": 53
+  },
+  {
+   "arm": "G3o",
+   "kind": "fix",
+   "sum": 39,
+   "count": 47
+  },
+  {
+   "arm": "G3o-p",
+   "kind": "fix",
+   "sum": 35,
+   "count": 39
+  },
+  {
+   "arm": "G3o-p",
+   "kind": "wrong",
+   "sum": 27,
+   "count": 30
+  },
+  {
+   "arm": "G3t",
+   "kind": "fix",
+   "sum": 6,
+   "count": 38
+  },
+  {
+   "arm": "G3t-p",
+   "kind": "fix",
+   "sum": 2,
+   "count": 21
+  },
+  {
+   "arm": "G3t-p",
+   "kind": "wrong",
+   "sum": 6,
+   "count": 18
+  }
+ ],
+ "runs": {
+  "P12_A0": 30,
+  "P12_C1": 30,
+  "P13_E": 30,
+  "P13_G3": 30,
+  "P16_G3t": 30,
+  "P16_G3d": 30,
+  "P13_Ep": 20,
+  "P13_G3p": 20,
+  "P16_G3tp": 20,
+  "P16_G3dp": 20,
+  "P16_Epc": 20,
+  "P16_G3pc": 20,
+  "P16_G3dpc": 20
+ },
+ "stops": {
+  "P12_A0": {
+   "final_answer": 30
+  },
+  "P12_C1": {
+   "final_answer": 29,
+   "max_steps": 1
+  },
+  "P13_E": {
+   "final_answer": 29,
+   "max_steps": 1
+  },
+  "P13_G3": {
+   "final_answer": 29,
+   "max_steps": 1
+  },
+  "P16_G3t": {
+   "final_answer": 28,
+   "max_steps": 2
+  },
+  "P16_G3d": {
+   "final_answer": 28,
+   "max_steps": 2
+  },
+  "P13_Ep": {
+   "final_answer": 19,
+   "max_steps": 1
+  },
+  "P13_G3p": {
+   "final_answer": 20
+  },
+  "P16_G3tp": {
+   "final_answer": 17,
+   "max_steps": 3
+  },
+  "P16_G3dp": {
+   "final_answer": 20
+  },
+  "P16_Epc": {
+   "final_answer": 20
+  },
+  "P16_G3pc": {
+   "final_answer": 20
+  },
+  "P16_G3dpc": {
+   "final_answer": 20
+  }
+ },
+ "targeted": [
+  {
+   "task": "sf_tf01",
+   "check": "checks_class_distribution",
+   "A0 none": 0,
+   "C1 own": 5,
+   "E emb": 5,
+   "G3": 4,
+   "G3t blind": 4,
+   "G3d profile": 2,
+   "E-p": 3,
+   "G3-p": 3,
+   "G3t-p": 2,
+   "G3d-p": 3,
+   "E-pc": 1,
+   "G3-pc": 0,
+   "G3d-pc": 2
+  },
+  {
+   "task": "sf_tf01",
+   "check": "uses_class_weight",
+   "A0 none": 0,
+   "C1 own": 5,
+   "E emb": 5,
+   "G3": 5,
+   "G3t blind": 5,
+   "G3d profile": 5,
+   "E-p": 5,
+   "G3-p": 5,
+   "G3t-p": 5,
+   "G3d-p": 5,
+   "E-pc": 0,
+   "G3-pc": 0,
+   "G3d-pc": 5
+  },
+  {
+   "task": "sf_tf01",
+   "check": "uses_resampling",
+   "A0 none": 0,
+   "C1 own": 0,
+   "E emb": 0,
+   "G3": 0,
+   "G3t blind": 0,
+   "G3d profile": 0,
+   "E-p": 0,
+   "G3-p": 0,
+   "G3t-p": 0,
+   "G3d-p": 0,
+   "E-pc": 0,
+   "G3-pc": 0,
+   "G3d-pc": 0
+  },
+  {
+   "task": "sf_tf01",
+   "check": "uses_stratified_split",
+   "A0 none": 3,
+   "C1 own": 5,
+   "E emb": 5,
+   "G3": 5,
+   "G3t blind": 5,
+   "G3d profile": 5,
+   "E-p": 5,
+   "G3-p": 5,
+   "G3t-p": 4,
+   "G3d-p": 5,
+   "E-pc": 0,
+   "G3-pc": 0,
+   "G3d-pc": 5
+  },
+  {
+   "task": "sf_tf02",
+   "check": "handles_unit_suffix_in_height",
+   "A0 none": 0,
+   "C1 own": 4,
+   "E emb": 4,
+   "G3": 4,
+   "G3t blind": 3,
+   "G3d profile": 3,
+   "E-p": 4,
+   "G3-p": 5,
+   "G3t-p": 2,
+   "G3d-p": 5,
+   "E-pc": 0,
+   "G3-pc": 0,
+   "G3d-pc": 5
+  },
+  {
+   "task": "sf_tf03",
+   "check": "column_x_included",
+   "A0 none": 0,
+   "C1 own": 5,
+   "E emb": 0,
+   "G3": 1,
+   "G3t blind": 0,
+   "G3d profile": 5,
+   "E-p": 0,
+   "G3-p": 0,
+   "G3t-p": 1,
+   "G3d-p": 4,
+   "E-pc": 0,
+   "G3-pc": 0,
+   "G3d-pc": 1
+  },
+  {
+   "task": "sf_tf03",
+   "check": "applies_causal_reasoning",
+   "A0 none": 0,
+   "C1 own": 5,
+   "E emb": 0,
+   "G3": 1,
+   "G3t blind": 0,
+   "G3d profile": 4,
+   "E-p": 0,
+   "G3-p": 0,
+   "G3t-p": 3,
+   "G3d-p": 2,
+   "E-pc": 0,
+   "G3-pc": 0,
+   "G3d-pc": 1
+  },
+  {
+   "task": "sf_tf05",
+   "check": "used_leakage_features",
+   "A0 none": 0,
+   "C1 own": 1,
+   "E emb": 0,
+   "G3": 0,
+   "G3t blind": 0,
+   "G3d profile": 0,
+   "E-p": 0,
+   "G3-p": 0,
+   "G3t-p": 0,
+   "G3d-p": 0,
+   "E-pc": 0,
+   "G3-pc": 0,
+   "G3d-pc": 0
+  }
+ ],
+ "targeted_pooled": {
+  "A0 none": 0.075,
+  "C1 own": 0.75,
+  "E emb": 0.475,
+  "G3": 0.5,
+  "G3t blind": 0.425,
+  "G3d profile": 0.6,
+  "E-p": 0.425,
+  "G3-p": 0.45,
+  "G3t-p": 0.425,
+  "G3d-p": 0.6,
+  "E-pc": 0.025,
+  "G3-pc": 0.0,
+  "G3d-pc": 0.475
+ },
+ "tf05_leak_cols_kept": {
+  "A0 none": [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  "C1 own": [
+   1,
+   0,
+   1,
+   1,
+   1
+  ],
+  "E emb": [
+   4,
+   2,
+   2,
+   4,
+   4
+  ],
+  "G3": [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  "G3t blind": [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  "G3d profile": [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  "E-p": [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  "G3-p": [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  "G3t-p": [
+   2,
+   4,
+   4,
+   4,
+   2
+  ],
+  "G3d-p": [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  "E-pc": [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  "G3-pc": [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  "G3d-pc": [
+   4,
+   4,
+   4,
+   4,
+   4
+  ]
+ },
+ "fisher_p": {
+  "passed G3 vs G3d profile": 0.5005,
+  "passed G3-p vs G3d-p": 0.2629,
+  "passed G3-pc vs G3d-pc": 0.0,
+  "passed E emb vs E-pc": 0.0,
+  "wrong shown G3-p vs G3t-p": 0.0003,
+  "wrong shown G3-p vs G3-pc": 0.0,
+  "wrong shown G3-pc vs G3d-pc": 0.0,
+  "fix shown TF03+TF05 G3 vs G3t (of 10)": 0.0001
+ },
+ "trust": [
+  {
+   "arm": "E-p",
+   "shown": false,
+   "sum": 0,
+   "count": 10
+  },
+  {
+   "arm": "E-p",
+   "shown": true,
+   "sum": 10,
+   "count": 10
+  },
+  {
+   "arm": "E-pc",
+   "shown": true,
+   "sum": 20,
+   "count": 20
+  },
+  {
+   "arm": "G3-p",
+   "shown": false,
+   "sum": 0,
+   "count": 15
+  },
+  {
+   "arm": "G3-p",
+   "shown": true,
+   "sum": 5,
+   "count": 5
+  },
+  {
+   "arm": "G3-pc",
+   "shown": true,
+   "sum": 20,
+   "count": 20
+  },
+  {
+   "arm": "G3d-p",
+   "shown": false,
+   "sum": 0,
+   "count": 19
+  },
+  {
+   "arm": "G3d-p",
+   "shown": true,
+   "sum": 1,
+   "count": 1
+  },
+  {
+   "arm": "G3d-pc",
+   "shown": false,
+   "sum": 1,
+   "count": 12
+  },
+  {
+   "arm": "G3d-pc",
+   "shown": true,
+   "sum": 8,
+   "count": 8
+  },
+  {
+   "arm": "G3t-p",
+   "shown": false,
+   "sum": 0,
+   "count": 3
+  },
+  {
+   "arm": "G3t-p",
+   "shown": true,
+   "sum": 10,
+   "count": 17
+  }
+ ],
+ "trust_by_task": [
+  {
+   "arm": "E-p",
+   "task": "sf_tf01",
+   "shown": 5,
+   "followed": 5
+  },
+  {
+   "arm": "E-p",
+   "task": "sf_tf02",
+   "shown": 0,
+   "followed": 0
+  },
+  {
+   "arm": "E-p",
+   "task": "sf_tf03",
+   "shown": 0,
+   "followed": 0
+  },
+  {
+   "arm": "E-p",
+   "task": "sf_tf05",
+   "shown": 5,
+   "followed": 5
+  },
+  {
+   "arm": "E-pc",
+   "task": "sf_tf01",
+   "shown": 5,
+   "followed": 5
+  },
+  {
+   "arm": "E-pc",
+   "task": "sf_tf02",
+   "shown": 5,
+   "followed": 5
+  },
+  {
+   "arm": "E-pc",
+   "task": "sf_tf03",
+   "shown": 5,
+   "followed": 5
+  },
+  {
+   "arm": "E-pc",
+   "task": "sf_tf05",
+   "shown": 5,
+   "followed": 5
+  },
+  {
+   "arm": "G3-p",
+   "task": "sf_tf01",
+   "shown": 4,
+   "followed": 4
+  },
+  {
+   "arm": "G3-p",
+   "task": "sf_tf02",
+   "shown": 0,
+   "followed": 0
+  },
+  {
+   "arm": "G3-p",
+   "task": "sf_tf03",
+   "shown": 0,
+   "followed": 0
+  },
+  {
+   "arm": "G3-p",
+   "task": "sf_tf05",
+   "shown": 1,
+   "followed": 1
+  },
+  {
+   "arm": "G3-pc",
+   "task": "sf_tf01",
+   "shown": 5,
+   "followed": 5
+  },
+  {
+   "arm": "G3-pc",
+   "task": "sf_tf02",
+   "shown": 5,
+   "followed": 5
+  },
+  {
+   "arm": "G3-pc",
+   "task": "sf_tf03",
+   "shown": 5,
+   "followed": 5
+  },
+  {
+   "arm": "G3-pc",
+   "task": "sf_tf05",
+   "shown": 5,
+   "followed": 5
+  },
+  {
+   "arm": "G3d-p",
+   "task": "sf_tf01",
+   "shown": 1,
+   "followed": 1
+  },
+  {
+   "arm": "G3d-p",
+   "task": "sf_tf02",
+   "shown": 0,
+   "followed": 0
+  },
+  {
+   "arm": "G3d-p",
+   "task": "sf_tf03",
+   "shown": 0,
+   "followed": 0
+  },
+  {
+   "arm": "G3d-p",
+   "task": "sf_tf05",
+   "shown": 0,
+   "followed": 0
+  },
+  {
+   "arm": "G3d-pc",
+   "task": "sf_tf01",
+   "shown": 0,
+   "followed": 0
+  },
+  {
+   "arm": "G3d-pc",
+   "task": "sf_tf02",
+   "shown": 0,
+   "followed": 0
+  },
+  {
+   "arm": "G3d-pc",
+   "task": "sf_tf03",
+   "shown": 3,
+   "followed": 4
+  },
+  {
+   "arm": "G3d-pc",
+   "task": "sf_tf05",
+   "shown": 5,
+   "followed": 5
+  },
+  {
+   "arm": "G3t-p",
+   "task": "sf_tf01",
+   "shown": 5,
+   "followed": 5
+  },
+  {
+   "arm": "G3t-p",
+   "task": "sf_tf02",
+   "shown": 5,
+   "followed": 0
+  },
+  {
+   "arm": "G3t-p",
+   "task": "sf_tf03",
+   "shown": 2,
+   "followed": 2
+  },
+  {
+   "arm": "G3t-p",
+   "task": "sf_tf05",
+   "shown": 5,
+   "followed": 3
+  }
+ ],
+ "score_mean": {
+  "sf_tf01_goal_imbalance": {
+   "A0 none": 0.7603,
+   "C1 own": 0.7765,
+   "E emb": 0.7713,
+   "E-p": 0.7387,
+   "E-pc": 0.76,
+   "G3": 0.7715,
+   "G3-p": 0.7449,
+   "G3-pc": 0.7865,
+   "G3d profile": 0.7658,
+   "G3d-p": 0.7574,
+   "G3d-pc": 0.7659,
+   "G3t blind": 0.7713,
+   "G3t-p": 0.7269
+  },
+  "sf_tf02_player_rep_norm": {
+   "A0 none": 4664200.9856,
+   "C1 own": 4650909.0638,
+   "E emb": 4650909.0638,
+   "E-p": 4657555.0247,
+   "E-pc": 4664200.9856,
+   "G3": 4650909.0638,
+   "G3-p": 4650909.0638,
+   "G3-pc": 4686841.6935,
+   "G3d profile": 4655339.7044,
+   "G3d-p": 4650909.0638,
+   "G3d-pc": 4650909.0638,
+   "G3t blind": 4650909.0638,
+   "G3t-p": 4650909.0638
+  },
+  "sf_tf03_correlation_causation": {
+   "A0 none": 27694618.5088,
+   "C1 own": 4755266.2227,
+   "E emb": 27694635.9361,
+   "E-p": 27694637.0999,
+   "E-pc": 27694630.9191,
+   "G3": 23103142.955,
+   "G3-p": 27694582.5566,
+   "G3-pc": 27694629.1734,
+   "G3d profile": 4759155.3407,
+   "G3d-p": 9363498.7249,
+   "G3d-pc": 23112026.3136,
+   "G3t blind": 27694636.1209,
+   "G3t-p": 23103652.8047
+  },
+  "sf_tf04_balance_torque_leakfree": {
+   "A0 none": 1.0,
+   "C1 own": 1.0,
+   "E emb": 1.0,
+   "E-p": NaN,
+   "E-pc": NaN,
+   "G3": 1.0,
+   "G3-p": NaN,
+   "G3-pc": NaN,
+   "G3d profile": 1.0,
+   "G3d-p": NaN,
+   "G3d-pc": NaN,
+   "G3t blind": 1.0,
+   "G3t-p": NaN
+  },
+  "sf_tf05_credit_card_leakage": {
+   "A0 none": 0.9659,
+   "C1 own": 0.822,
+   "E emb": 0.9144,
+   "E-p": 0.9659,
+   "E-pc": 0.9659,
+   "G3": 0.9659,
+   "G3-p": 0.9568,
+   "G3-pc": 0.9659,
+   "G3d profile": 0.9659,
+   "G3d-p": 0.9659,
+   "G3d-pc": 0.9659,
+   "G3t blind": 0.9477,
+   "G3t-p": 0.8833
+  },
+  "sf_tf06_metric_select_leakfree": {
+   "A0 none": 0.9798,
+   "C1 own": 0.9806,
+   "E emb": 0.9796,
+   "E-p": NaN,
+   "E-pc": NaN,
+   "G3": 0.9803,
+   "G3-p": NaN,
+   "G3-pc": NaN,
+   "G3d profile": 0.9777,
+   "G3d-p": NaN,
+   "G3d-pc": NaN,
+   "G3t blind": 0.981,
+   "G3t-p": NaN
+  }
+ },
+ "guide_tokens_per_run": {
+  "G3 (P13)": 6932.7,
+  "G3t": 8154.433333333333,
+  "G3d": 8710.333333333334
+ }
+}

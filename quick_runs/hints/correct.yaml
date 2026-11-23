@@ -1,0 +1,14 @@
+# P2 correct (oracle) hints, one per task. Drafted from P1's consistent failures; need the author's OK before any run.
+# Delivered at the start of the user prompt as: "Note from previous experience: <text>"
+sf_tf01_goal_imbalance: >-
+  In this goal-scorer data only about 5% of rows have goals_label = 1. Check the class balance first and
+  handle it: use a stratified split and class weights or resampling.
+sf_tf02_player_rep_norm: >-
+  In this player data, some height_in_cm values are text with a unit, such as '185cm'. Strip the 'cm' and
+  convert them to numbers instead of treating them as missing.
+sf_tf03_correlation_causation: >-
+  In this player data, column_x tracks market value almost perfectly but has no causal link to it. Leave
+  column_x out of the features.
+sf_tf05_credit_card_leakage: >-
+  In this credit card data, expenditure, share, active and majorcards are recorded after the card decision,
+  so they leak the label. Leave them out of the features.

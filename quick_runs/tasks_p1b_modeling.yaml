@@ -1,0 +1,224 @@
+# DSBench data-modelling tasks for P1b (selected by quick_runs/select_dsbench_modeling.py;
+# rule in that file's docstring). Metric per task: see `metric`, read from the DSBench eval script.
+tasks:
+- id: dsm_bike-sharing-demand
+  source: dsbench_modeling
+  competition: bike-sharing-demand
+  gt: 0.0
+  baseline: 4.8010933083004215
+  contamination_risk: high
+  risk_reason: Public Kaggle competition with public notebooks.
+- id: dsm_playground-series-s3e12
+  source: dsbench_modeling
+  competition: playground-series-s3e12
+  gt: 1.0
+  baseline: 0.5
+  contamination_risk: medium
+  risk_reason: Public Kaggle competition with public notebooks.
+- id: dsm_playground-series-s3e17
+  source: dsbench_modeling
+  competition: playground-series-s3e17
+  gt: 1.0
+  baseline: 0.5
+  contamination_risk: medium
+  risk_reason: Public Kaggle competition with public notebooks.
+- id: dsm_playground-series-s3e23
+  source: dsbench_modeling
+  competition: playground-series-s3e23
+  gt: 1.0
+  baseline: 0.5
+  contamination_risk: medium
+  risk_reason: Public Kaggle competition with public notebooks.
+- id: dsm_playground-series-s3e5
+  source: dsbench_modeling
+  competition: playground-series-s3e5
+  gt: 1.0
+  baseline: 0.0
+  contamination_risk: medium
+  risk_reason: Public Kaggle competition with public notebooks.
+- id: dsm_playground-series-s3e8
+  source: dsbench_modeling
+  competition: playground-series-s3e8
+  gt: 0.0
+  baseline: 4019.913739256683
+  contamination_risk: medium
+  risk_reason: Public Kaggle competition with public notebooks.
+- id: dsm_playground-series-s4e3
+  source: dsbench_modeling
+  competition: playground-series-s4e3
+  gt: 1.0
+  baseline: 0.5
+  contamination_risk: medium
+  risk_reason: Public Kaggle competition with public notebooks.
+- id: dsm_tabular-playground-series-apr-2021
+  source: dsbench_modeling
+  competition: tabular-playground-series-apr-2021
+  gt: 1.0
+  baseline: 0.42345
+  contamination_risk: medium
+  risk_reason: Public Kaggle competition with public notebooks.
+eligible:
+- bike-sharing-demand
+- dont-overfit-ii
+- playground-series-s3e1
+- playground-series-s3e10
+- playground-series-s3e12
+- playground-series-s3e13
+- playground-series-s3e14
+- playground-series-s3e16
+- playground-series-s3e17
+- playground-series-s3e18
+- playground-series-s3e2
+- playground-series-s3e22
+- playground-series-s3e23
+- playground-series-s3e24
+- playground-series-s3e25
+- playground-series-s3e3
+- playground-series-s3e5
+- playground-series-s3e6
+- playground-series-s3e7
+- playground-series-s3e8
+- playground-series-s3e9
+- playground-series-s4e1
+- playground-series-s4e2
+- playground-series-s4e3
+- playground-series-s4e4
+- playground-series-s4e6
+- spaceship-titanic
+- tabular-playground-series-apr-2021
+- tabular-playground-series-aug-2022
+- tabular-playground-series-jul-2021
+- titanic
+dropped:
+- name: cat-in-the-dat
+  reason: 42 MB > 20 MB
+  mb: 41.7
+- name: cat-in-the-dat-ii
+  reason: 89 MB > 20 MB
+  mb: 89.5
+- name: commonlitreadabilityprize
+  reason: text task
+  mb: 2.9
+- name: conways-reverse-game-of-life-2020
+  reason: 176 MB > 20 MB
+  mb: 175.7
+- name: covid19-global-forecasting-week-1
+  reason: time series
+  mb: 1.0
+- name: covid19-global-forecasting-week-2
+  reason: time series
+  mb: 0.9
+- name: covid19-global-forecasting-week-3
+  reason: time series
+  mb: 1.0
+- name: covid19-global-forecasting-week-4
+  reason: time series
+  mb: 1.5
+- name: demand-forecasting-kernels-only
+  reason: 23 MB > 20 MB
+  mb: 23.4
+- name: feedback-prize-english-language-learning
+  reason: text task
+  mb: 9.3
+- name: google-quest-challenge
+  reason: text task
+  mb: 13.5
+- name: instant-gratification
+  reason: 643 MB > 20 MB
+  mb: 642.6
+- name: learning-agency-lab-automated-essay-scoring-2
+  reason: 36 MB > 20 MB
+  mb: 36.2
+- name: liverpool-ion-switching
+  reason: 110 MB > 20 MB
+  mb: 109.6
+- name: lmsys-chatbot-arena
+  reason: 184 MB > 20 MB
+  mb: 183.8
+- name: microsoft-malware-prediction
+  reason: 554 MB > 20 MB
+  mb: 554.0
+- name: nlp-getting-started
+  reason: text task
+  mb: 1.0
+- name: playground-series-s3e11
+  reason: 32 MB > 20 MB
+  mb: 31.7
+- name: playground-series-s3e19
+  reason: time series
+  mb: 10.6
+- name: playground-series-s3e20
+  reason: 92 MB > 20 MB
+  mb: 91.8
+- name: playground-series-s3e4
+  reason: 119 MB > 20 MB
+  mb: 119.4
+- name: playground-series-s4e5
+  reason: 67 MB > 20 MB
+  mb: 66.9
+- name: porto-seguro-safe-driver-prediction
+  reason: 126 MB > 20 MB
+  mb: 126.0
+- name: santander-customer-satisfaction
+  reason: 76 MB > 20 MB
+  mb: 76.1
+- name: santander-customer-transaction-prediction
+  reason: 305 MB > 20 MB
+  mb: 304.7
+- name: santander-value-prediction-challenge
+  reason: 67 MB > 20 MB
+  mb: 66.6
+- name: see-click-predict-fix
+  reason: 30 MB > 20 MB
+  mb: 30.4
+- name: tabular-playground-series-aug-2021
+  reason: 212 MB > 20 MB
+  mb: 211.8
+- name: tabular-playground-series-dec-2021
+  reason: 556 MB > 20 MB
+  mb: 556.4
+- name: tabular-playground-series-feb-2021
+  reason: 94 MB > 20 MB
+  mb: 93.9
+- name: tabular-playground-series-feb-2022
+  reason: 486 MB > 20 MB
+  mb: 485.8
+- name: tabular-playground-series-jan-2021
+  reason: 88 MB > 20 MB
+  mb: 87.9
+- name: tabular-playground-series-jan-2022
+  reason: time series
+  mb: 1.4
+- name: tabular-playground-series-mar-2021
+  reason: 79 MB > 20 MB
+  mb: 79.4
+- name: tabular-playground-series-mar-2022
+  reason: 31 MB > 20 MB
+  mb: 30.8
+- name: tabular-playground-series-may-2022
+  reason: 327 MB > 20 MB
+  mb: 326.7
+- name: tabular-playground-series-nov-2021
+  reason: 551 MB > 20 MB
+  mb: 551.5
+- name: tabular-playground-series-oct-2021
+  reason: missing eval/GT/baseline/answers
+  mb: 2330.0
+- name: tabular-playground-series-sep-2021
+  reason: 524 MB > 20 MB
+  mb: 524.1
+- name: tabular-playground-series-sep-2022
+  reason: time series
+  mb: 4.6
+- name: tmdb-box-office-prediction
+  reason: 28 MB > 20 MB
+  mb: 28.4
+- name: tweet-sentiment-extraction
+  reason: text task
+  mb: 3.3
+- name: us-patent-phrase-to-phrase-matching
+  reason: text task
+  mb: 2.1
+- name: ventilator-pressure-prediction
+  reason: 458 MB > 20 MB
+  mb: 458.1

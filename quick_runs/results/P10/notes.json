@@ -1,0 +1,8 @@
+{
+ "sf_tf01_goal_imbalance": "inferred from the task wording (goal scorers are rare), not recalled",
+ "sf_tf06_metric_select_leakfree": "inferred from the task wording (goal scorers are rare), not recalled",
+ "sf_tf06_metric_select_cue": "read off the file name 'imbalance'",
+ "blade_crofoot": "the prompt names Crofoot et al.",
+ "blade_hurricane": "the prompt names Simonsohn et al.",
+ "blade_teachingratings": "the prompt names Hamermesh & Parker"
+}

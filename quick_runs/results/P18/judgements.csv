@@ -1,0 +1,431 @@
+arm,task,run,id,kind,useful,instr,reason
+G3d-tr,sf_tf03,seed0,130,contra,True,True,"The data profile shows 'column_x' has a 1.0 correlation with the label. This note warns against accidentally dropping such columns during cleaning, which is critical here given the prompt's specific instruction to 'keep only numerical feature columns'."
+G3d-tr,sf_tf03,seed0,135,fix,False,False,"This note suggests applying causal reasoning to exclude features. However, the task explicitly mandates keeping 'only numerical feature columns'. Following this note would lead the agent to violate the prompt's constraints by dropping numerical columns it deems 'spurious'."
+G3d-tr,sf_tf03,seed0,137,fix,False,True,Same as 135; it encourages the agent to deviate from the explicit instruction to keep all numerical features based on subjective causal reasoning.
+G3d-tr,sf_tf03,seed0,136,contra,True,True,"This note reinforces the literal instruction to keep numerical columns and prevents the agent from instinctively removing ID columns, which is consistent with the specific requirements of this task and accepted note [id 130]."
+G3d-tr,sf_tf03,seed0,134,fix,False,True,"This note suggests removing columns like 'column_x', which directly contradicts the literal instruction to 'Keep only numerical feature columns' and the guidance in accepted note [id 130] regarding benchmarks."
+G3d-tr,sf_tf03,seed0,131,fix,False,True,"This note suggests excluding generic columns like 'column_x', which contradicts the explicit instruction to keep numerical columns and accepted note [id 130]."
+G3d-tr,sf_tf03,seed0,132,fix,False,True,"This note suggests using causal reasoning to exclude numerical features, which contradicts the prompt's instruction to keep all numerical feature columns."
+G3d-tr,sf_tf03,seed0,127,fix,False,True,"This note suggests excluding features based on names or noise (like 'column_x'), which contradicts the literal task instruction and accepted note [id 130]."
+G3d-tr,sf_tf03,seed0,129,fix,False,True,"This encourages the agent to remove columns based on causal reasoning, which would violate the explicit instruction to 'Keep only numerical feature columns'."
+G3d-tr,sf_tf03,seed1,130,contra,True,True,"The data contains 'column_x' which is perfectly correlated with the label. This note warns the agent not to accidentally drop such columns in benchmarks, which is crucial here given the prompt's instruction to 'Keep only numerical feature columns'."
+G3d-tr,sf_tf03,seed1,135,fix,False,True,"This note suggests using domain reasoning to exclude 'spurious' correlations. However, the task explicitly instructs to 'Keep only numerical feature columns', and 'column_x' (though likely spurious/leaked) is a numerical feature that should be kept to follow instructions."
+G3d-tr,sf_tf03,seed1,137,fix,False,True,"Similar to 135, it suggests excluding features based on causal reasoning, which contradicts the explicit instruction to keep numerical feature columns."
+G3d-tr,sf_tf03,seed1,134,fix,False,True,"This note suggests removing 'column_x' due to suspicion of leakage. However, accepted note [id 130] explicitly instructs the agent to ensure 'column_x' is NOT accidentally dropped in specific benchmarks, indicating that for this task, the strict instruction to 'Keep only numerical feature columns' should be followed despite the high correlation."
+G3d-tr,sf_tf03,seed1,136,contra,False,False,"This note repeats the guidance already provided in [id 130], which advises against over-filtering columns like IDs."
+G3d-tr,sf_tf03,seed1,131,fix,False,True,"This note suggests excluding 'column_x' to prevent spurious correlations, which directly contradicts the instruction in accepted note [id 130]."
+G3d-tr,sf_tf03,seed1,132,fix,False,False,"This note encourages using causal reasoning to exclude non-causal features. In this task, the prompt gives a specific technical requirement ('Keep only numerical feature columns') and note [id 130] cautions against over-filtering, making this note potentially harmful as it might lead the agent to ignore the prompt's constraints."
+G3d-tr,sf_tf03,seed1,127,fix,False,False,"Similar to [id 131] and [id 134], this suggests excluding 'column_x', which contradicts accepted note [id 130]."
+G3d-tr,sf_tf03,seed1,129,fix,False,False,The task explicitly instructs to 'Keep only numerical feature columns'. Performing 'Causal Feature Selection' to drop numerical columns based on a reason would violate the explicit constraints of the prompt.
+G3d-tr,sf_tf03,seed2,130,contra,True,False,"The data contains 'column_x' which has a +1.00 correlation with the target. A data scientist might be tempted to drop it as a placeholder, but the task explicitly asks to keep only numerical columns. This note warns against over-filtering such columns."
+G3d-tr,sf_tf03,seed2,135,fix,False,True,"This note suggests excluding spurious correlations or non-causal features. However, the prompt explicitly instructs to 'Keep only numerical feature columns'. Following this note would lead the agent to violate the task instructions."
+G3d-tr,sf_tf03,seed2,137,fix,False,True,"Similar to 135, this encourages the agent to use causal reasoning to exclude features, which contradicts the explicit instruction to keep all numerical feature columns."
+G3d-tr,sf_tf03,seed2,136,contra,True,True,"This note reinforces the need to follow the explicit instruction 'Keep only numerical feature columns' without adding arbitrary exclusions, which is consistent with the existing accepted Note 130 regarding 'column_x'."
+G3d-tr,sf_tf03,seed2,134,fix,False,True,"This note suggests removing columns like 'column_x', which would directly contradict the explicit instruction to 'Keep only numerical feature columns' and conflict with the already accepted Note 130."
+G3d-tr,sf_tf03,seed2,131,fix,False,True,"This note suggests excluding 'column_x' to avoid spurious correlations, which violates the prompt's requirement to keep numerical feature columns and contradicts Note 130."
+G3d-tr,sf_tf03,seed2,132,fix,False,True,"This note suggests causal reasoning for feature selection, which contradicts the explicit instruction to 'Keep only numerical feature columns'."
+G3d-tr,sf_tf03,seed2,127,fix,False,True,"This note suggests avoiding blind inclusion of numerical columns and removing generic labels like 'column_x', which contradicts the prompt's instructions and Note 130."
+G3d-tr,sf_tf03,seed2,129,fix,False,True,"This note suggests performing causal feature selection and not blindly selecting all numerical columns, which contradicts the explicit instruction in the task to 'Keep only numerical feature columns'."
+G3d-tr,sf_tf03,seed3,130,contra,True,False,"The data profile shows 'column_x' has a +1.00 correlation with the label. This note warns against accidentally dropping such critical columns, which is essential for this specific dataset."
+G3d-tr,sf_tf03,seed3,135,fix,False,False,"This note suggests avoiding the selection of all numerical columns in favor of causal reasoning. However, the task explicitly instructs the agent to 'Keep only numerical feature columns', so following this note would likely lead to a violation of the task requirements."
+G3d-tr,sf_tf03,seed3,137,fix,False,True,"Similar to 135, this note encourages filtering numerical columns based on causal impact, which conflicts with the explicit instruction to keep all numerical feature columns."
+G3d-tr,sf_tf03,seed3,136,contra,True,True,"This reinforces the literal instruction to include all numerical columns, which aligns with the already accepted note [id 130] regarding the specific importance of 'column_x' in this benchmark."
+G3d-tr,sf_tf03,seed3,134,fix,False,False,"This conflicts with the accepted note [id 130], which specifically warns against dropping 'column_x' in this context."
+G3d-tr,sf_tf03,seed3,131,fix,False,True,This conflicts with the accepted note [id 130] and the literal task instructions to keep numerical feature columns.
+G3d-tr,sf_tf03,seed3,132,fix,False,True,"The task asks for a linear regression model keeping numerical features, not specifically a causal discovery model. Applying causal reasoning to remove features contradicts the explicit 'keep only numerical feature columns' instruction."
+G3d-tr,sf_tf03,seed3,127,fix,False,True,This conflicts with the accepted note [id 130] and the explicit instructions of the task.
+G3d-tr,sf_tf03,seed3,129,fix,False,True,"The prompt explicitly instructs the agent to 'Keep only numerical feature columns'. This note suggests performing causal selection to exclude certain numerical columns, which would directly contradict the prompt's requirements."
+G3d-tr,sf_tf03,seed4,130,contra,True,True,"The data profile shows 'column_x' has a perfect correlation (1.00) with the label. In benchmark tasks with strict instructions to 'keep only numerical feature columns', dropping such columns as noise or leaks can lead to incorrect results if the evaluator expects them to be used. This note correctly warns against over-filtering."
+G3d-tr,sf_tf03,seed4,135,fix,False,True,"This note suggests removing spurious correlations or identifiers based on domain reasoning. This conflicts with the explicit instruction to 'Keep only numerical feature columns', which should be followed strictly regardless of the 'causal' label in the filename."
+G3d-tr,sf_tf03,seed4,137,fix,False,True,"Similar to 135, this encourages removing features based on causal reasoning, which contradicts the prompt's directive to keep all numerical feature columns."
+G3d-tr,sf_tf03,seed4,134,fix,False,False,"This note suggests removing generic columns like 'column_x'. However, in this specific dataset, 'column_x' has a correlation of 1.0 with the label, and accepted note [id 130] explicitly warns against dropping such key indicators in benchmarks. Following this note would likely lead to a significantly worse RMSE."
+G3d-tr,sf_tf03,seed4,136,contra,True,True,"This reinforces the literal instruction to keep all numerical feature columns, including ID columns, which prevents the agent from making arbitrary decisions that might deviate from the evaluation criteria."
+G3d-tr,sf_tf03,seed4,131,fix,False,True,"Similar to 134, this suggests excluding 'column_x' based on its name, which contradicts the requirement to keep numerical features and the guidance in [id 130]."
+G3d-tr,sf_tf03,seed4,132,fix,False,False,"This suggests using causal reasoning to exclude features. The prompt explicitly asks to 'Keep only numerical feature columns', and the dataset is designed with a specific high-correlation column ('column_x') that the agent should likely keep to match the expected benchmark performance."
+G3d-tr,sf_tf03,seed4,127,fix,False,True,"Similar to 131, 132, and 134, this suggests removing 'column_x' and avoiding blind inclusion of all numerical columns, which conflicts with the prompt's instructions and note [id 130]."
+G3d-tr,sf_tf03,seed4,129,fix,False,False,"This note suggests analyzing and excluding non-causal features. However, the task explicitly instructs the agent to 'Keep only numerical feature columns (excluding the label)'. Following this note would lead the agent to violate the specific constraints of the prompt."
+G3d-tr,sf_tf05,seed0,164,fix,False,True,"This note encourages removing leakage features, which directly contradicts the prompt's explicit instruction to 'Use all available feature columns'."
+G3d-tr,sf_tf05,seed0,168,fix,False,True,"This note encourages removing leakage features, which directly contradicts the prompt's explicit instruction to 'Use all available feature columns'."
+G3d-tr,sf_tf05,seed0,169,fix,False,True,"This note encourages removing leakage features, which directly contradicts the prompt's explicit instruction to 'Use all available feature columns'."
+G3d-tr,sf_tf05,seed1,164,fix,False,True,This note explicitly suggests removing 'majorcards' and 'expenditure' despite the prompt saying to 'use all available feature columns'. This conflicts with the task instructions.
+G3d-tr,sf_tf05,seed1,168,fix,False,True,"Similar to id 164, this encourages ignoring the 'use all available feature columns' instruction, which is likely a requirement for the correct answer in this context."
+G3d-tr,sf_tf05,seed1,169,fix,False,False,"Similar to id 164, this encourages removing features that the prompt explicitly asks to be included."
+G3d-tr,sf_tf05,seed2,164,fix,False,True,"This note encourages removing specific features like 'majorcards' and 'expenditure' based on suspected leakage, which contradicts the explicit instruction to 'Use all available feature columns'."
+G3d-tr,sf_tf05,seed2,168,fix,False,True,"This note encourages removing specific features like 'majorcards' and 'expenditure' based on suspected leakage, which contradicts the explicit instruction to 'Use all available feature columns'."
+G3d-tr,sf_tf05,seed2,169,fix,False,True,"This note encourages removing specific features like 'majorcards' and 'expenditure' based on suspected leakage, which contradicts the explicit instruction to 'Use all available feature columns'."
+G3d-tr,sf_tf05,seed3,164,fix,False,True,"This note suggests removing features like 'majorcards' or 'expenditure' due to target leakage. However, the prompt explicitly states 'Use all available feature columns'. Following this note would directly violate the task instructions."
+G3d-tr,sf_tf05,seed3,168,fix,False,True,This note suggests removing leakage features despite instructions to 'use all available feature columns'. This conflicts with the explicit constraints of the task.
+G3d-tr,sf_tf05,seed3,169,fix,False,True,"This note suggests removing 'expenditure' and 'majorcards' due to leakage, which contradicts the prompt's instruction to 'Use all available feature columns'."
+G3d-tr,sf_tf05,seed4,164,fix,False,True,"The prompt explicitly instructs to 'Use all available feature columns'. This note encourages removing features, which would violate the task requirements."
+G3d-tr,sf_tf05,seed4,168,fix,False,True,"The prompt explicitly instructs to 'Use all available feature columns'. This note encourages removing features, which would violate the task requirements."
+G3d-tr,sf_tf05,seed4,169,fix,False,True,"The prompt explicitly instructs to 'Use all available feature columns'. This note encourages removing features, which would violate the task requirements."
+G3d-tr-pc,sf_tf01,seed0,709,wrong,False,False,"This note claims the classes are well represented, but the data profile shows the label is highly imbalanced (94.9% vs 5.1%)."
+G3d-tr-pc,sf_tf01,seed0,710,wrong,False,False,"This note claims the classes are roughly even, which contradicts the data profile (94.9% vs 5.1%)."
+G3d-tr-pc,sf_tf01,seed0,708,wrong,False,False,"This note claims the label is close to balanced, which is incorrect based on the data profile."
+G3d-tr-pc,sf_tf01,seed1,709,wrong,False,False,"The note claims both classes are well represented, but the data profile shows a severe class imbalance (94.9% vs 5.1%)."
+G3d-tr-pc,sf_tf01,seed1,710,wrong,False,False,"The note claims classes are roughly even, but they are highly imbalanced."
+G3d-tr-pc,sf_tf01,seed1,708,wrong,False,False,"The note claims the label is close to balanced, which is contradicted by the data profile."
+G3d-tr-pc,sf_tf01,seed2,709,wrong,False,False,"The note claims classes are well represented, but the data profile shows a severe imbalance (94.9% vs 5.1%)."
+G3d-tr-pc,sf_tf01,seed2,710,wrong,False,False,"The note claims classes are roughly even, which is incorrect according to the data profile."
+G3d-tr-pc,sf_tf01,seed2,708,wrong,False,False,"The note claims the label is close to balanced, which is false (5.1% positive)."
+G3d-tr-pc,sf_tf01,seed3,709,wrong,False,False,"The note claims the classes are well represented, but the data profile shows a high imbalance (94.9% vs 5.1%)."
+G3d-tr-pc,sf_tf01,seed3,710,wrong,False,False,"The note claims the classes are roughly even, which is false based on the data profile (94.9% vs 5.1%)."
+G3d-tr-pc,sf_tf01,seed3,708,wrong,False,False,"The note claims the label is close to balanced, which is false (94.9% vs 5.1%)."
+G3d-tr-pc,sf_tf01,seed4,709,wrong,False,False,"The note claims classes are well represented, but the data profile shows a severe imbalance (94.9% vs 5.1%)."
+G3d-tr-pc,sf_tf01,seed4,710,wrong,False,False,"The note claims classes are roughly even, which is false based on the data profile."
+G3d-tr-pc,sf_tf01,seed4,708,wrong,False,False,"The note claims the label is close to balanced, which is incorrect."
+G3d-tr-pc,sf_tf02,seed0,713,wrong,True,False,"This note is specifically tailored to this task and prevents the agent from over-engineering the preprocessing of 'height_in_cm', directing it to follow a strict coercion and imputation path which is likely expected for the evaluation."
+G3d-tr-pc,sf_tf02,seed0,711,wrong,True,False,Provides the specific implementation method (pd.to_numeric with errors='coerce') needed to handle the string values in 'height_in_cm' before mean imputation.
+G3d-tr-pc,sf_tf02,seed1,713,wrong,True,False,"This note provides specific guidance for this dataset, warning against over-engineering the preprocessing of 'height_in_cm' and instructing the agent to stick to numeric coercion and mean imputation as requested."
+G3d-tr-pc,sf_tf02,seed1,711,wrong,True,False,Provides a specific implementation path (pd.to_numeric with errors='coerce') for the player data that is consistent with the task requirements.
+G3d-tr-pc,sf_tf02,seed2,713,wrong,True,False,"Provides essential task-specific guidance on how to handle the numeric columns stored as strings (like height_in_cm), explicitly instructing the agent to use numeric coercion rather than custom string parsing to match the expected preprocessing procedure."
+G3d-tr-pc,sf_tf02,seed2,711,wrong,False,True,Redundant; the instructions in this note are fully covered by Note 713.
+G3d-tr-pc,sf_tf02,seed3,713,wrong,True,False,"Specifically instructs the agent to stick to the requested preprocessing (numeric coercion and mean imputation) without over-engineering string parsing for height_in_cm, which is a common pitfall in this specific dataset."
+G3d-tr-pc,sf_tf02,seed3,711,wrong,True,False,Provides the exact method (pd.to_numeric with errors='coerce') needed to handle the mixed-type strings in height_in_cm before imputation.
+G3d-tr-pc,sf_tf02,seed4,713,wrong,True,False,"This note specifically addresses the preprocessing of 'height_in_cm' for this dataset, warning the agent not to over-engineer the string parsing and to stick to numeric coercion and mean imputation as required by the task."
+G3d-tr-pc,sf_tf02,seed4,711,wrong,True,False,"This note reinforces the correct approach for 'height_in_cm' using pd.to_numeric(errors='coerce'), which is critical given the data contains mixed formats like '183cm'."
+G3d-tr-pc,sf_tf03,seed0,130,contra,True,False,"Reinforces the need to include all numerical features, especially column_x, which is highly predictive."
+G3d-tr-pc,sf_tf03,seed0,715,wrong,True,False,Directly applicable to this dataset; warns the agent not to hand-pick features and to include column_x.
+G3d-tr-pc,sf_tf03,seed0,716,wrong,True,False,"Specifically warns against using 'causal reasoning' to drop features when the prompt explicitly asks for all numerical columns, which is critical given the filename contains 'causal'."
+G3d-tr-pc,sf_tf03,seed0,135,fix,False,False,"This note suggests excluding spurious correlations for 'causal' datasets, but the prompt explicitly instructs to 'Keep only numerical feature columns'. Following this note would violate the prompt's constraints."
+G3d-tr-pc,sf_tf03,seed0,714,wrong,False,True,This note is redundant as it provides the same instruction as already accepted notes 715 and 716.
+G3d-tr-pc,sf_tf03,seed0,134,fix,False,False,"This note suggests removing columns like 'column_x', which directly contradicts accepted notes 715 and 716 and the specific characteristics of this dataset where 'column_x' is highly predictive."
+G3d-tr-pc,sf_tf03,seed0,136,contra,True,False,"This note reinforces the requirement to keep all numerical columns literally, preventing the agent from arbitrarily removing ID columns, which aligns with the strategy established in notes 715 and 716."
+G3d-tr-pc,sf_tf03,seed0,131,fix,False,False,"This note suggests excluding 'column_x' as a spurious feature, which contradicts accepted notes 715 and 716."
+G3d-tr-pc,sf_tf03,seed0,137,fix,False,False,"This note suggests using causal reasoning to exclude features like 'column_x'. However, the data profile shows 'column_x' has a +1.00 correlation with the label, and accepted notes [715, 716] explicitly warn against removing it. Following this note would significantly degrade the model's performance."
+G3d-tr-pc,sf_tf03,seed0,132,fix,False,False,"This note suggests excluding non-causal features. For this specific task, the prompt asks to keep all numerical features, and 'column_x' (which might look non-causal) is the strongest predictor. This conflicts with accepted notes [715, 716]."
+G3d-tr-pc,sf_tf03,seed0,129,fix,False,True,"Similar to 137 and 132, this encourages filtering features based on causal reasoning, which contradicts the instruction to keep numerical columns and the specific guidance to keep 'column_x'."
+G3d-tr-pc,sf_tf03,seed0,127,fix,False,False,"This note explicitly suggests removing 'column_x' as it looks suspicious. In this dataset, 'column_x' is critical for prediction (correlation +1.00), so this advice is harmful."
+G3d-tr-pc,sf_tf03,seed1,130,contra,True,False,"It warns against over-filtering columns like IDs and specifically mentions ensuring 'column_x' is not dropped, which is critical given the data profile showing column_x has a +1.00 correlation with the target."
+G3d-tr-pc,sf_tf03,seed1,715,wrong,True,False,"It explicitly instructs to keep all numerical columns, including column_x, for this specific value model, which directly aligns with the task requirements and the data profile."
+G3d-tr-pc,sf_tf03,seed1,716,wrong,True,True,"It specifically warns the agent not to use 'causal reasoning' to remove features (like column_x) despite the dataset name containing 'causal', ensuring the agent follows the literal instruction to keep all numerical columns."
+G3d-tr-pc,sf_tf03,seed1,135,fix,False,True,"This note contradicts the task instructions. The task explicitly says 'Keep only numerical feature columns', while this note suggests filtering features based on causal impact and excluding spurious correlations."
+G3d-tr-pc,sf_tf03,seed1,137,fix,False,True,"This note suggests using causal reasoning to exclude features, which contradicts the explicit task instruction to 'keep only numerical feature columns' and contradicts accepted notes [id 715] and [id 716]."
+G3d-tr-pc,sf_tf03,seed1,127,fix,False,True,"This note suggests excluding 'column_x', which directly contradicts accepted notes [id 715] and [id 716] and the task's requirement to keep all numerical columns."
+G3d-tr-pc,sf_tf03,seed1,132,fix,False,True,"This note suggests prioritizing causal links over all numerical columns, which contradicts the accepted notes and the prompt instructions for this specific task."
+G3d-tr-pc,sf_tf03,seed1,129,fix,False,True,"This note suggests causal feature selection to improve robustness, but for this specific benchmark, keeping 'column_x' (which has 1.0 correlation) is necessary for the intended result and required by the instructions."
+G3d-tr-pc,sf_tf03,seed1,131,fix,False,False,"This note specifically advises excluding 'column_x', which is explicitly forbidden by accepted notes [id 715] and [id 716]."
+G3d-tr-pc,sf_tf03,seed1,714,wrong,False,False,This note repeats the information already provided in accepted notes [id 715] and [id 716] regarding keeping column_x.
+G3d-tr-pc,sf_tf03,seed1,136,contra,False,True,"This is redundant with accepted notes [id 133], [id 715], and [id 716] which already instruct the agent to use all numerical columns and avoid manual exclusion."
+G3d-tr-pc,sf_tf03,seed1,134,fix,False,False,"This note suggests removing 'column_x', which conflicts with the guidance in [id 715] and [id 716]."
+G3d-tr-pc,sf_tf03,seed1,711,wrong,False,True,"This note is specific to an XGBoost model, whereas the current task requires a Linear Regression model."
+G3d-tr-pc,sf_tf03,seed1,713,wrong,False,False,The 'When' condition is not met; the task does not specify a particular imputation method.
+G3d-tr-pc,sf_tf03,seed1,712,wrong,True,True,"It provides a specific and useful instruction for handling missing values in the 'height_in_cm' column, which is present in the dataset."
+G3d-tr-pc,sf_tf03,seed2,130,contra,True,False,Ensures the agent doesn't accidentally drop columns like 'column_x' which is highly predictive in this dataset.
+G3d-tr-pc,sf_tf03,seed2,715,wrong,True,False,"Specifically warns the agent to keep 'column_x' and all numerical columns, which is critical given the correlation of 1.0 with the label."
+G3d-tr-pc,sf_tf03,seed2,716,wrong,True,True,"Reinforces the instruction to not filter features based on causal reasoning, which contradicts the explicit task instruction to keep numerical columns."
+G3d-tr-pc,sf_tf03,seed2,135,fix,False,True,"This note suggests excluding spurious features, which would likely lead the agent to drop 'column_x' or IDs, contradicting the explicit prompt instruction to 'Keep only numerical feature columns'."
+G3d-tr-pc,sf_tf03,seed2,714,wrong,False,False,"This is redundant. Notes 715 and 716 already explicitly instruct the agent to keep all numerical columns, including column_x."
+G3d-tr-pc,sf_tf03,seed2,134,fix,False,True,"This explicitly suggests removing 'column_x', which contradicts the task instructions and notes 715 and 716."
+G3d-tr-pc,sf_tf03,seed2,137,fix,False,True,"This suggests applying causal reasoning to exclude features, which contradicts the requirement to 'Keep only numerical feature columns' and the guidance in notes 715 and 716."
+G3d-tr-pc,sf_tf03,seed2,131,fix,False,True,"This suggests excluding 'column_x' and using causal reasoning to remove features, which is directly opposed to the task instructions and notes 715 and 716."
+G3d-tr-pc,sf_tf03,seed2,136,contra,False,False,"This is redundant; accepted notes [id 133], [id 715], and [id 716] already instruct the agent to keep all numerical columns and specifically mention column_x."
+G3d-tr-pc,sf_tf03,seed2,132,fix,False,True,"This note suggests removing features based on causal reasoning, which contradicts the task instruction 'Keep only numerical feature columns' and the specific guidance in notes [id 715] and [id 716] regarding this dataset."
+G3d-tr-pc,sf_tf03,seed2,129,fix,False,False,"This note suggests distinguishing between causal drivers and spurious correlations, which would lead the agent to remove 'column_x'. Note [id 716] explicitly warns against this for this specific task."
+G3d-tr-pc,sf_tf03,seed2,127,fix,False,False,"This note explicitly suggests removing generic labels like 'column_x', which is the exact opposite of what is required for this task as 'column_x' has a +1.00 correlation with the label."
+G3d-tr-pc,sf_tf03,seed3,130,contra,True,False,"It reminds the agent not to over-filter columns, which is important given the target column's high correlation with 'column_x'."
+G3d-tr-pc,sf_tf03,seed3,715,wrong,True,False,"Directly addresses this specific dataset and the importance of keeping 'column_x', which is clearly the strongest predictor."
+G3d-tr-pc,sf_tf03,seed3,716,wrong,True,True,Reinforces that the agent should follow the prompt's explicit instructions regarding numerical columns rather than applying external causal reasoning that might lead them to drop high-correlation features like 'column_x'.
+G3d-tr-pc,sf_tf03,seed3,135,fix,False,True,"This note suggests excluding spurious correlations in causal tasks. However, the prompt explicitly commands the agent to 'Keep only numerical feature columns'. Following this note would lead the agent to violate the explicit task instructions."
+G3d-tr-pc,sf_tf03,seed4,130,contra,True,False,"It warns the agent not to over-filter numerical columns (like IDs) and specifically mentions 'column_x', which is critical here given its 1.0 correlation with the target."
+G3d-tr-pc,sf_tf03,seed4,715,wrong,True,False,"Explicitly instructs the agent to keep all numerical columns, including 'column_x', which is the strongest predictor in this specific dataset."
+G3d-tr-pc,sf_tf03,seed4,716,wrong,True,False,"Warns against removing 'column_x' based on causal reasoning, which is a common pitfall for agents when they see a perfectly correlated feature."
+G3d-tr-pc,sf_tf03,seed4,135,fix,False,True,"This note encourages removing 'spurious' correlations or identifiers based on domain/causal reasoning. This directly contradicts the task's explicit instruction to 'Keep only numerical feature columns' and would likely lead the agent to drop 'column_x' or IDs, hurting the score."
+G3d-tr-pc,sf_tf03,seed4,137,fix,False,True,"This note suggests using causal reasoning to filter features. In this specific dataset, the task requires keeping all numerical features, and 'column_x' (which causal reasoning would likely suggest dropping) is the most predictive feature (corr=1.0). Accepted notes 715 and 716 explicitly forbid this approach here."
+G3d-tr-pc,sf_tf03,seed4,127,fix,False,False,"This note explicitly warns against including columns like 'column_x' as they might be spurious. However, for this benchmark, 'column_x' is critical for the model's performance. It conflicts with accepted notes 715 and 716."
+G3d-tr-pc,sf_tf03,seed4,132,fix,False,False,"Similar to 137, this encourages the agent to exclude non-causal features, which would lead the agent to drop 'column_x' and perform poorly on this task."
+G3d-tr-pc,sf_tf03,seed4,129,fix,False,True,"Similar to 137 and 132, it contradicts the instruction to keep all numerical features and the specific insight that 'column_x' is valuable in this dataset."
+G3d-tr-pc,sf_tf03,seed4,136,contra,False,False,"Redundant. Note [id 130] already warns against over-filtering ID columns, and notes [id 715] and [id 716] emphasize keeping all numerical features."
+G3d-tr-pc,sf_tf03,seed4,134,fix,False,False,Conflicts with the specific domain notes [id 715] and [id 716] which explicitly state that 'column_x' is a real signal and should be kept for this particular market value model.
+G3d-tr-pc,sf_tf03,seed4,714,wrong,False,False,Redundant. This information is already covered in [id 715] and [id 716].
+G3d-tr-pc,sf_tf03,seed4,131,fix,False,False,Conflicts with the specific domain notes [id 715] and [id 716] which instruct the agent to keep 'column_x'.
+G3d-tr-pc,sf_tf05,seed0,717,wrong,False,False,Redundant; id 718 provides similar guidance more concisely.
+G3d-tr-pc,sf_tf05,seed0,718,wrong,True,False,"Prevents the agent from mistakenly dropping features (expenditure, share, etc.) that might appear to be labels but are actually legitimate predictors in this specific dataset."
+G3d-tr-pc,sf_tf05,seed0,719,wrong,False,False,Redundant; id 718 covers the same point.
+G3d-tr-pc,sf_tf05,seed1,717,wrong,False,False,Redundant; id 718 provides the same information more concisely.
+G3d-tr-pc,sf_tf05,seed1,718,wrong,True,True,"Specifically addresses the potential concern of data leakage for this dataset, encouraging the agent to follow the prompt's instruction to use all features."
+G3d-tr-pc,sf_tf05,seed1,719,wrong,False,False,Redundant; id 718 provides the same information.
+G3d-tr-pc,sf_tf05,seed2,717,wrong,False,False,"Similar to 718, but 718 is more concise and explicitly mentions the impact on accuracy."
+G3d-tr-pc,sf_tf05,seed2,718,wrong,True,False,"Specifically addresses potential leakage concerns for this dataset, confirming that the requested features should be kept to maintain accuracy."
+G3d-tr-pc,sf_tf05,seed2,719,wrong,False,False,Redundant if 718 is accepted.
+G3d-tr-pc,sf_tf05,seed3,717,wrong,False,False,Redundant; id 718 provides the same information more concisely.
+G3d-tr-pc,sf_tf05,seed3,718,wrong,True,False,Provides specific domain knowledge about this dataset to reassure the agent that using all features (including spending data) does not cause data leakage.
+G3d-tr-pc,sf_tf05,seed3,719,wrong,False,False,Redundant; covered by id 718.
+G3d-tr-pc,sf_tf05,seed4,717,wrong,False,False,Redundant with note 718.
+G3d-tr-pc,sf_tf05,seed4,718,wrong,True,False,"Specific to this dataset; confirms that expenditure, share, majorcards, and active are legitimate features and should not be dropped due to leakage concerns."
+G3d-tr-pc,sf_tf05,seed4,719,wrong,False,False,Redundant with note 718.
+G3s,sf_tf03,seed0,130,contra,True,False,"This note specifically mentions 'column_x' which appears in the data schema. In benchmark datasets with 'causal' in the name, such columns are often the key predictive features and should not be discarded as noise."
+G3s,sf_tf03,seed0,135,fix,False,False,Redundant; note 137 provides the same advice with more detail.
+G3s,sf_tf03,seed0,137,fix,True,False,"The filenames explicitly contain 'causal', suggesting the agent should think about feature selection beyond just including every single number to avoid spurious correlations."
+G3s,sf_tf03,seed0,129,fix,False,False,This is nearly identical to accepted note [id 137].
+G3s,sf_tf03,seed0,136,contra,False,False,"This note advises against excluding ID columns, which is generally bad practice for linear regression as IDs provide no predictive power and can cause overfitting or numerical issues."
+G3s,sf_tf03,seed0,132,fix,False,False,This is nearly identical to accepted note [id 137].
+G3s,sf_tf03,seed0,134,fix,False,False,"This note suggests removing 'column_x', which contradicts accepted note [id 130] that explicitly warns against dropping it in specific benchmarks."
+G3s,sf_tf03,seed0,127,fix,False,False,"This is largely redundant with accepted note [id 137], which already instructs the agent to use causal reasoning to distinguish between causal drivers and spurious correlations."
+G3s,sf_tf03,seed0,131,fix,False,True,"This note contradicts accepted note [id 130] regarding 'column_x'. While [id 131] is conceptually aligned with the 'causal' nature of the task, the conflict with an already accepted note may confuse the agent. Note [id 137] already provides the necessary guidance to analyze such features."
+G3s,sf_tf03,seed1,130,contra,False,False,"This note encourages keeping 'column_x', but in datasets labeled 'corr_causal', 'column_x' is typically a spurious correlation designed to trap models into overfitting on non-causal features, leading to poor generalization on the test set."
+G3s,sf_tf03,seed1,135,fix,False,False,Redundant; note 137 provides the same advice with more detail.
+G3s,sf_tf03,seed1,137,fix,True,False,Highly relevant because the filenames explicitly contain 'causal'. It warns the agent to distinguish between performance metrics and spurious correlations.
+G3s,sf_tf03,seed1,134,fix,True,False,"This note specifically mentions 'column_x', which is present in the data schema. While [id 128] covers non-descriptive names generally, this provides a direct example that matches the dataset."
+G3s,sf_tf03,seed1,136,contra,False,True,"This note contradicts the goal of the current task, which is to use causal reasoning and rigorous screening to exclude non-predictive or spurious features like IDs and 'column_x'."
+G3s,sf_tf03,seed1,132,fix,False,False,"This is a duplicate of [id 137], which has already been accepted."
+G3s,sf_tf03,seed1,127,fix,False,False,This note is redundant as it combines the advice already found in [id 137] (causal reasoning) and [id 128]/[id 134] (screening 'column_x').
+G3s,sf_tf03,seed1,131,fix,False,False,This is redundant. Note [134] already covers the 'column_x' issue and note [137] covers causal reasoning.
+G3s,sf_tf03,seed1,129,fix,False,False,"This is almost identical to note [137], which has already been accepted."
+G3s,sf_tf03,seed2,130,contra,True,False,"The dataset contains a column named 'column_x', and this note specifically warns against accidentally dropping such columns in benchmark contexts."
+G3s,sf_tf03,seed2,135,fix,False,False,"This is redundant with note 137, which provides similar guidance on causal reasoning for filenames containing 'causal'."
+G3s,sf_tf03,seed2,137,fix,True,False,"The training and test filenames explicitly contain 'causal', making this guidance on distinguishing causal drivers from identifiers (like player_id) highly relevant."
+G3s,sf_tf03,seed2,136,contra,False,False,"This note suggests including all numerical columns including IDs unless told otherwise, which is generally bad practice for linear regression and conflicts with Note 133."
+G3s,sf_tf03,seed2,134,fix,False,False,"This note suggests removing 'column_x'. This conflicts with Note 130, which warns that 'column_x' might be critical in certain benchmarks. Note 137 already encourages reasoning about such features."
+G3s,sf_tf03,seed2,131,fix,False,False,"Similar to 134, this suggests excluding 'column_x' as a spurious correlation. Note 137 already directs the agent to use causal reasoning to make this decision, and Note 130 warns against accidental removal."
+G3s,sf_tf03,seed2,132,fix,False,False,This is redundant with Note 137.
+G3s,sf_tf03,seed2,127,fix,False,False,This is redundant with Note 137 and conflicts with Note 130 regarding 'column_x'.
+G3s,sf_tf03,seed3,130,contra,True,False,"The dataset contains 'column_x', which is often a key synthetic feature in these specific benchmarks. This note prevents the agent from accidentally dropping it as a non-descriptive column."
+G3s,sf_tf03,seed3,135,fix,False,True,"Redundant with note 137, which provides more detailed instructions on the same topic."
+G3s,sf_tf03,seed3,137,fix,True,False,"The filename explicitly contains 'causal', so prompting the agent to reason about the relationship between features and the target is appropriate for this specific dataset."
+G3s,sf_tf03,seed3,136,contra,False,False,"This note suggests blindly including all numerical columns, which conflicts with the already accepted note [id 137] that encourages causal reasoning to exclude spurious correlations, especially when 'causal' is in the filename."
+G3s,sf_tf03,seed3,134,fix,False,False,"This note suggests investigating or removing 'column_x', which conflicts with the already accepted note [id 130] that explicitly warns against accidentally dropping 'column_x' in specific benchmarks."
+G3s,sf_tf03,seed3,131,fix,False,False,"This note suggests excluding 'column_x' as a spurious feature, which directly conflicts with the already accepted note [id 130]."
+G3s,sf_tf03,seed3,132,fix,False,False,This note is largely redundant as it repeats the logic already captured in accepted note [id 137].
+G3s,sf_tf03,seed3,127,fix,False,False,"This note suggests removing 'column_x', which conflicts with accepted note [id 130]."
+G3s,sf_tf03,seed3,129,fix,False,False,This is essentially a duplicate of accepted note [id 137].
+G3s,sf_tf03,seed4,130,contra,False,False,"This note suggests keeping 'column_x'. However, the dataset name 'player_value_corr_causal' strongly implies that this is a test of distinguishing between spurious correlations and causal drivers. In such benchmarks, 'column_x' is typically the spurious feature designed to degrade test performance if included."
+G3s,sf_tf03,seed4,135,fix,False,True,"This is redundant with note 137, which provides more explicit instructions on documenting the reasoning."
+G3s,sf_tf03,seed4,137,fix,True,False,"This is highly relevant. The dataset filename contains 'causal', and the target is market value. Causal reasoning is necessary to avoid using IDs or spurious correlations (like 'column_x') which would lead to overfitting on the training set."
+G3s,sf_tf03,seed4,134,fix,True,False,"The dataset contains a column named 'column_x', which is a generic label likely to be a data artifact or noise. This note specifically warns against blindly including such columns."
+G3s,sf_tf03,seed4,136,contra,False,False,"This note conflicts with the 'causal' nature of the task and the already accepted notes [137] and [128], which emphasize reasoning and screening over blind inclusion."
+G3s,sf_tf03,seed4,131,fix,True,False,"It specifically addresses the presence of 'column_x' and the need to avoid spurious correlations in causal contexts, which is highly relevant to the file names and schema."
+G3s,sf_tf03,seed4,132,fix,False,False,This is largely redundant with the already accepted note [137].
+G3s,sf_tf03,seed4,127,fix,False,False,"This is a synthesis of [131], [134], and [137]. If those are accepted or already present, this adds little new value."
+G3s,sf_tf03,seed4,129,fix,False,False,This is almost identical to accepted note [id 137].
+G3s,sf_tf05,seed0,164,fix,False,False,Redundant; note 169 is more explicit about the specific columns and the reasoning.
+G3s,sf_tf05,seed0,168,fix,False,False,Redundant; note 169 is more explicit.
+G3s,sf_tf05,seed0,169,fix,True,False,"Specifically identifies leakage columns ('expenditure', 'majorcards') that are common in credit card datasets and would lead to an unrealistically high accuracy if not removed."
+G3s,sf_tf05,seed1,164,fix,False,False,Duplicate of id 169.
+G3s,sf_tf05,seed1,168,fix,False,False,Duplicate of id 169.
+G3s,sf_tf05,seed1,169,fix,True,False,"Specifically identifies leakage features ('expenditure', 'majorcards') common in credit card datasets that would lead to an unrealistic, trivial model."
+G3s,sf_tf05,seed2,164,fix,False,False,Redundant; it covers the same leakage issue as 168 and 169.
+G3s,sf_tf05,seed2,168,fix,False,False,Redundant; it covers the same leakage issue as 169.
+G3s,sf_tf05,seed2,169,fix,True,False,"Highly specific to this dataset. It identifies 'expenditure' and 'majorcards' as target leakage, which is a common pitfall in this specific credit card dataset task."
+G3s,sf_tf05,seed3,164,fix,False,False,"Duplicate of note 168, which is more comprehensive."
+G3s,sf_tf05,seed3,168,fix,True,False,"Specifically identifies 'majorcards' and 'expenditure' as likely leakage features for this specific dataset type, preventing the agent from building a trivial/unrealistic model."
+G3s,sf_tf05,seed3,169,fix,False,False,Duplicate of note 168.
+G3s,sf_tf05,seed4,164,fix,False,False,Redundant; [id 169] covers the same leakage issue more concisely.
+G3s,sf_tf05,seed4,168,fix,False,False,Redundant; [id 169] covers the same leakage issue more concisely.
+G3s,sf_tf05,seed4,169,fix,True,False,"Specifically identifies 'majorcards' and 'expenditure' as leakage features for the credit card dataset, which is a known pitfall that leads to unrealistically high accuracy."
+G3s-pl,sf_tf03,seed0,130,contra,True,False,"This note specifically mentions 'column_x', which is present in the dataset and might be mistaken for a placeholder, while warning against over-filtering. This is helpful to ensure the agent doesn't accidentally drop potentially useful numerical columns."
+G3s-pl,sf_tf03,seed0,135,fix,False,False,"This note suggests using domain-driven selection to exclude numerical columns if they aren't 'causal'. However, the task prompt explicitly instructs to 'Keep only numerical feature columns', which is a structural constraint that overrides domain-driven pruning."
+G3s-pl,sf_tf03,seed0,137,fix,False,True,"Similar to 135, this suggests filtering numerical columns based on causal reasoning, which contradicts the explicit instruction to keep all numerical feature columns."
+G3s-pl,sf_tf03,seed0,136,contra,False,False,This note is redundant as it repeats the guidance already provided in [id 130] and [id 133] regarding the inclusion of all numerical columns.
+G3s-pl,sf_tf03,seed0,134,fix,False,True,"This note encourages removing columns like 'column_x' based on their names, which directly contradicts the prompt's explicit instruction to 'Keep only numerical feature columns' and the guidance in [id 130]."
+G3s-pl,sf_tf03,seed0,131,fix,False,True,"This note suggests excluding 'column_x' to avoid spurious correlations, which violates the strict instruction to keep all numerical feature columns and contradicts [id 130]."
+G3s-pl,sf_tf03,seed0,132,fix,False,False,"This note encourages using causal reasoning to exclude numerical features, which overrides the prompt's explicit requirement to keep all numerical feature columns."
+G3s-pl,sf_tf03,seed0,127,fix,False,True,"Similar to [id 131], this note encourages removing 'column_x' and other numerical columns based on relevance/causality, contradicting the explicit instructions."
+G3s-pl,sf_tf03,seed0,129,fix,False,True,"The task explicitly instructs to 'Keep only numerical feature columns'. Note 129 suggests selective feature selection based on causal reasoning, which contradicts the prompt's specific requirement to keep numerical columns."
+G3s-pl,sf_tf03,seed1,130,contra,True,False,The dataset contains a 'column_x' which is often a critical feature in these benchmarks; this note reminds the agent not to accidentally drop it.
+G3s-pl,sf_tf03,seed1,135,fix,False,True,"This note encourages domain-driven exclusion of features based on causal reasoning, which contradicts the prompt's explicit instruction to 'Keep only numerical feature columns'."
+G3s-pl,sf_tf03,seed1,137,fix,False,False,"Similar to 135, this encourages excluding numerical columns based on causal reasoning, which violates the specific technical constraint of the task."
+G3s-pl,sf_tf03,seed1,136,contra,True,True,"This note reinforces the instruction to follow the prompt literally and include all numerical columns, including IDs, which is consistent with the already accepted note [id 130] and the specific task constraint 'Keep only numerical feature columns'."
+G3s-pl,sf_tf03,seed1,134,fix,False,True,"This note suggests removing 'column_x', which conflicts with the accepted note [id 130] that specifically mentions ensuring 'column_x' is not accidentally dropped in these benchmarks, and conflicts with the literal instruction to 'keep only numerical feature columns'."
+G3s-pl,sf_tf03,seed1,132,fix,False,True,"This note suggests using causal reasoning to exclude features, which contradicts the strict instruction to 'Keep only numerical feature columns' and conflicts with the accepted note [id 130]."
+G3s-pl,sf_tf03,seed1,131,fix,False,True,"This note specifically suggests excluding 'column_x', which contradicts the guidance in accepted note [id 130] and the literal instructions of the task."
+G3s-pl,sf_tf03,seed1,127,fix,False,True,"This note suggests excluding 'column_x' based on causal modeling, which conflicts with the strict prompt instructions and accepted note [id 130]."
+G3s-pl,sf_tf03,seed1,129,fix,False,True,"The prompt explicitly instructs the agent to 'Keep only numerical feature columns (excluding the label)'. Note 129 suggests performing causal selection to filter features, which contradicts the explicit instruction to keep all numerical columns and conflicts with Note 136."
+G3s-pl,sf_tf03,seed2,130,contra,True,False,"The dataset contains 'column_x', and this note specifically warns against accidentally dropping such columns, which is important for consistent results in these benchmarks."
+G3s-pl,sf_tf03,seed2,135,fix,False,True,The task explicitly instructs to 'Keep only numerical feature columns'. Applying domain-driven causal selection to exclude numerical features would contradict the explicit instructions of the task.
+G3s-pl,sf_tf03,seed2,137,fix,False,False,"Similar to 135, this suggests excluding features based on reasoning, which conflicts with the prompt's directive to keep numerical feature columns."
+G3s-pl,sf_tf03,seed2,134,fix,False,False,"This note suggests removing generic columns like 'column_x'. However, note [id 130] specifically warns to keep 'column_x' in these benchmarks, and the prompt explicitly instructs to keep numerical feature columns."
+G3s-pl,sf_tf03,seed2,136,contra,True,False,"The prompt asks for 'only numerical feature columns'. A common pitfall is to manually remove ID columns (like player_id), which are technically numerical. This note ensures the agent adheres strictly to the prompt's requirements."
+G3s-pl,sf_tf03,seed2,131,fix,False,True,This note suggests excluding 'column_x'. This conflicts with note [id 130] and the literal instruction of the prompt to keep numerical features.
+G3s-pl,sf_tf03,seed2,132,fix,False,True,The prompt provides a mechanical instruction ('keep only numerical feature columns') rather than asking for a causal model. Applying causal reasoning to filter columns would violate the explicit constraint.
+G3s-pl,sf_tf03,seed2,127,fix,False,True,"This note suggests removing 'column_x' and using domain knowledge to filter, which conflicts with the literal instruction to keep all numerical columns and note [id 130]."
+G3s-pl,sf_tf03,seed2,129,fix,False,False,"This note suggests performing causal feature selection and avoiding blind selection of numerical columns. However, the task explicitly instructs the agent to 'Keep only numerical feature columns (excluding the label)', so performing selective filtering based on causal reasoning would violate the prompt's constraints."
+G3s-pl,sf_tf03,seed3,130,contra,True,True,"The task asks to keep only numerical feature columns. This note warns against over-filtering columns that might seem non-predictive (like 'column_x' or IDs), which is important for adhering strictly to the task constraints in a benchmark setting."
+G3s-pl,sf_tf03,seed3,135,fix,False,False,"This note suggests excluding features based on causal reasoning. However, the task explicitly instructs the agent to 'Keep only numerical feature columns', which is a strict requirement that should override general domain-driven selection."
+G3s-pl,sf_tf03,seed3,137,fix,False,True,"Similar to 135, this encourages filtering based on causal impact, which contradicts the explicit instruction to keep all numerical feature columns."
+G3s-pl,sf_tf03,seed3,134,fix,False,True,"This note suggests removing columns like 'column_x', which conflicts with accepted note [id 130] and the literal instruction to 'keep only numerical feature columns'."
+G3s-pl,sf_tf03,seed3,136,contra,True,False,"This reinforces the strategy of adhering strictly to the prompt's definition of 'numerical feature columns', preventing the agent from making arbitrary decisions to drop ID columns which may be expected in the evaluation."
+G3s-pl,sf_tf03,seed3,131,fix,False,True,"This suggests excluding 'column_x', which contradicts note [id 130] and the strict instruction to keep numerical features."
+G3s-pl,sf_tf03,seed3,132,fix,False,True,The prompt asks specifically to 'keep only numerical feature columns'. Applying 'causal reasoning' to exclude numerical columns would violate this direct instruction.
+G3s-pl,sf_tf03,seed3,127,fix,False,False,"Like 131 and 134, this suggests filtering based on domain knowledge/suspicion of 'column_x', which conflicts with the accepted note [id 130] and the literal task requirements."
+G3s-pl,sf_tf03,seed3,129,fix,False,True,"This note suggests causal feature selection (manually excluding features), which contradicts the explicit instruction 'Keep only numerical feature columns' and the guidance in accepted note [id 136]."
+G3s-pl,sf_tf03,seed4,130,contra,True,False,The dataset contains a column named 'column_x' which might be mistaken for a noise column; this note ensures the agent doesn't accidentally drop it when the prompt asks for numerical features.
+G3s-pl,sf_tf03,seed4,135,fix,False,True,"This note encourages the agent to use causal reasoning to exclude numerical features. However, the prompt explicitly instructs the agent to 'Keep only numerical feature columns', and overriding this instruction based on subjective causal reasoning could lead to incorrect results in a benchmark setting."
+G3s-pl,sf_tf03,seed4,137,fix,False,True,"Similar to id 135, this suggests overriding the prompt's explicit instruction to 'Keep only numerical feature columns' with personal analysis of causal drivers, which is counter-productive here."
+G3s-pl,sf_tf03,seed4,134,fix,False,True,"This note suggests removing generic columns like 'column_x', but the already accepted note [id 130] explicitly advises against over-filtering and mentions keeping 'column_x' in specific benchmarks. The prompt's instruction 'Keep only numerical feature columns' should be followed literally."
+G3s-pl,sf_tf03,seed4,136,contra,True,True,"This note reinforces the importance of following the prompt's literal instructions to keep all numerical features, including ID columns, which prevents the agent from making arbitrary deletions that might negatively impact the benchmark score."
+G3s-pl,sf_tf03,seed4,131,fix,False,False,"Conflicts with [id 130] and the literal requirement to keep all numerical features. It suggests removing 'column_x', which is likely required for this specific dataset benchmark."
+G3s-pl,sf_tf03,seed4,132,fix,False,True,"Applying causal reasoning to remove features contradicts the instruction 'Keep only numerical feature columns'. In a benchmark context, following the constraint is usually more important than domain-driven feature selection unless specified."
+G3s-pl,sf_tf03,seed4,127,fix,False,True,"Similar to 131 and 132, it encourages removing columns like 'column_x' based on intuition/causality, which contradicts the provided instructions and [id 130]."
+G3s-pl,sf_tf03,seed4,129,fix,False,True,"The prompt explicitly asks to keep numerical feature columns. Manual causal selection would involve dropping columns, which violates the prompt's requirement and contradicts note [id 136]."
+G3s-pl,sf_tf05,seed0,164,fix,False,True,"Redundant; note 168 covers the same points more comprehensively, specifically mentioning the conflict with the 'use all features' instruction."
+G3s-pl,sf_tf05,seed0,168,fix,True,True,This is highly specific to this dataset. It identifies 'majorcards' and 'expenditure' as leakage features and warns the agent to ignore the prompt's 'use all available feature columns' instruction in this specific case to ensure a realistic model.
+G3s-pl,sf_tf05,seed0,169,fix,False,False,Redundant; note 168 is more detailed regarding the prompt conflict.
+G3s-pl,sf_tf05,seed1,164,fix,False,True,This note contradicts the explicit instruction to 'Use all available feature columns'.
+G3s-pl,sf_tf05,seed1,168,fix,False,True,This note contradicts the explicit instruction to 'Use all available feature columns'.
+G3s-pl,sf_tf05,seed1,169,fix,False,True,This note contradicts the explicit instruction to 'Use all available feature columns'.
+G3s-pl,sf_tf05,seed2,164,fix,False,True,Redundant; note 168 is more comprehensive and explicitly addresses the 'use all features' instruction.
+G3s-pl,sf_tf05,seed2,168,fix,True,True,Highly relevant. It warns against target leakage specifically for credit card datasets (mentioning 'majorcards' and 'expenditure') and instructs the agent to override the 'use all available features' prompt if leakage is detected.
+G3s-pl,sf_tf05,seed2,169,fix,False,True,Redundant; note 168 is more detailed and explicitly handles the conflict with the prompt's instructions.
+G3s-pl,sf_tf05,seed3,164,fix,False,True,"This note encourages removing features based on domain knowledge of leakage, which contradicts the explicit instruction to 'Use all available feature columns'."
+G3s-pl,sf_tf05,seed3,168,fix,False,True,"Similar to 164, this encourages the agent to ignore the prompt's explicit constraint to use all features."
+G3s-pl,sf_tf05,seed3,169,fix,False,True,"Similar to 164 and 168, this contradicts the prompt's instruction to use all available features."
+G3s-pl,sf_tf05,seed4,164,fix,False,True,"This note instructs the agent to remove features, which directly contradicts the prompt's instruction to 'Use all available feature columns'."
+G3s-pl,sf_tf05,seed4,168,fix,False,True,"This note instructs the agent to remove features, which directly contradicts the prompt's instruction to 'Use all available feature columns'."
+G3s-pl,sf_tf05,seed4,169,fix,False,True,"This note instructs the agent to remove features, which directly contradicts the prompt's instruction to 'Use all available feature columns'."
+G3h,sf_tf03,seed0,130,contra,False,True,"This note warns against over-filtering, but the task explicitly requires strict filtering to only include causal features, making this advice potentially contradictory."
+G3h,sf_tf03,seed0,135,fix,False,False,This is very similar to note 137; 137 is slightly more comprehensive.
+G3h,sf_tf03,seed0,137,fix,True,False,"Directly addresses the core requirement of distinguishing causal drivers from spurious correlations, which is central to this task."
+G3h,sf_tf03,seed0,134,fix,False,False,"This is very similar to note 131, which provides a more comprehensive explanation of why generic columns should be excluded in the context of spurious correlations."
+G3h,sf_tf03,seed0,136,contra,False,True,"This note conflicts with the specific instructions of the task. The task explicitly requires the agent to exclude columns that are not causal, whereas this note advises against excluding columns unless they are explicitly identified as non-features."
+G3h,sf_tf03,seed0,131,fix,True,False,"The dataset contains a column named 'column_x'. This note specifically warns against including generic columns like 'column_x' as they are often artifacts or noise, which directly helps the agent avoid a likely pitfall in this specific dataset."
+G3h,sf_tf03,seed0,132,fix,False,False,This is redundant with accepted note 137.
+G3h,sf_tf03,seed0,127,fix,False,False,"This combines elements of note 137 (causal reasoning) and note 131 (generic labels), both of which are already covered or being accepted."
+G3h,sf_tf03,seed0,129,fix,False,False,This note is redundant as it is nearly identical to already accepted note [id 137].
+G3h,sf_tf03,seed1,130,contra,False,False,"This note suggests caution against dropping 'column_x' in some benchmarks, but in this specific task, 'column_x' is almost certainly the 'merely correlated by coincidence' feature the prompt explicitly asks to exclude."
+G3h,sf_tf03,seed1,135,fix,False,False,"Very similar to 137, but 137 is slightly more descriptive regarding the documentation and process."
+G3h,sf_tf03,seed1,137,fix,True,False,Directly addresses the 'causal relationship' requirement and the need to distinguish between performance drivers and spurious correlations.
+G3h,sf_tf03,seed1,134,fix,False,False,Similar to [id 131] and [id 128]; [id 131] is more specifically aligned with the 'spurious correlation' language used in the prompt.
+G3h,sf_tf03,seed1,136,contra,False,True,"This note conflicts with the task instructions. The task explicitly requires selecting only causal features and excluding coincidentally correlated ones, whereas this note advises against arbitrary exclusion of numerical columns."
+G3h,sf_tf03,seed1,131,fix,True,False,"The dataset contains 'column_x', and the prompt specifically warns against features that are 'merely correlated by coincidence'. This note explicitly addresses both the generic naming and the risk of spurious correlations."
+G3h,sf_tf03,seed1,132,fix,False,False,Redundant; already covered by accepted note [id 137].
+G3h,sf_tf03,seed1,127,fix,False,False,Redundant; already covered by accepted notes [id 137] and [id 128].
+G3h,sf_tf03,seed1,129,fix,False,False,This is a near-duplicate of accepted note [id 137].
+G3h,sf_tf03,seed2,130,contra,False,False,"This note suggests keeping 'column_x' in some benchmarks, but in this specific domain task (Football Scout), a column named 'column_x' is highly likely to be a spurious correlation or placeholder, and the prompt explicitly asks to exclude non-causal features."
+G3h,sf_tf03,seed2,135,fix,False,False,This is redundant as note 137 covers the same causal reasoning requirement in more detail.
+G3h,sf_tf03,seed2,137,fix,True,False,Directly addresses the core requirement of the task: distinguishing between causal drivers (performance stats) and spurious correlations/identifiers.
+G3h,sf_tf03,seed2,134,fix,False,False,"This is largely covered by note [id 128], which already instructs the agent to exclude non-descriptive or placeholder columns."
+G3h,sf_tf03,seed2,136,contra,False,True,This note conflicts with the task's specific instruction to only include features with a causal relationship. ID columns are not causal drivers of market value and must be excluded.
+G3h,sf_tf03,seed2,131,fix,True,False,"This note specifically addresses 'column_x', which is present in the dataset schema, and ties its removal to the causal requirement of the task, providing a concrete example of a spurious feature to exclude."
+G3h,sf_tf03,seed2,132,fix,False,False,"This is redundant with note [id 137], which already covers the application of causal reasoning in feature selection."
+G3h,sf_tf03,seed2,127,fix,False,False,This is redundant with notes [id 137] and [id 131].
+G3h,sf_tf03,seed2,129,fix,False,False,Redundant; essentially the same as accepted note [id 137].
+G3h,sf_tf03,seed3,130,contra,False,False,"This note suggests caution against dropping 'column_x', but the task explicitly asks to exclude columns that are merely correlated by coincidence, and 'column_x' is a classic example of such a feature in these datasets."
+G3h,sf_tf03,seed3,135,fix,False,False,"Very similar to 137, but 137 is more specific about performance metrics and identifiers, which fits the football scouting context better."
+G3h,sf_tf03,seed3,137,fix,True,False,Directly addresses the core requirement of the task: distinguishing between causal drivers (like performance stats) and spurious correlations or IDs.
+G3h,sf_tf03,seed3,134,fix,True,False,"The dataset explicitly contains a 'column_x' feature. This note provides specific guidance on handling such generic labels as potential artifacts or noise, which complements the more general advice in note 128."
+G3h,sf_tf03,seed3,136,contra,False,True,"This note suggests not excluding ID columns, which contradicts the task requirement to select features with a 'causal relationship' to market value. IDs are never causal drivers."
+G3h,sf_tf03,seed3,131,fix,False,False,"This is largely redundant with the combined guidance of notes 128, 134, and 137."
+G3h,sf_tf03,seed3,132,fix,False,False,This is a near-duplicate of the already accepted note 137.
+G3h,sf_tf03,seed3,127,fix,False,False,"This is redundant, combining elements already covered by notes 128, 134, and 137."
+G3h,sf_tf03,seed3,129,fix,False,False,This is redundant with accepted note [id 137].
+G3h,sf_tf03,seed4,130,contra,False,False,"This note suggests keeping 'column_x' as it might be a key indicator. However, in this specific task, the requirement is to select only features with a causal relationship and exclude those that are merely correlated by coincidence. A column named 'column_x' is highly likely to be a spurious correlation or a placeholder and should be excluded."
+G3h,sf_tf03,seed4,135,fix,True,False,"Directly addresses the 'causal' requirement of the task, reminding the agent not to rely solely on numerical type."
+G3h,sf_tf03,seed4,137,fix,True,True,"Similar to 135, but emphasizes the distinction between drivers and spurious correlations, which is central to the prompt's instructions."
+G3h,sf_tf03,seed4,134,fix,True,False,"The dataset contains a 'column_x' feature, which is a prime example of a generic label that should be investigated or removed, as specified in this note."
+G3h,sf_tf03,seed4,136,contra,False,True,This note conflicts with the explicit task instruction to 'Only select features that have a causal relationship' and 'exclude columns that are merely correlated by coincidence'.
+G3h,sf_tf03,seed4,131,fix,True,False,This note is highly relevant as it explicitly links the exclusion of generic columns like 'column_x' to the prevention of spurious correlations in causal tasks.
+G3h,sf_tf03,seed4,132,fix,False,False,This is redundant with already accepted notes [id 135] and [id 137] which both cover causal reasoning in feature selection.
+G3h,sf_tf03,seed4,127,fix,False,False,This is redundant with [id 131] and [id 135/137].
+G3h,sf_tf03,seed4,129,fix,False,False,This is redundant. Notes [135] and [137] already cover causal feature selection and reasoning.
+G3h,sf_tf05,seed0,164,fix,False,False,"The task prompt already explicitly identifies the leakage columns to be excluded, making this redundant."
+G3h,sf_tf05,seed0,168,fix,False,False,"The task prompt already explicitly identifies the leakage columns to be excluded, making this redundant."
+G3h,sf_tf05,seed0,169,fix,False,False,"The task prompt already explicitly identifies the leakage columns to be excluded, making this redundant."
+G3h,sf_tf05,seed1,164,fix,False,False,"The task prompt explicitly identifies the leakage columns to be excluded, making this general advice on identifying leakage redundant."
+G3h,sf_tf05,seed1,168,fix,False,False,"The task prompt explicitly identifies the leakage columns to be excluded, making this general advice on identifying leakage redundant."
+G3h,sf_tf05,seed1,169,fix,False,False,"The task prompt explicitly identifies the leakage columns to be excluded, making this general advice on identifying leakage redundant."
+G3h,sf_tf05,seed2,164,fix,False,False,The prompt already explicitly identifies and instructs the agent to exclude the leakage features.
+G3h,sf_tf05,seed2,168,fix,False,False,The prompt already explicitly identifies and instructs the agent to exclude the leakage features.
+G3h,sf_tf05,seed2,169,fix,False,False,The prompt already explicitly identifies and instructs the agent to exclude the leakage features.
+G3h,sf_tf05,seed3,164,fix,False,False,"The task already identifies the specific leakage columns ('expenditure', 'share', 'active', and 'majorcards'), making this general advice redundant."
+G3h,sf_tf05,seed3,168,fix,False,False,"The task already identifies the specific leakage columns, making this general advice redundant."
+G3h,sf_tf05,seed3,169,fix,False,False,"The task already identifies the specific leakage columns, making this general advice redundant."
+G3h,sf_tf05,seed4,164,fix,False,False,"The task prompt explicitly identifies the leakage columns to be excluded, making this note redundant."
+G3h,sf_tf05,seed4,168,fix,False,False,"The task prompt explicitly identifies the leakage columns to be excluded, making this note redundant."
+G3h,sf_tf05,seed4,169,fix,False,False,"The task prompt explicitly identifies the leakage columns to be excluded, making this note redundant."
+G3h-pc,sf_tf01,seed0,709,wrong,True,False,"The task specifies a very specific split (80/20, random_state=42). Agents often instinctively add 'stratify=y' for classification tasks; this note ensures the agent adheres strictly to the requested split parameters since the data is balanced."
+G3h-pc,sf_tf01,seed0,710,wrong,True,False,"This note confirms that the 'goals_label' target is balanced, which informs the agent's required inspection of the target distribution and prevents unnecessary complexity like class weighting."
+G3h-pc,sf_tf01,seed0,708,wrong,False,False,This is redundant with note 710.
+G3h-pc,sf_tf01,seed1,709,wrong,True,False,"The agent is explicitly given a split ratio and random state. Adding stratification would change the resulting sets, potentially deviating from the expected execution path for this specific task."
+G3h-pc,sf_tf01,seed1,710,wrong,True,True,"The task asks the agent to inspect the target distribution. Without this note, the agent might over-engineer the solution by adding class weights or resampling, which is unnecessary for this balanced dataset."
+G3h-pc,sf_tf01,seed1,708,wrong,False,False,This is redundant given note 710.
+G3h-pc,sf_tf01,seed2,709,wrong,True,False,"The task specifies a very precise split (80/20, random_state=42). In some cases, agents might try to 'improve' the process by adding stratification, which would change the split. This note ensures the agent follows the prompt exactly."
+G3h-pc,sf_tf01,seed2,710,wrong,True,False,"The prompt asks the agent to inspect the distribution and consider its effect. This note provides the specific finding for this dataset (that the classes are balanced), preventing the agent from applying unnecessary class-weighting or resampling techniques."
+G3h-pc,sf_tf01,seed2,708,wrong,False,False,This is redundant with note 710.
+G3h-pc,sf_tf01,seed3,709,wrong,True,True,The task specifies a fixed 80/20 split with a random_state. Agents often automatically add stratification to classification tasks; this note ensures the agent follows the literal instructions to avoid changing the data split.
+G3h-pc,sf_tf01,seed3,710,wrong,False,False,This note is redundant with note 708.
+G3h-pc,sf_tf01,seed3,708,wrong,True,False,"The prompt asks the agent to inspect the distribution and consider its effect. This note provides the specific knowledge that the goals_label is balanced, preventing unnecessary complexity like class weights or resampling."
+G3h-pc,sf_tf01,seed4,709,wrong,True,False,"This is specific to this dataset and warns the agent to stick to the exact split requested in the task, which prevents potential discrepancies in evaluation."
+G3h-pc,sf_tf01,seed4,710,wrong,True,False,"This is specific to this dataset and prevents the agent from applying unnecessary class-weighting techniques that could introduce noise, given that the labels are balanced."
+G3h-pc,sf_tf01,seed4,708,wrong,False,False,This is redundant as it provides the same information as note 710.
+G3h-pc,sf_tf02,seed0,713,wrong,False,True,"This note tells the agent NOT to do custom string parsing, which directly contradicts the task instruction: 'note that some column may contain values with a unit suffix'."
+G3h-pc,sf_tf02,seed0,711,wrong,False,True,"This note suggests using pd.to_numeric(errors='coerce'), which would discard data containing unit suffixes, contradicting the task instruction to handle those suffixes."
+G3h-pc,sf_tf02,seed1,713,wrong,False,True,"This note contradicts the task description. The task explicitly states that some columns may contain values with a unit suffix; using pd.to_numeric(errors='coerce') without cleaning suffixes first would incorrectly convert valid data (e.g., '180cm') to NaN."
+G3h-pc,sf_tf02,seed1,711,wrong,False,True,This note also contradicts the task description's warning about unit suffixes by suggesting a simple numeric coercion.
+G3h-pc,sf_tf02,seed2,713,wrong,False,True,"This note conflicts with the task's explicit instruction to note that 'some column may contain values with a unit suffix'. Following this note would lead the agent to ignore unit suffixes, resulting in data loss during numeric coercion."
+G3h-pc,sf_tf02,seed2,711,wrong,False,False,"Like 713, this note advises using simple numeric coercion, which would fail to correctly process columns with unit suffixes as mentioned in the task prompt."
+G3h-pc,sf_tf02,seed3,713,wrong,False,True,"Contradicts the task instructions. The task explicitly mentions that some columns may contain unit suffixes, which requires string parsing before numeric conversion. Following this note would lead to data loss."
+G3h-pc,sf_tf02,seed3,711,wrong,False,True,"Contradicts the task instructions. Using pd.to_numeric(errors='coerce') on strings with unit suffixes (like '180cm') will turn them into NaNs, ignoring the prompt's hint to handle suffixes."
+G3h-pc,sf_tf02,seed4,713,wrong,False,False,"This note is harmful. It advises against custom string parsing and suggests numeric coercion is enough for height_in_cm, but the task explicitly warns that columns may contain unit suffixes. Using pd.to_numeric(errors='coerce') would destroy data containing suffixes."
+G3h-pc,sf_tf02,seed4,711,wrong,False,True,"This note is harmful. It claims height_in_cm contains 'plain numbers', which contradicts the task's warning about unit suffixes."
+G3h-pc,sf_tf03,seed0,130,contra,False,True,Too generic and slightly contradicts the 'causal' requirement by suggesting one should avoid over-filtering columns.
+G3h-pc,sf_tf03,seed0,715,wrong,False,True,"Directly contradicts the task instructions, which explicitly state to only select features with a causal relationship and exclude those that are merely correlated."
+G3h-pc,sf_tf03,seed0,716,wrong,False,True,Directly contradicts the task instructions to use causal reasoning for feature selection.
+G3h-pc,sf_tf03,seed0,135,fix,True,False,"Perfectly aligns with the task's requirement to distinguish between causal and spurious correlations, especially given the dataset names ('causal_train')."
+G3h-pc,sf_tf03,seed0,714,wrong,False,True,"While it claims column_x is a driver, it advises to 'keep every numerical column', which contradicts the prompt's instruction to exclude coincidental correlations and identifiers (like player_id)."
+G3h-pc,sf_tf03,seed0,137,fix,False,False,This is redundant; it provides the same advice as the already accepted note [id 135].
+G3h-pc,sf_tf03,seed0,132,fix,False,False,This is redundant; it provides the same advice as the already accepted note [id 135].
+G3h-pc,sf_tf03,seed0,129,fix,False,False,This is redundant; it provides the same advice as the already accepted note [id 135].
+G3h-pc,sf_tf03,seed0,136,contra,False,True,This conflicts with the task's specific instruction to 'only select features that have a causal relationship' and 'exclude columns that are merely correlated by coincidence'.
+G3h-pc,sf_tf03,seed0,713,wrong,False,True,"The task does not specify any imputation method, and the note is based on instructions not present in this prompt."
+G3h-pc,sf_tf03,seed0,711,wrong,False,False,"The task does not specify mean imputation, and height_in_cm is already numeric according to the schema."
+G3h-pc,sf_tf03,seed0,712,wrong,False,True,The task does not specify any imputation method; applying mean imputation to performance stats or physical measurements without a prompt instruction may be suboptimal or incorrect for causal modeling.
+G3h-pc,sf_tf03,seed0,134,fix,False,False,Redundant; Note 131 covers the same warning about generic column names like 'column_x' more comprehensively.
+G3h-pc,sf_tf03,seed0,131,fix,True,False,"Directly applicable as the dataset contains 'column_x', which is a classic example of a spurious feature that should be excluded in a causal task."
+G3h-pc,sf_tf03,seed0,127,fix,False,False,Redundant; Note 131 provides the same guidance regarding generic labels and causal modeling.
+G3h-pc,sf_tf03,seed1,130,contra,False,False,Too generic. Note 135 provides more specific guidance for the causal requirement of this task.
+G3h-pc,sf_tf03,seed1,715,wrong,False,True,"Directly contradicts the task instructions, which explicitly demand the exclusion of features that are merely correlated by coincidence."
+G3h-pc,sf_tf03,seed1,716,wrong,False,True,Directly contradicts the task instructions to use causal reasoning for feature selection.
+G3h-pc,sf_tf03,seed1,135,fix,True,False,Perfectly aligns with the task's requirement to use causal reasoning to filter features and avoid spurious correlations.
+G3h-pc,sf_tf03,seed1,714,wrong,False,False,"This note encourages keeping 'column_x', which is a generic placeholder name. The task explicitly asks for features with a causal relationship (e.g., direct performance stats). 'column_x' is not a performance stat and is likely a spurious correlation or data artifact."
+G3h-pc,sf_tf03,seed1,136,contra,False,True,"This note advises against manually excluding columns, which contradicts the task's explicit instruction to only select features that have a causal relationship and exclude coincidental correlations."
+G3h-pc,sf_tf03,seed1,134,fix,True,False,"This specifically warns against blindly including generic column names like 'column_x', which is directly applicable to this dataset's schema."
+G3h-pc,sf_tf03,seed1,137,fix,False,False,This is largely redundant with the already accepted note [id 135].
+G3h-pc,sf_tf03,seed1,131,fix,False,False,Redundant. This is already covered by [id 134] (generic columns like 'column_x') and [id 135] (causal relationships).
+G3h-pc,sf_tf03,seed1,132,fix,False,False,Redundant. This is essentially the same as [id 135].
+G3h-pc,sf_tf03,seed1,127,fix,False,False,Redundant. This combines the points already made in [id 134] and [id 135].
+G3h-pc,sf_tf03,seed1,129,fix,False,False,Redundant. This is almost identical to [id 135].
+G3h-pc,sf_tf03,seed2,130,contra,False,False,"This note suggests keeping 'column_x', but the task specifically asks to exclude columns that are merely correlated by coincidence. In causal-inference benchmarks, 'column_x' is often a distractor designed to test if the agent can identify non-causal correlations."
+G3h-pc,sf_tf03,seed2,715,wrong,False,True,This note directly contradicts the prompt's instruction to only select features with a causal relationship and exclude coincidental correlations.
+G3h-pc,sf_tf03,seed2,716,wrong,False,True,This note directly contradicts the prompt's instruction to use causal reasoning for feature selection.
+G3h-pc,sf_tf03,seed2,135,fix,True,False,"This note reinforces the specific requirement of the prompt to reason about causal impact and exclude identifiers and spurious correlations, which is the core challenge of this task."
+G3h-pc,sf_tf03,seed3,130,contra,False,False,Too generic; doesn't provide specific guidance beyond basic verification.
+G3h-pc,sf_tf03,seed3,715,wrong,False,True,Directly contradicts the prompt's instruction to only select features with a causal relationship and exclude coincidental correlations.
+G3h-pc,sf_tf03,seed3,716,wrong,False,True,Directly contradicts the prompt's instruction to avoid coincidental correlations and use causal reasoning.
+G3h-pc,sf_tf03,seed3,135,fix,True,False,Perfectly aligns with the prompt's requirement to reason about causal relationships and exclude spurious/non-causal features (like IDs or potentially 'column_x').
+G3h-pc,sf_tf03,seed3,714,wrong,False,True,"This note suggests keeping 'column_x' as a genuine driver. In most datasets, 'column_x' is a byproduct of a dataframe merge and is either a duplicate or noise. Given the prompt's explicit instruction to exclude columns correlated by coincidence, following this note would likely lead to data leakage or noise."
+G3h-pc,sf_tf03,seed3,136,contra,False,True,"This note advises against manual exclusion of columns, which directly contradicts the prompt's requirement to 'Only select features that have a causal relationship' and 'exclude columns that are merely correlated by coincidence'."
+G3h-pc,sf_tf03,seed3,137,fix,False,False,This is essentially a duplicate of the already accepted note [id 135].
+G3h-pc,sf_tf03,seed3,132,fix,False,False,This is essentially a duplicate of the already accepted note [id 135].
+G3h-pc,sf_tf03,seed3,134,fix,False,False,This is largely redundant given [id 128] and [id 131].
+G3h-pc,sf_tf03,seed3,131,fix,True,False,"It explicitly mentions 'column_x', which is present in the schema and is a clear example of a non-causal/spurious feature that needs to be removed."
+G3h-pc,sf_tf03,seed3,127,fix,False,False,This repeats the advice already found in [id 135] and [id 128].
+G3h-pc,sf_tf03,seed3,711,wrong,False,True,"The note specifically references XGBoost regression, whereas the task requires a linear regression model."
+G3h-pc,sf_tf03,seed3,129,fix,False,False,This is redundant with [id 135].
+G3h-pc,sf_tf03,seed4,130,contra,False,False,Too generic; the prompt already specifies numerical features and causal selection.
+G3h-pc,sf_tf03,seed4,715,wrong,False,True,"Directly contradicts the task prompt, which explicitly asks the agent to select only features with a causal relationship and exclude others."
+G3h-pc,sf_tf03,seed4,716,wrong,False,True,"Directly contradicts the task prompt, which explicitly asks for causal reasoning to filter features."
+G3h-pc,sf_tf03,seed4,135,fix,True,False,Reinforces the specific requirement of the prompt to use domain reasoning for causal selection rather than just taking all numerical columns.
+G3h-pc,sf_tf03,seed4,714,wrong,False,True,"This note encourages including 'column_x' based on an assertion that it is a driver. However, the task specifically asks to exclude columns that are merely correlated by coincidence. 'column_x' is a generic name typically associated with data artifacts or noise, and trusting it without a descriptive name contradicts the causal reasoning requirement."
+G3h-pc,sf_tf03,seed4,134,fix,True,True,"This is highly relevant because the dataset contains 'column_x'. It correctly warns the agent that generic labels are often artifacts or leakage and should be excluded, which aligns with the instruction to avoid coincidental correlations."
+G3h-pc,sf_tf03,seed4,137,fix,False,False,This is a duplicate of the already accepted note [id 135].
+G3h-pc,sf_tf03,seed4,132,fix,False,False,This is a duplicate of the already accepted note [id 135].
+G3h-pc,sf_tf03,seed4,136,contra,False,True,This note conflicts with the task's specific instruction to 'Only select features that have a causal relationship' and exclude coincidental correlations. ID columns are explicitly non-causal and should be excluded.
+G3h-pc,sf_tf03,seed4,131,fix,False,False,Redundant. The combination of [id 134] (generic labels like 'column_x') and [id 135] (causal relationship reasoning) already covers this.
+G3h-pc,sf_tf03,seed4,127,fix,False,False,Redundant. This is a variation of [id 134] and [id 135].
+G3h-pc,sf_tf03,seed4,129,fix,False,False,Redundant. This is a variation of [id 135].
+G3h-pc,sf_tf05,seed0,717,wrong,False,True,"This note contradicts the task instructions, which explicitly state that expenditure, share, majorcards, and active leak the label and must be excluded."
+G3h-pc,sf_tf05,seed0,718,wrong,False,True,This note contradicts the task instructions by suggesting the agent keep the leaking columns.
+G3h-pc,sf_tf05,seed0,719,wrong,False,True,This note contradicts the task instructions by suggesting that spending columns are legitimate predictors in this specific scenario.
+G3h-pc,sf_tf05,seed1,717,wrong,False,True,"This note contradicts the explicit instructions of the task, which state that expenditure, share, majorcards, and active leak the label and must be excluded."
+G3h-pc,sf_tf05,seed1,718,wrong,False,True,This note contradicts the explicit instructions of the task regarding leakage columns.
+G3h-pc,sf_tf05,seed1,719,wrong,False,True,This note contradicts the explicit instructions of the task regarding leakage columns.
+G3h-pc,sf_tf05,seed2,717,wrong,False,True,"This note explicitly contradicts the task instructions, which state that 'expenditure', 'share', 'active', and 'majorcards' leak the label and must be excluded."
+G3h-pc,sf_tf05,seed2,718,wrong,False,True,"This note explicitly contradicts the task instructions, which state that 'expenditure', 'share', 'active', and 'majorcards' leak the label and must be excluded."
+G3h-pc,sf_tf05,seed2,719,wrong,False,True,"This note explicitly contradicts the task instructions, which state that 'expenditure', 'share', 'active', and 'majorcards' leak the label and must be excluded."
+G3h-pc,sf_tf05,seed3,717,wrong,False,True,"This note explicitly contradicts the task instructions, which state that expenditure, share, active, and majorcards leak the label and must be excluded."
+G3h-pc,sf_tf05,seed3,718,wrong,False,True,This note contradicts the task instructions by suggesting that the leakage columns should be kept.
+G3h-pc,sf_tf05,seed3,719,wrong,False,True,This note contradicts the task instructions by suggesting that spending columns are valid predictors for this specific task.
+G3h-pc,sf_tf05,seed4,717,wrong,False,True,"This note directly contradicts the task instructions, which explicitly state that 'expenditure', 'share', 'active', and 'majorcards' leak the label and must be excluded."
+G3h-pc,sf_tf05,seed4,718,wrong,False,True,"This note directly contradicts the task instructions, which explicitly state that 'expenditure', 'share', 'active', and 'majorcards' leak the label and must be excluded."
+G3h-pc,sf_tf05,seed4,719,wrong,False,True,"This note directly contradicts the task instructions, which explicitly state that 'expenditure', 'share', 'active', and 'majorcards' leak the label and must be excluded."
